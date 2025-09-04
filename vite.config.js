@@ -4,6 +4,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src')
@@ -11,11 +12,10 @@ export default defineConfig({
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   server: {
-    open: true,
     port: 5182,
-    // historyApiFallback: true,
+    open: true,
+    // Remove historyApiFallback - not needed in Vite
   },
-
   build: {
     outDir: 'dist',
     rollupOptions: {
