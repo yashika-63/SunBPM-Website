@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "../../CSS/Services/Servicespage.css";
+import "../../CSS/Services/ServicesPage.css";
 import stats from "../../data/statsData";
 import serviceAreas from "../../data/serviceAreasData";
 import insights from "../../data/insightsData";
