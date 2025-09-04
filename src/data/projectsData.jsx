@@ -2,42 +2,43 @@ const projects = [
   {
     image: "/images/services/project1.png",
     heading: "SunBPM CSR",
-    link: "/Products/CSR",   // ✅ add link
+    link: "/Products/CSR",
     desc: [
-      "End-to-end CSR strategy & execution",
-      "Monitoring & evaluation framework",
-      "Ensures impact and accountability",
+      "Streamlined CSR policy & governance",
+      "Automated budgeting and compliance tracking",
+      "Maximizes social impact with measurable outcomes",
     ],
   },
   {
     image: "/images/services/project2.png",
     heading: "SunBPM BRSR",
-    link: "/Products/BRSR",   // ✅ add link
+    link: "/Products/BRSR",
     desc: [
-      "Structured ESG reporting framework",
-      "Drives transparency & compliance",
-      "Builds stakeholder trust",
+      "Integrated responsibility & sustainability reporting",
+      "Simplifies data capture, workflows, and disclosures",
+      "Enhances transparency and investor confidence",
     ],
   },
   {
     image: "/images/services/project3.png",
     heading: "SunBPM ESG",
-    link: "/Products/ESG",   // ✅ add link
+    link: "/Products/ESG",
     desc: [
-      "Complete ESG management platform",
-      "Tracks footprint & safety metrics",
-      "Aligns with global standards",
+      "Unified ESG performance management platform",
+      "Monitors carbon, social, and governance metrics",
+      "Aligns with global sustainability standards",
     ],
   },
   {
     image: "/images/services/project4.png",
     heading: "SunBPM EHS",
-    link: "/Products/EHS",   // ✅ add link
+    link: "/Products/EHS",
     desc: [
-      "Ensures safety compliance",
-      "Promotes healthy workplaces",
-      "Minimizes risks effectively",
+      "Proactive environment, health & safety management",
+      "Automates incident, risk, and compliance workflows",
+      "Builds safer, sustainable, and resilient workplaces",
     ],
   },
 ];
+
 export default projects;

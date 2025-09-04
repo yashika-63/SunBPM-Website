@@ -10,6 +10,15 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
+const staggerContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
 const ContactPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -26,29 +35,24 @@ const ContactPage = () => {
 
       {/* ===== 1) LET'S COLLABORATE + WORLD MAP ===== */}
       <motion.section
-        className="cu-intro"
-        variants={fadeUp}
+        className="cu-grand"
+        variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.3 }}
       >
-        <div className="cu-container cu-intro-grid">
-          <div className="cu-intro-left">
-            <h2 className="cu-h2">
-              <span className="cu-accent">Let’s start a</span><br />
-              conversation
-            </h2>
-            <p className="cu-muted">
-              If you like to learn more about our platform, explore our solutions,
-              or discuss pricing, simply complete the contact form and our team
-              will get in touch with you shortly.
-            </p>
-          </div>
-
-          <div className="cu-intro-right">
-            <img className="cu-worldmap" src="/images/ContactUs/Doted-map.png" alt="Global presence map" />
-          </div>
-        </div>
+        <motion.div className="cu-grand-content" variants={fadeUp}>
+          <div className="cu-grand-label">Lets Start the Conversation</div>
+          {/* <div className="cu-grand-heading">
+            Lets Start the Conversation</div> */}
+          <p className="cu-grand-desc">
+            SunBPM delivers end-to-end digitalization solutions tailored to your business needs. From workflow
+            automation and compliance management to analytics and integrations, we help organizations streamline
+            operations, enhance collaboration, and achieve measurable business results.</p>
+        </motion.div>
+        <motion.div className="cu-grand-img" variants={fadeUp}>
+          <img src="/images/ContactUs/Doted-map.png" alt="Meeting room" />
+        </motion.div>
       </motion.section>
 
       {/* ===== 2) LET’S START A CONVERSATION + FORM ===== */}
@@ -61,48 +65,68 @@ const ContactPage = () => {
       >
         <div className="cu-container cu-start-grid">
 
-          <motion.div
-            className="cu-start-left"
-            variants={fadeUp}
-          >
+          {/* Left side map */}
+          <motion.div className="cu-start-left" variants={fadeUp}>
             <MyMap />
           </motion.div>
 
-          <motion.div
-            className="cu-start-right"
-            variants={fadeUp}
-          >
+          {/* Right side form */}
+          <motion.div className="cu-start-right" variants={fadeUp}>
             <form className="cu-card">
               <div className="cu-card-head">
                 <h3>Let’s connect</h3>
               </div>
 
+              {/* Full Name + Email */}
               <div className="cu-row-2">
                 <div className="cu-field">
-                  <label>First Name</label>
-                  <input type="text" />
+                  <label>Full Name *</label>
+                  <input type="text" placeholder="Enter Full Name" />
                 </div>
                 <div className="cu-field">
-                  <label>Last Name</label>
-                  <input type="text" />
+                  <label>Email *</label>
+                  <input type="email" placeholder="Enter Email Address" />
                 </div>
               </div>
 
-              <div className="cu-field">
-                <label>Email Address</label>
-                <input type="email" />
+              {/* Organization + Mobile */}
+              <div className="cu-row-2">
+                <div className="cu-field">
+                  <label>Your Organization *</label>
+                  <input type="text" placeholder="Enter Organization Name" />
+                </div>
+                <div className="cu-field">
+                  <label>Mobile Number *</label>
+                  <input type="tel" placeholder="Enter Mobile Number" />
+                </div>
               </div>
 
+              {/* Products/Services */}
               <div className="cu-field">
-                <label>Message</label>
-                <textarea rows="5" />
+                <label>Products / Services Interested In *</label>
+                <select>
+                  <option value="">Select one</option>
+                  <option value="CSR">SunBPM CSR</option>
+                  <option value="BRSR">SunBPM BRSR</option>
+                  <option value="EHS">SunBPM EHS</option>
+                  <option value="ESG">SunBPM ESG</option>
+                </select>
               </div>
 
+              {/* Description */}
+              <div className="cu-field">
+                <label>Describe what you are looking for (Optional)</label>
+                <textarea rows="5" placeholder="Enter your message or requirements" />
+              </div>
+
+              {/* Submit */}
               <button type="submit" className="cu-btn-dark">Get in touch</button>
             </form>
           </motion.div>
         </div>
       </motion.section>
+
+
 
       {/* ===== 3) MORE WAYS TO REACH OUT ===== */}
       <motion.section

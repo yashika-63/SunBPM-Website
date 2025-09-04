@@ -1,54 +1,52 @@
-const insights = [
+const services = [
   {
-    image: "/images/services/solar.jpg",
+    image: "/images/services/Industry Trends.png",
+    title: "Industry Trends",
     desc: [
-      "ERP implementation in SAP, Dynamics & Oracle",
-      "Best practices with tailored solutions",
-      "Custom configurations for unique needs",
-      "Seamless transition to support teams",
+      "Stay updated on the latest BPM and automation innovations.",
+      "Discover how emerging tech shapes future business processes.",
     ],
   },
   {
-    image: "/images/services/handshake.jpg",
+    image: "/images/services/Case Studies.png",
+    title: "Case Studies",
     desc: [
-      "High-performing, user-friendly applications tailored to your business",
-      "Dedicated post-launch maintenance and support",
-      "Ensures apps stay updated, secure, and optimized",
+      "Explore real-world success stories powered by SunBPM.",
+      "See measurable outcomes across diverse industries.",
     ],
   },
   {
-    image: "/images/services/plant.jpg",
+    image: "/images/services/Guides & Whitepapers.png",
+    title: "Guides & Whitepapers",
     desc: [
-      "Tailored software solutions aligned with your goals",
-      "Agile approach from concept to deployment",
-      "Scalability, efficiency, and seamless integration",
+      "Access in-depth resources on compliance and governance.",
+      "Learn best practices for scaling digital transformation.",
     ],
   },
   {
-    image: "/images/services/global.jpg",
+    image: "/images/services/Thought Leadership.png",
+    title: "Thought Leadership",
     desc: [
-      "Rapid application development with SunBPM",
-      "Reduced time-to-market and development costs",
-      "Workflow automation, custom apps, and enterprise solutions",
-      "Seamless deployment with minimal coding",
+      "Gain services from experts on business process excellence.",
+      "Leverage strategies to boost growth and efficiency.",
     ],
   },
   {
-    image: "/images/services/factory.jpg",
+    image: "/images/services/Customer Stories.png",
+    title: "Customer Stories",
     desc: [
-      "Design intuitive interfaces and user-friendly experiences",
-      "Engaging and compelling digital content",
-      "Creativity combined with functionality to stand out",
+      "Understand challenges solved with low-code automation.",
+      "See how clients achieved sustainability and ROI.",
     ],
   },
   {
-    image: "/images/services/analytics.jpg",
+    image: "/images/services/Market Insights.png",
+    title: "Market services",
     desc: [
-      "SEO, social media, targeted ads, and content marketing",
-      "Strategies that drive engagement, traffic, and conversions",
-      "Data-driven approach ensures maximum ROI",
+      "Track evolving regulations and industry standards.",
+      "Identify opportunities to stay ahead of competitors.",
     ],
   },
 ];
 
-export default insights;
+export default services;

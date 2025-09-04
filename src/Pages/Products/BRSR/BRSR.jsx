@@ -3,19 +3,18 @@ import { motion } from "framer-motion";
 import "../../../CSS/Products/BRSR/BRSR.css";
 
 // Feature icons
-import { FaBuilding, FaUsers, FaGlobe } from "react-icons/fa";
+import { FaBuilding, FaHandshake, FaLeaf } from "react-icons/fa";
 
 // New icons for Modules & Capabilities
 import {
-FaGavel,
   FaProjectDiagram,
-  FaRegMoneyBillAlt,
+  FaSitemap,
+  FaDatabase,
+  FaNetworkWired,
+  FaBalanceScale,
   FaChartLine,
-  FaBoxes,
-  FaGraduationCap,
-  FaShieldAlt,
-  FaDraftingCompass,
-  FaChartBar,
+  FaCogs,
+  FaCheckCircle,
 } from "react-icons/fa";
 
 // ---------- Animation Variants ----------
@@ -36,71 +35,72 @@ const fadeInRight = {
 // ✅ Core Modules
 const MODULES = [
   {
-    icon: FaGavel,
-    title: "BRSR Committee & Governance",
+    icon: FaSitemap,
+    title: "Enterprise Mapping",
     points: [
-      "Streamline policy creation, meeting management, and committee workflows.",
-      "Ensure compliance with BRSR regulations and governance frameworks.",
+      "Define and structure business units, plants, and offices.",
+      "Manage roles, approvals, and access levels for visibility.",
     ],
   },
   {
     icon: FaProjectDiagram,
-    title: "Project Planning & Execution",
+    title: "Workflows",
     points: [
-      "Define project objectives, stakeholders, and timelines.",
-      "Track execution, progress, and impact assessments.",
+      "Automate BRSR processes with attribute codes and responsibilities.",
+      "Set reporting frequencies with alerts and reminders for timely submissions.",
     ],
   },
   {
-    icon: FaRegMoneyBillAlt,
-    title: "Budgeting & Financial Planning",
+    icon: FaDatabase,
+    title: "Data Management",
     points: [
-      "Allocate and monitor BRSR budgets effectively.",
-      "Track approvals, verifications, and amendments seamlessly.",
+      "Capture and validate master data at source with controls.",
+      "Enable secure restructuring of data for analytics and insights.",
     ],
   },
   {
-    icon: FaChartLine,
-    title: "Impact Assessment",
+    icon: FaNetworkWired,
+    title: "Associate Digitalization",
     points: [
-      "Conduct thorough stakeholder assessments and evaluations.",
-      "Generate insights with respect to activities and project execution.",
+      "Engage upstream and downstream value chain in reporting.",
+      "Provide restricted access while ensuring assurance and transparency.",
     ],
   },
   {
-    icon: FaBoxes,
-    title: "Procurement & Resource Allocation",
+    icon: FaLeaf,
+    title: "Core Footprints & Assessment",
     points: [
-      "Handle vendor selection, approvals, requisitions, deliveries, POs, invoices, and payments.",
-      "Ensure fair, ethical, and BRSR-compliant procurement processes.",
+      "Track organizational environmental and social impact metrics.",
+      "Evaluate practices against benchmarks for performance improvement.",
     ],
   },
   {
-    icon: FaGraduationCap,
-    title: "Education & Community Engagement",
+    icon: FaBalanceScale,
+    title: "Targets, Value Chain & Materiality",
     points: [
-      "Streamline student enrollments, attendance, and performance tracking.",
-      "Strengthen community engagement through structured BRSR programs.",
+      "Set measurable sustainability goals with stakeholder priorities.",
+      "Engage partners in transparent reporting for shared accountability.",
     ],
   },
 ];
 
+
 // ✅ Core Capabilities
 const CAPABILITIES = [
   {
-    icon: FaShieldAlt,
-    title: "Compliance Ready",
-    desc: "Ensure all BRSR activities meet legal standards.",
+    icon: FaCheckCircle,
+    title: "Regulatory Compliance",
+    desc: "Ensure BRSR disclosures meet all legal and reporting standards.",
   },
   {
-    icon: FaDraftingCompass,
-    title: "Strategy Design",
-    desc: "Plan and execute effective BRSR initiatives.",
+    icon: FaCogs,
+    title: "Process Automation",
+    desc: "Automate data collection, validation, and reporting workflows.",
   },
   {
-    icon: FaChartBar,
-    title: "Scalable Solution",
-    desc: "Reliably grow BRSR initiatives across the enterprise.",
+    icon: FaChartLine,
+    title: "Performance Insights",
+    desc: "Gain actionable analytics to drive sustainability improvements.",
   },
 ];
 
@@ -108,29 +108,29 @@ const CAPABILITIES = [
 const OUTCOMES = [
   {
     icon: FaBuilding,
-    title: "Impact on Business",
+    title: "Business Advantages",
     points: [
-      "Builds strong brand reputation & trust",
-      "Lowers costs through efficient practices",
-      "Reduces risks of legal or reputational issues",
+      "Strengthens brand reputation and investor confidence",
+      "Improves decision-making with reliable sustainability data",
+      "Reduces risks by ensuring regulatory and ESG compliance",
     ],
   },
   {
-    icon: FaUsers,
-    title: "Value for Customers",
+    icon: FaHandshake,
+    title: "Stakeholder Value",
     points: [
-      "Encourages responsible buying behavior",
-      "Ensures high quality, ethical products",
-      "Promotes awareness of ethical consumption",
+      "Builds trust with customers, employees, and partners",
+      "Encourages responsible and ethical business practices",
+      "Enhances transparency in corporate disclosures",
     ],
   },
   {
-    icon: FaGlobe,
-    title: "Benefits to Society",
+    icon: FaLeaf,
+    title: "Societal & Environmental Impact",
     points: [
-      "Supports communities and local sustainability",
-      "Encourages job creation and social development",
-      "Helps mitigate climate and ethical change",
+      "Promotes community development and social welfare",
+      "Drives climate action and resource efficiency",
+      "Supports long-term sustainable growth goals",
     ],
   },
 ];
@@ -148,12 +148,11 @@ const BRSR = () => {
       >
         <div className="BRSR-hero-overlay">
           <h1>
-            Comprehensive Low-Code Platform for Corporate Social Responsibility
+            Comprehensive Low-Code Platform for Business Responsibility & Sustainability Reporting
           </h1>
           <p>
-            Our Enterprise BRSR Solution provides a comprehensive approach to
-            Corporate Social Responsibility, empowering organizations to achieve
-            sustainability development goals.
+            SunBPM BRSR empowers organizations to capture, manage, and report sustainability data with 
+            transparency, compliance, and measurable impact—driving long-term ESG and business growth.
           </p>
         </div>
       </motion.section>
@@ -168,11 +167,11 @@ const BRSR = () => {
       >
         <h2>What is BRSR ?</h2>
         <p>
-          <span className="highlight">Corporate Social Responsibility (BRSR)</span>{" "}
-          is a strategic business practice where organizations integrate
-          ethical, social, and environmental concerns into their operations,
-          ensuring accountability to stakeholders and contributing to sustainable
-          development.
+          <span className="highlight">Business Responsibility & Sustainability Reporting (BRSR)</span>{" "}
+          is a structured framework introduced to help organizations disclose their environmental, social, 
+          and governance (ESG) performance in a transparent and measurable manner. It goes beyond compliance, 
+          enabling businesses to align operations with sustainability goals, demonstrate accountability to 
+          stakeholders, and drive long-term value creation through responsible practices.
         </p>
       </motion.section>
 
@@ -246,11 +245,10 @@ const BRSR = () => {
             Scalable Solutions
           </h2>
           <p>
-            We deliver a next-generation BRSR platform that goes beyond
-            compliance, empowering organizations with business insights, and
-            measurable outcomes. With our solution, companies can transform
-            social responsibility into a driver of growth, trust, and long-term
-            value.
+            SunBPM BRSR enables enterprises to streamline sustainability reporting with a unified platform 
+            that simplifies data collection, validation, and compliance. Built for modern organizations, 
+            it ensures transparency, accountability, and alignment with regulatory frameworks, empowering 
+            companies to meet stakeholder expectations and sustainability goals.
           </p>
         </motion.div>
         <motion.div className="BRSR-redef-left" variants={fadeInRight}>
@@ -328,8 +326,8 @@ const BRSR = () => {
       >
         <div className="BRSR-cta-inner-container">
           <p className="BRSR-cta-text">
-            Empower your BRSR journey with an all-in-one platform — from planning
-            to impact measurement, built for modern enterprises.
+            Transform sustainability reporting into a strategic advantage with SunBPM BRSR — precise, 
+            transparent, and future-ready.
           </p>
         </div>
       </motion.section>

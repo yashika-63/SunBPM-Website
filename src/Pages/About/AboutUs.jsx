@@ -128,7 +128,7 @@ const AboutUs = () => {
       </section>
 
       {/* Journey Section */}
-      <section className="journey">
+      {/* <section className="journey"> 
         <div className="journey-head">
           <h2>Our Journey</h2>
           <p>From quodsi persecuti to BUILDNPA - a history of continuous innovation</p>
@@ -148,7 +148,7 @@ const AboutUs = () => {
             );
           })}
         </div>
-      </section>
+      </section> */}
 
       {/* Team Section */}
       <section className="team-section container">

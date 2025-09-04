@@ -83,8 +83,8 @@ const Sunbpmhome = () => {
       <section className="section white-background">
         <div className="container grid-2">
           <motion.div className="benefits-content">
-            <h2 className="section-title">Transform Your Business Operations</h2>
-            <p className="section-subtitle">
+            <h2 style={{ textAlign: 'left' }} className="section-title">Transform Your Business Operations</h2>
+            <p style={{ textAlign: 'left' }} className="section-subtitle">
               SunBPM empowers organizations to streamline processes, reduce costs, and improve compliance while maintaining flexibility.
             </p>
             <div className="benefits-list">

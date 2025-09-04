@@ -3,20 +3,9 @@ import { motion } from "framer-motion";
 import "../../../CSS/Products/EHS/EHS.css";
 
 // Feature icons
-import { FaBuilding, FaUsers, FaGlobe } from "react-icons/fa";
+import {FaGlobe, FaIndustry, FaHardHat, FaUserShield, FaClipboardCheck ,FaVials, FaExclamationTriangle, FaBalanceScale, 
+FaShieldAlt } from "react-icons/fa";
 
-// New icons for Modules & Capabilities
-import {
-FaGavel,
-  FaProjectDiagram,
-  FaRegMoneyBillAlt,
-  FaChartLine,
-  FaBoxes,
-  FaGraduationCap,
-  FaShieldAlt,
-  FaDraftingCompass,
-  FaChartBar,
-} from "react-icons/fa";
 
 // ---------- Animation Variants ----------
 const fadeInUp = {
@@ -36,104 +25,107 @@ const fadeInRight = {
 // ✅ Core Modules
 const MODULES = [
   {
-    icon: FaGavel,
-    title: "EHS Committee & Governance",
+    icon: FaBalanceScale,
+    title: "Compliance & Regulatory Management",
     points: [
-      "Streamline policy creation, meeting management, and committee workflows.",
-      "Ensure compliance with EHS regulations and governance frameworks.",
+      "Ensure adherence to legal and industry-specific EHS standards",
+      "Maintain compliance records and automate reporting workflows",
     ],
   },
   {
-    icon: FaProjectDiagram,
-    title: "Project Planning & Execution",
+    icon: FaExclamationTriangle,
+    title: "Incident & Risk Management",
     points: [
-      "Define project objectives, stakeholders, and timelines.",
-      "Track execution, progress, and impact assessments.",
+      "Identify, track, and prevent workplace hazards effectively",
+      "Implement corrective actions and preventive safety measures",
     ],
   },
   {
-    icon: FaRegMoneyBillAlt,
-    title: "Budgeting & Financial Planning",
+    icon: FaShieldAlt,
+    title: "Hazard Identification & Permit to Work",
     points: [
-      "Allocate and monitor EHS budgets effectively.",
-      "Track approvals, verifications, and amendments seamlessly.",
+      "Streamline permit approvals for safer work environments",
+      "Track hazard controls and work authorization in real time",
     ],
   },
   {
-    icon: FaChartLine,
-    title: "Impact Assessment",
+    icon: FaVials,
+    title: "Safety Data & Material Management",
     points: [
-      "Conduct thorough stakeholder assessments and evaluations.",
-      "Generate insights with respect to activities and project execution.",
+      "Maintain chemical safety documentation and SDS records",
+      "Track inspections, equipment safety, and compliance checks",
     ],
   },
   {
-    icon: FaBoxes,
-    title: "Procurement & Resource Allocation",
+    icon: FaClipboardCheck,
+    title: "Audits & Inspections",
     points: [
-      "Handle vendor selection, approvals, requisitions, deliveries, POs, invoices, and payments.",
-      "Ensure fair, ethical, and EHS-compliant procurement processes.",
+      "Conduct systematic audits with real-time tracking and analytics",
+      "Generate actionable compliance reports for decision-making",
     ],
   },
   {
-    icon: FaGraduationCap,
-    title: "Education & Community Engagement",
+    icon: FaUserShield,
+    title: "Workforce & Contractor Safety",
     points: [
-      "Streamline student enrollments, attendance, and performance tracking.",
-      "Strengthen community engagement through structured EHS programs.",
+      "Manage training, certifications, and safety protocols for employees and contractors",
+      "Promote accountability and build a strong safety culture",
     ],
   },
 ];
+
 
 // ✅ Core Capabilities
 const CAPABILITIES = [
   {
-    icon: FaShieldAlt,
-    title: "Compliance Ready",
-    desc: "Ensure all EHS activities meet legal standards.",
+    icon: FaBalanceScale,
+    title: "Regulatory Compliance",
+    desc: "Ensure strict adherence to environmental, health, and safety regulations.",
   },
   {
-    icon: FaDraftingCompass,
-    title: "Strategy Design",
-    desc: "Plan and execute effective EHS initiatives.",
+    icon: FaExclamationTriangle,
+    title: "Risk Prevention",
+    desc: "Identify hazards early and implement preventive safety measures.",
   },
   {
-    icon: FaChartBar,
-    title: "Scalable Solution",
-    desc: "Reliably grow EHS initiatives across the enterprise.",
+    icon: FaUserShield,
+    title: "Workforce Protection",
+    desc: "Safeguard employees and contractors through training and safety protocols.",
   },
 ];
+
 
 // ✅ Positive Outcomes
 const OUTCOMES = [
   {
-    icon: FaBuilding,
-    title: "Impact on Business",
+    icon: FaIndustry,
+    title: "Business Resilience",
     points: [
-      "Builds strong brand reputation & trust",
-      "Lowers costs through efficient practices",
-      "Reduces risks of legal or reputational issues",
+      "Ensures compliance with environmental and safety regulations",
+      "Minimizes downtime by preventing accidents and hazards",
+      "Boosts operational efficiency through proactive risk controls",
     ],
   },
   {
-    icon: FaUsers,
-    title: "Value for Customers",
+    icon: FaHardHat,
+    title: "Workforce Safety & Well-being",
     points: [
-      "Encourages responsible buying behavior",
-      "Ensures high quality, ethical products",
-      "Promotes awareness of ethical consumption",
+      "Provides a secure and healthy working environment",
+      "Enhances employee confidence through training and awareness",
+      "Strengthens safety culture and accountability at all levels",
     ],
   },
   {
     icon: FaGlobe,
-    title: "Benefits to Society",
+    title: "Environmental & Social Impact",
     points: [
-      "Supports communities and local sustainability",
-      "Encourages job creation and social development",
-      "Helps mitigate climate and ethical change",
+      "Reduces ecological footprint through responsible practices",
+      "Protects surrounding communities from health and safety risks",
+      "Supports long-term sustainability and corporate responsibility",
     ],
   },
 ];
+
 
 const EHS = () => {
   return (
@@ -148,12 +140,11 @@ const EHS = () => {
       >
         <div className="EHS-hero-overlay">
           <h1>
-            Comprehensive Low-Code Platform for Corporate Social Responsibility
+            Comprehensive Low-Code Platform for Environment, Health, and Safety
           </h1>
           <p>
-            Our Enterprise EHS Solution provides a comprehensive approach to
-            Corporate Social Responsibility, empowering organizations to achieve
-            sustainability development goals.
+            Our Enterprise EHS Solution delivers an integrated approach to Environment, Health, and Safety,
+            helping organizations ensure compliance, protect employees, and build a sustainable workplace.
           </p>
         </div>
       </motion.section>
@@ -168,11 +159,10 @@ const EHS = () => {
       >
         <h2>What is EHS ?</h2>
         <p>
-          <span className="highlight">Corporate Social Responsibility (EHS)</span>{" "}
-          is a strategic business practice where organizations integrate
-          ethical, social, and environmental concerns into their operations,
-          ensuring accountability to stakeholders and contributing to sustainable
-          development.
+          <span className="highlight">Environment, Health, and Safety (EHS)</span>{" "}
+          is a structured business discipline focused on safeguarding people, protecting the environment, and
+          ensuring workplace safety. By integrating regulatory compliance, risk management, and sustainability
+          practices, EHS enables organizations to minimize hazards, enhance employee well-being, and drive long-term operational excellence.
         </p>
       </motion.section>
 
@@ -246,10 +236,10 @@ const EHS = () => {
             Scalable Solutions
           </h2>
           <p>
-            We deliver a next-generation EHS platform that goes beyond
-            compliance, empowering organizations with business insights, and
-            measurable outcomes. With our solution, companies can transform
-            social responsibility into a driver of growth, trust, and long-term
+            We provide a next-generation EHS platform that extends beyond regulatory compliance, 
+            equipping organizations with actionable insights, advanced safety management, and measurable 
+            results. Our solution transforms EHS into a strategic enabler of resilience, stakeholder 
+            confidence, and sustainable growth.
             value.
           </p>
         </motion.div>
@@ -328,8 +318,8 @@ const EHS = () => {
       >
         <div className="EHS-cta-inner-container">
           <p className="EHS-cta-text">
-            Empower your EHS journey with an all-in-one platform — from planning
-            to impact measurement, built for modern enterprises.
+            Drive safer, smarter, and sustainable operations with an integrated EHS platform — built to 
+            protect people, ensure compliance, and strengthen business resilience.
           </p>
         </div>
       </motion.section>

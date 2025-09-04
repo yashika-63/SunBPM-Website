@@ -20,7 +20,7 @@ const MyMap = () => {
       <MapContainer
         center={position}
         zoom={18}
-        style={{ height: "430px", width: "100%" }} // ✅ fixed height
+        style={{ height: "520px", width: "100%" }} // ✅ fixed height
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

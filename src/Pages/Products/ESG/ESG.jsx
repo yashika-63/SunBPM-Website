@@ -3,16 +3,9 @@ import { motion } from "framer-motion";
 import "../../../CSS/Products/ESG/ESG.css";
 
 // Feature icons
-import { FaBuilding, FaUsers, FaGlobe } from "react-icons/fa";
+import { FaChartLine, FaHandshake, FaLeaf, FaClipboardCheck,FaCloud, FaUsers } from "react-icons/fa";
 
-// New icons for Modules & Capabilities
 import {
-FaGavel,
-  FaProjectDiagram,
-  FaRegMoneyBillAlt,
-  FaChartLine,
-  FaBoxes,
-  FaGraduationCap,
   FaShieldAlt,
   FaDraftingCompass,
   FaChartBar,
@@ -36,51 +29,51 @@ const fadeInRight = {
 // ✅ Core Modules
 const MODULES = [
   {
-    icon: FaGavel,
-    title: "ESG Committee & Governance",
+    icon: FaLeaf,
+    title: "Sustainability Framework",
     points: [
-      "Streamline policy creation, meeting management, and committee workflows.",
-      "Ensure compliance with ESG regulations and governance frameworks.",
+      "Ensure alignment with GRI, CDP, and S&P standards",
+      "Maintain investor-trusted attribute frameworks",
     ],
   },
   {
-    icon: FaProjectDiagram,
-    title: "Project Planning & Execution",
+    icon: FaCloud,
+    title: "Carbon Tracking & Reporting",
     points: [
-      "Define project objectives, stakeholders, and timelines.",
-      "Track execution, progress, and impact assessments.",
+      "Automate Scope 1, 2, & 3 emissions tracking",
+      "Deliver integrated carbon accounting & insights",
     ],
   },
   {
-    icon: FaRegMoneyBillAlt,
-    title: "Budgeting & Financial Planning",
+    icon: FaClipboardCheck,
+    title: "Assurance & Reports",
     points: [
-      "Allocate and monitor ESG budgets effectively.",
-      "Track approvals, verifications, and amendments seamlessly.",
+      "Generate audit-ready ESG reports",
+      "Provide verification and compliance tools",
+    ],
+  },
+  {
+    icon: FaUsers,
+    title: "Employee Wellbeing & Inclusion",
+    points: [
+      "Foster diversity, fairness, and inclusion",
+      "Promote employee health and well-being",
     ],
   },
   {
     icon: FaChartLine,
-    title: "Impact Assessment",
+    title: "Performance Tracking & Benchmarking",
     points: [
-      "Conduct thorough stakeholder assessments and evaluations.",
-      "Generate insights with respect to activities and project execution.",
+      "Offer real-time ESG performance insights",
+      "Enable financial and non-financial comparisons",
     ],
   },
   {
-    icon: FaBoxes,
-    title: "Procurement & Resource Allocation",
+    icon: FaHandshake,
+    title: "Stakeholder & Value Chain Engagement",
     points: [
-      "Handle vendor selection, approvals, requisitions, deliveries, POs, invoices, and payments.",
-      "Ensure fair, ethical, and ESG-compliant procurement processes.",
-    ],
-  },
-  {
-    icon: FaGraduationCap,
-    title: "Education & Community Engagement",
-    points: [
-      "Streamline student enrollments, attendance, and performance tracking.",
-      "Strengthen community engagement through structured ESG programs.",
+      "Manage stakeholder interactions effectively",
+      "Conduct materiality assessments for ESG priorities",
     ],
   },
 ];
@@ -89,51 +82,53 @@ const MODULES = [
 const CAPABILITIES = [
   {
     icon: FaShieldAlt,
-    title: "Compliance Ready",
-    desc: "Ensure all ESG activities meet legal standards.",
+    title: "Compliance Assurance",
+    desc: "Ensure ESG initiatives align with global regulations and reporting standards.",
   },
   {
     icon: FaDraftingCompass,
-    title: "Strategy Design",
-    desc: "Plan and execute effective ESG initiatives.",
+    title: "Strategic Execution",
+    desc: "Design and implement effective sustainability strategies across the enterprise.",
   },
   {
     icon: FaChartBar,
-    title: "Scalable Solution",
-    desc: "Reliably grow ESG initiatives across the enterprise.",
+    title: "Scalable Growth",
+    desc: "Expand ESG practices seamlessly to support long-term organizational goals.",
   },
 ];
+
 
 // ✅ Positive Outcomes
 const OUTCOMES = [
   {
-    icon: FaBuilding,
-    title: "Impact on Business",
+    icon: FaLeaf,
+    title: "Sustainable Growth",
     points: [
-      "Builds strong brand reputation & trust",
-      "Lowers costs through efficient practices",
-      "Reduces risks of legal or reputational issues",
+      "Strengthens long-term business resilience",
+      "Reduces environmental risks with efficient resource use",
+      "Aligns strategies with global sustainability goals",
     ],
   },
   {
-    icon: FaUsers,
-    title: "Value for Customers",
+    icon: FaHandshake,
+    title: "Stronger Stakeholder Trust",
     points: [
-      "Encourages responsible buying behavior",
-      "Ensures high quality, ethical products",
-      "Promotes awareness of ethical consumption",
+      "Builds credibility with investors, regulators, and customers",
+      "Improves employee engagement and workplace culture",
+      "Enhances brand reputation through ethical practices",
     ],
   },
   {
-    icon: FaGlobe,
-    title: "Benefits to Society",
+    icon: FaChartLine,
+    title: "Improved Business Performance",
     points: [
-      "Supports communities and local sustainability",
-      "Encourages job creation and social development",
-      "Helps mitigate climate and ethical change",
+      "Unlocks access to ESG-focused funding and partnerships",
+      "Drives operational efficiency and cost savings",
+      "Enables data-driven decisions with transparent reporting",
     ],
   },
 ];
+
 
 const ESG = () => {
   return (
@@ -151,9 +146,8 @@ const ESG = () => {
             Comprehensive Low-Code Platform for Environmental, social, and governance
           </h1>
           <p>
-            Our Enterprise ESG Solution provides a comprehensive approach to
-            Environmental, social, and governance, empowering organizations to achieve
-            sustainability development goals.
+            Our Enterprise ESG Solution empowers organizations to achieve sustainability goals through a 
+            holistic Environmental, Social, and Governance approach.
           </p>
         </div>
       </motion.section>
@@ -169,10 +163,8 @@ const ESG = () => {
         <h2>What is ESG ?</h2>
         <p>
           <span className="highlight">Environmental, social, and governance (ESG)</span>{" "}
-          is a strategic business practice where organizations integrate
-          ethical, social, and environmental concerns into their operations,
-          ensuring accountability to stakeholders and contributing to sustainable
-          development.
+          refers to the standards and practices that guide businesses in managing their environmental impact, 
+          social responsibility, and corporate governance to drive sustainable growth.
         </p>
       </motion.section>
 
@@ -246,11 +238,9 @@ const ESG = () => {
             Scalable Solutions
           </h2>
           <p>
-            We deliver a next-generation ESG platform that goes beyond
-            compliance, empowering organizations with business insights, and
-            measurable outcomes. With our solution, companies can transform
-            social responsibility into a driver of growth, trust, and long-term
-            value.
+            We provide a future-ready ESG platform that goes beyond compliance, enabling organizations to 
+            gain actionable insights, achieve measurable outcomes, and turn sustainability into a driver of 
+            growth, trust, and long-term value.
           </p>
         </motion.div>
         <motion.div className="ESG-redef-left" variants={fadeInRight}>
@@ -328,8 +318,8 @@ const ESG = () => {
       >
         <div className="ESG-cta-inner-container">
           <p className="ESG-cta-text">
-            Empower your ESG journey with an all-in-one platform — from planning
-            to impact measurement, built for modern enterprises.
+            Drive sustainable success with a unified ESG platform enabling strategy, compliance, and 
+            measurable impact for modern enterprises.
           </p>
         </div>
       </motion.section>
