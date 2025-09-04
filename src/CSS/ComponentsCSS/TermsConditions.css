@@ -1,0 +1,163 @@
+/* Base styles */
+.terms-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+  text-align: left;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.last-updated {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.Terms-Section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+/* Responsive styles */
+
+/* For tablets in portrait mode */
+@media (max-width: 768px) {
+  .terms-container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.75em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  ul {
+    margin-left: 15px;
+  }
+}
+
+/* For tablets in landscape mode */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .terms-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.9em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-size: 1.15em;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .terms-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  p {
+    margin-bottom: 8px;
+  }
+
+  ul {
+    margin-left: 10px;
+  }
+}
+
+/* For iPads */
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .terms-container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.75em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  ul {
+    margin-left: 15px;
+  }
+}
+
+/* For iPhones */
+@media (max-device-width: 375px) and (orientation: portrait) {
+  .terms-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.4em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+  h3 {
+    font-size: 0.9em;
+  }
+
+  p {
+    margin-bottom: 6px;
+  }
+
+  ul {
+    margin-left: 8px;
+  }
+}

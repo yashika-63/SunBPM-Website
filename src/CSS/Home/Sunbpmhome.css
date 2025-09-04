@@ -1,0 +1,334 @@
+.home {
+  overflow: hidden;
+}
+
+.section {
+  padding-top: 50px;
+}
+
+.white-background {
+  background: white;
+}
+
+/* .gray-background {
+  background: #f9fafb;
+} */
+
+.orange-gradient {
+  margin: 100px 0 40px 0;
+  padding-bottom: 60px;
+  background: linear-gradient(90deg, rgba(247, 148, 29, 1) 49%, rgba(249, 199, 79, 1) 100%);
+}
+
+/* .dark-gradient {
+  background: linear-gradient(to bottom right, #111827, #7c2d12);
+} */
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.black-text {
+  color: #000000;
+}
+
+/* .light-text {
+  color: #fed7aa;
+} */
+
+.section-subtitle {
+  font-size: 24px;
+  color: #000000;
+  max-width: 48rem;
+  margin: 0 auto; 
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+.value-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  text-align: center;
+}
+
+.icon-container {
+  background: #F7941D;
+  padding: 1rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.icon-container:hover {
+  transform: scale(1.1);
+}
+
+.icon-white {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+
+.value-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0.75rem;
+}
+
+.value-description {
+  font-size: 16px;
+  color: #000000;
+}
+
+.feature-grid {
+  padding: 10px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.btn-primary {
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #F7941D;
+  color: white;
+  padding: 7px 16px;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 600px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat-card {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.stat-label {
+  color: #000000;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.benefit-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #F7941D;
+  flex-shrink: 0;
+}
+
+.image-card {
+  position: relative;
+  background: linear-gradient(to bottom right, #eff6ff, #f5f3ff);
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+
+.image {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cost-card {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3f4f6;
+}
+
+.cost-value {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #ea580c;
+}
+
+.cost-label {
+  color: #4b5563;
+}
+
+/* ===== Mobile (max-width: 640px) ===== */
+@media (max-width: 640px) {
+  .section {
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .orange-gradient{
+    margin:20px 0 0 0;
+  }
+
+  .value-grid,
+  .feature-grid,
+  .stats-grid,
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+
+  .image {
+    height: 16rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+
+  .value-title {
+    font-size: 1.25rem;
+  }
+
+  .value-description {
+    font-size: 1rem;
+  }
+
+  .benefit-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .cost-value {
+    font-size: 1.75rem;
+  }
+
+  .cost-label {
+    font-size: 1rem;
+  }
+}
+
+/* ===== Tablet (641px–1024px) ===== */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .section {
+    padding: 50px 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .value-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
+
+/* ===== Desktop (1025px and up) ===== */
+@media (min-width: 1025px) {
+  .section-title {
+    font-size: 2.25rem;
+  }
+
+  .section-subtitle {
+    font-size: 24px;
+  }
+}

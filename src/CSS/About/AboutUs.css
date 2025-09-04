@@ -1,0 +1,544 @@
+/* ================= HEADER ================= */
+/* .main-header {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.main-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-header nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.main-header nav a:hover {
+  color: #F7941D;
+}
+
+.cta-button {
+  background-color: #1a237e;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #3949ab;
+} */
+
+/* ================= HERO SECTION (replaced with Aboutus) ================= */
+.Aboutus {
+  display: flex;
+  min-height: 300px;
+  margin-top: 40px;
+}
+
+.Aboutus-content {
+  flex: 1;
+  background: #f7941d;
+  /* Kodex orange */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  padding: 40px 30px;
+}
+
+.Aboutus-label {
+  color: black;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 0px;
+}
+
+.Aboutus-heading {
+  color: #000;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: left;
+  line-height: 1.1;
+  padding: 0.5rem 0;
+}
+
+.Aboutus-desc {
+  margin-top: 40px;
+  text-align: left;
+  font-size: 16px;
+  color: black;
+}
+
+.Aboutus-img {
+  height: 500px;
+  flex: 2;
+  /* background: #eee; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Aboutus-img img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  min-height: 340px;
+}
+
+/* ================= INTRO ================= */
+.intro-section {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 0px 0px;
+  justify-content: center;
+}
+
+.intro-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+}
+
+.intro-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.intro-text h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #f7941d;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.intro-text p {
+  text-align: left;
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.contact-btn {
+  background-color: transparent;
+  color: #f7941d;
+  border: 2px solid #f7941d;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #f7941d;
+  color: #fff;
+}
+
+.intro-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* ================= VISION & MISSION ================= */
+.vision-mission-section.container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  background: #fff;
+  max-width: 100%;
+  /* margin-left: 0; */
+  /* padding: 3rem 2rem; */
+}
+
+.diagram-container img {
+  width: 320px;
+  height: 320px;
+  margin-top: 20%;
+  /* height: auto; */
+  /* margin-bottom: 1rem; */
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  /* gap: 2rem; */
+  max-width: 69%;
+}
+
+.vision-block h3,
+.mission-block h3 {
+  font-size: 36px;
+  color: #f7941d;
+  margin-bottom: 0.5rem;
+}
+
+.vision-block p,
+.mission-block p {
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ================= JOURNEY ================= */
+.journey {
+  background: #fff;
+  padding: 30px 0px 30px;
+  color: #000000;
+}
+
+.journey-head {
+  text-align: center;
+  margin: 0 auto 40px;
+  max-width: 900px;
+}
+
+.journey-head h2 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  font-weight: 800;
+  color: #f7941d;
+}
+
+.journey-head p {
+  margin: 0;
+  color: #000000;
+  font-size: 1rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  /* padding: 20px 0; */
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #e5e7eb;
+  transform: translateX(-1px);
+}
+
+.timeline-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* margin: 40px 0; */
+  min-height: 120px;
+}
+
+.timeline-row .dot {
+  position: absolute;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: #f7941d;
+  border-radius: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 0 0 0 4px #e5eefc;
+}
+
+.timeline-row.left {
+  justify-content: flex-start;
+  padding-right: 52%;
+}
+
+.timeline-row.right {
+  justify-content: flex-end;
+  padding-left: 52%;
+}
+
+.timeline-card {
+  background: #fff;
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 460px;
+  padding: 22px 24px;
+  opacity: 0;
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.timeline-card.left {
+  transform: translateX(-60px);
+}
+
+.timeline-card.left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-card.right {
+  transform: translateX(60px);
+}
+
+.timeline-card.right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-row:nth-child(1) .timeline-card {
+  transition-delay: 0.1s;
+}
+
+.timeline-row:nth-child(2) .timeline-card {
+  transition-delay: 0.2s;
+}
+
+.timeline-row:nth-child(3) .timeline-card {
+  transition-delay: 0.3s;
+}
+
+.timeline-row:nth-child(4) .timeline-card {
+  transition-delay: 0.4s;
+}
+
+.timeline-row:nth-child(5) .timeline-card {
+  transition-delay: 0.5s;
+}
+
+.timeline-row:nth-child(6) .timeline-card {
+  transition-delay: 0.6s;
+}
+
+.timeline-card .year {
+  color: #f7941d;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.timeline-card .desc {
+  color: #000000;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ================= TEAM SECTION ================= */
+.team-section.container {
+  background: #fff;
+  padding: 0px 0px 100px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.team-section h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #f7941d;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.team-grid {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 4rem;
+  justify-content: center;
+}
+
+.team-grid img {
+  width: 47%;
+}
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 1200px) {
+  .Aboutus {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .Aboutus-img {
+    height: 300px;
+    width: 100%;
+  }
+
+  .Aboutus-content {
+    padding: 30px 20px;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Aboutus {
+    margin-top: 20px;
+  }
+
+  .Aboutus-img {
+    height: 220px;
+  }
+
+  .diagram-container img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .vision-mission-section.container {
+    gap: 0px;
+  }
+
+  .intro-container {
+    margin: 40px 0 0 0;
+    gap: 0px;
+  }
+
+  .team-section.container{
+    padding-bottom: 50px;
+  }
+
+  .Aboutus-content {
+    margin-top: 20px;
+    padding: 20px 15px;
+  }
+
+  .Aboutus-label {
+    font-size: 28px;
+  }
+
+  .Aboutus-heading {
+    font-size: 24px;
+  }
+
+  .Aboutus-desc {
+    font-size: 14px;
+  }
+
+  .intro-text h2 {
+    font-size: 28px;
+  }
+
+  .intro-text p {
+    font-size: 14px;
+  }
+
+  .team-section h1 {
+    font-size: 28px;
+  }
+
+  .timeline-card .year {
+    font-size: 18px;
+  }
+
+  .timeline-card .desc {
+    font-size: 14px;
+  }
+
+  .team-member-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .team-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Aboutus-img {
+    height: 160px;
+  }
+
+  .Aboutus-label {
+    font-size: 24px;
+  }
+
+  .Aboutus-heading {
+    font-size: 20px;
+  }
+
+  .Aboutus-desc {
+    font-size: 14px;
+  }
+
+  .intro-text h2 {
+    font-size: 22px;
+  }
+
+  .intro-text p {
+    font-size: 14px;
+  }
+
+  .timeline-card .year {
+    font-size: 16px;
+  }
+
+  .timeline-card .desc {
+    font-size: 14px;
+  }
+
+  .team-grid {
+    gap: 20px;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro-container {
+  animation: fadeIn 1.2s ease-out forwards;
+}

@@ -1,0 +1,547 @@
+/* ================= General ================= */
+/* Prevent horizontal scrollbar */
+body,
+html {
+  overflow-x: hidden;
+}
+
+.BRSR-page {
+  margin-top: 42px;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.containers {
+  width: 100%;
+  max-width: 1600px;
+  /* stretches on wide screens */
+  margin: 0 auto;
+  /* center align */
+  padding: 50px 0px 30px;
+  /* safe container padding */
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* ================= Hero Section ================= */
+.BRSR-hero {
+  background: url('../../../../public/images/products/BRSR/BRSR-grand-image.png') no-repeat center/cover;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.BRSR-hero-overlay {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  color: white;
+  max-width: 900px;
+  border-radius: 8px;
+}
+
+.BRSR-hero-overlay h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.BRSR-hero-overlay p {
+  font-size: 16px;
+}
+
+/* ================= Intro ================= */
+.BRSR-intro h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.BRSR-intro .highlight {
+  color: #F7941D;
+  font-weight: bold;
+}
+
+/* ================= Outcomes ================= */
+.BRSR-outcomes h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.BRSR-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.BRSR-card {
+  width: 344px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.BRSR-card:hover {
+  transform: translateY(-5px);
+}
+
+.BRSR-icon-container {
+  background: #F7941D;
+  padding: 1rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  margin-left: 140px;
+  margin-right: auto;
+}
+
+.BRSR-feature-icon {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+}
+
+.BRSR-card h3 {
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.BRSR-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.BRSR-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.BRSR-benefit-dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(to right, #de7b00, #ff8c1a);
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+/* ================= How BRSR Works ================= */
+.BRSR-how {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.BRSR-how-left img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.BRSR-how-right h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.BRSR-how-right p {
+  margin-bottom: 20px;
+}
+
+.btn-learn {
+  background: #F7941D;
+  border: none;
+  padding: 12px 24px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-learn:hover {
+  background: #F7941D;
+}
+
+/* ================= Redefining BRSR ================= */
+.BRSR-redef {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.BRSR-redef h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.BRSR-redef .highlight {
+  color: #F7941D;
+  font-weight: bold;
+}
+
+.BRSR-redef-img {
+  margin-top: 20px;
+  border-radius: 6px;
+  width: 300px;
+}
+
+/* ================= Core Modules ================= */
+.BRSR-modules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.BRSR-module-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.BRSR-module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.BRSR-module-icon {
+  background: #F7941D;
+  padding: 1rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  margin-left: 140px;
+  margin-right: auto;
+  color: #fff;
+}
+
+
+.BRSR-module-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.BRSR-module-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.BRSR-module-card li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #000000;
+}
+
+.BRSR-benefit-dot {
+  margin-right: 10px;
+}
+
+/* ================= Core Capabilities ================= */
+.BRSR-cap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.BRSR-cap-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.BRSR-cap-card:hover {
+  transform: translateY(-6px);
+  /* background: #f0eded; */
+}
+
+.BRSR-cap-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #F7941D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 0 auto 1rem;
+}
+
+.BRSR-cap-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.BRSR-cap-desc {
+  font-size: 0.95rem;
+  color: #000000;
+  line-height: 1.5;
+}
+
+/* ================= CTA Section ================= */
+.BRSR-cta {
+  background: #F7941D;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 20px;
+  margin: 60px auto;
+  max-width: 1000px;
+}
+
+.BRSR-cta-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.BRSR-cta-btn {
+  background: #fff;
+  color: #F7941D;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.BRSR-cta-btn:hover {
+  background: #E8E8E8;
+  color: #F7941D;
+}
+
+/* ================= Did You Know ================= */
+.BRSR-fact {
+  background: #f9fafb;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 16px;
+  max-width: 1000px;
+  margin: 60px auto;
+}
+
+.BRSR-fact h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.BRSR-fact p {
+  font-size: 1.05rem;
+  color: #000000;
+  line-height: 1.7;
+}
+
+/* ================= Responsive ================= */
+
+/* Large screens (≥1600px) */
+@media (min-width: 1600px) {
+  .containers {
+    max-width: 1500px;
+    padding: 50px 0px 0px 0px;
+  }
+
+  .BRSR-cta,
+  .BRSR-fact {
+    max-width: 1200px;
+  }
+}
+
+/* Laptops (1024px–1599px) */
+@media (max-width: 1599px) {
+  .containers {
+    padding: 50px 0px 0px 0px;
+  }
+
+  .BRSR-modules-grid,
+  .BRSR-cap-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets (768px–1023px) */
+@media (max-width: 1023px) {
+  .BRSR-hero {
+    height: 400px;
+  }
+
+  .BRSR-hero-overlay h1 {
+    font-size: 22px;
+  }
+
+  .BRSR-hero-overlay p {
+    font-size: 14px;
+  }
+
+  .BRSR-modules-grid,
+  .BRSR-cap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .BRSR-card {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .BRSR-how,
+  .BRSR-redef {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .BRSR-redef-img {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Mobile (480px–767px) */
+@media (max-width: 767px) {
+  .containers {
+    padding: 40px 0px 0px 0px;
+  }
+
+  .BRSR-module-icon {
+    margin: 0 100px 1rem;
+  }
+
+  .BRSR-icon-container {
+    margin: 0 100px 1rem;
+  }
+
+  .BRSR-hero {
+    height: 300px;
+  }
+
+  .BRSR-hero-overlay {
+    padding: 20px;
+  }
+
+  .BRSR-hero-overlay h1 {
+    font-size: 20px;
+  }
+
+  .BRSR-hero-overlay p {
+    font-size: 13px;
+  }
+
+  .BRSR-modules-grid,
+  .BRSR-cap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .BRSR-card {
+    max-width: 100%;
+  }
+
+  .BRSR-cta {
+    padding: 40px 20px;
+    border-radius: 14px;
+  }
+
+  .BRSR-cta-text {
+    font-size: 1rem;
+  }
+
+  .BRSR-cta-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+
+  .BRSR-fact {
+    padding: 40px 20px;
+  }
+
+  .BRSR-fact h3 {
+    font-size: 1.3rem;
+  }
+
+  .BRSR-fact p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Mobile (≤479px) */
+@media (max-width: 479px) {
+  .containers {
+    padding: 30px 0px 0px 0px;
+  }
+
+  .BRSR-module-icon {
+    margin: 0 100px 1rem;
+  }
+
+  .BRSR-icon-container {
+    margin: 0 100px 1rem;
+  }
+
+  .BRSR-hero {
+    height: 250px;
+  }
+
+  .BRSR-hero-overlay h1 {
+    font-size: 18px;
+  }
+
+  .BRSR-hero-overlay p {
+    font-size: 12px;
+  }
+
+  .BRSR-module-card h4,
+  .BRSR-cap-heading {
+    font-size: 1rem;
+  }
+
+  .BRSR-cap-desc {
+    font-size: 0.9rem;
+  }
+
+  .BRSR-cta {
+    padding: 30px 15px;
+  }
+
+  .BRSR-cta-text {
+    font-size: 0.95rem;
+  }
+
+  .BRSR-cta-btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+
+  .BRSR-fact h3 {
+    font-size: 1.1rem;
+  }
+
+  .BRSR-fact p {
+    font-size: 0.9rem;
+  }
+}

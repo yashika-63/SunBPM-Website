@@ -1,0 +1,159 @@
+.ss-clientsSection {
+    margin: 80px 0 50px 0;
+    text-align: start;
+    padding: 0;
+    width: 100%;
+}
+
+.ss-clientsTitle {
+    font-size: 40px;
+    margin: 20px;
+}
+
+.ss-clientsDescription {
+    font-size: 16px;
+    /* margin-left: 20px; */
+    padding-left: 25px;
+    color: black;
+}
+
+.ss-clientsLogosContainer {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ss-clientLogos {
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    animation: scrollLogos 220s linear infinite;
+}
+
+.ss-clientLogo {
+    height: 200px;
+    width: 120px;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.ss-clientLogo1 {
+    height: 80px;
+    width: 100px;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.ss-clientLogo2 {
+    height: 100px;
+    width: 100px;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.ss-clientLogo3 {
+    height: 80px;
+    width: 80px;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.ss-clientLogo4 {
+    height: 200px;
+    width: 200px;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.ss-clientLogo5 {
+    height: 50px;
+    width: 150px;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.ss-clientLogo6 {
+    height: 180px;
+    width: 120px;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.ss-clientLogo7 {
+    height: 80px;
+    width: 140px;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+@keyframes scrollLogos {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100% + 100vw);
+    }
+  }
+
+
+
+/* Responsive Design */
+
+/* Tablets and Small Screens */
+@media screen and (max-width: 1024px) {
+
+    .ss-clientsSection {
+        text-align: start;
+        padding: 20px 0;
+    }
+
+    .ss-clientsTitle {
+        font-size: 40px;
+    }
+
+    .ss-clientLogo {
+        height: 160px;
+        width: 160px;
+        margin-right: 20px;
+    }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 768px) {
+
+    .ss-clientsSection {
+        margin:0px;
+        text-align: start;
+        padding: 20px 0;
+    }
+
+    .ss-clientsTitle {
+        font-size: 32px;
+    }
+
+    .ss-clientLogo {
+        height: 120px;
+        width: 120px;
+        margin-right: 10px;
+    }
+}
+
+/* Small Mobile Phones (iPhone SE, etc.) */
+@media screen and (max-width: 480px) {
+
+    .ss-clientsSection {
+        text-align: start;
+        padding: 20px 20px;
+    }
+
+    .ss-clientsTitle {
+        font-size: 24px;
+    }
+
+    .ss-clientLogo {
+        height: 100px;
+        width: 100px;
+        margin-right: 5px;
+    }
+}
+  

@@ -1,0 +1,547 @@
+/* ================= General ================= */
+/* Prevent horizontal scrollbar */
+body,
+html {
+  overflow-x: hidden;
+}
+
+.ESG-page {
+  margin-top: 42px;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.containers {
+  width: 100%;
+  max-width: 1600px;
+  /* stretches on wide screens */
+  margin: 0 auto;
+  /* center align */
+  padding: 50px 0px 30px;
+  /* safe container padding */
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* ================= Hero Section ================= */
+.ESG-hero {
+  background: url('../../../../public/images/products/ESG/ESG-grand-image.png') no-repeat center/cover;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ESG-hero-overlay {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  color: white;
+  max-width: 900px;
+  border-radius: 8px;
+}
+
+.ESG-hero-overlay h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.ESG-hero-overlay p {
+  font-size: 16px;
+}
+
+/* ================= Intro ================= */
+.ESG-intro h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.ESG-intro .highlight {
+  color: #F7941D;
+  font-weight: bold;
+}
+
+/* ================= Outcomes ================= */
+.ESG-outcomes h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.ESG-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.ESG-card {
+  width: 344px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.ESG-card:hover {
+  transform: translateY(-5px);
+}
+
+.ESG-icon-container {
+  background: #F7941D;
+  padding: 1rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  margin-left: 140px;
+  margin-right: auto;
+}
+
+.ESG-feature-icon {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+}
+
+.ESG-card h3 {
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.ESG-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.ESG-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.ESG-benefit-dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(to right, #de7b00, #ff8c1a);
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+/* ================= How ESG Works ================= */
+.ESG-how {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.ESG-how-left img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.ESG-how-right h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.ESG-how-right p {
+  margin-bottom: 20px;
+}
+
+.btn-learn {
+  background: #F7941D;
+  border: none;
+  padding: 12px 24px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-learn:hover {
+  background: #F7941D;
+}
+
+/* ================= Redefining ESG ================= */
+.ESG-redef {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.ESG-redef h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.ESG-redef .highlight {
+  color: #F7941D;
+  font-weight: bold;
+}
+
+.ESG-redef-img {
+  margin-top: 20px;
+  border-radius: 6px;
+  width: 300px;
+}
+
+/* ================= Core Modules ================= */
+.ESG-modules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.ESG-module-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ESG-module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.ESG-module-icon {
+  background: #F7941D;
+  padding: 1rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  margin-left: 140px;
+  margin-right: auto;
+  color: #fff;
+}
+
+
+.ESG-module-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.ESG-module-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ESG-module-card li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #000000;
+}
+
+.ESG-benefit-dot {
+  margin-right: 10px;
+}
+
+/* ================= Core Capabilities ================= */
+.ESG-cap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.ESG-cap-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ESG-cap-card:hover {
+  transform: translateY(-6px);
+  /* background: #f0eded; */
+}
+
+.ESG-cap-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #F7941D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 0 auto 1rem;
+}
+
+.ESG-cap-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.ESG-cap-desc {
+  font-size: 0.95rem;
+  color: #000000;
+  line-height: 1.5;
+}
+
+/* ================= CTA Section ================= */
+.ESG-cta {
+  background: #F7941D;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 20px;
+  margin: 60px auto;
+  max-width: 1000px;
+}
+
+.ESG-cta-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.ESG-cta-btn {
+  background: #fff;
+  color: #F7941D;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ESG-cta-btn:hover {
+  background: #E8E8E8;
+  color: #F7941D;
+}
+
+/* ================= Did You Know ================= */
+.ESG-fact {
+  background: #f9fafb;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 16px;
+  max-width: 1000px;
+  margin: 60px auto;
+}
+
+.ESG-fact h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.ESG-fact p {
+  font-size: 1.05rem;
+  color: #000000;
+  line-height: 1.7;
+}
+
+/* ================= Responsive ================= */
+
+/* Large screens (≥1600px) */
+@media (min-width: 1600px) {
+  .containers {
+    max-width: 1500px;
+    padding: 50px 0px 0px 0px;
+  }
+
+  .ESG-cta,
+  .ESG-fact {
+    max-width: 1200px;
+  }
+}
+
+/* Laptops (1024px–1599px) */
+@media (max-width: 1599px) {
+  .containers {
+    padding: 50px 0px 0px 0px;
+  }
+
+  .ESG-modules-grid,
+  .ESG-cap-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets (768px–1023px) */
+@media (max-width: 1023px) {
+  .ESG-hero {
+    height: 400px;
+  }
+
+  .ESG-hero-overlay h1 {
+    font-size: 22px;
+  }
+
+  .ESG-hero-overlay p {
+    font-size: 14px;
+  }
+
+  .ESG-modules-grid,
+  .ESG-cap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ESG-card {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .ESG-how,
+  .ESG-redef {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ESG-redef-img {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Mobile (480px–767px) */
+@media (max-width: 767px) {
+  .containers {
+    padding: 40px 0px 0px 0px;
+  }
+
+  .ESG-module-icon {
+    margin: 0 100px 1rem;
+  }
+
+  .ESG-icon-container {
+    margin: 0 100px 1rem;
+  }
+
+  .ESG-hero {
+    height: 300px;
+  }
+
+  .ESG-hero-overlay {
+    padding: 20px;
+  }
+
+  .ESG-hero-overlay h1 {
+    font-size: 20px;
+  }
+
+  .ESG-hero-overlay p {
+    font-size: 13px;
+  }
+
+  .ESG-modules-grid,
+  .ESG-cap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ESG-card {
+    max-width: 100%;
+  }
+
+  .ESG-cta {
+    padding: 40px 20px;
+    border-radius: 14px;
+  }
+
+  .ESG-cta-text {
+    font-size: 1rem;
+  }
+
+  .ESG-cta-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+
+  .ESG-fact {
+    padding: 40px 20px;
+  }
+
+  .ESG-fact h3 {
+    font-size: 1.3rem;
+  }
+
+  .ESG-fact p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Mobile (≤479px) */
+@media (max-width: 479px) {
+  .containers {
+    padding: 30px 0px 0px 0px;
+  }
+
+  .ESG-module-icon {
+    margin: 0 100px 1rem;
+  }
+
+  .ESG-icon-container {
+    margin: 0 100px 1rem;
+  }
+
+  .ESG-hero {
+    height: 250px;
+  }
+
+  .ESG-hero-overlay h1 {
+    font-size: 18px;
+  }
+
+  .ESG-hero-overlay p {
+    font-size: 12px;
+  }
+
+  .ESG-module-card h4,
+  .ESG-cap-heading {
+    font-size: 1rem;
+  }
+
+  .ESG-cap-desc {
+    font-size: 0.9rem;
+  }
+
+  .ESG-cta {
+    padding: 30px 15px;
+  }
+
+  .ESG-cta-text {
+    font-size: 0.95rem;
+  }
+
+  .ESG-cta-btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+
+  .ESG-fact h3 {
+    font-size: 1.1rem;
+  }
+
+  .ESG-fact p {
+    font-size: 0.9rem;
+  }
+}

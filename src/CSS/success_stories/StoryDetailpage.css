@@ -1,0 +1,96 @@
+/* StoryDetailpage.css */
+
+.story-detail-page {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 40px 0px;
+  color: #000000;
+  line-height: 1.7;
+}
+
+/* Hero Section */
+.story-hero {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.story-hero img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.story-hero h1 {
+  /* position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); */
+  background: #f7941d;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 36px;
+  max-width: 100%;
+}
+
+/* Content Section */
+.story-content {
+  /* background:  #E8E8E8; */
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); */
+}
+
+.story-content h3 {
+  font-size: 24px;
+  color: #000000;
+}
+
+.story-content p {
+  margin: 0;
+  font-size: 16px;
+  color: #000000;
+}
+
+/* Back Button */
+.back-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  background: #f7941d;
+  color: #000000;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid #000000;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  color: #FFF;
+  border: 2px solid #000000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .story-hero h1 {
+    font-size: 1.4rem;
+    padding: 10px 16px;
+  }
+
+  .story-content {
+    padding: 1rem 1.2rem;
+  }
+
+  .back-btn {
+    width: 50%;
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
