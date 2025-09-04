@@ -1,7 +1,6 @@
 import { useState } from 'react'; 
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
-import ContactUs from './Pages/Contact us/contactus';
 import Sunbpmhome from './Pages/Home/Sunbpmhome';
 import ServicesPage from './Pages/services/ServicesPage';
 import CSR from './Pages/Products/CSR/CSR';
@@ -17,6 +16,7 @@ import PrivacyPolicy from './Pages/components/PrivacyPolicy';
 import TermsConditions from './Pages/components/TermsConditions';
 import StoryDetailPage from './Pages/success_stories/StoryDetailPage';
 import BookADemo from './Pages/BookADemo/BookADemo';
+import ContactUs from './Pages/Contact us/ContactPage.jsx';
 
 function App() {
   const [count, setCount] = useState(0);

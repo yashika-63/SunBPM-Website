@@ -10,7 +10,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-const ContactUs = () => {
+const ContactPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
@@ -208,4 +208,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactPage;
