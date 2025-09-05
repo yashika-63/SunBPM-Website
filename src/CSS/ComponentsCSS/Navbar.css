@@ -55,6 +55,7 @@
 }
 
 .nav-link {
+  cursor: pointer;
   font-size: 16px;
   font-weight: 500;
   display: flex;

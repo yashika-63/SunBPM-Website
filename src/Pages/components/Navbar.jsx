@@ -31,7 +31,7 @@ const Navbar = () => {
       ],
     },
     { name: 'Contact Us', href: '/Contact' },
-    { name: 'Success stories', href: '/SuccessStories' },
+    // { name: 'Success stories', href: '/SuccessStories' },
   ];
 
   const toggleDropdown = (item) => {
@@ -42,7 +42,7 @@ const Navbar = () => {
     }
   };
 
-  // ⬇️ Helper to navigate + scroll to top
+  // Helper to navigate + scroll to top
   const handleNavClick = (path) => {
     navigate(path);
     window.scrollTo({ top: 0, behavior: "smooth" });

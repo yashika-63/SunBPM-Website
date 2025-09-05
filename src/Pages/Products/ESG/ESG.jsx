@@ -143,7 +143,7 @@ const ESG = () => {
       >
         <div className="ESG-hero-overlay">
           <h1>
-            Comprehensive Low-Code Platform for Environmental, social, and governance
+            Comprehensive Low-Code Platform for Environmental, Social, and Governance
           </h1>
           <p>
             Our Enterprise ESG Solution empowers organizations to achieve sustainability goals through a 
@@ -162,7 +162,7 @@ const ESG = () => {
       >
         <h2>What is ESG ?</h2>
         <p>
-          <span className="highlight">Environmental, social, and governance (ESG)</span>{" "}
+          <span className="highlight">Environmental, Social, and Governance (ESG)</span>{" "}
           refers to the standards and practices that guide businesses in managing their environmental impact, 
           social responsibility, and corporate governance to drive sustainable growth.
         </p>

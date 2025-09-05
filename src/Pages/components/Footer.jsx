@@ -61,8 +61,8 @@ const Footer = () => {
         <div className="policies">
           <h3>Our Policies</h3>
           <ul>
-            <li><Link to="/PrivacyPolicy" className="email-link">Privacy Policies</Link></li>
-            <li><Link to="/TermsConditions" className="email-link">Terms & Conditions</Link></li>
+            <li><Link to="" className="email-link">Privacy Policies</Link></li>
+            <li><Link to="" className="email-link">Terms & Conditions</Link></li>
             {/* <li>Refund Policy</li> */}
           </ul>
         </div>

@@ -275,7 +275,6 @@ html {
   padding-bottom: 20px;
   transition: box-shadow 0.3s, border 0.3s;
   border: 2px solid transparent;
-  cursor: pointer;
   box-sizing: border-box;
 }
 

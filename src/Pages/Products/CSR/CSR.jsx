@@ -1,23 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../../CSS/Products/CSR/CSR.css";
-
-// Feature icons
-import { FaBuilding, FaUsers, FaGlobe } from "react-icons/fa";
-
-// New icons for Modules & Capabilities
-import {
-FaGavel,
-  FaProjectDiagram,
-  FaRegMoneyBillAlt,
-  FaChartLine,
-  FaBoxes,
-  FaGraduationCap,
-  FaShieldAlt,
-  FaDraftingCompass,
-  FaChartBar,
-} from "react-icons/fa";
-
+import CSRCAPABILITIES from "../../../data/Products/CSRCapabilities";
+import CSRMODULES from "../../../data/Products/CSRModules";
+import CSROUTCOMES from "../../../data/Products/CSROutcomes";
 // ---------- Animation Variants ----------
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -32,108 +18,6 @@ const fadeInRight = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
 };
 
-// ---------- Data ----------
-// ✅ Core Modules
-const MODULES = [
-  {
-    icon: FaGavel,
-    title: "CSR Committee & Governance",
-    points: [
-      "Streamline policy creation, meeting management, and committee workflows.",
-      "Ensure compliance with CSR regulations and governance frameworks.",
-    ],
-  },
-  {
-    icon: FaProjectDiagram,
-    title: "Project Planning & Execution",
-    points: [
-      "Define project objectives, stakeholders, and timelines.",
-      "Track execution, progress, and impact assessments.",
-    ],
-  },
-  {
-    icon: FaRegMoneyBillAlt,
-    title: "Budgeting & Financial Planning",
-    points: [
-      "Allocate and monitor CSR budgets effectively.",
-      "Track approvals, verifications, and amendments seamlessly.",
-    ],
-  },
-  {
-    icon: FaChartLine,
-    title: "Impact Assessment",
-    points: [
-      "Conduct thorough stakeholder assessments and evaluations.",
-      "Generate insights with respect to activities and project execution.",
-    ],
-  },
-  {
-    icon: FaBoxes,
-    title: "Procurement & Resource Allocation",
-    points: [
-      "Handle vendor selection, approvals, requisitions, deliveries, POs, invoices, and payments.",
-      "Ensure fair, ethical, and CSR-compliant procurement processes.",
-    ],
-  },
-  {
-    icon: FaGraduationCap,
-    title: "Education & Community Engagement",
-    points: [
-      "Streamline student enrollments, attendance, and performance tracking.",
-      "Strengthen community engagement through structured CSR programs.",
-    ],
-  },
-];
-
-// ✅ Core Capabilities
-const CAPABILITIES = [
-  {
-    icon: FaShieldAlt,
-    title: "Compliance Ready",
-    desc: "Ensure all CSR activities meet legal standards.",
-  },
-  {
-    icon: FaDraftingCompass,
-    title: "Strategy Design",
-    desc: "Plan and execute effective CSR initiatives.",
-  },
-  {
-    icon: FaChartBar,
-    title: "Scalable Solution",
-    desc: "Reliably grow CSR initiatives across the enterprise.",
-  },
-];
-
-// ✅ Positive Outcomes
-const OUTCOMES = [
-  {
-    icon: FaBuilding,
-    title: "Impact on Business",
-    points: [
-      "Builds strong brand reputation & trust",
-      "Lowers costs through efficient practices",
-      "Reduces risks of legal or reputational issues",
-    ],
-  },
-  {
-    icon: FaUsers,
-    title: "Value for Customers",
-    points: [
-      "Encourages responsible buying behavior",
-      "Ensures high quality, ethical products",
-      "Promotes awareness of ethical consumption",
-    ],
-  },
-  {
-    icon: FaGlobe,
-    title: "Benefits to Society",
-    points: [
-      "Supports communities and local sustainability",
-      "Encourages job creation and social development",
-      "Helps mitigate climate and ethical change",
-    ],
-  },
-];
 
 const CSR = () => {
   return (
@@ -187,7 +71,7 @@ const CSR = () => {
         <h2>Positive Outcomes of CSR</h2>
 
         <div className="csr-cards">
-          {OUTCOMES.map(({ icon: Icon, title, points }, i) => (
+          {CSROUTCOMES.map(({ icon: Icon, title, points }, i) => (
             <motion.div key={i} className="csr-card" variants={fadeInUp}>
               <div className="csr-icon-container">
                 <Icon className="csr-feature-icon" />
@@ -272,7 +156,7 @@ const CSR = () => {
         <h2 className="csr-section-title">SunBPM CSR Core Modules</h2>
 
         <div className="csr-modules-grid">
-          {MODULES.map(({ icon: Icon, title, points }, idx) => (
+          {CSRMODULES.map(({ icon: Icon, title, points }, idx) => (
             <motion.div key={idx} className="csr-module-card" variants={fadeInUp}>
               <div className="csr-module-icon">
                 <Icon size={32} />
@@ -304,7 +188,7 @@ const CSR = () => {
         </h2>
 
         <div className="csr-cap-grid">
-          {CAPABILITIES.map(({ icon: Icon, title, desc }, i) => (
+          {CSRCAPABILITIES.map(({ icon: Icon, title, desc }, i) => (
             <motion.div key={i} className="csr-cap-card" variants={fadeInUp}>
               <div className="csr-cap-icon">
                 <Icon size={26} />

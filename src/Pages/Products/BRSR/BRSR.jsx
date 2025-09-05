@@ -1,21 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../../CSS/Products/BRSR/BRSR.css";
+import BRSRMODULES from "../../../data/Products/BRSRModules";
+import BRSRCAPABILITIES from "../../../data/Products/BRSRCapabilities";
+import BRSROUTCOMES from "../../../data/Products/BRSROutcomes";
 
 // Feature icons
-import { FaBuilding, FaHandshake, FaLeaf } from "react-icons/fa";
+
 
 // New icons for Modules & Capabilities
-import {
-  FaProjectDiagram,
-  FaSitemap,
-  FaDatabase,
-  FaNetworkWired,
-  FaBalanceScale,
-  FaChartLine,
-  FaCogs,
-  FaCheckCircle,
-} from "react-icons/fa";
+
 
 // ---------- Animation Variants ----------
 const fadeInUp = {
@@ -31,109 +25,6 @@ const fadeInRight = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
 };
 
-// ---------- Data ----------
-// ✅ Core Modules
-const MODULES = [
-  {
-    icon: FaSitemap,
-    title: "Enterprise Mapping",
-    points: [
-      "Define and structure business units, plants, and offices.",
-      "Manage roles, approvals, and access levels for visibility.",
-    ],
-  },
-  {
-    icon: FaProjectDiagram,
-    title: "Workflows",
-    points: [
-      "Automate BRSR processes with attribute codes and responsibilities.",
-      "Set reporting frequencies with alerts and reminders for timely submissions.",
-    ],
-  },
-  {
-    icon: FaDatabase,
-    title: "Data Management",
-    points: [
-      "Capture and validate master data at source with controls.",
-      "Enable secure restructuring of data for analytics and insights.",
-    ],
-  },
-  {
-    icon: FaNetworkWired,
-    title: "Associate Digitalization",
-    points: [
-      "Engage upstream and downstream value chain in reporting.",
-      "Provide restricted access while ensuring assurance and transparency.",
-    ],
-  },
-  {
-    icon: FaLeaf,
-    title: "Core Footprints & Assessment",
-    points: [
-      "Track organizational environmental and social impact metrics.",
-      "Evaluate practices against benchmarks for performance improvement.",
-    ],
-  },
-  {
-    icon: FaBalanceScale,
-    title: "Targets, Value Chain & Materiality",
-    points: [
-      "Set measurable sustainability goals with stakeholder priorities.",
-      "Engage partners in transparent reporting for shared accountability.",
-    ],
-  },
-];
-
-
-// ✅ Core Capabilities
-const CAPABILITIES = [
-  {
-    icon: FaCheckCircle,
-    title: "Regulatory Compliance",
-    desc: "Ensure BRSR disclosures meet all legal and reporting standards.",
-  },
-  {
-    icon: FaCogs,
-    title: "Process Automation",
-    desc: "Automate data collection, validation, and reporting workflows.",
-  },
-  {
-    icon: FaChartLine,
-    title: "Performance Insights",
-    desc: "Gain actionable analytics to drive sustainability improvements.",
-  },
-];
-
-// ✅ Positive Outcomes
-const OUTCOMES = [
-  {
-    icon: FaBuilding,
-    title: "Business Advantages",
-    points: [
-      "Strengthens brand reputation and investor confidence",
-      "Improves decision-making with reliable sustainability data",
-      "Reduces risks by ensuring regulatory and ESG compliance",
-    ],
-  },
-  {
-    icon: FaHandshake,
-    title: "Stakeholder Value",
-    points: [
-      "Builds trust with customers, employees, and partners",
-      "Encourages responsible and ethical business practices",
-      "Enhances transparency in corporate disclosures",
-    ],
-  },
-  {
-    icon: FaLeaf,
-    title: "Societal & Environmental Impact",
-    points: [
-      "Promotes community development and social welfare",
-      "Drives climate action and resource efficiency",
-      "Supports long-term sustainable growth goals",
-    ],
-  },
-];
 
 const BRSR = () => {
   return (
@@ -186,7 +77,7 @@ const BRSR = () => {
         <h2>Positive Outcomes of BRSR</h2>
 
         <div className="BRSR-cards">
-          {OUTCOMES.map(({ icon: Icon, title, points }, i) => (
+          {BRSROUTCOMES.map(({ icon: Icon, title, points }, i) => (
             <motion.div key={i} className="BRSR-card" variants={fadeInUp}>
               <div className="BRSR-icon-container">
                 <Icon className="BRSR-feature-icon" />
@@ -272,7 +163,7 @@ const BRSR = () => {
         <h2 className="BRSR-section-title">SunBPM BRSR Core Modules</h2>
 
         <div className="BRSR-modules-grid">
-          {MODULES.map(({ icon: Icon, title, points }, idx) => (
+          {BRSRMODULES.map(({ icon: Icon, title, points }, idx) => (
             <motion.div key={idx} className="BRSR-module-card" variants={fadeInUp}>
               <div className="BRSR-module-icon">
                 <Icon size={32} />
@@ -304,7 +195,7 @@ const BRSR = () => {
         </h2>
 
         <div className="BRSR-cap-grid">
-          {CAPABILITIES.map(({ icon: Icon, title, desc }, i) => (
+          {BRSRCAPABILITIES.map(({ icon: Icon, title, desc }, i) => (
             <motion.div key={i} className="BRSR-cap-card" variants={fadeInUp}>
               <div className="BRSR-cap-icon">
                 <Icon size={26} />
