@@ -38,6 +38,9 @@ const ClientsSection = () => {
     { src: "/images/Home/ClientLogos/HDFC.png", alt: "HDFC", className: "ss-clientLogo" },
     { src: "/images/Home/ClientLogos/Star plus.png", alt: "Star Plus", className: "ss-clientLogo3" },
     { src: "/images/Home/ClientLogos/Unichem.png", alt: "Unichem", className: "ss-clientLogo" },
+    { src: "/images/Home/ClientLogos/Alkyl.png", alt: "Alkyl", className: "ss-clientLogo" },
+    { src: "/images/Home/ClientLogos/Waaree.png", alt: "Waaree", className: "ss-clientLogo" },
+    { src: "/images/Home/ClientLogos/Vinati.png", alt: "Vinati", className: "ss-clientLogo" },
   ];
 
   return (
