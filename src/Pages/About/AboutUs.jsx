@@ -88,15 +88,15 @@ const AboutUs = () => {
           <div className="vision-block">
             <h3>Our Vision</h3>
             <p>
-              To be the leading low-code platform that empowers organizations to innovate, digitalize, 
-              and achieve operational excellence.
+              To emerge as the foremost low-code platform that empowers organizations to innovate, embrace 
+              digital transformation, and achieve sustainable operational excellence.
             </p>
           </div>
           <div className="mission-block">
             <h3>Our Mission</h3>
             <p>
-              To deliver flexible, scalable, and user-friendly solutions that simplify processes, 
-              reduce costs, and accelerate business growth.
+              To provide scalable, flexible, and intuitive solutions that streamline processes, optimize costs, 
+              and accelerate business growth while driving long-term value creation.
             </p>
           </div>
         </div>

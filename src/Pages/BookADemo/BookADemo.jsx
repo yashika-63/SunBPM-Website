@@ -37,16 +37,51 @@ const BookADemo = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
       setErrors({});
-      setSubmitted(true);
-      console.log("Form submitted:", formData);
-      // here you can call API to save data
+      setSubmitted(false); // reset before API call
+
+      try {
+        const response = await fetch("http://localhost:6002/api/book-demo", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullName: formData.fullname,
+            email: formData.email,
+            organization: formData.organization,
+            mobileNumber: formData.mobile,
+            productsServices: formData.interest,
+            description: formData.description,
+          }),
+        });
+
+        if (response.ok) {
+          setSubmitted(true);
+          setFormData({
+            fullname: "",
+            email: "",
+            organization: "",
+            mobile: "",
+            interest: "",
+            description: "",
+          });
+          console.log("Data submitted successfully!");
+        } else {
+          const errorData = await response.json();
+          console.error("Error submitting data:", errorData);
+          alert("Something went wrong! Please try again.");
+        }
+      } catch (err) {
+        console.error("Network error:", err);
+        alert("Server not reachable. Please check if backend is running.");
+      }
     }
   };
 

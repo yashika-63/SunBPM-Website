@@ -48,7 +48,7 @@ const ServicesPage = () => {
             operations, enhance collaboration, and achieve measurable business results.</p>
         </motion.div>
         <motion.div className="sp-service-img" variants={fadeUp}>
-          <img src="/images/services/office.jpg" alt="Meeting room" />
+          <img src="/images/services/office.png" alt="Meeting room" />
         </motion.div>
       </motion.section>
 

@@ -21,18 +21,123 @@ const staggerContainer = {
 
 const ContactPage = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const [formData, setFormData] = useState({
+    fullname: "",
+    email: "",
+    organization: "",
+    mobile: "",
+    interest: "",
+    description: "",
+  });
+  const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
 
   const faqs = [
-    { question: "What is SunBPM?", answer: "SunBPM is a business process management solution." },
-    { question: "Do I need technical expertise to use SunBPM?", answer: "No, it is designed for ease of use." },
-    { question: "Can SunBPM integrate with our existing systems?", answer: "Yes, SunBPM offers integration options." },
-    { question: "Is my data secure with SunBPM?", answer: "Yes, data security is a top priority." },
-    { question: "Do you offer a free trial or demo?", answer: "Yes, you can request a demo or trial." },
-  ];
+  {
+    question: "What is SunBPM and how can it help my organization?",
+    answer:
+      "SunBPM is a comprehensive low-code platform that enables organizations to design, automate, and optimize business processes quickly. It helps reduce costs, improve compliance, and boost efficiency without requiring heavy coding.",
+  },
+  {
+    question: "How is SunBPM different from traditional ERP systems?",
+    answer:
+      "Unlike traditional ERP solutions, SunBPM is flexible, customizable, and faster to implement. It adapts to your unique processes instead of forcing you into rigid, off-the-shelf workflows.",
+  },
+  {
+    question: "Can SunBPM integrate with my existing IT systems?",
+    answer:
+      "Yes, SunBPM offers seamless integration with ERP, HR, CRM, and other enterprise applications using APIs, pre-built connectors, and real-time synchronization.",
+  },
+  {
+    question: "Do I need programming expertise to use SunBPM?",
+    answer:
+      "No, SunBPM is a low-code platform with an intuitive drag-and-drop interface, allowing business users to design and manage workflows without advanced technical skills.",
+  },
+  {
+    question: "How long does it take to implement SunBPM?",
+    answer:
+      "SunBPM enables organizations to automate standard business processes within just 3–4 weeks, ensuring quick ROI and minimal disruption.",
+  },
+  {
+    question: "How secure is SunBPM for enterprise use?",
+    answer:
+      "SunBPM provides enterprise-grade security with role-based access controls, complete audit trails, and data encryption to keep your business data safe.",
+  },
+];
+
+  // handle input changes
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // validate inputs
+  const validate = () => {
+    let newErrors = {};
+    if (!formData.fullname) newErrors.fullname = "Full name is required";
+    if (!formData.email) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Enter a valid email";
+    }
+    if (!formData.organization) newErrors.organization = "Organization is required";
+    if (!formData.mobile) {
+      newErrors.mobile = "Mobile number is required";
+    } else if (!/^[0-9]{10}$/.test(formData.mobile)) {
+      newErrors.mobile = "Enter a valid 10-digit number";
+    }
+    if (!formData.interest) newErrors.interest = "Please select your interest";
+
+    return newErrors;
+  };
+
+  // submit handler
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+    } else {
+      setErrors({});
+      setSubmitted(false);
+
+      try {
+        const response = await fetch("http://localhost:6002/api/book-demo", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            fullName: formData.fullname,
+            email: formData.email,
+            organization: formData.organization,
+            mobileNumber: formData.mobile,
+            productsServices: formData.interest,
+            description: formData.description,
+          }),
+        });
+
+        if (response.ok) {
+          setSubmitted(true);
+          setFormData({
+            fullname: "",
+            email: "",
+            organization: "",
+            mobile: "",
+            interest: "",
+            description: "",
+          });
+        } else {
+          const errorData = await response.json();
+          console.error("Error submitting:", errorData);
+          alert("Something went wrong. Try again!");
+        }
+      } catch (err) {
+        console.error("Network error:", err);
+        alert("Server not reachable. Please check backend.");
+      }
+    }
+  };
 
   return (
     <main className="cu-page">
-
       {/* ===== 1) LET'S COLLABORATE + WORLD MAP ===== */}
       <motion.section
         className="cu-grand"
@@ -43,12 +148,11 @@ const ContactPage = () => {
       >
         <motion.div className="cu-grand-content" variants={fadeUp}>
           <div className="cu-grand-label">Lets Start the Conversation</div>
-          {/* <div className="cu-grand-heading">
-            Lets Start the Conversation</div> */}
           <p className="cu-grand-desc">
             SunBPM delivers end-to-end digitalization solutions tailored to your business needs. From workflow
             automation and compliance management to analytics and integrations, we help organizations streamline
-            operations, enhance collaboration, and achieve measurable business results.</p>
+            operations, enhance collaboration, and achieve measurable business results.
+          </p>
         </motion.div>
         <motion.div className="cu-grand-img" variants={fadeUp}>
           <img src="/images/ContactUs/Doted-map.png" alt="Meeting room" />
@@ -64,7 +168,6 @@ const ContactPage = () => {
         viewport={{ once: true }}
       >
         <div className="cu-container cu-start-grid">
-
           {/* Left side map */}
           <motion.div className="cu-start-left" variants={fadeUp}>
             <MyMap />
@@ -72,61 +175,106 @@ const ContactPage = () => {
 
           {/* Right side form */}
           <motion.div className="cu-start-right" variants={fadeUp}>
-            <form className="cu-card">
-              <div className="cu-card-head">
-                <h3>Let’s connect</h3>
+            {submitted ? (
+              <div className="success-msg">
+                Thank you! We will get back to you shortly.
               </div>
-
-              {/* Full Name + Email */}
-              <div className="cu-row-2">
-                <div className="cu-field">
-                  <label>Full Name *</label>
-                  <input type="text" placeholder="Enter Full Name" />
+            ) : (
+              <form className="cu-card" onSubmit={handleSubmit}>
+                <div className="cu-card-head">
+                  <h3>Let’s connect</h3>
                 </div>
-                <div className="cu-field">
-                  <label>Email *</label>
-                  <input type="email" placeholder="Enter Email Address" />
+
+                {/* Full Name + Email */}
+                <div className="cu-row-2">
+                  <div className="cu-field">
+                    <label>Full Name *</label>
+                    <input
+                      type="text"
+                      name="fullname"
+                      value={formData.fullname}
+                      onChange={handleChange}
+                      placeholder="Enter Full Name"
+                    />
+                    {errors.fullname && <p className="error">{errors.fullname}</p>}
+                  </div>
+                  <div className="cu-field">
+                    <label>Email *</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Enter Email Address"
+                    />
+                    {errors.email && <p className="error">{errors.email}</p>}
+                  </div>
                 </div>
-              </div>
 
-              {/* Organization + Mobile */}
-              <div className="cu-row-2">
-                <div className="cu-field">
-                  <label>Your Organization *</label>
-                  <input type="text" placeholder="Enter Organization Name" />
+                {/* Organization + Mobile */}
+                <div className="cu-row-2">
+                  <div className="cu-field">
+                    <label>Your Organization *</label>
+                    <input
+                      type="text"
+                      name="organization"
+                      value={formData.organization}
+                      onChange={handleChange}
+                      placeholder="Enter Organization Name"
+                    />
+                    {errors.organization && <p className="error">{errors.organization}</p>}
+                  </div>
+                  <div className="cu-field">
+                    <label>Mobile Number *</label>
+                    <input
+                      type="tel"
+                      name="mobile"
+                      value={formData.mobile}
+                      onChange={handleChange}
+                      placeholder="Enter Mobile Number"
+                    />
+                    {errors.mobile && <p className="error">{errors.mobile}</p>}
+                  </div>
                 </div>
+
+                {/* Products/Services */}
                 <div className="cu-field">
-                  <label>Mobile Number *</label>
-                  <input type="tel" placeholder="Enter Mobile Number" />
+                  <label>Products / Services Interested In *</label>
+                  <select
+                    name="interest"
+                    value={formData.interest}
+                    onChange={handleChange}
+                  >
+                    <option value="">Select one</option>
+                    <option value="SunBPM CSR">SunBPM CSR</option>
+                    <option value="SunBPM BRSR">SunBPM BRSR</option>
+                    <option value="SunBPM EHS">SunBPM EHS</option>
+                    <option value="SunBPM ESG">SunBPM ESG</option>
+                  </select>
+                  {errors.interest && <p className="error">{errors.interest}</p>}
                 </div>
-              </div>
 
-              {/* Products/Services */}
-              <div className="cu-field">
-                <label>Products / Services Interested In *</label>
-                <select>
-                  <option value="">Select one</option>
-                  <option value="CSR">SunBPM CSR</option>
-                  <option value="BRSR">SunBPM BRSR</option>
-                  <option value="EHS">SunBPM EHS</option>
-                  <option value="ESG">SunBPM ESG</option>
-                </select>
-              </div>
+                {/* Description */}
+                <div className="cu-field">
+                  <label>Describe what you are looking for (Optional)</label>
+                  <textarea
+                    name="description"
+                    rows="5"
+                    value={formData.description}
+                    onChange={handleChange}
+                    placeholder="Enter your message or requirements"
+                  />
+                </div>
 
-              {/* Description */}
-              <div className="cu-field">
-                <label>Describe what you are looking for (Optional)</label>
-                <textarea rows="5" placeholder="Enter your message or requirements" />
-              </div>
-
-              {/* Submit */}
-              <button type="submit" className="cu-btn-dark">Get in touch</button>
-            </form>
+                {/* Submit */}
+                <button type="submit" className="cu-btn-dark">
+                  Get in touch
+                </button>
+              </form>
+            )}
           </motion.div>
         </div>
       </motion.section>
-
-
 
       {/* ===== 3) MORE WAYS TO REACH OUT ===== */}
       <motion.section
@@ -161,7 +309,6 @@ const ContactPage = () => {
               <Link to="/BookDemo" className="cu-way-link">
                 Book now
               </Link>
-
             </motion.div>
           </div>
         </div>
