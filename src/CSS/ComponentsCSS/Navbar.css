@@ -131,14 +131,14 @@
 }
 
 /* Overlay */
-/* .drawer-overlay {
+.drawer-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 998;
-} */
+}
 
 /* Side Drawer */
 .side-drawer {
@@ -161,6 +161,7 @@
 
 /* Close button */
 .drawer-close {
+  color: #000000;
   position: absolute;
   top: 15px;
   right: 15px;

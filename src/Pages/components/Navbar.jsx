@@ -131,13 +131,14 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <>
+          <div
+            className="drawer-overlay" // this should cover full screen
+            onClick={() => setMobileMenuOpen(false)} // click anywhere closes
+          >
             <div
-              className="drawer-overlay"
-              onClick={() => setMobileMenuOpen(false)}
-            ></div>
-
-            <div className={`side-drawer open`}>
+              className={`side-drawer open`}
+              onClick={(e) => e.stopPropagation()} // ✅ prevent closing when clicking inside
+            >
               <div className="drawer-header">
                 <button
                   className="drawer-close"
@@ -180,14 +181,16 @@ const Navbar = () => {
               </div>
 
               <div className="mobile-cta">
-              <Link to="/BookDemo" className="btn-primary">
-                Book a Demo
-              </Link>
+                <Link to="/BookDemo" className="btn-primary">
+                  Book a Demo
+                </Link>
               </div>
             </div>
-          </>
+          </div>
         )}
       </AnimatePresence>
+
+
     </motion.nav>
   );
 };

@@ -206,6 +206,7 @@
 .cu-field input,
 .cu-field select,
 .cu-field textarea {
+  color: #000000;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, .08);
   background: #fff;
@@ -377,6 +378,7 @@
 .cu-faq-q {
   width: 100%;
   background: #fff;
+  color: #000000;
   border: none;
   padding: 16px 0;
   border-radius: 0 0 3px;

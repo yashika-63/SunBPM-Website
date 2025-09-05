@@ -6,6 +6,7 @@
 }
 
 .ss-clientsTitle {
+    color: #000000;
     font-size: 40px;
     margin: 20px;
 }
@@ -88,12 +89,13 @@
 
 @keyframes scrollLogos {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
+
     100% {
-      transform: translateX(-100% + 100vw);
+        transform: translateX(-100% + 100vw);
     }
-  }
+}
 
 
 
@@ -108,6 +110,7 @@
     }
 
     .ss-clientsTitle {
+        color: #000000;
         font-size: 40px;
     }
 
@@ -121,13 +124,19 @@
 /* Mobile Phones */
 @media screen and (max-width: 768px) {
 
+    .ss-clientsDescription {
+        padding-left: 0px;
+    }
+
     .ss-clientsSection {
-        margin:0px;
+        margin: 0px;
         text-align: start;
         padding: 20px 0;
     }
 
     .ss-clientsTitle {
+        margin-left: 0px;
+        color: 0px;
         font-size: 32px;
     }
 
@@ -140,13 +149,18 @@
 
 /* Small Mobile Phones (iPhone SE, etc.) */
 @media screen and (max-width: 480px) {
-
+    .ss-clientsDescription {
+        padding-left: 0px;
+    } 
+    
     .ss-clientsSection {
         text-align: start;
         padding: 20px 20px;
     }
 
     .ss-clientsTitle {
+        margin-left: 0px;
+        color: 0px;
         font-size: 24px;
     }
 
@@ -156,4 +170,3 @@
         margin-right: 5px;
     }
 }
-  

@@ -44,6 +44,8 @@
 .form-group input,
 .form-group textarea{
   width: 97%;
+  background-color: #fff;
+  color: #000000;
   padding: 12px 14px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -53,6 +55,8 @@
 
 .form-group select{
   width: 100%;
+  color: #000000;
+  background-color: #fff;
   padding: 12px 14px;
   border: 1px solid #ccc;
   border-radius: 8px;
