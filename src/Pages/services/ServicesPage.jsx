@@ -97,7 +97,7 @@ const ServicesPage = () => {
         <motion.div className="sp-service-left" variants={fadeUp}>
           <h3>Our Expertise Areas</h3>
           <p>
-            We specialize in web and mobile apps, SEO optimization, mobile platforms, and immersive AR/VR experiences. Our solutions blend innovation with practical functionality.
+            We specialize in Web Applications, Data Analytics, Mobile Applications and Cloud Computing. Our solutions combine innovation with practical functionality to drive business growth.
           </p>
         </motion.div>
         <motion.div className="sp-service-right" variants={fadeUp}>
