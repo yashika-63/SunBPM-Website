@@ -32,36 +32,41 @@ const ContactPage = () => {
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
-  const faqs = [
+const faqs = [
   {
-    question: "What is SunBPM and how can it help my organization?",
+    question: "What are the benefits of the SunBPM Responsible Business Suite?",
     answer:
-      "SunBPM is a comprehensive low-code platform that enables organizations to design, automate, and optimize business processes quickly. It helps reduce costs, improve compliance, and boost efficiency without requiring heavy coding.",
+      "SunBPM enhances operational efficiency, ensures transparency, and supports continuous improvement with data-driven insights. It provides comprehensive functionality, quick implementation, and reliable support—all in one trusted solution.",
   },
   {
-    question: "How is SunBPM different from traditional ERP systems?",
+    question: "What solutions are built on SunBPM Responsible Business Suite?",
     answer:
-      "Unlike traditional ERP solutions, SunBPM is flexible, customizable, and faster to implement. It adapts to your unique processes instead of forcing you into rigid, off-the-shelf workflows.",
+      "SunBPM supports Sales, Marketing, Finance, Compliance, Operations, and HR—covering everything from CRM and Support to Payroll, Audit, and Project Management.",
   },
   {
-    question: "Can SunBPM integrate with my existing IT systems?",
+    question: "Are applications built on SunBPM Responsible Business Suite scalable?",
     answer:
-      "Yes, SunBPM offers seamless integration with ERP, HR, CRM, and other enterprise applications using APIs, pre-built connectors, and real-time synchronization.",
+      "Yes, applications built on SunBPM Responsible Business Suite are designed to be highly scalable, ensuring long-term adaptability as your business grows.",
   },
   {
-    question: "Do I need programming expertise to use SunBPM?",
+    question: "How do I get started with SunBPM Responsible Business Suite?",
     answer:
-      "No, SunBPM is a low-code platform with an intuitive drag-and-drop interface, allowing business users to design and manage workflows without advanced technical skills.",
+      "You can get started by contacting us at +91 8850941503 or emailing sales@pristine-code.com to explore our solutions.",
   },
   {
-    question: "How long does it take to implement SunBPM?",
+    question: "Is SunBPM RBS customizable for different organizational needs?",
     answer:
-      "SunBPM enables organizations to automate standard business processes within just 3–4 weeks, ensuring quick ROI and minimal disruption.",
+      "Yes, SunBPM RBS is highly customizable. Workflows, dashboards, and reports can be tailored to your processes, making it suitable for any industry or organization size.",
   },
   {
-    question: "How secure is SunBPM for enterprise use?",
+    question: "Do you offer 24/7 customer support?",
     answer:
-      "SunBPM provides enterprise-grade security with role-based access controls, complete audit trails, and data encryption to keep your business data safe.",
+      "SunBPM RBS provides support during dedicated business hours, with email options available beyond those hours to ensure timely assistance and extended coverage.",
+  },
+  {
+    question: "What is SunBPM Responsible Business Suite?",
+    answer:
+      "SunBPM is an enterprise-class, comprehensive application platform that is flexible yet robust. It enables organizations to develop applications quickly without requiring deep programming expertise.",
   },
 ];
 
@@ -250,6 +255,7 @@ const ContactPage = () => {
                     <option value="SunBPM BRSR">SunBPM BRSR</option>
                     <option value="SunBPM EHS">SunBPM EHS</option>
                     <option value="SunBPM ESG">SunBPM ESG</option>
+                    <option value="Other">Other</option>
                   </select>
                   {errors.interest && <p className="error">{errors.interest}</p>}
                 </div>

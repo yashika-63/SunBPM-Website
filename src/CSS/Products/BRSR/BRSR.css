@@ -25,7 +25,7 @@ html {
 
 /* ================= Hero Section ================= */
 .BRSR-hero {
-  background: url('../../../../public/images/products/BRSR/BRSR-grand-image.jpg') no-repeat center/cover;
+  background: url('../../../../images/products/BRSR/BRSR-grand-image.jpg') no-repeat center/cover;
   position: relative;
   width: 100%;
   height: 500px;

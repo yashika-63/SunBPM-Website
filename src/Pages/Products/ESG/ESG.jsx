@@ -1,15 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../../CSS/Products/ESG/ESG.css";
-
-// Feature icons
-import { FaChartLine, FaHandshake, FaLeaf, FaClipboardCheck,FaCloud, FaUsers } from "react-icons/fa";
-
-import {
-  FaShieldAlt,
-  FaDraftingCompass,
-  FaChartBar,
-} from "react-icons/fa";
+import ESGCAPABILITIES from "../../../data/Products/ESGCapabilities";
+import ESGMODULES from "../../../data/Products/ESGModules";
+import ESGOUTCOMES from "../../../data/Products/ESGOutcomes";
 
 // ---------- Animation Variants ----------
 const fadeInUp = {
@@ -24,111 +18,6 @@ const fadeInRight = {
   hidden: { opacity: 0, x: 80 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
 };
-
-// ---------- Data ----------
-// ✅ Core Modules
-const MODULES = [
-  {
-    icon: FaLeaf,
-    title: "Sustainability Framework",
-    points: [
-      "Ensure alignment with GRI, CDP, and S&P standards",
-      "Maintain investor-trusted attribute frameworks",
-    ],
-  },
-  {
-    icon: FaCloud,
-    title: "Carbon Tracking & Reporting",
-    points: [
-      "Automate Scope 1, 2, & 3 emissions tracking",
-      "Deliver integrated carbon accounting & insights",
-    ],
-  },
-  {
-    icon: FaClipboardCheck,
-    title: "Assurance & Reports",
-    points: [
-      "Generate audit-ready ESG reports",
-      "Provide verification and compliance tools",
-    ],
-  },
-  {
-    icon: FaUsers,
-    title: "Employee Wellbeing & Inclusion",
-    points: [
-      "Foster diversity, fairness, and inclusion",
-      "Promote employee health and well-being",
-    ],
-  },
-  {
-    icon: FaChartLine,
-    title: "Performance Tracking & Benchmarking",
-    points: [
-      "Offer real-time ESG performance insights",
-      "Enable financial and non-financial comparisons",
-    ],
-  },
-  {
-    icon: FaHandshake,
-    title: "Stakeholder & Value Chain Engagement",
-    points: [
-      "Manage stakeholder interactions effectively",
-      "Conduct materiality assessments for ESG priorities",
-    ],
-  },
-];
-
-// ✅ Core Capabilities
-const CAPABILITIES = [
-  {
-    icon: FaShieldAlt,
-    title: "Compliance Assurance",
-    desc: "Ensure ESG initiatives align with global regulations and reporting standards.",
-  },
-  {
-    icon: FaDraftingCompass,
-    title: "Strategic Execution",
-    desc: "Design and implement effective sustainability strategies across the enterprise.",
-  },
-  {
-    icon: FaChartBar,
-    title: "Scalable Growth",
-    desc: "Expand ESG practices seamlessly to support long-term organizational goals.",
-  },
-];
-
-
-// ✅ Positive Outcomes
-const OUTCOMES = [
-  {
-    icon: FaLeaf,
-    title: "Sustainable Growth",
-    points: [
-      "Strengthens long-term business resilience",
-      "Reduces environmental risks with efficient resource use",
-      "Aligns strategies with global sustainability goals",
-    ],
-  },
-  {
-    icon: FaHandshake,
-    title: "Stronger Stakeholder Trust",
-    points: [
-      "Builds credibility with investors, regulators, and customers",
-      "Improves employee engagement and workplace culture",
-      "Enhances brand reputation through ethical practices",
-    ],
-  },
-  {
-    icon: FaChartLine,
-    title: "Improved Business Performance",
-    points: [
-      "Unlocks access to ESG-focused funding and partnerships",
-      "Drives operational efficiency and cost savings",
-      "Enables data-driven decisions with transparent reporting",
-    ],
-  },
-];
-
 
 const ESG = () => {
   return (
@@ -179,7 +68,7 @@ const ESG = () => {
         <h2>Positive Outcomes of ESG</h2>
 
         <div className="ESG-cards">
-          {OUTCOMES.map(({ icon: Icon, title, points }, i) => (
+          {ESGOUTCOMES.map(({ icon: Icon, title, points }, i) => (
             <motion.div key={i} className="ESG-card" variants={fadeInUp}>
               <div className="ESG-icon-container">
                 <Icon className="ESG-feature-icon" />
@@ -264,7 +153,7 @@ const ESG = () => {
         <h2 className="ESG-section-title">SunBPM ESG Core Modules</h2>
 
         <div className="ESG-modules-grid">
-          {MODULES.map(({ icon: Icon, title, points }, idx) => (
+          {ESGMODULES.map(({ icon: Icon, title, points }, idx) => (
             <motion.div key={idx} className="ESG-module-card" variants={fadeInUp}>
               <div className="ESG-module-icon">
                 <Icon size={32} />
@@ -296,7 +185,7 @@ const ESG = () => {
         </h2>
 
         <div className="ESG-cap-grid">
-          {CAPABILITIES.map(({ icon: Icon, title, desc }, i) => (
+          {ESGCAPABILITIES.map(({ icon: Icon, title, desc }, i) => (
             <motion.div key={i} className="ESG-cap-card" variants={fadeInUp}>
               <div className="ESG-cap-icon">
                 <Icon size={26} />

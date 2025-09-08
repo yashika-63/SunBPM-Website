@@ -51,7 +51,8 @@
 }
 
 .nav-item {
-  position: relative; /* ensures dropdown is aligned below each nav item */
+  position: relative;
+  cursor: pointer; /* ensures dropdown is aligned below each nav item */
 }
 
 .nav-link {

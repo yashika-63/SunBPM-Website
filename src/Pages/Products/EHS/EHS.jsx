@@ -1,11 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../../CSS/Products/EHS/EHS.css";
-
-// Feature icons
-import {FaGlobe, FaIndustry, FaHardHat, FaUserShield, FaClipboardCheck ,FaVials, FaExclamationTriangle, FaBalanceScale, 
-FaShieldAlt } from "react-icons/fa";
-
+import EHSOUTCOMES from "../../../data/Products/EHSOutcomes";
+import EHSMODULES from "../../../data/Products/EHSModules";
+import EHSCAPABILITIES from "../../../data/Products/EHSCapabilities";
 
 // ---------- Animation Variants ----------
 const fadeInUp = {
@@ -20,111 +18,6 @@ const fadeInRight = {
   hidden: { opacity: 0, x: 80 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
 };
-
-// ---------- Data ----------
-// ✅ Core Modules
-const MODULES = [
-  {
-    icon: FaBalanceScale,
-    title: "Compliance & Regulatory Management",
-    points: [
-      "Ensure adherence to legal and industry-specific EHS standards",
-      "Maintain compliance records and automate reporting workflows",
-    ],
-  },
-  {
-    icon: FaExclamationTriangle,
-    title: "Incident & Risk Management",
-    points: [
-      "Identify, track, and prevent workplace hazards effectively",
-      "Implement corrective actions and preventive safety measures",
-    ],
-  },
-  {
-    icon: FaShieldAlt,
-    title: "Hazard Identification & Permit to Work",
-    points: [
-      "Streamline permit approvals for safer work environments",
-      "Track hazard controls and work authorization in real time",
-    ],
-  },
-  {
-    icon: FaVials,
-    title: "Safety Data & Material Management",
-    points: [
-      "Maintain chemical safety documentation and SDS records",
-      "Track inspections, equipment safety, and compliance checks",
-    ],
-  },
-  {
-    icon: FaClipboardCheck,
-    title: "Audits & Inspections",
-    points: [
-      "Conduct systematic audits with real-time tracking and analytics",
-      "Generate actionable compliance reports for decision-making",
-    ],
-  },
-  {
-    icon: FaUserShield,
-    title: "Workforce & Contractor Safety",
-    points: [
-      "Manage training, certifications, and safety protocols for employees and contractors",
-      "Promote accountability and build a strong safety culture",
-    ],
-  },
-];
-
-
-// ✅ Core Capabilities
-const CAPABILITIES = [
-  {
-    icon: FaBalanceScale,
-    title: "Regulatory Compliance",
-    desc: "Ensure strict adherence to environmental, health, and safety regulations.",
-  },
-  {
-    icon: FaExclamationTriangle,
-    title: "Risk Prevention",
-    desc: "Identify hazards early and implement preventive safety measures.",
-  },
-  {
-    icon: FaUserShield,
-    title: "Workforce Protection",
-    desc: "Safeguard employees and contractors through training and safety protocols.",
-  },
-];
-
-
-// ✅ Positive Outcomes
-const OUTCOMES = [
-  {
-    icon: FaIndustry,
-    title: "Business Resilience",
-    points: [
-      "Ensures compliance with environmental and safety regulations",
-      "Minimizes downtime by preventing accidents and hazards",
-      "Boosts operational efficiency through proactive risk controls",
-    ],
-  },
-  {
-    icon: FaHardHat,
-    title: "Workforce Safety & Well-being",
-    points: [
-      "Provides a secure and healthy working environment",
-      "Enhances employee confidence through training and awareness",
-      "Strengthens safety culture and accountability at all levels",
-    ],
-  },
-  {
-    icon: FaGlobe,
-    title: "Environmental & Social Impact",
-    points: [
-      "Reduces ecological footprint through responsible practices",
-      "Protects surrounding communities from health and safety risks",
-      "Supports long-term sustainability and corporate responsibility",
-    ],
-  },
-];
 
 
 const EHS = () => {
@@ -177,7 +70,7 @@ const EHS = () => {
         <h2>Positive Outcomes of EHS</h2>
 
         <div className="EHS-cards">
-          {OUTCOMES.map(({ icon: Icon, title, points }, i) => (
+          {EHSOUTCOMES.map(({ icon: Icon, title, points }, i) => (
             <motion.div key={i} className="EHS-card" variants={fadeInUp}>
               <div className="EHS-icon-container">
                 <Icon className="EHS-feature-icon" />
@@ -264,7 +157,7 @@ const EHS = () => {
         <h2 className="EHS-section-title">SunBPM EHS Core Modules</h2>
 
         <div className="EHS-modules-grid">
-          {MODULES.map(({ icon: Icon, title, points }, idx) => (
+          {EHSMODULES.map(({ icon: Icon, title, points }, idx) => (
             <motion.div key={idx} className="EHS-module-card" variants={fadeInUp}>
               <div className="EHS-module-icon">
                 <Icon size={32} />
@@ -296,7 +189,7 @@ const EHS = () => {
         </h2>
 
         <div className="EHS-cap-grid">
-          {CAPABILITIES.map(({ icon: Icon, title, desc }, i) => (
+          {EHSCAPABILITIES.map(({ icon: Icon, title, desc }, i) => (
             <motion.div key={i} className="EHS-cap-card" variants={fadeInUp}>
               <div className="EHS-cap-icon">
                 <Icon size={26} />

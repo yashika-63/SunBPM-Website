@@ -18,7 +18,7 @@ const Sunbpmhome = () => {
         <div className="container">
           <div className="text-center">
             <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="section-title">
-              Why Leading Enterprises Choose SunBPM abc
+              Why Leading Enterprises Choose SunBPM
             </motion.h2>
             <motion.p initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="section-subtitle">
               Transform your business processes with our comprehensive low-code platform

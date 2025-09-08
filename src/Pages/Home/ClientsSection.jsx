@@ -38,9 +38,9 @@ const ClientsSection = () => {
     { src: "/images/Home/ClientLogos/HDFC.png", alt: "HDFC", className: "ss-clientLogo" },
     { src: "/images/Home/ClientLogos/Star plus.png", alt: "Star Plus", className: "ss-clientLogo3" },
     { src: "/images/Home/ClientLogos/Unichem.png", alt: "Unichem", className: "ss-clientLogo" },
-    { src: "/images/Home/ClientLogos/Alkyl.png", alt: "Alkyl", className: "ss-clientLogo" },
-    { src: "/images/Home/ClientLogos/Waaree.png", alt: "Waaree", className: "ss-clientLogo" },
-    { src: "/images/Home/ClientLogos/Vinati.png", alt: "Vinati", className: "ss-clientLogo" },
+    { src: "/images/Home/ClientLogos/Alkyl.png", alt: "Alkyl", className: "ss-clientLogo", style: { marginRight: "0px" } },
+    { src: "/images/Home/ClientLogos/Waaree.svg", alt: "Waaree", className: "ss-clientLogo" },
+    { src: "/images/Home/ClientLogos/Vinati.svg", alt: "Vinati", className: "ss-clientLogo" },
   ];
 
   return (
@@ -59,6 +59,7 @@ const ClientsSection = () => {
                 src={logo.src}
                 alt={logo.alt}
                 className={logo.className}
+                style={logo.style}
               />
             ))}
         </div>

@@ -161,6 +161,7 @@ const BookADemo = () => {
                 <option value="SunBPM BRSR">SunBPM BRSR</option>
                 <option value="SunBPM EHS">SunBPM EHS</option>
                 <option value="SunBPM ESG">SunBPM ESG</option>
+                <option value="Other">Other</option>
               </select>
               {errors.interest && <p className="error">{errors.interest}</p>}
             </div>
