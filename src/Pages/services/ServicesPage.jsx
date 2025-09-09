@@ -119,6 +119,7 @@ const ServicesPage = () => {
           {insights.map((insight, idx) => (
             <div className="sp-insight-card" key={idx}>
               <img src={insight.image} alt={"Insight visual " + (idx + 1)} />
+              <h3 className="sp-insight-heading">{insight.title}</h3> {/* Added heading */}
               <div className="sp-insight-info">
                 <ul>
                   {insight.desc.map((point, i) => (
