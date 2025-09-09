@@ -45,8 +45,7 @@ const PrivacyPolicy = () => {
         </li>
         <li>
           <strong>Company</strong> (referred to as either "the Company", "We",
-          "Us" or "Our" in this Agreement) refers to Pristine IT Code Private
-          Limited, 501, Omega House, Chemtex Lane, Hiranandani Gardens, Sainath
+          "Us" or "Our" in this Agreement) refers to SunBPM, 501, Omega House, Chemtex Lane, Hiranandani Gardens, Sainath
           Nagar, Powai, Mumbai, Maharashtra 400076.
         </li>
         <li>

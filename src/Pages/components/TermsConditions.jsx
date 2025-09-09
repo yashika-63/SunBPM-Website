@@ -33,7 +33,7 @@ const TermsConditions = () => {
           <li>
             <strong>Company</strong> (referred to as either &quot;the
             Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot;
-            in this Agreement) refers to Pristine IT Code Private Limited, 501,
+            in this Agreement) refers to SunBPM, 501,
             Omega House, Chemtex Lane, Hiranandani Gardens, Powai, Mumbai,
             Maharashtra 400076.
           </li>

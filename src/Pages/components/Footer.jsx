@@ -55,14 +55,14 @@ const Footer = () => {
             <li><Link to="/AboutUs" className="email-link">About</Link></li>
             <li><Link to="/Services" className="email-link">Services</Link></li>
             <li><Link to="/Contact" className="email-link">Contact Us</Link></li>
-            <li><Link to="/SuccessStories" className="email-link">Sucess stories</Link></li>
+            {/* <li><Link to="/SuccessStories" className="email-link">Sucess stories</Link></li> */}
           </ul>
         </div>
         <div className="policies">
           <h3>Our Policies</h3>
           <ul>
-            <li><Link to="" className="email-link">Privacy Policies</Link></li>
-            <li><Link to="" className="email-link">Terms & Conditions</Link></li>
+            <li><Link to="/PrivacyPolicy" className="email-link">Privacy Policies</Link></li>
+            <li><Link to="/TermsConditions" className="email-link">Terms & Conditions</Link></li>
             {/* <li>Refund Policy</li> */}
           </ul>
         </div>
