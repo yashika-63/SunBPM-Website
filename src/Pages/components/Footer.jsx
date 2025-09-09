@@ -27,8 +27,8 @@ const Footer = () => {
           </p>
           <p>
             <strong>Email:</strong> <br />
-            <a href="mailto:sales@pristine-code.com" className="email-link">
-              sales@pristine-code.com
+            <a href="mailto:sales@sunbpm.com" className="email-link">
+              sales@sunbpm.com
             </a>
           </p>
           <p>

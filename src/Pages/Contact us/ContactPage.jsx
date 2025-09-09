@@ -51,7 +51,7 @@ const ContactPage = () => {
     {
       question: "How do I get started with SunBPM Responsible Business Suite?",
       answer:
-        "You can get started by contacting us at +91 8850941503 or emailing sales@pristine-code.com to explore our solutions.",
+        "You can get started by contacting us at +91 8850941503 or emailing sales@sunbpm.com to explore our solutions.",
     },
     {
       question: "Is SunBPM RBS customizable for different organizational needs?",
@@ -298,8 +298,8 @@ const ContactPage = () => {
               <div className="cu-way-icon"><Mail size={22} /></div>
               <div className="cu-way-title">Drop Us an Email</div>
               <div className="cu-way-link"
-                onClick={() => window.location.href = "mailto:sales@pristine-code.com"}>
-                sales@pristine-code.com
+                onClick={() => window.location.href = "mailto:sales@sunbpm.com"}>
+                sales@sunbpm.com
               </div>
 
             </motion.div>
