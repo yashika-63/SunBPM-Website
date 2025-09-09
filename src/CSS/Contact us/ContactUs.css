@@ -280,6 +280,7 @@
 }
 
 .cu-way-link {
+  cursor: pointer;
   color: #000000;
   font-size: 16px;
   opacity: .9;

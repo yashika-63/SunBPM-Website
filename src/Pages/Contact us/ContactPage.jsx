@@ -32,43 +32,43 @@ const ContactPage = () => {
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
-const faqs = [
-  {
-    question: "What are the benefits of the SunBPM Responsible Business Suite?",
-    answer:
-      "SunBPM enhances operational efficiency, ensures transparency, and supports continuous improvement with data-driven insights. It provides comprehensive functionality, quick implementation, and reliable support—all in one trusted solution.",
-  },
-  {
-    question: "What solutions are built on SunBPM Responsible Business Suite?",
-    answer:
-      "SunBPM supports Sales, Marketing, Finance, Compliance, Operations, and HR—covering everything from CRM and Support to Payroll, Audit, and Project Management.",
-  },
-  {
-    question: "Are applications built on SunBPM Responsible Business Suite scalable?",
-    answer:
-      "Yes, applications built on SunBPM Responsible Business Suite are designed to be highly scalable, ensuring long-term adaptability as your business grows.",
-  },
-  {
-    question: "How do I get started with SunBPM Responsible Business Suite?",
-    answer:
-      "You can get started by contacting us at +91 8850941503 or emailing sales@pristine-code.com to explore our solutions.",
-  },
-  {
-    question: "Is SunBPM RBS customizable for different organizational needs?",
-    answer:
-      "Yes, SunBPM RBS is highly customizable. Workflows, dashboards, and reports can be tailored to your processes, making it suitable for any industry or organization size.",
-  },
-  {
-    question: "Do you offer 24/7 customer support?",
-    answer:
-      "SunBPM RBS provides support during dedicated business hours, with email options available beyond those hours to ensure timely assistance and extended coverage.",
-  },
-  {
-    question: "What is SunBPM Responsible Business Suite?",
-    answer:
-      "SunBPM is an enterprise-class, comprehensive application platform that is flexible yet robust. It enables organizations to develop applications quickly without requiring deep programming expertise.",
-  },
-];
+  const faqs = [
+    {
+      question: "What are the benefits of the SunBPM Responsible Business Suite?",
+      answer:
+        "SunBPM enhances operational efficiency, ensures transparency, and supports continuous improvement with data-driven insights. It provides comprehensive functionality, quick implementation, and reliable support—all in one trusted solution.",
+    },
+    {
+      question: "What solutions are built on SunBPM Responsible Business Suite?",
+      answer:
+        "SunBPM supports Sales, Marketing, Finance, Compliance, Operations, and HR—covering everything from CRM and Support to Payroll, Audit, and Project Management.",
+    },
+    {
+      question: "Are applications built on SunBPM Responsible Business Suite scalable?",
+      answer:
+        "Yes, applications built on SunBPM Responsible Business Suite are designed to be highly scalable, ensuring long-term adaptability as your business grows.",
+    },
+    {
+      question: "How do I get started with SunBPM Responsible Business Suite?",
+      answer:
+        "You can get started by contacting us at +91 8850941503 or emailing sales@pristine-code.com to explore our solutions.",
+    },
+    {
+      question: "Is SunBPM RBS customizable for different organizational needs?",
+      answer:
+        "Yes, SunBPM RBS is highly customizable. Workflows, dashboards, and reports can be tailored to your processes, making it suitable for any industry or organization size.",
+    },
+    {
+      question: "Do you offer 24/7 customer support?",
+      answer:
+        "SunBPM RBS provides support during dedicated business hours, with email options available beyond those hours to ensure timely assistance and extended coverage.",
+    },
+    {
+      question: "What is SunBPM Responsible Business Suite?",
+      answer:
+        "SunBPM is an enterprise-class, comprehensive application platform that is flexible yet robust. It enables organizations to develop applications quickly without requiring deep programming expertise.",
+    },
+  ];
 
   // handle input changes
   const handleChange = (e) => {
@@ -297,7 +297,11 @@ const faqs = [
             <motion.div className="cu-way" variants={fadeUp}>
               <div className="cu-way-icon"><Mail size={22} /></div>
               <div className="cu-way-title">Drop Us an Email</div>
-              <div className="cu-way-small">sales@pristine-code.com</div>
+              <div className="cu-way-link"
+                onClick={() => window.location.href = "mailto:sales@pristine-code.com"}>
+                sales@pristine-code.com
+              </div>
+
             </motion.div>
 
             <motion.div className="cu-way" variants={fadeUp}>

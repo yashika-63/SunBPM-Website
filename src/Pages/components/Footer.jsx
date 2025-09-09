@@ -70,7 +70,6 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-social">
           <a><Link to="https://www.linkedin.com/company/pristine-it-code" target="_blank" rel="noopener noreferrer" className="email-link"><img src="/images/components/Footer icons/linkedin-01.png" alt="LinkedIn" /></Link></a>
-          <a><Link to="https://x.com/PristineITcode" target="_blank" rel="noopener noreferrer"><img src="/images/components/Footer icons/new-twitter.png" alt="X" className="email-link" /></Link></a>
           <a><Link to="https://www.facebook.com/pristineitcode/" target="_blank" rel="noopener noreferrer" className="email-link"><img src="/images/components/Footer icons/facebook-01.png" alt="Facebook" /></Link></a>
           <a><Link to="https://www.instagram.com/pristineitcode/" target="_blank" rel="noopener noreferrer" className="email-link"><img src="/images/components/Footer icons/instagram.png" alt="Instagram" /></Link></a>
         </div>

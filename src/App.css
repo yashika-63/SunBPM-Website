@@ -6,6 +6,14 @@
   background: #fff;
 }
 
+.notfound-page {
+  min-height: 100vh;  /* full screen height */
+  background: transparent; /* keep it blank */
+  padding: 0px;
+  color: #000000;
+  text-align: left;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
