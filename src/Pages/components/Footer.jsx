@@ -31,12 +31,12 @@ const Footer = () => {
               sales@sunbpm.com
             </a>
           </p>
-          <p>
+          {/* <p>
             <strong>GST No.:</strong> <br />
             <a>
               27AAOCP9044N1ZK
             </a>
-          </p>
+          </p> */}
         </div>
         <div className="footer-line" />
         <div className="product">

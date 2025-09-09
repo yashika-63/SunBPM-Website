@@ -244,7 +244,7 @@ const ContactPage = () => {
 
                 {/* Products/Services */}
                 <div className="cu-field">
-                  <label>Products / Services Interested In *</label>
+                  <label>Products Interested In  *</label>
                   <select
                     name="interest"
                     value={formData.interest}
@@ -255,7 +255,6 @@ const ContactPage = () => {
                     <option value="SunBPM BRSR">SunBPM BRSR</option>
                     <option value="SunBPM EHS">SunBPM EHS</option>
                     <option value="SunBPM ESG">SunBPM ESG</option>
-                    <option value="Other">Other</option>
                   </select>
                   {errors.interest && <p className="error">{errors.interest}</p>}
                 </div>
@@ -268,9 +267,11 @@ const ContactPage = () => {
                     rows="5"
                     value={formData.description}
                     onChange={handleChange}
-                    placeholder="Enter your message or requirements"
+                    placeholder="Enter your message or requirements here..."
+                    className="custom-textarea"
                   />
                 </div>
+
 
                 {/* Submit */}
                 <button type="submit" className="cu-btn-dark">

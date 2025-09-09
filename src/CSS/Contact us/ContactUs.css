@@ -415,6 +415,11 @@
   text-align: left;
 }
 
+.custom-textarea::placeholder {
+  font-size: 16px;
+  font-family: 'Hellix', sans-serif !important;
+}
+
 /* ===== responsive ===== */
 @media (max-width: 1024px) {
   .cu-intro-grid {
