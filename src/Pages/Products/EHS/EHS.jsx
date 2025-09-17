@@ -102,7 +102,7 @@ const EHS = () => {
         <motion.div className="EHS-how-right" variants={fadeInRight}>
           <h2>How EHS works</h2>
           <p>
-            See how SunBPM EHS works — from innovation in technology to
+            See how SunBPM EHS works from innovation in technology to
             impactful action.
           </p>
           <button
@@ -211,7 +211,7 @@ const EHS = () => {
       >
         <div className="EHS-cta-inner-container">
           <p className="EHS-cta-text">
-            Drive safer, smarter, and sustainable operations with an integrated EHS platform — built to 
+            Drive safer, smarter, and sustainable operations with an integrated EHS platform built to 
             protect people, ensure compliance, and strengthen business resilience.
           </p>
         </div>

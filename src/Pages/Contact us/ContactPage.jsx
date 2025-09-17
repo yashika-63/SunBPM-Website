@@ -36,7 +36,7 @@ const ContactPage = () => {
     {
       question: "What are the benefits of the SunBPM Responsible Business Suite?",
       answer:
-        "SunBPM enhances operational efficiency, ensures transparency, and supports continuous improvement with data-driven insights. It provides comprehensive functionality, quick implementation, and reliable support—all in one trusted solution.",
+        "SunBPM enhances operational efficiency, ensures transparency, and supports continuous improvement with data-driven insights. It provides comprehensive functionality, quick implementation, and reliable support all in one trusted solution.",
     },
     {
       question: "What solutions are built on SunBPM Responsible Business Suite?",
