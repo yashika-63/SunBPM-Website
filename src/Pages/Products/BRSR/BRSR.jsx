@@ -43,7 +43,7 @@ const BRSR = () => {
           </h1>
           <p>
             SunBPM BRSR empowers organizations to capture, manage, and report sustainability data with 
-            transparency, compliance, and measurable impact—driving long-term ESG and business growth.
+            transparency, compliance, and measurable impact driving long-term ESG and business growth.
           </p>
         </div>
       </motion.section>
@@ -109,7 +109,7 @@ const BRSR = () => {
         <motion.div className="BRSR-how-right" variants={fadeInRight}>
           <h2>How BRSR works</h2>
           <p>
-            See how SunBPM BRSR works — from innovation in technology to
+            See how SunBPM BRSR works from innovation in technology to
             impactful action.
           </p>
           <button
@@ -217,7 +217,7 @@ const BRSR = () => {
       >
         <div className="BRSR-cta-inner-container">
           <p className="BRSR-cta-text">
-            Transform sustainability reporting into a strategic advantage with SunBPM BRSR — precise, 
+            Transform sustainability reporting into a strategic advantage with SunBPM BRSR precise, 
             transparent, and future-ready.
           </p>
         </div>

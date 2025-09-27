@@ -44,10 +44,11 @@ const BookADemo = () => {
       setErrors(validationErrors);
     } else {
       setErrors({});
-      setSubmitted(false); // reset before API call
+      setSubmitted(false);
 
       try {
-        const response = await fetch("http://localhost:6002/api/book-demo", {
+        // Use relative URL instead of absolute URL
+        const response = await fetch("/api/book-demo", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -84,7 +85,7 @@ const BookADemo = () => {
       }
     }
   };
-
+  
   return (
     <div className="demo-container">
       <div className="form-box">
@@ -150,7 +151,7 @@ const BookADemo = () => {
 
             {/* Interest - Dropdown */}
             <div className="form-group">
-              <label>Products / Services Interested In *</label>
+              <label>Products Interested In  *</label>
               <select
                 name="interest"
                 value={formData.interest}
@@ -161,7 +162,6 @@ const BookADemo = () => {
                 <option value="SunBPM BRSR">SunBPM BRSR</option>
                 <option value="SunBPM EHS">SunBPM EHS</option>
                 <option value="SunBPM ESG">SunBPM ESG</option>
-                <option value="Other">Other</option>
               </select>
               {errors.interest && <p className="error">{errors.interest}</p>}
             </div>
@@ -174,7 +174,8 @@ const BookADemo = () => {
                 value={formData.description}
                 onChange={handleChange}
                 rows="4"
-                placeholder="Enter your requirements here..."
+                placeholder="Enter your message or requirements here..."
+                className="custom-textarea"
               />
             </div>
 

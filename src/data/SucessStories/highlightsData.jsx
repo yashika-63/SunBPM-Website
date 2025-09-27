@@ -3,7 +3,7 @@ const highlights = [
     image: "/images/success_stories/person1.jpg",
     title: "Process Efficiency Without Limits: How SunBPM Empowers Businesses with Intelligent Automation",
     desc: [
-      "To help enterprises move beyond manual workflows and accelerate digital transformation, Pristine built SunBPM which enables process automation and seamless integrations. Businesses now streamline operations, monitor performance in real time, ensure compliance, and optimize costs—all within a single unified platform."
+      "To help enterprises move beyond manual workflows and accelerate digital transformation, Pristine built SunBPM which enables process automation and seamless integrations. Businesses now streamline operations, monitor performance in real time, ensure compliance, and optimize costs all within a single unified platform."
     ],
     align: "left"
   },

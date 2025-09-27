@@ -103,7 +103,7 @@ const CSR = () => {
         <motion.div className="csr-how-right" variants={fadeInRight}>
           <h2>How CSR works</h2>
           <p>
-            See how SunBPM CSR works — from innovation in technology to
+            See how SunBPM CSR works from innovation in technology to
             impactful action.
           </p>
           <button
@@ -210,7 +210,7 @@ const CSR = () => {
       >
         <div className="csr-cta-inner-container">
           <p className="csr-cta-text">
-            Empower your CSR journey with an all-in-one platform — from planning
+            Empower your CSR journey with an all-in-one platform from planning
             to impact measurement, built for modern enterprises.
           </p>
         </div>

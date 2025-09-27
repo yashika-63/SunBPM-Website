@@ -100,7 +100,7 @@ const ESG = () => {
         <motion.div className="ESG-how-right" variants={fadeInRight}>
           <h2>How ESG works</h2>
           <p>
-            See how SunBPM ESG works — from innovation in technology to
+            See how SunBPM ESG works from innovation in technology to
             impactful action.
           </p>
           <button
