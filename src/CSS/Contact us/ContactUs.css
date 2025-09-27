@@ -230,6 +230,17 @@
   opacity: .9;
 }
 
+.cu-btn-bookdemo {
+  margin-top: 12px;
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 /* ===== ways to reach out ===== */
 .cu-ways {
   /* background: linear-gradient(to bottom right, #4e2101, #c8532b); */
@@ -296,6 +307,11 @@
   line-height: 1.5;
   opacity: .95;
 }
+
+.cu-way-small a:hover{
+color: #fff;
+}
+
 
 /* ===== location ===== */
 .cu-location {
@@ -409,7 +425,7 @@
   border: 2px solid #000000;
   border-radius: 0 0 3px;
   color: #000000;
-  padding: 15px;
+  padding: 10px 5px;
   margin: 2px 0px 16px;
   font-size: 16px;
   text-align: left;
@@ -450,6 +466,9 @@
 
   .cu-divider {
     display: none;
+  }
+  .cu-grand-img img {
+    min-height: 200px;
   }
 }
 

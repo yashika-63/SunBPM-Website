@@ -460,6 +460,15 @@ html {
 
   .EHS-card {
     max-width: 100%;
+    padding: 15px;
+  }
+
+  .EHS-card li {
+    gap: 0px;
+  }
+
+  .EHS-module-card {
+    padding: 12px;
   }
 
   .EHS-cta {
@@ -487,6 +496,11 @@ html {
   .EHS-fact p {
     font-size: 0.95rem;
   }
+
+  /* .EHS-redef {
+    gap: 0px;
+  } */
+
 }
 
 /* Small Mobile (≤479px) */
@@ -496,11 +510,11 @@ html {
   }
 
   .EHS-module-icon {
-    margin: 0 120px 1rem;
+    margin: 0 40% 1rem;
   }
 
   .EHS-icon-container {
-    margin: 0 120px 1rem;
+    margin: 0 40% 1rem;
   }
 
   .EHS-hero {

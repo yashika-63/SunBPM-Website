@@ -195,9 +195,8 @@ html {
 }
 
 .csr-redef-img {
-  margin-top: 20px;
   border-radius: 6px;
-  width: 300px;
+  width: 200px;
 }
 
 /* ================= Core Modules ================= */
@@ -460,7 +459,16 @@ html {
 
   .csr-card {
     max-width: 100%;
+    padding: 15px;
   }
+
+  .csr-card li {
+  gap: 0px;
+  }
+
+csr-module-card {
+  padding: 12px;
+}
 
   .csr-cta {
     margin: 40px auto;
@@ -497,11 +505,11 @@ html {
   }
 
   .csr-module-icon {
-    margin: 0 120px 1rem;
+    margin: 0 40% 1rem;
   }
 
   .csr-icon-container {
-    margin: 0 120px 1rem;
+    margin: 0 40% 1rem;
   }
 
   .csr-hero {

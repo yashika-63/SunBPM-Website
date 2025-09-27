@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import "../../CSS/BookADemo/BookADemo.css";
 
 const BookADemo = () => {
@@ -13,6 +16,7 @@ const BookADemo = () => {
 
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -44,10 +48,13 @@ const BookADemo = () => {
       setErrors(validationErrors);
     } else {
       setErrors({});
-      setSubmitted(false); // reset before API call
+      setSubmitted(false);
 
       try {
-        const response = await fetch("http://localhost:6002/api/book-demo", {
+        // Use relative URL instead of absolute URL
+        // const response = await fetch("/api/book-demo", {
+        // const response = await fetch("http://localhost:6002/api/book-demo", {
+        const response = await fetch("http://15.207.163.30:6002/api/book-demo", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -63,7 +70,7 @@ const BookADemo = () => {
         });
 
         if (response.ok) {
-          setSubmitted(true);
+          toast.success("Thank you! Your request has been submitted.");
           setFormData({
             fullname: "",
             email: "",
@@ -72,15 +79,15 @@ const BookADemo = () => {
             interest: "",
             description: "",
           });
-          console.log("Data submitted successfully!");
-        } else {
+        }
+        else {
           const errorData = await response.json();
-          console.error("Error submitting data:", errorData);
+          console.log("Server Error Response:", errorData);
           alert("Something went wrong! Please try again.");
         }
       } catch (err) {
-        console.error("Network error:", err);
-        alert("Server not reachable. Please check if backend is running.");
+        console.log("Network/Server Error Response:", err);
+        alert("Something went wrong! Please try again.");
       }
     }
   };
@@ -90,103 +97,101 @@ const BookADemo = () => {
       <div className="form-box">
         <h2 className="form-title">Book a Demo</h2>
 
-        {submitted ? (
-          <div className="success-msg">
-            Thank you! Your request has been submitted.
+        <form onSubmit={handleSubmit} className="demo-form">
+          {/* Full Name */}
+          <div className="form-group">
+            <label>Full Name *</label>
+            <input
+              type="text"
+              name="fullname"
+              value={formData.fullname}
+              onChange={handleChange}
+              placeholder="Enter Full Name"
+            />
+            {errors.fullname && <p className="error">{errors.fullname}</p>}
           </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="demo-form">
-            {/* Full Name */}
-            <div className="form-group">
-              <label>Full Name *</label>
-              <input
-                type="text"
-                name="fullname"
-                value={formData.fullname}
-                onChange={handleChange}
-                placeholder="Enter Full Name"
-              />
-              {errors.fullname && <p className="error">{errors.fullname}</p>}
-            </div>
 
-            {/* Email */}
-            <div className="form-group">
-              <label>Email *</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Enter Email"
-              />
-              {errors.email && <p className="error">{errors.email}</p>}
-            </div>
+          {/* Email */}
+          <div className="form-group">
+            <label>Email *</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Enter Email"
+            />
+            {errors.email && <p className="error">{errors.email}</p>}
+          </div>
 
-            {/* Organization */}
-            <div className="form-group">
-              <label>Your Organization *</label>
-              <input
-                type="text"
-                name="organization"
-                value={formData.organization}
-                onChange={handleChange}
-                placeholder="Enter Organization Name"
-              />
-              {errors.organization && <p className="error">{errors.organization}</p>}
-            </div>
+          {/* Organization */}
+          <div className="form-group">
+            <label>Your Organization *</label>
+            <input
+              type="text"
+              name="organization"
+              value={formData.organization}
+              onChange={handleChange}
+              placeholder="Enter Organization Name"
+            />
+            {errors.organization && <p className="error">{errors.organization}</p>}
+          </div>
 
-            {/* Mobile */}
-            <div className="form-group">
-              <label>Mobile Number *</label>
-              <input
-                type="tel"
-                name="mobile"
-                value={formData.mobile}
-                onChange={handleChange}
-                placeholder="Enter Mobile Number"
-              />
-              {errors.mobile && <p className="error">{errors.mobile}</p>}
-            </div>
+          {/* Mobile */}
+          <div className="form-group">
+            <label>Mobile Number *</label>
+            <input
+              type="tel"
+              name="mobile"
+              value={formData.mobile}
+              onChange={handleChange}
+              placeholder="Enter Mobile Number"
+            />
+            {errors.mobile && <p className="error">{errors.mobile}</p>}
+          </div>
 
-            {/* Interest - Dropdown */}
-            <div className="form-group">
-              <label>Products Interested In  *</label>
-              <select
-                name="interest"
-                value={formData.interest}
-                onChange={handleChange}
-              >
-                <option value="">Select one</option>
-                <option value="SunBPM CSR">SunBPM CSR</option>
-                <option value="SunBPM BRSR">SunBPM BRSR</option>
-                <option value="SunBPM EHS">SunBPM EHS</option>
-                <option value="SunBPM ESG">SunBPM ESG</option>
-              </select>
-              {errors.interest && <p className="error">{errors.interest}</p>}
-            </div>
+          {/* Interest - Dropdown */}
+          <div className="form-group">
+            <label>Products Interested In *</label>
+            <select
+              name="interest"
+              value={formData.interest}
+              onChange={handleChange}
+            >
+              <option value="">Select one</option>
+              <option value="SunBPM CSR">SunBPM CSR</option>
+              <option value="SunBPM BRSR">SunBPM BRSR</option>
+              <option value="SunBPM EHS">SunBPM EHS</option>
+              <option value="SunBPM ESG">SunBPM ESG</option>
+            </select>
+            {errors.interest && <p className="error">{errors.interest}</p>}
+          </div>
 
-            {/* Description */}
-            <div className="form-group">
-              <label>Describe what you are looking for (Optional)</label>
-              <textarea
-                name="description"
-                value={formData.description}
-                onChange={handleChange}
-                rows="4"
-                placeholder="Enter your message or requirements here..."
-                className="custom-textarea"
-              />
-            </div>
+          {/* Description */}
+          <div className="form-group">
+            <label>Describe what you are looking for (Optional)</label>
+            <textarea
+              name="description"
+              value={formData.description}
+              onChange={handleChange}
+              rows="4"
+              placeholder="Enter your message or requirements here..."
+              className="custom-textarea"
+            />
+          </div>
 
-            {/* Submit */}
-            <div className="form-btn">
-              <button type="submit">Submit Request</button>
-            </div>
-          </form>
-        )}
+          {/* Submit */}
+          <div className="form-btn">
+            <button type="submit">Submit Request</button>
+          </div>
+        </form>
+
+        {/* Toast Container */}
+        <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
       </div>
     </div>
   );
+
 };
 
 export default BookADemo;

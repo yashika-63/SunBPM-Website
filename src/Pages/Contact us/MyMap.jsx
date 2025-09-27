@@ -16,11 +16,11 @@ const MyMap = () => {
   const position = [19.118705030314057, 72.91354864181613]; // Office coordinates
 
   return (
-    <div className="w-full">
+    <div className="w-full relative z-0"> {/* Keep map lower than navbar */}
       <MapContainer
         center={position}
         zoom={18}
-        style={{ height: "520px", width: "100%" }} // ✅ fixed height
+        style={{ height: "520px", width: "100%", zIndex: 0 }}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

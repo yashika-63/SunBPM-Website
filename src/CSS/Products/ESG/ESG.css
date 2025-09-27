@@ -460,6 +460,15 @@ html {
 
   .ESG-card {
     max-width: 100%;
+    padding: 15px;
+  }
+
+  .ESG-card li {
+    gap: 0px;
+  }
+
+  .ESG-module-card {
+    padding: 12px;
   }
 
   .ESG-cta {
@@ -496,11 +505,11 @@ html {
   }
 
   .ESG-module-icon {
-    margin: 0 120px 1rem;
+    margin: 0 40% 1rem;
   }
 
   .ESG-icon-container {
-    margin: 0 120px 1rem;
+    margin: 0 40% 1rem;
   }
 
   .ESG-hero {

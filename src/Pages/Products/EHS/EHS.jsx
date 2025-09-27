@@ -132,8 +132,7 @@ const EHS = () => {
             We provide a next-generation EHS platform that extends beyond regulatory compliance, 
             equipping organizations with actionable insights, advanced safety management, and measurable 
             results. Our solution transforms EHS into a strategic enabler of resilience, stakeholder 
-            confidence, and sustainable growth.
-            value.
+            confidence, and sustainable growth value.
           </p>
         </motion.div>
         <motion.div className="EHS-redef-left" variants={fadeInRight}>

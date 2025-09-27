@@ -23,8 +23,10 @@ const Footer = () => {
 
           <p>
             <strong>Contact Us:</strong> <br />
-            +91 8850941503,<br /> +91 8591061753
+            <a href="tel:+918850941503" className="Phone-link">+91 8850941503</a>,<br />
+            <a href="tel:+918591061753" className="Phone-link">+91 8591061753</a>
           </p>
+
           <p>
             <strong>Email:</strong> <br />
             <a href="mailto:sales@sunbpm.com" className="email-link">
@@ -69,10 +71,43 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <div className="footer-social">
-          <a><Link to="https://www.linkedin.com/company/pristine-it-code" target="_blank" rel="noopener noreferrer" className="email-link"><img src="/images/components/Footer icons/linkedin-01.png" alt="LinkedIn" /></Link></a>
-          <a><Link to="https://www.facebook.com/pristineitcode/" target="_blank" rel="noopener noreferrer" className="email-link"><img src="/images/components/Footer icons/facebook-01.png" alt="Facebook" /></Link></a>
-          <a><Link to="https://www.instagram.com/pristineitcode/" target="_blank" rel="noopener noreferrer" className="email-link"><img src="/images/components/Footer icons/instagram.png" alt="Instagram" /></Link></a>
+          <a
+            href="https://www.linkedin.com/company/pristine-it-code"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="email-link"
+          >
+            <img
+              src="/images/components/Footer icons/linkedin-01.png"
+              alt="LinkedIn"
+            />
+          </a>
+
+          <a
+            href="https://www.facebook.com/pristineitcode/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="email-link"
+          >
+            <img
+              src="/images/components/Footer icons/facebook-01.png"
+              alt="Facebook"
+            />
+          </a>
+
+          <a
+            href="https://www.instagram.com/pristineitcode/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="email-link"
+          >
+            <img
+              src="/images/components/Footer icons/instagram.png"
+              alt="Instagram"
+            />
+          </a>
         </div>
+
       </div>
     </footer>
   );
