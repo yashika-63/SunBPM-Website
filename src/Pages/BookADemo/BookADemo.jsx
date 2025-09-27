@@ -49,6 +49,7 @@ const BookADemo = () => {
     } else {
       setErrors({});
       setSubmitted(false);
+      setSubmitted(false);
 
       try {
         // Use relative URL instead of absolute URL
@@ -91,7 +92,7 @@ const BookADemo = () => {
       }
     }
   };
-
+  
   return (
     <div className="demo-container">
       <div className="form-box">
