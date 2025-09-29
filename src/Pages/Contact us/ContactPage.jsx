@@ -140,7 +140,7 @@ const ContactPage = () => {
         }
       } catch (err) {
         console.error("Network error:", err);
-        alert("Server not reachable. Please check backend.");
+        alert("Something went wrong. Try again!");
       }
     }
   };
