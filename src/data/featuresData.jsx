@@ -7,7 +7,7 @@ const features = [
     title: 'Low-Code Workflow Builder', 
     description: 'Build and deploy applications fast with minimal coding.', 
     benefits: [
-      'Visual drag-and-drop designer', 
+      'Drag & drop capability', 
       'Quick deployment in weeks', 
       'Error-free from day one', 
       'Easily adaptable workflows'

@@ -68,7 +68,7 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: #ea580c;
+  color: #F7941D;;
 }
 
 .chevron-icon {
@@ -79,10 +79,9 @@
 }
 
 .dropdown {
-  position: absolute;
+  position:absolute;
   top: 100%; /* exactly below nav-link */
   left: 0;
-  /* width: 10rem; */
   background: white;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
@@ -94,14 +93,14 @@
   display: block;
   padding: 8px 4px;
   font-size: 14px;
-  color: #374151;
-  width: 100px;
+  color: #000000;
+  width: 110px;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
 .dropdown-link:hover {
   background: #f9fafb;
-  color: #ea580c;
+  color: #F7941D;;
 }
 
 /* Mobile menu icon */

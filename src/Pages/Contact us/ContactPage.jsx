@@ -108,8 +108,8 @@ const ContactPage = () => {
 
       try {
         // const response = await fetch("/api/book-demo", {
-        // const response = await fetch("http://localhost:6002/api/book-demo", {
-        const response = await fetch("http://15.207.163.30:6002/api/book-demo", {
+        const response = await fetch("http://localhost:6002/api/book-demo", {
+          // const response = await fetch("http://15.207.163.30:6002/api/book-demo", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -251,9 +251,11 @@ const ContactPage = () => {
                 >
                   <option value="">Select one</option>
                   <option value="SunBPM CSR">SunBPM CSR</option>
-                  <option value="SunBPM BRSR">SunBPM BRSR</option>
                   <option value="SunBPM EHS">SunBPM EHS</option>
                   <option value="SunBPM ESG">SunBPM ESG</option>
+                  <option value="SunBPM ESG">SunBPM QMS</option>
+                  <option value="SunBPM ESG">SunBPM PO/PR</option>
+                  <option value="SunBPM ESG">SunBPM Capex/Opex</option>
                 </select>
                 {errors.interest && <p className="error">{errors.interest}</p>}
               </div>

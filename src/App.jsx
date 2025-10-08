@@ -7,7 +7,7 @@ import AboutUs from "./Pages/About/AboutUs";
 import SuccessStoriesPage from "./Pages/success_stories/SuccessStoriesPage";
 import EHS from "./Pages/Products/EHS/EHS";
 import ESG from "./Pages/Products/ESG/ESG";
-import BRSR from "./Pages/Products/BRSR/BRSR";
+
 import Footer from "./Pages/components/Footer";
 import Navbar from "./Pages/components/Navbar";
 import ScrollToTop from "./Pages/components/ScrollToTop";
@@ -17,17 +17,19 @@ import StoryDetailPage from "./Pages/success_stories/StoryDetailPage";
 import BookADemo from "./Pages/BookADemo/BookADemo";
 import ContactUs from "./Pages/Contact us/ContactPage.jsx";
 import AdminPage from "./Pages/Admin/AdminPage.jsx";
+import QMS from "./Pages/Products/QMS/QMS.jsx";
+import CapexOpex from "./Pages/Products/CapexOpex/CapexOpex.jsx";
+import POPR from "./Pages/Products/POPR/POPR.jsx";
 
 // 404 page WITHOUT navbar & footer
 function NotFound() {
   return (
     <div className="notfound-page">
-      <h1>404 - Page Not Found</h1> 
+      <h1>404 - Page Not Found</h1>
       <p>The page you are looking for doesn’t exist.</p>
     </div>
   );
 }
-
 
 function AppContent() {
   const location = useLocation();
@@ -47,7 +49,9 @@ function AppContent() {
     "/products/csr",
     "/products/ehs",
     "/products/esg",
-    "/products/brsr",
+    "/products/qms",
+    "/products/popr",
+    "/products/capexopex",
     "/aboutus",
     "/successstories",
     "/privacypolicy",
@@ -74,7 +78,9 @@ function AppContent() {
           <Route path="/Products/CSR" element={<CSR />} />
           <Route path="/Products/EHS" element={<EHS />} />
           <Route path="/Products/ESG" element={<ESG />} />
-          <Route path="/Products/BRSR" element={<BRSR />} />
+          <Route path="/Products/POPR" element={<POPR/>} />
+          <Route path="/Products/QMS" element={<QMS />} />
+          <Route path="/Products/CapexOpex" element={<CapexOpex />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/SuccessStories" element={<SuccessStoriesPage />} />
           <Route path="/SuccessStories/:id" element={<StoryDetailPage />} />

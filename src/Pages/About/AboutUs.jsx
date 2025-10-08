@@ -80,7 +80,7 @@ const AboutUs = () => {
       </motion.section>
 
  {/* Vision & Mission Section */}
-      <section className="vision-mission-section container">
+      {/* <section className="vision-mission-section container">
         <div className="diagram-container">
           <img src="/images/About/lifecycle.png" alt="Cycle Diagram: Observe, Orient, Decide, Act" />
         </div>
@@ -100,7 +100,7 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
       
       {/* Intro Section */}
       <section className="intro-section">

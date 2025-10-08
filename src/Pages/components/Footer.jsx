@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-section address">
-          <h1>Driving tomorrow's success with today's technology.</h1>
+          <h1>Shaping future success with the technology we have today.</h1>
           <p>
             <strong>Address :</strong> <br />
             <a
@@ -45,9 +45,12 @@ const Footer = () => {
           <h3>Products</h3>
           <ul>
             <li><Link to="/Products/CSR" className="email-link">SunBPM CSR</Link></li>
-            <li><Link to="/Products/BRSR" className="email-link">SunBPM BRSR</Link></li>
+            {/* <li><Link to="/Products/BRSR" className="email-link">SunBPM BRSR</Link></li> */}
             <li><Link to="/Products/ESG" className="email-link">SunBPM ESG</Link></li>
             <li><Link to="/Products/EHS" className="email-link">SunBPM EHS</Link></li>
+            <li><Link to="/Products/QMS" className="email-link">SunBPM QMS</Link></li>
+            <li><Link to="/Products/POPR" className="email-link">SunBPM PO/PR</Link></li>
+            <li><Link to="/Products/CapexOpex" className="email-link">SunBPM Capex/Opex</Link></li>
             {/* <li>ERP</li> */}
           </ul>
         </div>

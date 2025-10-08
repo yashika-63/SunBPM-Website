@@ -1,5 +1,5 @@
 
-import {FaGlobe, FaIndustry, FaHardHat } from "react-icons/fa";
+import {FaGlobe, FaIndustry,FaUserShield } from "react-icons/fa";
 
 const EHSOUTCOMES = [
   {
@@ -12,7 +12,7 @@ const EHSOUTCOMES = [
     ],
   },
   {
-    icon: FaHardHat,
+    icon: FaUserShield,
     title: "Workforce Safety & Well-being",
     points: [
       "Provides a secure and healthy working environment",

@@ -1,9 +1,9 @@
 
-import { FaUserShield,FaExclamationTriangle, FaBalanceScale } from "react-icons/fa";
+import { FaUserShield,FaExclamationTriangle, FaShieldAlt } from "react-icons/fa";
 
 const EHSCAPABILITIES = [
   {
-    icon: FaBalanceScale,
+    icon: FaShieldAlt,
     title: "Regulatory Compliance",
     desc: "Ensure strict adherence to environmental, health, and safety regulations.",
   },

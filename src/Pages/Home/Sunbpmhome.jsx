@@ -21,7 +21,7 @@ const Sunbpmhome = () => {
               Why Leading Enterprises Choose SunBPM
             </motion.h2>
             <motion.p initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="section-subtitle">
-              Transform your business processes with our comprehensive low-code platform
+              Accelerate innovation and efficiency with our all-in-one low-code platform.
             </motion.p>
           </div>
           <div className="value-grid">

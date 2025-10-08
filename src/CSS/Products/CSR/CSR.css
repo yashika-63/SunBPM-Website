@@ -147,6 +147,10 @@ html {
   align-items: center;
   gap: 40px;
 }
+/* .csr-how > * {
+  flex: 0 0 50%;
+} */
+
 
 .csr-how-left img {
   border-radius: 8px;

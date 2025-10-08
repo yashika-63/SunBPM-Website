@@ -1,0 +1,566 @@
+/* ================= General ================= */
+/* Prevent horizontal scrollbar */
+body,
+html {
+  overflow-x: hidden;
+}
+
+.QMS-page {
+  margin-top: 42px;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.containers {
+  width: 100%;
+  max-width: 1600px;
+  /* stretches on wide screens */
+  margin: 0 auto;
+  /* center align */
+  padding: 50px 0px 30px;
+  /* safe container padding */
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* ================= Hero Section ================= */
+.QMS-hero {
+  background: url('../../../../images/products/QMS/QMS-grand-image.jpg') no-repeat center/cover;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.QMS-hero-overlay {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  color: white;
+  max-width: 900px;
+  border-radius: 8px;
+}
+
+.QMS-hero-overlay h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.QMS-hero-overlay p {
+  font-size: 16px;
+}
+
+/* ================= Intro ================= */
+.QMS-intro h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.QMS-intro .highlight {
+  color: #F7941D;
+  font-weight: bold;
+}
+
+/* ================= Outcomes ================= */
+.QMS-outcomes h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.QMS-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.QMS-card {
+  width: 344px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.QMS-card:hover {
+  transform: translateY(-5px);
+}
+
+.QMS-icon-container {
+  background: #F7941D;
+  padding: 1rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  margin-left: 140px;
+  margin-right: auto;
+}
+
+.QMS-feature-icon {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+}
+
+.QMS-card h3 {
+  height: 65px;
+  line-height: 1.3;
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.QMS-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.QMS-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.QMS-benefit-dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(to right, #de7b00, #ff8c1a);
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+/* ================= How QMS Works ================= */
+.QMS-how {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.QMS-how-left img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.QMS-how-right h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.QMS-how-right p {
+  margin-bottom: 20px;
+}
+
+.btn-learn {
+  background: #F7941D;
+  border: none;
+  padding: 12px 24px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-learn:hover {
+  background: #F7941D;
+}
+
+/* ================= Redefining QMS ================= */
+.QMS-redef {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.QMS-redef h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.QMS-redef .highlight {
+  color: #F7941D;
+  font-weight: bold;
+}
+
+.QMS-redef-img {
+  margin-top: 20px;
+  border-radius: 6px;
+  width: 300px;
+}
+
+/* ================= Core Modules ================= */
+.QMS-modules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.QMS-module-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.QMS-module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.QMS-module-icon {
+  background: #F7941D;
+  padding: 1rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  margin-left: 140px;
+  margin-right: auto;
+  color: #fff;
+}
+
+
+.QMS-module-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.QMS-module-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.QMS-module-card li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #000000;
+}
+
+.QMS-benefit-dot {
+  margin-right: 10px;
+}
+
+/* ================= Core Capabilities ================= */
+.QMS-cap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.QMS-cap-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.QMS-cap-card:hover {
+  transform: translateY(-6px);
+  /* background: #f0eded; */
+}
+
+.QMS-cap-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #F7941D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 0 auto 1rem;
+}
+
+.QMS-cap-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.QMS-cap-desc {
+  font-size: 0.95rem;
+  color: #000000;
+  line-height: 1.5;
+}
+
+/* ================= CTA Section ================= */
+.QMS-cta {
+  background: #F7941D;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 20px;
+  margin: 60px auto;
+  max-width: 1000px;
+}
+
+.QMS-cta-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.QMS-cta-btn {
+  background: #fff;
+  color: #F7941D;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.QMS-cta-btn:hover {
+  background: #E8E8E8;
+  color: #F7941D;
+}
+
+/* ================= Did You Know ================= */
+.QMS-fact {
+  background: #f9fafb;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 16px;
+  max-width: 1000px;
+  margin: 60px auto;
+}
+
+.QMS-fact h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.QMS-fact p {
+  font-size: 1.05rem;
+  color: #000000;
+  line-height: 1.7;
+}
+
+/* ================= Responsive ================= */
+
+/* Large screens (≥1600px) */
+@media (min-width: 1600px) {
+  .containers {
+    max-width: 1500px;
+    padding: 50px 0px 0px 0px;
+  }
+
+  .QMS-cta,
+  .QMS-fact {
+    max-width: 1200px;
+  }
+}
+
+/* Laptops (1024px–1599px) */
+@media (max-width: 1599px) {
+  .containers {
+    padding: 50px 0px 0px 0px;
+  }
+
+  .QMS-modules-grid,
+  .QMS-cap-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets (768px–1023px) */
+@media (max-width: 1023px) {
+  .QMS-hero {
+    height: 400px;
+  }
+
+  .QMS-hero-overlay h1 {
+    font-size: 22px;
+  }
+
+  .QMS-hero-overlay p {
+    font-size: 14px;
+  }
+
+  .QMS-modules-grid,
+  .QMS-cap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .QMS-card {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .QMS-how,
+  .QMS-redef {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .QMS-redef-img {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Mobile (480px–767px) */
+@media (max-width: 767px) {
+  .containers {
+    padding: 40px 0px 0px 0px;
+  }
+
+  .QMS-module-icon {
+    margin: 0 120px 1rem;
+  }
+
+  .QMS-icon-container {
+    margin: 0 120px 1rem;
+  }
+
+  .QMS-hero {
+    height: 300px;
+  }
+
+  .QMS-hero-overlay {
+    padding: 20px;
+  }
+
+  .QMS-hero-overlay h1 {
+    font-size: 20px;
+  }
+
+  .QMS-hero-overlay p {
+    font-size: 13px;
+  }
+
+  .QMS-modules-grid,
+  .QMS-cap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .QMS-card {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .QMS-card li {
+    gap: 0px;
+  }
+
+  .QMS-module-card {
+    padding: 12px;
+  }
+
+  .QMS-cta {
+    padding: 40px 20px;
+    border-radius: 14px;
+  }
+
+  .QMS-cta-text {
+    font-size: 1rem;
+  }
+
+  .QMS-cta-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+
+  .QMS-fact {
+    padding: 40px 20px;
+  }
+
+  .QMS-fact h3 {
+    font-size: 1.3rem;
+  }
+
+  .QMS-fact p {
+    font-size: 0.95rem;
+  }
+
+  .QMS-card h3 {
+    height: auto;
+  }
+}
+
+/* Small Mobile (≤479px) */
+@media (max-width: 479px) {
+  .containers {
+    padding: 30px 0px 0px 0px;
+  }
+
+  .QMS-module-icon {
+    margin: 0 40% 1rem;
+  }
+
+  .QMS-icon-container {
+    margin: 0 40% 1rem;
+  }
+
+  .QMS-hero {
+    height: 250px;
+  }
+
+  .QMS-hero-overlay h1 {
+    font-size: 18px;
+  }
+
+  .QMS-hero-overlay p {
+    font-size: 12px;
+  }
+
+  .QMS-module-card h4,
+  .QMS-cap-heading {
+    font-size: 1rem;
+  }
+
+  .QMS-cap-desc {
+    font-size: 0.9rem;
+  }
+
+  .QMS-cta {
+    padding: 30px 15px;
+  }
+
+  .QMS-cta-text {
+    font-size: 0.95rem;
+  }
+
+  .QMS-cta-btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+
+  .QMS-fact h3 {
+    font-size: 1.1rem;
+  }
+
+  .QMS-fact p {
+    font-size: 0.9rem;
+  }
+
+  .QMS-card h3 {
+    height: auto;
+  }
+}

@@ -11,16 +11,6 @@ const projects = [
   },
   {
     image: "/images/services/project2.png",
-    heading: "SunBPM BRSR",
-    link: "/Products/BRSR",
-    desc: [
-      "Integrated responsibility & sustainability reporting",
-      "Simplifies data capture, workflows, and disclosures",
-      "Enhances transparency and investor confidence",
-    ],
-  },
-  {
-    image: "/images/services/project3.png",
     heading: "SunBPM ESG",
     link: "/Products/ESG",
     desc: [
@@ -30,13 +20,43 @@ const projects = [
     ],
   },
   {
-    image: "/images/services/project4.png",
+    image: "/images/services/project3.png",
     heading: "SunBPM EHS",
     link: "/Products/EHS",
     desc: [
       "Proactive environment, health & safety management",
       "Automates incident, risk, and compliance workflows",
       "Builds safer, sustainable, and resilient workplaces",
+    ],
+  },
+  {
+    image: "/images/services/project4.png",
+    heading: "SunBPM QMS",
+    link: "/Products/QMS",
+    desc: [
+      "Makes quality management easy with automated workflows.",
+      "Tracks issues, changes, and approvals in one place.",
+      "Gives clear insights with real-time reports and dashboards.",
+    ],
+  },
+  {
+    image: "/images/services/project5.png",
+    heading: "SunBPM PO/PR",
+    link: "/Products/POPR",
+    desc: [
+      "Automates purchase requests and order approvals.",
+      "Reads emails and updates data automatically.",
+      "Keeps everything transparent with easy tracking.",
+    ],
+  },
+  {
+    image: "/images/services/project6.png",
+    heading: "SunBPM Capex/Opex",
+    link: "/Products/CapexOpex",
+    desc: [
+      "Simplifies expense planning and approvals.",
+      "Helps control budgets and spending in real time.",
+      "Improves visibility with clear reports and dashboards.",
     ],
   },
 ];

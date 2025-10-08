@@ -110,6 +110,8 @@ html {
 }
 
 .EHS-card h3 {
+  height: 65px;
+  line-height: 1.3;
   color: #000000;
   font-size: 24px;
   margin-bottom: 15px;
@@ -421,6 +423,7 @@ html {
     width: 100%;
     max-width: 280px;
   }
+
 }
 
 /* Mobile (480px–767px) */
@@ -497,10 +500,13 @@ html {
     font-size: 0.95rem;
   }
 
+  .EHS-card h3 {
+    height: auto;
+  }
+
   /* .EHS-redef {
     gap: 0px;
   } */
-
 }
 
 /* Small Mobile (≤479px) */
@@ -557,5 +563,9 @@ html {
 
   .EHS-fact p {
     font-size: 0.9rem;
+  }
+
+  .EHS-card h3 {
+    height: auto;
   }
 }

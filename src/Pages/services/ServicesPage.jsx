@@ -43,8 +43,8 @@ const ServicesPage = () => {
             Comprehensive Digital Solutions Tailored to Your Business
           </div>
           <p className="sp-service-desc">
-            SunBPM delivers end-to-end digitalization solutions tailored to your business needs. From workflow 
-            automation and compliance management to analytics and integrations, we help organizations streamline 
+            SunBPM delivers end-to-end digitalization solutions tailored to your business needs. From workflow
+            automation and compliance management to analytics and integrations, we help organizations streamline
             operations, enhance collaboration, and achieve measurable business results.</p>
         </motion.div>
         <motion.div className="sp-service-img" variants={fadeUp}>
@@ -64,7 +64,7 @@ const ServicesPage = () => {
           Empowering Your Business Through Technology
         </motion.h2>
         <motion.p className="sp-about-desc" variants={fadeUp}>
-          SunBPM enables organizations to design, automate, and optimize processes with its low-code platform, delivering flexible, scalable, and user-friendly solutions that drive efficiency, reduce costs, and accelerate growth.
+          SunBPM helps businesses create, automate, and improve their workflows using an easy low-code platform. It offers flexible and scalable tools that boost productivity, cut expenses, and support faster growth. 
         </motion.p>
       </motion.section>
 
@@ -97,7 +97,7 @@ const ServicesPage = () => {
         <motion.div className="sp-service-left" variants={fadeUp}>
           <h3>Our Expertise Areas</h3>
           <p>
-            We specialize in Web Applications, Data Analytics, Mobile Applications and Cloud Computing. Our solutions combine innovation with practical functionality to drive business growth.
+            We specialize in Web Applications, Data Analytics and Mobile Applications. Our solutions combine innovation with practical functionality to drive business growth.
           </p>
         </motion.div>
         <motion.div className="sp-service-right" variants={fadeUp}>
@@ -114,12 +114,12 @@ const ServicesPage = () => {
 
       {/* Insights */}
       <section className="sp-insights">
-        <h2 className="sp-insights-title">Explore Insights</h2>
+        <h2 className="sp-insights-title">SunBPM FrameWork Functionality </h2>
         <div className="sp-insights-list">
           {insights.map((insight, idx) => (
             <div className="sp-insight-card" key={idx}>
               <img src={insight.image} alt={"Insight visual " + (idx + 1)} />
-              <h3 className="sp-insight-heading">{insight.title}</h3> {/* Added heading */}
+              <h3 className="sp-insight-heading">{insight.title}</h3>
               <div className="sp-insight-info">
                 <ul>
                   {insight.desc.map((point, i) => (
@@ -131,6 +131,25 @@ const ServicesPage = () => {
           ))}
         </div>
       </section>
+
+      {/* <section className="sp-insights">
+        <h2 className="sp-insights-title">Explore Insights</h2>
+        <div className="sp-insights-list">
+          {insights.map((insight, idx) => (
+            <div className="sp-insight-card" key={idx}>
+              <img src={insight.image} alt={"Insight visual " + (idx + 1)} />
+              <h3 className="sp-insight-heading">{insight.title}</h3>
+              <div className="sp-insight-info">
+                <ul>
+                  {insight.desc.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section> */}
 
 
       {/* Projects */}
@@ -148,7 +167,7 @@ const ServicesPage = () => {
           {projects.map((proj, idx) => (
             <motion.div className="sp-project-card" key={idx} variants={fadeUp}>
               <img src={proj.image} alt={`Project ${idx + 1}`} />
-              {proj.heading && <div className="sp-csr-heading">{proj.heading}</div>}
+              
               <div className="sp-project-info">
                 <ul>
                   {proj.desc.map((point, i) => (
