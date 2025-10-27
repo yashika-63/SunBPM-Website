@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../../CSS/Products/CSR/CSR.css";
-import CSRADVANTAGES from "../../../data/Products/CSRADVANTAGES";
+import CSRADVANTAGES from "../../../data/Products/CSRADVANTAGES.jsx";
 import CSRMODULES from "../../../data/Products/CSRModules";
 
 // ---------- Animation Variants ----------
