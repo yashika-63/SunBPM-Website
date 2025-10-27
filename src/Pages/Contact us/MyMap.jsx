@@ -16,7 +16,13 @@ const MyMap = () => {
   const position = [19.118705030314057, 72.91354864181613]; // Office coordinates
 
   return (
-    <div className="w-full relative z-0"> {/* Keep map lower than navbar */}
+    <div
+      className="w-full relative z-0"
+      style={{
+        // 🎨 Orange tint near #F7941D
+        filter: "hue-rotate(-15deg) saturate(1.9) brightness(0.9) contrast(2.1)",
+      }}
+    >
       <MapContainer
         center={position}
         zoom={18}

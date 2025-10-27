@@ -20,6 +20,7 @@ import AdminPage from "./Pages/Admin/AdminPage.jsx";
 import QMS from "./Pages/Products/QMS/QMS.jsx";
 import CapexOpex from "./Pages/Products/CapexOpex/CapexOpex.jsx";
 import POPR from "./Pages/Products/POPR/POPR.jsx";
+import CookiePopup from "./Pages/components/CookiePopup.jsx";
 
 // 404 page WITHOUT navbar & footer
 function NotFound() {
@@ -78,7 +79,7 @@ function AppContent() {
           <Route path="/Products/CSR" element={<CSR />} />
           <Route path="/Products/EHS" element={<EHS />} />
           <Route path="/Products/ESG" element={<ESG />} />
-          <Route path="/Products/POPR" element={<POPR/>} />
+          <Route path="/Products/POPR" element={<POPR />} />
           <Route path="/Products/QMS" element={<QMS />} />
           <Route path="/Products/CapexOpex" element={<CapexOpex />} />
           <Route path="/AboutUs" element={<AboutUs />} />
@@ -94,6 +95,10 @@ function AppContent() {
 
       {/* show footer only if valid route and not in no-layout */}
       {isValidRoute && !hideFooter && <Footer />}
+
+      {/* Cookie Consent Banner */}
+      <CookiePopup/>
+
     </div>
   );
 }

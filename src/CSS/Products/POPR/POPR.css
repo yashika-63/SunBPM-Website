@@ -28,24 +28,55 @@ html {
   background: url('../../../../images/products/POPR/POPR-grand-image.jpg') no-repeat center/cover;
   position: relative;
   width: 100%;
-  height: 500px;
-  display: flex;
+  height: 570px;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .POPR-hero-overlay {
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  /* padding: 40px; */
   color: white;
-  max-width: 900px;
-  border-radius: 8px;
+  max-width: 100%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  /* border-radius: 8px; */
 }
 
 .POPR-hero-overlay h1 {
-  font-size: 28px;
-  margin-bottom: 20px;
+  line-height: 1.5;
+  text-align: left;
+  font-size: 36px;
+  padding-top: 180px;
+  padding-left: 40px;
+  /* margin-bottom: 20px; */
+}
+
+.hero-button {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 40px;
+  padding-top: 70px;
+  /* Aligns button to the left */
+}
+
+.btn-learn {
+  background: #F7941D;
+  border: none;
+  padding: 12px 24px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-learn:hover {
+  color: #000000;
+  box-shadow: 0 4px 12px rgba(244, 142, 0, 1);
+
 }
 
 .POPR-hero-overlay p {
@@ -63,77 +94,6 @@ html {
   font-weight: bold;
 }
 
-/* ================= Outcomes ================= */
-.POPR-outcomes h2 {
-  font-size: 22px;
-  margin-bottom: 30px;
-  margin-top: 0px;
-  text-align: center;
-}
-
-.POPR-cards {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.POPR-card {
-  width: 344px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.POPR-card:hover {
-  transform: translateY(-5px);
-}
-
-.POPR-icon-container {
-  background: #F7941D;
-  padding: 1rem;
-  border-radius: 9999px;
-  display: inline-flex;
-  transition: transform 0.3s ease;
-  margin-bottom: 20px;
-  margin-left: 140px;
-  margin-right: auto;
-}
-
-.POPR-feature-icon {
-  width: 32px;
-  height: 32px;
-  color: #fff;
-}
-
-.POPR-card h3 {
-  height: 65px;
-  line-height: 1.3;
-  color: #000000;
-  font-size: 24px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.POPR-card ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.POPR-card li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-}
-
 .POPR-benefit-dot {
   flex-shrink: 0;
   width: 8px;
@@ -143,51 +103,30 @@ html {
   margin-top: 6px;
 }
 
-/* ================= How POPR Works ================= */
-.POPR-how {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.POPR-how-left img {
-  border-radius: 8px;
-  width: 100%;
-}
-
-.POPR-how-right h2 {
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-
-.POPR-how-right p {
-  margin-bottom: 20px;
-}
-
-.btn-learn {
-  background: #F7941D;
-  border: none;
-  padding: 12px 24px;
-  color: white;
-  font-weight: bold;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn-learn:hover {
-  background: #F7941D;
-}
-
 /* ================= Redefining POPR ================= */
 .POPR-redef {
   overflow: hidden;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 110px;
+  width: 100%;
 }
 
-.POPR-redef h2 {
-  font-size: 22px;
+.POPR-redef-left {
+  flex: 2.5;
+  /* Text area takes 2 parts */
+}
+
+.POPR-redef-right {
+  align-items: end;
+  flex: 1;
+  /* Image area takes 1 part */
+}
+
+.POPR-redef h1 {
+  margin-top: 0px;
+  line-height: 1.3;
+  font-size: 36px;
   margin-bottom: 15px;
 }
 
@@ -197,9 +136,8 @@ html {
 }
 
 .POPR-redef-img {
-  margin-top: 20px;
   border-radius: 6px;
-  width: 300px;
+  width: 380px;
 }
 
 /* ================= Core Modules ================= */
@@ -212,14 +150,14 @@ html {
 .POPR-module-card {
   background: #fff;
   border-radius: 16px;
-  padding: 24px;
+  padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .POPR-module-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px) scale(1.04) !important;
+  box-shadow: 0 4px 12px rgba(244, 142, 0, 0.8);
 }
 
 .POPR-module-icon {
@@ -234,8 +172,8 @@ html {
   color: #fff;
 }
 
-
 .POPR-module-card h4 {
+  height: 65px;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
@@ -259,108 +197,196 @@ html {
   margin-right: 10px;
 }
 
-/* ================= Core Capabilities ================= */
+.POPR-section-title {
+  margin-bottom: 20px;
+}
+
+/* ================= Strategic Advantages ================= */
 .POPR-cap-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2rem;
 }
 
 .POPR-cap-card {
+  position: relative;
   background: #fff;
-  border-radius: 14px;
-  padding: 24px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: left;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: all 0.45s ease;
+  overflow: hidden;
+  cursor: pointer;
 }
 
+/* Hover lift + orange glow */
 .POPR-cap-card:hover {
-  transform: translateY(-6px);
-  /* background: #f0eded; */
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(247, 148, 29, 0.6);
 }
 
+/* Icon styling */
 .POPR-cap-icon {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #F7941D;
+  background: linear-gradient(135deg, #f7941d, #ffb74d);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  margin: 0 auto 1rem;
+  margin-bottom: 1.2rem;
+  transition: transform 0.4s ease;
 }
 
+.POPR-cap-card:hover .POPR-cap-icon {
+  transform: rotate(10deg) scale(1.15);
+}
+
+/* Heading animation */
 .POPR-cap-heading {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #000000;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
+.POPR-cap-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #f7941d;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.POPR-cap-card:hover .POPR-cap-heading::after {
+  width: 45%;
+}
+
+/* Description animation */
 .POPR-cap-desc {
-  font-size: 0.95rem;
-  color: #000000;
-  line-height: 1.5;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  transition: color 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
+}
+
+.POPR-cap-card:hover .POPR-cap-desc {
+  color: #000;
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* Light pulse glow behind icon */
+.POPR-cap-card:hover .POPR-cap-icon::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(247, 148, 29, 1);
+  border-radius: 50%;
+  animation: pulseGlow 1.4s ease-out infinite;
+  z-index: 0;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
 }
 
 /* ================= CTA Section ================= */
 .POPR-cta {
-  background: #F7941D;
-  color: #fff;
+  position: relative;
+  background: linear-gradient(90deg, #f7941d 0%, #f9c74f 100%);
+  color: #000000;
   text-align: center;
-  padding: 60px 20px;
+  padding: 70px 25px;
   border-radius: 20px;
-  margin: 60px auto;
+  margin: 70px auto;
   max-width: 1000px;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* Animated gradient glow on hover */
+.POPR-cta:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(247, 148, 29, 0.35);
+  background: linear-gradient(270deg, #f9c74f 0%, #f7941d 100%);
+}
+
+/* Light sweep effect with continuous repetition on hover */
+.POPR-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-25deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Trigger animation only on hover */
+.POPR-cta:hover::before {
+  animation: sweep 3s linear infinite; /* repeat continuously */
+  opacity: 1;
+}
+
+@keyframes sweep {
+  0% {
+    left: -75%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    left: 125%;
+    opacity: 0.8;
+  }
+  100% {
+    left: 125%;
+    opacity: 0;
+  }
+}
+
+
+/* Text styling */
 .POPR-cta-text {
   text-align: center;
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-.POPR-cta-btn {
-  background: #fff;
-  color: #F7941D;
-  padding: 12px 32px;
-  border-radius: 30px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.POPR-cta-btn:hover {
-  background: #E8E8E8;
-  color: #F7941D;
-}
-
-/* ================= Did You Know ================= */
-.POPR-fact {
-  background: #f9fafb;
-  padding: 60px 20px;
-  text-align: center;
-  border-radius: 16px;
-  max-width: 1000px;
-  margin: 60px auto;
-}
-
-.POPR-fact h3 {
   font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 1rem;
-  color: #000000;
+  margin: 0;
+  color: #000;
+  transition: color 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
 }
 
-.POPR-fact p {
-  font-size: 1.05rem;
-  color: #000000;
-  line-height: 1.7;
+/* Text animation on hover */
+.POPR-cta:hover .POPR-cta-text {
+  transform: translateY(-4px);
+  opacity: 0.95;
+  color: #1a1a1a;
 }
+
 
 /* ================= Responsive ================= */
 
@@ -401,6 +427,10 @@ html {
 
   .POPR-hero-overlay p {
     font-size: 14px;
+  }
+
+  .POPR-redef h1 {
+    font-size: 22px;
   }
 
   .POPR-modules-grid,
@@ -444,16 +474,32 @@ html {
   }
 
   .POPR-hero-overlay {
+    height: 84%;
     padding: 20px;
   }
 
   .POPR-hero-overlay h1 {
+    padding-top: 30px;
+    padding-left: 0px;
     font-size: 20px;
+  }
+
+  .POPR-redef h1 {
+    font-size: 24px;
   }
 
   .POPR-hero-overlay p {
     font-size: 13px;
   }
+
+  .hero-button {
+    padding-left: 0px;
+    padding-top: 40px;
+  }
+
+.btn-learn {
+  padding: 8px 12px;
+}
 
   .POPR-modules-grid,
   .POPR-cap-grid {
@@ -469,11 +515,12 @@ html {
     gap: 0px;
   }
 
-  .POPR-module-card {
+  POPR-module-card {
     padding: 12px;
   }
 
   .POPR-cta {
+    margin: 40px auto;
     padding: 40px 20px;
     border-radius: 14px;
   }
@@ -483,7 +530,7 @@ html {
   }
 
   .POPR-cta-btn {
-    padding: 10px 24px;
+    padding: 10px 24px !important;
     font-size: 0.9rem;
   }
 
@@ -499,8 +546,8 @@ html {
     font-size: 0.95rem;
   }
 
-  .POPR-card h3 {
-    height: auto;
+  .POPR-redef {
+    gap: 30px;
   }
 }
 
@@ -523,7 +570,22 @@ html {
   }
 
   .POPR-hero-overlay h1 {
+    padding-top: 30px;
+    padding-left: 0px;
     font-size: 18px;
+  }
+
+  .hero-button {
+    padding-left: 0px;
+    padding-top: 40px;
+  }
+
+  .btn-learn {
+  padding: 8px 12px !important;
+}
+
+  .POPR-redef h1 {
+    font-size: 22px;
   }
 
   .POPR-hero-overlay p {
@@ -532,6 +594,7 @@ html {
 
   .POPR-module-card h4,
   .POPR-cap-heading {
+    height: auto;
     font-size: 1rem;
   }
 
@@ -540,6 +603,7 @@ html {
   }
 
   .POPR-cta {
+    margin: 40px auto;
     padding: 30px 15px;
   }
 
@@ -558,9 +622,5 @@ html {
 
   .POPR-fact p {
     font-size: 0.9rem;
-  }
-
-  .POPR-card h3 {
-    height: auto;
   }
 }

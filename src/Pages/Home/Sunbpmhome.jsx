@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, useInView, useAnimation } from 'framer-motion';
 import Hero from './Hero';
 import FeatureCard from './FeatureCard';
 import ClientsSection from './ClientsSection';
@@ -9,7 +9,43 @@ import features from '../../data/featuresData';
 import valueProps from "../../data/valuePropsData";
 import industryStats from "../../data/industryStatsData";
 
+const AnimatedNumber = ({ value, animate }) => {
+  const [count, setCount] = useState(0);
+  const numericValue = parseInt(value);
+  const suffix = value.replace(/[0-9]/g, "");
+
+  useEffect(() => {
+    if (!animate) return; // only start counting when animate is true
+    let start = 0;
+    const end = numericValue;
+    const duration = 3000; // 3 seconds
+    const stepTime = 20;
+    const increment = (end - start) / (duration / stepTime);
+
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= end) {
+        start = end;
+        clearInterval(timer);
+      }
+      setCount(Math.floor(start));
+    }, stepTime);
+
+    return () => clearInterval(timer);
+  }, [numericValue, animate]);
+
+  return <span>{count}{suffix}</span>;
+};
+
 const Sunbpmhome = () => {
+  const statsRef = useRef(null);
+  const inView = useInView(statsRef, { once: true });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (inView) controls.start({ opacity: 1, y: 0 });
+  }, [inView, controls]);
+
   return (
     <div className="home">
       <Hero />
@@ -21,7 +57,7 @@ const Sunbpmhome = () => {
               Why Leading Enterprises Choose SunBPM
             </motion.h2>
             <motion.p initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="section-subtitle">
-              Accelerate innovation and efficiency with our all-in-one low-code platform.
+              Accelerate innovation and efficiency with our low-code platform.
             </motion.p>
           </div>
           <div className="value-grid">
@@ -31,7 +67,7 @@ const Sunbpmhome = () => {
                   <prop.icon className="icon-white" />
                 </div>
                 <h3 className="value-title">{prop.title}</h3>
-                <p className="value-description">{prop.description}</p>
+                {/* <p className="value-description">{prop.description}</p> */}
               </motion.div>
             ))}
           </div>
@@ -58,20 +94,39 @@ const Sunbpmhome = () => {
       </section>
 
       {/* Stats */}
-      <section className="section orange-gradient">
+      <section className="section orange-gradient" ref={statsRef}>
         <div className="container">
           <div className="text-center section-header">
-            <motion.h2 className="section-title white-text">
+            <motion.h2
+              className="section-title white-text"
+              initial={{ opacity: 0, y: 30 }}
+              animate={controls}
+              transition={{ duration: 0.6 }}
+            >
               Trusted by Industry Leaders
             </motion.h2>
-            <motion.p className="section-subtitle light-text" >
-              Join hundreds of enterprises that have transformed their operations
+            <motion.p
+              className="section-subtitle light-text"
+              initial={{ opacity: 0, y: 30 }}
+              animate={controls}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              Empowering enterprises to streamline operations and achieve excellence.
             </motion.p>
           </div>
+
           <div className="stats-grid">
             {industryStats.map((stat, index) => (
-              <motion.div key={index} className="stat-card">
-                <div className="stat-value">{stat.value}</div>
+              <motion.div
+                key={index}
+                className="stat-card"
+                initial={{ opacity: 0, y: 40 }}
+                animate={controls}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+              >
+                <div className="stat-value">
+                  <AnimatedNumber value={stat.value} animate={inView} />
+                </div>
                 <div className="stat-label">{stat.label}</div>
               </motion.div>
             ))}
@@ -79,13 +134,15 @@ const Sunbpmhome = () => {
         </div>
       </section>
 
+
+
       {/* Benefits */}
       <section className="section white-background">
         <div className="container grid-2">
           <motion.div className="benefits-content">
-            <h2 style={{ textAlign: 'left', marginTop: '0px'  }} className="section-title">
+            <h2 style={{ textAlign: 'left', marginTop: '0px' }} className="section-title">
               Transform Your Business Operations</h2>
-            <p style={{ textAlign: 'left' , }} className="section-subtitle">
+            <p style={{ textAlign: 'left', }} className="section-subtitle">
               SunBPM empowers organizations to streamline processes, reduce costs, and improve compliance while maintaining flexibility.
             </p>
             <div className="benefits-list">

@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../../CSS/Products/CSR/CSR.css";
-import CSRCAPABILITIES from "../../../data/Products/CSRCapabilities";
+import CSRADVANTAGES from "../../../data/Products/CSRADVANTAGES";
 import CSRMODULES from "../../../data/Products/CSRModules";
-import CSROUTCOMES from "../../../data/Products/CSROutcomes";
+
 // ---------- Animation Variants ----------
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -32,89 +32,29 @@ const CSR = () => {
       >
         <div className="csr-hero-overlay">
           <h1>
-            Comprehensive Low-Code Platform for Corporate Social Responsibility
+
+            Impact That Speaks. Responsibility <br />That Counts
           </h1>
-          <p>
-            Our Enterprise CSR Solution provides a comprehensive approach to
-            Corporate Social Responsibility, empowering organizations to achieve
-            sustainability development goals.
-          </p>
+          <div className="hero-button">
+            <button
+              className="btn-learn"
+              onClick={() => {
+                const element = document.getElementById("csr-modules");
+                if (element) {
+                  const offset = element.getBoundingClientRect().top + window.pageYOffset - 30;
+                  window.scrollTo({ top: offset, behavior: "smooth" });
+                }
+              }}
+            >
+              Learn More
+            </button>
+          </div>
+          {/* <p>
+            Empowering organizations to drive purposeful impact through streamlined CSR planning, 
+            execution, and reporting all on a single intelligent platform.
+
+          </p> */}
         </div>
-      </motion.section>
-
-      {/* ================= What is CSR ================= */}
-      <motion.section
-        className="csr-intro containers"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
-        <h2>What is CSR ?</h2>
-        <p>
-          <span className="highlight">Corporate Social Responsibility (CSR)</span>{" "}
-          is a strategic business practice where organizations integrate
-          ethical, social, and environmental concerns into their operations,
-          ensuring accountability to stakeholders and contributing to sustainable
-          development.
-        </p>
-      </motion.section>
-
-      {/* ================= Positive Outcomes ================= */}
-      <motion.section
-        className="csr-outcomes containers"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
-        <h2>Positive Outcomes of CSR</h2>
-
-        <div className="csr-cards">
-          {CSROUTCOMES.map(({ icon: Icon, title, points }, i) => (
-            <motion.div key={i} className="csr-card" variants={fadeInUp}>
-              <div className="csr-icon-container">
-                <Icon className="csr-feature-icon" />
-              </div>
-              <h3>{title}</h3>
-              <ul>
-                {points.map((p, idx) => (
-                  <li key={idx}>
-                    <span className="csr-benefit-dot"></span>
-                    <span>{p}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
-
-      {/* ================= How CSR Works ================= */}
-      <motion.section
-        className="csr-how containers"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <motion.div className="csr-how-left" variants={fadeInLeft}>
-          <img src="/images/products/CSR/CSR-work.png" alt="How CSR works" />
-        </motion.div>
-        <motion.div className="csr-how-right" variants={fadeInRight}>
-          <h2>How CSR works</h2>
-          <p>
-            See how SunBPM CSR works from innovation in technology to
-            impactful action.
-          </p>
-          <button
-            className="btn-learn"
-            onClick={() =>
-              document.getElementById("csr-modules")?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Learn More
-          </button>
-        </motion.div>
       </motion.section>
 
       {/* ================= Redefining CSR ================= */}
@@ -125,20 +65,20 @@ const CSR = () => {
         viewport={{ once: true }}
       >
         <motion.div className="csr-redef-left" variants={fadeInLeft}>
-          <h2>
-            Redefining <span className="highlight">CSR</span> with Smart,
-            Scalable Solutions
-          </h2>
+          <h1>
+            SunBPM CSR: Governance & Verifiable Impact
+          </h1>
           <p>
-            We provide a smart and scalable CSR platform that transcends compliance, equipping 
-            organizations with actionable insights and measurable outcomes. With SunBPM CSR, 
-            companies can turn responsibility into a catalyst for growth, trust, and lasting impact.
+            SunBPM CSR is the single digital platform that connects your CSR policy and budget directly
+            to validated ground-level outcomes. We eliminate the fragmented spreadsheets and manual data
+            compilation, ensuring that every rupee spent and every hour volunteered is captured within an
+            audit-ready, centralized system.
           </p>
         </motion.div>
-        <motion.div className="csr-redef-left" variants={fadeInRight}>
+        <motion.div className="csr-redef-right" variants={fadeInRight}>
           <img
-            src="/images/products/CSR/CSR-Side Frame.png"
-            alt="CSR Infographic"
+            src="/images/products/CSR/CSR Intro Image.png"
+            alt="CSR  Intro Image"
             className="csr-redef-img"
           />
         </motion.div>
@@ -153,7 +93,7 @@ const CSR = () => {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <h2 className="csr-section-title">SunBPM CSR Core Modules</h2>
+        <h1 className="csr-section-title">SunBPM CSR Core Modules</h1>
 
         <div className="csr-modules-grid">
           {CSRMODULES.map(({ icon: Icon, title, points }, idx) => (
@@ -175,20 +115,20 @@ const CSR = () => {
         </div>
       </motion.section>
 
-      {/* ================= Core Capabilities ================= */}
+      {/* ================= Strategic Advantages ================= */}
       <motion.section
-        className="csr-capabilities containers"
+        className="csr-ADVANTAGES containers"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <h2 className="csr-section-title">
-          Core <span className="highlight">CSR</span> Capabilities :
-        </h2>
+        <h1 className="csr-section-title">
+          Delivering Client Value: Strategic Advantages
+        </h1>
 
         <div className="csr-cap-grid">
-          {CSRCAPABILITIES.map(({ icon: Icon, title, desc }, i) => (
+          {CSRADVANTAGES.map(({ icon: Icon, title, desc }, i) => (
             <motion.div key={i} className="csr-cap-card" variants={fadeInUp}>
               <div className="csr-cap-icon">
                 <Icon size={26} />
@@ -210,8 +150,8 @@ const CSR = () => {
       >
         <div className="csr-cta-inner-container">
           <p className="csr-cta-text">
-            Empower your CSR journey with an all-in-one platform from planning
-            to impact measurement, built for modern enterprises.
+            Turn your CSR initiatives into measurable impact with SunBPM a smart platform that ensures
+            transparency, accountability, and lasting social value.
           </p>
         </div>
       </motion.section>

@@ -10,51 +10,65 @@
   background: white;
 }
 
-/* .gray-background {
-  background: #f9fafb;
-} */
-
 .orange-gradient {
-  margin: 100px 0 40px 0;
-  padding-bottom: 60px;
-  background: linear-gradient(90deg, rgba(247, 148, 29, 1) 49%, rgba(249, 199, 79, 1) 100%);
+  margin: 100px auto 40px auto;
+  padding: 20px 20px 60px;
+  background: linear-gradient(135deg, #f7941d, #f9c74f);
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  /* max-width: 1200px; */
 }
 
-/* .dark-gradient {
-  background: linear-gradient(to bottom right, #111827, #7c2d12);
-} */
-
-.container {
-  max-width: auto;
-  margin: 0 auto;
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-top: 40px;
 }
 
-.text-center {
+.stat-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 2rem 1rem;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.stat-card:hover {
+  transform: translateY(-30px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000 !important;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #fff7ee, #fff);
+  -webkit-background-clip: text;
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+  opacity: 0.9;
 }
 
 .section-title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 1rem;
   color: #000000;
+  margin-bottom: 0.5rem;
 }
-
-.black-text {
-  color: #000000;
-}
-
-/* .light-text {
-  color: #fed7aa;
-} */
 
 .section-subtitle {
-  font-size: 24px;
   color: #000000;
-  max-width: 48rem;
-  margin: 0 auto; 
+  margin: 0 auto 30px auto;
 }
 
+/* 
 .mb-16 {
   margin-bottom: 4rem;
 }
@@ -93,13 +107,99 @@
   font-size: 24px;
   font-weight: 600;
   color: #000000;
-  margin-bottom: 0.75rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .value-description {
   font-size: 16px;
   color: #000000;
+} */
+
+/* Cards Grid */
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  justify-content: center;
 }
+
+/* Value Card */
+.value-card {
+  /* background: linear-gradient(135deg, #fbecd9 0%, #fbfbfb 50%, #fbecd9 100%); */
+  background: linear-gradient(135deg, #ffe8ca 0%, #fbfbfb 40%, #fbfbfb 60%, #fbecd9 100%);
+  padding: 40px 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient border glow effect */
+.value-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, #f7941d, #f9c74f);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.value-card:hover::before {
+  opacity: 1;
+}
+
+/* Hover Effects */
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 30px rgba(247, 148, 29, 0.25);
+}
+
+/* Icon Circle */
+.icon-container {
+  background: linear-gradient(135deg, #f7941d, #f9c74f);
+  padding: 1.2rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 15px rgba(247, 148, 29, 0.3);
+}
+
+.value-card:hover .icon-container {
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 10px 25px rgba(247, 148, 29, 0.45);
+}
+
+/* Icon */
+.icon-white {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #ffffff;
+}
+
+/* Title */
+.value-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.value-card:hover .value-title {
+  color: #f7941d;
+}
+
 
 .feature-grid {
   padding: 10px;
@@ -216,7 +316,8 @@
 .cost-value {
   font-size: 1.875rem;
   font-weight: bold;
-  color: #F7941D;;
+  color: #F7941D;
+  ;
 }
 
 .cost-label {
@@ -238,8 +339,8 @@
     padding: 0 1rem;
   }
 
-  .orange-gradient{
-    margin:20px 0 0 0;
+  .orange-gradient {
+    margin: 20px 0 0 0;
   }
 
   .value-grid,

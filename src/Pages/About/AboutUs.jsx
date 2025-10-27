@@ -75,7 +75,7 @@ const AboutUs = () => {
             At SunBPM, we empower organizations to transform operations with innovation and technology. Our low-code platform enables quick process design, automation, and optimization without complex coding. With built-in flexibility, scalability, and ease of use, SunBPM helps businesses cut costs, boost efficiency, and drive sustainable growth. </p>
         </motion.div>
         <motion.div className="Aboutus-img" variants={fadeUp}>
-          <img src="/images/About/Grand-image.png" alt="About SunBPM Team" />
+          <img src="/images/About/Grand-image.jpg" alt="About SunBPM Team" />
         </motion.div>
       </motion.section>
 
@@ -108,12 +108,12 @@ const AboutUs = () => {
           <div className="intro-text">
             <h2>What SunBPM Offers.</h2>
             <p>
-              SunBPM provides a powerful low-code platform that helps organizations digitalize and 
-              automate business processes with speed and precision. From workflow automation and 
-              real-time analytics to seamless integrations and enterprise-grade security, SunBPM 
-              delivers everything you need to streamline operations, improve compliance, and drive 
-              business growth. With its mobile-first design and user-friendly interface, it ensures 
-              flexibility, scalability, and ease of adoption across industries and business sizes.
+              SunBPM redefines how businesses manage their processes through an easy-to-use low-code 
+              automation platform. It enables seamless workflow creation, approval management, and 
+              reporting all without complex coding. Designed for speed, scalability, and compliance, 
+              SunBPM supports end-to-end digitalization of operations while providing real-time analytics, 
+              cloud deployment, and role-based access control for maximum efficiency and security.
+
             </p>
             {/* <button className="contact-btn">Contact us</button> */}
           </div>

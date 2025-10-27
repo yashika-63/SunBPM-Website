@@ -1,150 +1,86 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../../CSS/Products/POPR/POPR.css";
-import POPRCAPABILITIES from "../../../data/Products/POPRCapabilities";
+import POPRADVANTAGES from "../../../data/Products/POPRADVANTAGES";
 import POPRMODULES from "../../../data/Products/POPRModules";
-import POPROUTCOMES from "../../../data/Products/POPROutcomes";
 
 // ---------- Animation Variants ----------
 const fadeInUp = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
 };
 const fadeInLeft = {
-    hidden: { opacity: 0, x: -80 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
+  hidden: { opacity: 0, x: -80 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
 };
 const fadeInRight = {
-    hidden: { opacity: 0, x: 80 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
+  hidden: { opacity: 0, x: 80 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
 };
 
+
 const POPR = () => {
-    return (
-        <div className="POPR-page">
-            {/* ================= Hero ================= */}
-            <motion.section
-                className="POPR-hero"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInUp}
+  return (
+    <div className="POPR-page">
+      {/* ================= Hero ================= */}
+      <motion.section
+        className="POPR-hero"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
+        <div className="POPR-hero-overlay">
+          <h1>
+            Control Every Purchase with Ease and <br/> Efficiency
+          </h1>
+          <div className="hero-button">
+            <button
+              className="btn-learn"
+              onClick={() => {
+                const element = document.getElementById("POPR-modules");
+                if (element) {
+                  const offset = element.getBoundingClientRect().top + window.pageYOffset - 30;
+                  window.scrollTo({ top: offset, behavior: "smooth" });
+                }
+              }}
             >
-                <div className="POPR-hero-overlay">
-                    <h1>
-                        Comprehensive Low-Code Platform for purchase requisition (PR) and purchase order (PO)
-                    </h1>
-                    <p>
-                        Our Enterprise PO/PR Solution empowers organizations to achieve sustainability goals through a
-                        holistic System approach.
-                    </p>
-                </div>
-            </motion.section>
+              Learn More
+            </button>
+          </div>
+        </div>
+      </motion.section>
 
-            {/* ================= What is POPR ================= */}
-            <motion.section
-                className="POPR-intro containers"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-            >
-                <h2>What is POPR ?</h2>
-                <p>
-                    <span className="highlight">SunBPM PO/PR</span>{" "}
-                    is a unified solution that streamlines the entire purchase requisition (PR) 
-                    and purchase order (PO) lifecycle. From requisition initiation to approvals, vendor 
-                    coordination, and reporting, the platform ensures accuracy, transparency, and 
-                    efficiency in procurement processes.
-                </p>
-            </motion.section>
+      {/* ================= Redefining POPR ================= */}
+      <motion.section
+        className="POPR-redef containers"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <motion.div className="POPR-redef-left" variants={fadeInLeft}>
+          <h1>
+            A Solution That Helps You Control Spend
+          </h1>
+          <p>
+            The SunBPM Purchase Requisition and Purchase Order (PO/PR) System transforms procurement into 
+            a unified, transparent, and compliant process. It integrates every stage from requisition 
+            initiation and approval to purchase order management, vendor interaction, and reporting 
+            into a single, low-code platform. SunBPM PO/PR structures all procurement activities 
+            into four interconnected pillars, ensuring complete visibility, accountability, and 
+            control across the supply chain.
+          </p>
+        </motion.div>
+        <motion.div className="POPR-redef-right" variants={fadeInRight}>
+          <img
+            src="/images/products/POPR/POPR Intro Image.jpg"
+            alt="POPR  Intro Image"
+            className="POPR-redef-img"
+          />
+        </motion.div>
+      </motion.section>
 
-            {/* ================= Positive Outcomes ================= */}
-            <motion.section
-                className="POPR-outcomes containers"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-            >
-                <h2>Positive Outcomes of POPR</h2>
-
-                <div className="POPR-cards">
-                    {POPROUTCOMES.map(({ icon: Icon, title, points }, i) => (
-                        <motion.div key={i} className="POPR-card" variants={fadeInUp}>
-                            <div className="POPR-icon-container">
-                                <Icon className="POPR-feature-icon" />
-                            </div>
-                            <h3>{title}</h3>
-                            <ul>
-                                {points.map((p, idx) => (
-                                    <li key={idx}>
-                                        <span className="POPR-benefit-dot"></span>
-                                        <span>{p}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </motion.div>
-                    ))}
-                </div>
-            </motion.section>
-
-            {/* ================= How POPR Works ================= */}
-            <motion.section
-                className="POPR-how containers"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            >
-                <motion.div className="POPR-how-left" variants={fadeInLeft}>
-                    <img src="/images/products/POPR/POPR-work.png" alt="How POPR works" />
-                </motion.div>
-                <motion.div className="POPR-how-right" variants={fadeInRight}>
-                    <h2>How POPR works</h2>
-                    <p>
-                        See how SunBPM POPR works from innovation in technology to
-                        impactful action.
-                    </p>
-                    <button
-                        className="btn-learn"
-                        onClick={() =>
-                            document.getElementById("POPR-modules")?.scrollIntoView({ behavior: "smooth" })
-                        }
-                    >
-                        Learn More
-                    </button>
-                </motion.div>
-            </motion.section>
-
-            {/* ================= Redefining POPR ================= */}
-            <motion.section
-                className="POPR-redef containers"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            >
-                <motion.div className="POPR-redef-left" variants={fadeInLeft}>
-                    <h2>
-                        Redefining <span className="highlight">POPR</span> with Smart,
-                        Scalable Solutions
-                    </h2>
-                    <p>
-                        With SunBPM PO/PR, businesses can automate procurement cycles, minimize delays, 
-                        and gain end-to-end control over purchase activities. The platform ensures 
-                        seamless collaboration across departments while aligning procurement practices 
-                        with organizational goals.
-                    </p>
-                </motion.div>
-                <motion.div className="POPR-redef-left" variants={fadeInRight}>
-                    <img
-                        src="/images/products/POPR/POPR-Side Frame.png"
-                        alt="POPR Infographic"
-                        className="POPR-redef-img"
-                    />
-                </motion.div>
-            </motion.section>
-
-            {/* ================= Core Modules ================= */}
+      {/* ================= Core Modules ================= */}
             <motion.section
                 id="POPR-modules"
                 className="POPR-modules containers"
@@ -175,47 +111,48 @@ const POPR = () => {
                 </div>
             </motion.section>
 
-            {/* ================= Core Capabilities ================= */}
-            <motion.section
-                className="POPR-capabilities containers"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-            >
-                <h2 className="POPR-section-title">
-                    Core <span className="highlight">POPR</span> Capabilities :
-                </h2>
+      {/* ================= Strategic Advantages ================= */}
+      <motion.section
+        className="POPR-ADVANTAGES containers"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
+        <h1 className="POPR-section-title">
+          Procurement Made Transparent and Agile
+        </h1>
 
-                <div className="POPR-cap-grid">
-                    {POPRCAPABILITIES.map(({ icon: Icon, title, desc }, i) => (
-                        <motion.div key={i} className="POPR-cap-card" variants={fadeInUp}>
-                            <div className="POPR-cap-icon">
-                                <Icon size={26} />
-                            </div>
-                            <div className="POPR-cap-heading">{title}</div>
-                            <div className="POPR-cap-desc">{desc}</div>
-                        </motion.div>
-                    ))}
-                </div>
-            </motion.section>
-
-            {/* ================= CTA ================= */}
-            <motion.section
-                className="POPR-cta"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-            >
-                <div className="POPR-cta-inner-container">
-                    <p className="POPR-cta-text">
-                        SunBPM PO/PR — Automating procurement for faster approvals, smarter decisions, and complete transparency.
-                    </p>
-                </div>
-            </motion.section>
+        <div className="POPR-cap-grid">
+          {POPRADVANTAGES.map(({ icon: Icon, title, desc }, i) => (
+            <motion.div key={i} className="POPR-cap-card" variants={fadeInUp}>
+              <div className="POPR-cap-icon">
+                <Icon size={26} />
+              </div>
+              <div className="POPR-cap-heading">{title}</div>
+              <div className="POPR-cap-desc">{desc}</div>
+            </motion.div>
+          ))}
         </div>
-    );
+      </motion.section>
+
+      {/* ================= CTA ================= */}
+      <motion.section
+        className="POPR-cta"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
+        <div className="POPR-cta-inner-container">
+          <p className="POPR-cta-text">
+            Turn your POPR initiatives into measurable impact with SunBPM a smart platform that ensures
+            transparency, accountability, and lasting social value.
+          </p>
+        </div>
+      </motion.section>
+    </div>
+  );
 };
 
 export default POPR;

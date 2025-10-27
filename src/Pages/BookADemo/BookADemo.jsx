@@ -1,8 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import "../../CSS/BookADemo/BookADemo.css";
+
+// ✅ Added CountdownToast component
+const CountdownToast = ({ message, duration }) => {
+  const [timeLeft, setTimeLeft] = useState(duration / 1000);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeLeft((prev) => (prev > 1 ? prev - 1 : 0));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div>
+      <p>{message}</p>
+    </div>
+  );
+};
+
 
 const BookADemo = () => {
   const [formData, setFormData] = useState({
@@ -52,10 +71,9 @@ const BookADemo = () => {
       setSubmitted(false);
 
       try {
-        // Use relative URL instead of absolute URL
         // const response = await fetch("/api/book-demo", {
         const response = await fetch("http://localhost:6002/api/book-demo", {
-        // const response = await fetch("http://15.207.163.30:6002/api/book-demo", {
+          // const response = await fetch("http://15.207.163.30:6002/api/book-demo", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -71,7 +89,18 @@ const BookADemo = () => {
         });
 
         if (response.ok) {
-          toast.success("Thank you! Your request has been submitted.");
+          const duration = 5000; // 5 seconds
+          toast.success(
+            <CountdownToast
+              message="Thank you! Your request has been submitted."
+              duration={duration}
+            />,
+            {
+              autoClose: duration,
+              hideProgressBar: false, // show progress bar
+            }
+          );
+
           setFormData({
             fullname: "",
             email: "",
@@ -81,6 +110,7 @@ const BookADemo = () => {
             description: "",
           });
         }
+
         else {
           const errorData = await response.json();
           console.log("Server Error Response:", errorData);
@@ -92,7 +122,7 @@ const BookADemo = () => {
       }
     }
   };
-  
+
   return (
     <div className="demo-container">
       <div className="form-box">
@@ -163,9 +193,9 @@ const BookADemo = () => {
               <option value="SunBPM CSR">SunBPM CSR</option>
               <option value="SunBPM EHS">SunBPM EHS</option>
               <option value="SunBPM ESG">SunBPM ESG</option>
-              <option value="SunBPM ESG">SunBPM QMS</option>
-              <option value="SunBPM ESG">SunBPM PO/PR</option>
-              <option value="SunBPM ESG">SunBPM Capex/Opex</option>
+              <option value="SunBPM QMS">SunBPM QMS</option>
+              <option value="SunBPM PO/PR">SunBPM PO/PR</option>
+              <option value="SunBPM Capex/Opex">SunBPM Capex/Opex</option>
             </select>
             {errors.interest && <p className="error">{errors.interest}</p>}
           </div>

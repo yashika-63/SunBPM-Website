@@ -80,7 +80,7 @@ const CSRMODULES = [
     icon: FaFileAlt, 
     title: "Reports Generation",
     points: [
-      "360 circular reports generation including linkage and trackage.",
+      "360 degree reports generation including linkage and trackage.",
       "All modules basic reports generation and trackage.",
     ],
   },

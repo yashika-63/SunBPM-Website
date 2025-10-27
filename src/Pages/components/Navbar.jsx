@@ -115,7 +115,7 @@ const Navbar = () => {
             ))}
 
             <div className="cta-buttons">
-              <Link to="/BookDemo" className="btn-primary">
+              <Link to="/BookDemo" className="navbar-btn-primary">
                 Book a Demo
               </Link>
             </div>
@@ -184,7 +184,7 @@ const Navbar = () => {
               </div>
 
               <div className="mobile-cta">
-                <Link to="/BookDemo" className="btn-primary">
+                <Link to="/BookDemo" className="navbar-btn-primary">
                   Book a Demo
                 </Link>
               </div>

@@ -1,5 +1,5 @@
 import {
-  Workflow, Shield, Smartphone, Zap,Users, Smile, User
+  Workflow, Shield, Smartphone, Zap,Users, User
 } from 'lucide-react';
 const features = [
   { 
@@ -40,7 +40,7 @@ const features = [
     title: 'Seamless Integrations', 
     description: 'Connect SunBPM with your existing IT systems easily.', 
     benefits: [
-      'Pre-built connectors', 
+      'Pre-built connectors',
       'REST API support', 
       'Real-time synchronization', 
       'Configurable integrations'

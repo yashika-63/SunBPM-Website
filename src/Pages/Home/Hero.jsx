@@ -36,8 +36,7 @@ const Hero = () => {
 
             <p className="hero-description">
               The comprehensive low-code platform that empowers enterprises to
-              digitize, automate, and optimize workflows across all departments
-              and industries.
+              digitize, automate, and optimize workflows across all departments.
             </p>
 
             <div className="hero-buttons">

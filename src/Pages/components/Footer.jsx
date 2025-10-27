@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-section address">
           <h1>Shaping future success with the technology we have today.</h1>
           <p>
-            <strong>Address :</strong> <br />
+            <strong>Address:</strong> <br />
             <a
               href="https://maps.app.goo.gl/WH2NEhzTctFYarnV9"
               target="_blank"
@@ -68,7 +68,6 @@ const Footer = () => {
           <ul>
             <li><Link to="/PrivacyPolicy" className="email-link">Privacy Policies</Link></li>
             <li><Link to="/TermsConditions" className="email-link">Terms & Conditions</Link></li>
-            {/* <li>Refund Policy</li> */}
           </ul>
         </div>
       </div>

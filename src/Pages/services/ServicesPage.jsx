@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "../../CSS/Services/ServicesPage.css";
 import stats from "../../data/statsData";
@@ -25,10 +26,67 @@ const staggerContainer = {
   },
 };
 
+// AnimatedNumber Component
+const AnimatedNumber = ({ value, animate }) => {
+  const suffix = value.replace(/[0-9.]/g, ""); // Extract '+', 'M', etc.
+  const numericValue = parseFloat(value);
+  const [displayValue, setDisplayValue] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Stop observing once animation starts
+        }
+      },
+      { threshold: 0.5 } // Trigger when 50% of element is visible
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible || isNaN(numericValue) || !animate) return;
+
+    let start = 0;
+    const duration = 2500; //2.5 seconds
+    const stepTime = 20;
+    const totalSteps = duration / stepTime;
+    const increment = numericValue / totalSteps;
+
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= numericValue) {
+        setDisplayValue(numericValue);
+        clearInterval(timer);
+      } else {
+        setDisplayValue(Math.floor(start));
+      }
+    }, stepTime);
+
+    return () => clearInterval(timer);
+  }, [isVisible, value, animate]);
+
+  return (
+    <span ref={ref}>
+      {isNaN(numericValue)
+        ? value
+        : `${displayValue.toLocaleString()}${suffix}`}
+    </span>
+  );
+};
+
+
 // ================== Component ==================
 const ServicesPage = () => {
   return (
     <div className="sp-page">
+
       {/* Service SECTION */}
       <motion.section
         className="sp-service"
@@ -43,12 +101,13 @@ const ServicesPage = () => {
             Comprehensive Digital Solutions Tailored to Your Business
           </div>
           <p className="sp-service-desc">
-            SunBPM delivers end-to-end digitalization solutions tailored to your business needs. From workflow
-            automation and compliance management to analytics and integrations, we help organizations streamline
-            operations, enhance collaboration, and achieve measurable business results.</p>
+            SunBPM specializes in delivering workflow automation, application development, process
+            consulting, and integration services. Whether you’re optimizing internal workflows or scaling
+            enterprise systems, we offer secure, scalable, and data-driven solutions that deliver
+            long-term value.</p>
         </motion.div>
         <motion.div className="sp-service-img" variants={fadeUp}>
-          <img src="/images/services/office.png" alt="Meeting room" />
+          <img src="/images/services/office.jpg" alt="Meeting room" />
         </motion.div>
       </motion.section>
 
@@ -64,7 +123,9 @@ const ServicesPage = () => {
           Empowering Your Business Through Technology
         </motion.h2>
         <motion.p className="sp-about-desc" variants={fadeUp}>
-          SunBPM helps businesses create, automate, and improve their workflows using an easy low-code platform. It offers flexible and scalable tools that boost productivity, cut expenses, and support faster growth. 
+          Technology should empower people, not complicate their work. SunBPM helps your teams work
+          smarter with intuitive tools that simplify complexity and turn everyday tasks into seamless
+          digital experiences.
         </motion.p>
       </motion.section>
 
@@ -76,15 +137,26 @@ const ServicesPage = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
+        <div className="sp-stats-header">
+          <h2 className="sp-stats-title">Our Impact in Numbers</h2>
+        </div>
         <div className="sp-stats-wrapper">
-          {stats.map((stat) => (
-            <motion.div className="sp-stat-block" key={stat.label} variants={fadeUp}>
-              <div className="sp-stat-value">{stat.value}</div>
-              <div className="sp-stat-label">{stat.label}</div>
+          {stats.map((stats) => (
+            <motion.div
+              className="sp-stat-block"
+              key={stats.label}
+              variants={fadeUp}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="sp-stat-value">
+                <AnimatedNumber value={stats.value} animate={true} />
+              </div>
+              <div className="sp-stat-label">{stats.label}</div>
             </motion.div>
           ))}
         </div>
       </motion.section>
+
 
       {/* Service Area */}
       <motion.section
@@ -158,7 +230,7 @@ const ServicesPage = () => {
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
       >
         <motion.h2 className="sp-projects-title" variants={fadeUp}>
           Our Latest Projects
@@ -167,7 +239,7 @@ const ServicesPage = () => {
           {projects.map((proj, idx) => (
             <motion.div className="sp-project-card" key={idx} variants={fadeUp}>
               <img src={proj.image} alt={`Project ${idx + 1}`} />
-              
+
               <div className="sp-project-info">
                 <ul>
                   {proj.desc.map((point, i) => (

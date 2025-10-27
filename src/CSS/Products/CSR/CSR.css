@@ -25,27 +25,58 @@ html {
 
 /* ================= Hero Section ================= */
 .csr-hero {
-  background: url('../../../../images/products/CSR/CSR-grand-image.jpg') no-repeat center/cover;
+  background: url('../../../../images/products/CSR/CSR-grand-image.png') no-repeat center/cover;
   position: relative;
   width: 100%;
-  height: 500px;
-  display: flex;
+  height: 570px;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .csr-hero-overlay {
   text-align: center;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  /* padding: 40px; */
   color: white;
-  max-width: 900px;
-  border-radius: 8px;
+  max-width: 100%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  /* border-radius: 8px; */
 }
 
 .csr-hero-overlay h1 {
-  font-size: 28px;
-  margin-bottom: 20px;
+  line-height: 1.5;
+  text-align: left;
+  font-size: 36px;
+  padding-top: 180px;
+  padding-left: 40px;
+  /* margin-bottom: 20px; */
+}
+
+.hero-button {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 40px;
+  padding-top: 70px;
+  /* Aligns button to the left */
+}
+
+.btn-learn {
+  background: #F7941D;
+  border: none;
+  padding: 12px 24px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-learn:hover {
+  color: #000000;
+  box-shadow: 0 4px 12px rgba(244, 142, 0, 1);
+
 }
 
 .csr-hero-overlay p {
@@ -63,75 +94,6 @@ html {
   font-weight: bold;
 }
 
-/* ================= Outcomes ================= */
-.csr-outcomes h2 {
-  font-size: 22px;
-  margin-bottom: 30px;
-  margin-top: 0px;
-  text-align: center;
-}
-
-.csr-cards {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.csr-card {
-  width: 344px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.csr-card:hover {
-  transform: translateY(-5px);
-}
-
-.csr-icon-container {
-  background: #F7941D;
-  padding: 1rem;
-  border-radius: 9999px;
-  display: inline-flex;
-  transition: transform 0.3s ease;
-  margin-bottom: 20px;
-  margin-left: 140px;
-  margin-right: auto;
-}
-
-.csr-feature-icon {
-  width: 32px;
-  height: 32px;
-  color: #fff;
-}
-
-.csr-card h3 {
-  color: #000000;
-  font-size: 24px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.csr-card ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.csr-card li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-}
-
 .csr-benefit-dot {
   flex-shrink: 0;
   width: 8px;
@@ -141,55 +103,30 @@ html {
   margin-top: 6px;
 }
 
-/* ================= How CSR Works ================= */
-.csr-how {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-/* .csr-how > * {
-  flex: 0 0 50%;
-} */
-
-
-.csr-how-left img {
-  border-radius: 8px;
-  width: 100%;
-}
-
-.csr-how-right h2 {
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-
-.csr-how-right p {
-  margin-bottom: 20px;
-}
-
-.btn-learn {
-  background: #F7941D;
-  border: none;
-  padding: 12px 24px;
-  color: white;
-  font-weight: bold;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn-learn:hover {
-  background: #F7941D;
-}
-
 /* ================= Redefining CSR ================= */
 .csr-redef {
   overflow: hidden;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 110px;
+  width: 100%;
 }
 
-.csr-redef h2 {
-  font-size: 22px;
+.csr-redef-left {
+  flex: 2.5;
+  /* Text area takes 2 parts */
+}
+
+.csr-redef-right {
+  align-items: end;
+  flex: 1;
+  /* Image area takes 1 part */
+}
+
+.csr-redef h1 {
+  margin-top: 0px;
+  line-height: 1.3;
+  font-size: 36px;
   margin-bottom: 15px;
 }
 
@@ -200,7 +137,7 @@ html {
 
 .csr-redef-img {
   border-radius: 6px;
-  width: 200px;
+  width: 380px;
 }
 
 /* ================= Core Modules ================= */
@@ -219,8 +156,8 @@ html {
 }
 
 .csr-module-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px) scale(1.04) !important;
+  box-shadow: 0 4px 12px rgba(244, 142, 0, 0.8);
 }
 
 .csr-module-icon {
@@ -234,7 +171,6 @@ html {
   margin-right: auto;
   color: #fff;
 }
-
 
 .csr-module-card h4 {
   font-size: 1.2rem;
@@ -260,85 +196,211 @@ html {
   margin-right: 10px;
 }
 
-/* ================= Core Capabilities ================= */
+.csr-section-title {
+  margin-bottom: 20px;
+}
+
+/* ================= Strategic Advantages ================= */
 .csr-cap-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2rem;
 }
 
 .csr-cap-card {
+  position: relative;
   background: #fff;
-  border-radius: 14px;
-  padding: 24px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: left;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: all 0.45s ease;
+  overflow: hidden;
+  cursor: pointer;
 }
 
+/* Hover lift + orange glow */
 .csr-cap-card:hover {
-  transform: translateY(-6px);
-  /* background: #f0eded; */
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 4px 12px rgba(244, 142, 0, 0.7);
 }
 
+/* Icon styling */
 .csr-cap-icon {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #F7941D;
+  background: linear-gradient(135deg, #f7941d, #ffb74d);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  margin: 0 auto 1rem;
+  margin-bottom: 1.2rem;
+  transition: transform 0.4s ease;
 }
 
+.csr-cap-card:hover .csr-cap-icon {
+  transform: rotate(10deg) scale(1.15);
+}
+
+/* Heading animation */
 .csr-cap-heading {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #000000;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.csr-cap-desc {
-  font-size: 0.95rem;
-  color: #000000;
-  line-height: 1.5;
+.csr-cap-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #f7941d;
+  border-radius: 2px;
+  transition: width 0.4s ease;
 }
+
+.csr-cap-card:hover .csr-cap-heading::after {
+  width: 45%;
+}
+
+/* Description animation */
+.csr-cap-desc {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  transition: color 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
+}
+
+.csr-cap-card:hover .csr-cap-desc {
+  color: #000;
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* Light pulse glow behind icon */
+.csr-cap-card:hover .csr-cap-icon::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(247, 148, 29, 1);
+  border-radius: 50%;
+  animation: pulseGlow 1.4s ease-out infinite;
+  z-index: 0;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+
 
 /* ================= CTA Section ================= */
 .csr-cta {
-  background: #F7941D;
-  color: #fff;
+  position: relative;
+  background: linear-gradient(90deg, #f7941d 0%, #f9c74f 100%);
+  color: #000000;
   text-align: center;
-  padding: 60px 20px;
+  padding: 70px 25px;
   border-radius: 20px;
-  margin: 60px auto;
+  margin: 70px auto;
   max-width: 1000px;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* Animated gradient glow on hover */
+.csr-cta:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(247, 148, 29, 0.35);
+  background: linear-gradient(270deg, #f9c74f 0%, #f7941d 100%);
+}
+
+/* Light sweep effect with continuous repetition on hover */
+.csr-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-25deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Trigger animation only on hover */
+.csr-cta:hover::before {
+  animation: sweep 3s linear infinite; /* repeat continuously */
+  opacity: 1;
+}
+
+@keyframes sweep {
+  0% {
+    left: -75%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    left: 125%;
+    opacity: 0.8;
+  }
+  100% {
+    left: 125%;
+    opacity: 0;
+  }
+}
+
+
+/* Text styling */
 .csr-cta-text {
   text-align: center;
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-.csr-cta-btn {
-  background: #fff;
-  color: #F7941D;
-  padding: 12px 32px;
-  border-radius: 30px;
+  font-size: 1.6rem;
   font-weight: 600;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  margin: 0;
+  color: #000;
+  transition: color 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
 }
 
-.csr-cta-btn:hover {
-  background: #E8E8E8;
-  color: #F7941D;
+/* Text animation on hover */
+.csr-cta:hover .csr-cta-text {
+  transform: translateY(-4px);
+  opacity: 0.95;
+  color: #1a1a1a;
 }
+
+/* Responsive adjustments */
+/* @media (max-width: 768px) {
+  .csr-cta {
+    padding: 50px 20px;
+    border-radius: 14px;
+  }
+
+  .csr-cta-text {
+    font-size: 1.3rem;
+  }
+} */
+
+
 
 /* ================= Did You Know ================= */
 .csr-fact {
@@ -404,6 +466,10 @@ html {
     font-size: 14px;
   }
 
+  .csr-redef h1 {
+    font-size: 22px;
+  }
+
   .csr-modules-grid,
   .csr-cap-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -445,16 +511,32 @@ html {
   }
 
   .csr-hero-overlay {
+    height: 84%;
     padding: 20px;
   }
 
   .csr-hero-overlay h1 {
+    padding-top: 30px;
+    padding-left: 0px;
     font-size: 20px;
+  }
+
+  .csr-redef h1 {
+    font-size: 24px;
   }
 
   .csr-hero-overlay p {
     font-size: 13px;
   }
+
+  .hero-button {
+    padding-left: 0px;
+    padding-top: 40px;
+  }
+
+.btn-learn {
+  padding: 8px 12px;
+}
 
   .csr-modules-grid,
   .csr-cap-grid {
@@ -467,12 +549,12 @@ html {
   }
 
   .csr-card li {
-  gap: 0px;
+    gap: 0px;
   }
 
-csr-module-card {
-  padding: 12px;
-}
+  csr-module-card {
+    padding: 12px;
+  }
 
   .csr-cta {
     margin: 40px auto;
@@ -485,7 +567,7 @@ csr-module-card {
   }
 
   .csr-cta-btn {
-    padding: 10px 24px;
+    padding: 10px 24px !important;
     font-size: 0.9rem;
   }
 
@@ -499,6 +581,10 @@ csr-module-card {
 
   .csr-fact p {
     font-size: 0.95rem;
+  }
+
+  .csr-redef {
+    gap: 30px;
   }
 }
 
@@ -521,7 +607,22 @@ csr-module-card {
   }
 
   .csr-hero-overlay h1 {
+    padding-top: 30px;
+    padding-left: 0px;
     font-size: 18px;
+  }
+
+  .hero-button {
+    padding-left: 0px;
+    padding-top: 40px;
+  }
+
+  .btn-learn {
+  padding: 8px 12px !important;
+}
+
+  .csr-redef h1 {
+    font-size: 22px;
   }
 
   .csr-hero-overlay p {

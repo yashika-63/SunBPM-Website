@@ -43,6 +43,25 @@
   padding-right: 40px;
 }
 
+.navbar-btn-primary {
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #F7941D;
+  color: white;
+  padding: 7px 16px;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar-btn-primary:hover{
+color: #000000;
+}
+
+
+
 @media (min-width: 1024px) {
   .nav-links {
     display: flex;

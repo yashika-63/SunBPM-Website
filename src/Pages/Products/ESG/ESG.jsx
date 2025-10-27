@@ -1,9 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../../CSS/Products/ESG/ESG.css";
-import ESGCAPABILITIES from "../../../data/Products/ESGCapabilities";
+import ESGADVANTAGES from "../../../data/Products/ESGADVANTAGES";
 import ESGMODULES from "../../../data/Products/ESGModules";
-import ESGOUTCOMES from "../../../data/Products/ESGOutcomes";
 
 // ---------- Animation Variants ----------
 const fadeInUp = {
@@ -19,6 +18,7 @@ const fadeInRight = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
 };
 
+
 const ESG = () => {
   return (
     <div className="ESG-page">
@@ -32,86 +32,23 @@ const ESG = () => {
       >
         <div className="ESG-hero-overlay">
           <h1>
-            Comprehensive Low-Code Platform for Environmental, Social, and Governance
+            ESG: Paving the Path to a Sustainable <br/> Economy
           </h1>
-          <p>
-            Our Enterprise ESG Solution empowers organizations to achieve sustainability goals through a 
-            holistic Environmental, Social, and Governance approach.
-          </p>
+          <div className="hero-button">
+            <button
+              className="btn-learn"
+              onClick={() => {
+                const element = document.getElementById("ESG-modules");
+                if (element) {
+                  const offset = element.getBoundingClientRect().top + window.pageYOffset - 30;
+                  window.scrollTo({ top: offset, behavior: "smooth" });
+                }
+              }}
+            >
+              Learn More
+            </button>
+          </div>
         </div>
-      </motion.section>
-
-      {/* ================= What is ESG ================= */}
-      <motion.section
-        className="ESG-intro containers"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
-        <h2>What is ESG ?</h2>
-        <p>
-          <span className="highlight">Environmental, Social, and Governance (ESG)</span>{" "}
-          refers to the standards and practices that guide businesses in managing their environmental impact, 
-          social responsibility, and corporate governance to drive sustainable growth.
-        </p>
-      </motion.section>
-
-      {/* ================= Positive Outcomes ================= */}
-      <motion.section
-        className="ESG-outcomes containers"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
-        <h2>Positive Outcomes of ESG</h2>
-
-        <div className="ESG-cards">
-          {ESGOUTCOMES.map(({ icon: Icon, title, points }, i) => (
-            <motion.div key={i} className="ESG-card" variants={fadeInUp}>
-              <div className="ESG-icon-container">
-                <Icon className="ESG-feature-icon" />
-              </div>
-              <h3>{title}</h3>
-              <ul>
-                {points.map((p, idx) => (
-                  <li key={idx}>
-                    <span className="ESG-benefit-dot"></span>
-                    <span>{p}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
-
-      {/* ================= How ESG Works ================= */}
-      <motion.section
-        className="ESG-how containers"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <motion.div className="ESG-how-left" variants={fadeInLeft}>
-          <img src="/images/products/ESG/ESG-work.png" alt="How ESG works" />
-        </motion.div>
-        <motion.div className="ESG-how-right" variants={fadeInRight}>
-          <h2>How ESG works</h2>
-          <p>
-            See how SunBPM ESG works from innovation in technology to
-            impactful action.
-          </p>
-          <button
-            className="btn-learn"
-            onClick={() =>
-              document.getElementById("ESG-modules")?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Learn More
-          </button>
-        </motion.div>
       </motion.section>
 
       {/* ================= Redefining ESG ================= */}
@@ -122,20 +59,19 @@ const ESG = () => {
         viewport={{ once: true }}
       >
         <motion.div className="ESG-redef-left" variants={fadeInLeft}>
-          <h2>
-            Redefining <span className="highlight">ESG</span> with Smart,
-            Scalable Solutions
-          </h2>
+          <h1>
+            A Clear View of Your Sustainability Performance
+          </h1>
           <p>
-            We provide a future-ready ESG platform that goes beyond compliance, enabling organizations to 
-            gain actionable insights, achieve measurable outcomes, and turn sustainability into a driver of 
-            growth, trust, and long-term value.
+            Enterprise ESG Solution enabling the entire ESG glide path. ESG aims to enhance disclosures 
+            on sustainability-related topics and provide stakeholders with better quantitative and 
+            qualitative insights and improve performance.
           </p>
         </motion.div>
-        <motion.div className="ESG-redef-left" variants={fadeInRight}>
+        <motion.div className="ESG-redef-right" variants={fadeInRight}>
           <img
-            src="/images/products/ESG/ESG-Side Frame.png"
-            alt="ESG Infographic"
+            src="/images/products/ESG/ESG Intro Image.png"
+            alt="ESG  Intro Image"
             className="ESG-redef-img"
           />
         </motion.div>
@@ -150,7 +86,7 @@ const ESG = () => {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <h2 className="ESG-section-title">SunBPM ESG Core Modules</h2>
+        <h1 className="ESG-section-title">SunBPM ESG Core Modules</h1>
 
         <div className="ESG-modules-grid">
           {ESGMODULES.map(({ icon: Icon, title, points }, idx) => (
@@ -172,20 +108,20 @@ const ESG = () => {
         </div>
       </motion.section>
 
-      {/* ================= Core Capabilities ================= */}
+      {/* ================= Strategic Advantages ================= */}
       <motion.section
-        className="ESG-capabilities containers"
+        className="ESG-ADVANTAGES containers"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <h2 className="ESG-section-title">
-          Core <span className="highlight">ESG</span> Capabilities :
-        </h2>
+        <h1 className="ESG-section-title">
+          Delivering Client Value: Strategic Advantages
+        </h1>
 
         <div className="ESG-cap-grid">
-          {ESGCAPABILITIES.map(({ icon: Icon, title, desc }, i) => (
+          {ESGADVANTAGES.map(({ icon: Icon, title, desc }, i) => (
             <motion.div key={i} className="ESG-cap-card" variants={fadeInUp}>
               <div className="ESG-cap-icon">
                 <Icon size={26} />
@@ -207,8 +143,8 @@ const ESG = () => {
       >
         <div className="ESG-cta-inner-container">
           <p className="ESG-cta-text">
-            Drive sustainable success with a unified ESG platform enabling strategy, compliance, and 
-            measurable impact for modern enterprises.
+            Turn your ESG initiatives into measurable impact with SunBPM a smart platform that ensures
+            transparency, accountability, and lasting social value.
           </p>
         </div>
       </motion.section>

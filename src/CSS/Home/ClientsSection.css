@@ -67,8 +67,8 @@
 }
 
 .ss-clientLogo5 {
-    height: 50px;
-    width: 150px;
+    height: 40px;
+    width: 90px;
     margin-right: 40px;
     flex-shrink: 0;
 }
@@ -81,8 +81,37 @@
 }
 
 .ss-clientLogo7 {
+    height: 60px;
+    width: 120px;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.ss-clientLogo8 {
+    height: 130px;
+    width: 120px;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+
+.ss-clientLogo9 {
+    height: 150px;
+    width: 120px;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+.ss-clientLogo-hettich {
     height: 80px;
-    width: 140px;
+    width: 100px;
+    margin-right: 40px;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+}
+
+.ss-clientLogo-crisil {
+    height: 90px;
+    width: 120px;
     margin-right: 40px;
     flex-shrink: 0;
 }
@@ -151,8 +180,8 @@
 @media screen and (max-width: 480px) {
     .ss-clientsDescription {
         padding-left: 0px;
-    } 
-    
+    }
+
     .ss-clientsSection {
         text-align: start;
         padding: 20px 20px;

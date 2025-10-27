@@ -1,10 +1,28 @@
 import { toast, ToastContainer } from "react-toastify";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../CSS/Contact us/ContactUs.css";
 import { CalendarCheck2, PhoneCall, Mail, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import MyMap from "./MyMap";
+
+
+const CountdownToast = ({ message, duration }) => {
+  const [timeLeft, setTimeLeft] = useState(duration / 1000);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeLeft((prev) => (prev > 1 ? prev - 1 : 0));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div>
+      <p>{message}</p>
+    </div>
+  );
+};
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -42,7 +60,7 @@ const ContactPage = () => {
     {
       question: "What solutions are built on SunBPM Responsible Business Suite?",
       answer:
-        "SunBPM supports Sales, Marketing, Finance, Compliance, Operations, and HR—covering everything from CRM and Support to Payroll, Audit, and Project Management.",
+        "SunBPM supports Sales, Marketing, Finance, Compliance, Operations, and HR covering everything from CRM and Support to Payroll, Audit, and Project Management.",
     },
     {
       question: "Are applications built on SunBPM Responsible Business Suite scalable?",
@@ -52,7 +70,7 @@ const ContactPage = () => {
     {
       question: "How do I get started with SunBPM Responsible Business Suite?",
       answer:
-        "You can get started by contacting us at +91 8850941503 or emailing sales@sunbpm.com to explore our solutions.",
+        "You may reach out to us at +91 8850941503 or email us on sales@sunbpm.com for more details about our solutions.",
     },
     {
       question: "Is SunBPM RBS customizable for different organizational needs?",
@@ -123,7 +141,18 @@ const ContactPage = () => {
         });
 
         if (response.ok) {
-          toast.success("Thank you! Your request has been submitted.");
+          const duration = 5000;
+          toast.success(
+            <CountdownToast
+              message="Thank you! Your request has been submitted."
+              duration={duration}
+            />,
+            {
+              autoClose: duration,
+              hideProgressBar: false,
+            }
+          );
+
           setFormData({
             fullname: "",
             email: "",
@@ -156,15 +185,19 @@ const ContactPage = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.div className="cu-grand-content" variants={fadeUp}>
+
           <div className="cu-grand-label">Lets Start the Conversation</div>
+          <div className="cu-service-heading">
+            Let’s build the future of your business together.
+          </div>
           <p className="cu-grand-desc">
-            SunBPM delivers end-to-end digitalization solutions tailored to your business needs. From workflow
-            automation and compliance management to analytics and integrations, we help organizations streamline
-            operations, enhance collaboration, and achieve measurable business results.
+             Whether you’re improving internal processes,
+            boosting team productivity, or expanding operational capabilities, our experts are here to
+            provide the right guidance, technology, and support every step of the way.
           </p>
         </motion.div>
         <motion.div className="cu-grand-img" variants={fadeUp}>
-          <img src="/images/ContactUs/Doted-map.png" alt="Meeting room" />
+          <img src="/images/ContactUs/Doted-map.jpg" alt="Meeting room" />
         </motion.div>
       </motion.section>
 
@@ -253,9 +286,9 @@ const ContactPage = () => {
                   <option value="SunBPM CSR">SunBPM CSR</option>
                   <option value="SunBPM EHS">SunBPM EHS</option>
                   <option value="SunBPM ESG">SunBPM ESG</option>
-                  <option value="SunBPM ESG">SunBPM QMS</option>
-                  <option value="SunBPM ESG">SunBPM PO/PR</option>
-                  <option value="SunBPM ESG">SunBPM Capex/Opex</option>
+                  <option value="SunBPM QMS">SunBPM QMS</option>
+                  <option value="SunBPM PO/PR">SunBPM PO/PR</option>
+                  <option value="SunBPM Capex/Opex">SunBPM Capex/Opex</option>
                 </select>
                 {errors.interest && <p className="error">{errors.interest}</p>}
               </div>
@@ -280,7 +313,7 @@ const ContactPage = () => {
             </form>
 
             {/* Toast Container */}
-            <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
+            <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
           </motion.div>
         </div>
       </motion.section>
@@ -312,8 +345,8 @@ const ContactPage = () => {
               <div className="cu-way-icon"><PhoneCall size={22} /></div>
               <div className="cu-way-title">Call us now</div>
               <div className="cu-way-small">
-                India — <a href="tel:+918850941503">(+91) 8850941503</a><br />
-                India — <a href="tel:+918591061753">(+91) 8591061753</a><br />
+                <a href="tel:+918850941503">(+91) 8850941503</a><br />
+                <a href="tel:+918591061753">(+91) 8591061753</a><br />
               </div>
             </motion.div>
 
