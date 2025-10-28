@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../../CSS/Products/EHS/EHS.css";
-import EHSADVANTAGES from "../../../data/Products/EHSADVANTAGES";
+import EHSADVANTAGES from "../../../data/Products/EHSAdvantages";
 import EHSMODULES from "../../../data/Products/EHSModules";
 
 // ---------- Animation Variants ----------

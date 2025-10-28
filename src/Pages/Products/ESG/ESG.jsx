@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../../CSS/Products/ESG/ESG.css";
-import ESGADVANTAGES from "../../../data/Products/ESGADVANTAGES";
+import ESGADVANTAGES from "../../../data/Products/ESGAdvantages";
 import ESGMODULES from "../../../data/Products/ESGModules";
 
 // ---------- Animation Variants ----------

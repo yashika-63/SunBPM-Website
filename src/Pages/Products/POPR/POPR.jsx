@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../../CSS/Products/POPR/POPR.css";
-import POPRADVANTAGES from "../../../data/Products/POPRADVANTAGES";
+import POPRADVANTAGES from "../../../data/Products/POPRAdvantages";
 import POPRMODULES from "../../../data/Products/POPRModules";
 
 // ---------- Animation Variants ----------

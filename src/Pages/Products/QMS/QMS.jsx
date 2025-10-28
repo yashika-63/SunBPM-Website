@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../../CSS/Products/QMS/QMS.css";
-import QMSADVANTAGES from "../../../data/Products/QMSADVANTAGES";
+import QMSADVANTAGES from "../../../data/Products/QMSAdvantages";
 import QMSMODULES from "../../../data/Products/QMSModules";
 
 // ---------- Animation Variants ----------

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../../CSS/Products/CapexOpex/CapexOpex.css";
-import CapexOpexADVANTAGES from "../../../data/Products/CapexOpexADVANTAGES";
+import CapexOpexADVANTAGES from "../../../data/Products/CapexOpexAdvantages";
 import CapexOpexMODULES from "../../../data/Products/CapexOpexModules";
 
 // ---------- Animation Variants ----------
