@@ -1,75 +1,74 @@
 const clientCards = [
   {
-    id: "globecom-services",
+    id: "chemical-industries",
     image: "/images/success_stories/team1.jpg",
-    title: "GlobeCom Services",
-    desc: "Streamlines workflows with SunBPM to accelerate project delivery by 90%.",
+    title: "Chemical Industries",
+    industry: "Chemical",
+    desc: "Optimizes production workflows and safety compliance.",
     content: `
-      GlobeCom Services partnered with SunBPM to modernize its workflow automation system. 
-      With our platform, they achieved a 90% improvement in project delivery timelines. 
-      The company successfully reduced manual intervention, enhanced team collaboration, 
-      and ensured compliance across international projects. 
-      GlobeCom continues to leverage SunBPM to scale globally while maintaining operational efficiency.
+      Chemical industries face complex challenges in managing hazardous materials, regulatory compliance, and production efficiency. 
+      With SunBPM, companies streamline their operational workflows, automate safety checks, and ensure adherence to environmental standards. 
+      The platform enables real-time monitoring, reduces manual errors, and improves collaboration across R&D, manufacturing, and compliance teams.
     `,
   },
   {
-    id: "translogix-freight",
+    id: "mechanical-industries",
     image: "/images/success_stories/team2.jpg",
-    title: "TransLogix Freight",
-    desc: "Shortens process cycle time by 35% and strengthens financial operations.",
+    title: "Mechanical Industries",
+    industry: "Mechanical",
+    desc: "Improves equipment lifecycle and maintenance scheduling.",
     content: `
-      TransLogix Freight faced challenges in managing its logistics and invoicing processes. 
-      With SunBPM, they cut process cycle times by 35% and streamlined financial operations. 
-      Automated workflows helped improve accuracy in billing, reduce disputes, and enhance customer trust. 
-      The solution empowered their workforce to focus on high-value logistics operations rather than paperwork.
+      Mechanical industries rely on precision and timely maintenance to avoid costly downtime. 
+      SunBPM helps automate maintenance schedules, track equipment performance, and manage spare parts inventory efficiently. 
+      The result is improved asset utilization, reduced operational costs, and enhanced productivity across manufacturing units.
     `,
   },
   {
-    id: "fintrust-consulting",
+    id: "electrical-industries",
     image: "/images/success_stories/team3.jpg",
-    title: "FinTrust Consulting",
-    desc: "Strengthens workflow governance and compliance with SunBPM by Pristine.",
+    title: "Electrical Industries",
+    industry: "Electrical",
+    desc: "Enhances process automation and quality control.",
     content: `
-      FinTrust Consulting needed a system to manage compliance-heavy workflows. 
-      SunBPM provided an intelligent governance framework, ensuring transparency and reducing audit risks. 
-      The platform enabled real-time monitoring of compliance processes and improved decision-making. 
-      As a result, FinTrust improved its client trust rating and reduced compliance costs significantly.
+      Electrical industries benefit from SunBPM’s ability to automate production workflows, manage quality inspections, and ensure compliance with industry standards. 
+      The platform supports integration with IoT devices for real-time data capture, enabling smarter decision-making and faster issue resolution. 
+      Companies report improved product consistency and reduced defect rates.
     `,
   },
   {
-    id: "heritage-life-insurance",
+    id: "automotive-industries",
     image: "/images/success_stories/team4.jpg",
-    title: "Heritage Life Insurance",
-    desc: "Chooses SunBPM to power intelligent process automation and enhance customer experience.",
+    title: "Automotive Industries",
+    industry: "Automotive",
+    desc: "Accelerates product development and supply chain coordination.",
     content: `
-      Heritage Life Insurance was struggling with legacy systems that slowed down claim processing. 
-      With SunBPM, they adopted intelligent automation, cutting claim resolution times by 60%. 
-      Customer satisfaction scores rose sharply, and employees experienced reduced workloads. 
-      Heritage now leverages SunBPM as a backbone for its digital transformation strategy.
+      Automotive industries use SunBPM to streamline product development cycles, manage supplier collaboration, and ensure regulatory compliance. 
+      The platform enables agile workflows across design, testing, and manufacturing, helping companies bring innovations to market faster. 
+      It also improves visibility across the supply chain, reducing delays and enhancing customer satisfaction.
     `,
   },
   {
-    id: "crestpoint-solutions",
+    id: "pharmaceutical-industries",
     image: "/images/success_stories/team5.jpg",
-    title: "Celebrating Innovation: CrestPoint Solutions",
-    desc: "Enhances customer experience with SunBPM by Pristine.",
+    title: "Pharmaceutical Industries",
+    industry: "Pharmaceutical",
+    desc: "Strengthens compliance and clinical process automation.",
     content: `
-      CrestPoint Solutions wanted to innovate its customer service processes. 
-      By integrating SunBPM, they designed tailored workflows that responded quickly to customer requests. 
-      The new system reduced ticket resolution times and boosted customer satisfaction. 
-      CrestPoint continues to innovate by building custom apps on top of the SunBPM ecosystem.
+      Pharmaceutical industries face stringent regulatory requirements and complex clinical workflows. 
+      SunBPM helps automate documentation, manage approvals, and track clinical trial progress with precision. 
+      The platform ensures audit readiness, reduces compliance risks, and accelerates time-to-market for new drugs.
     `,
   },
   {
-    id: "everbright-consumer-goods",
+    id: "textile-industries",
     image: "/images/success_stories/team6.jpg",
-    title: "EverBright Consumer Goods",
-    desc: "Reduces process deployment time by 85%.",
+    title: "Textile Industries",
+    industry: "Textile",
+    desc: "Boosts production efficiency and order fulfillment.",
     content: `
-      EverBright Consumer Goods needed to speed up process deployment for its global retail operations. 
-      Using SunBPM, they achieved an 85% reduction in deployment time. 
-      The company was able to roll out new retail processes across multiple geographies simultaneously. 
-      Today, EverBright uses SunBPM to maintain agility and stay ahead in a competitive market.
+      Textile industries leverage SunBPM to optimize production planning, manage inventory, and streamline order processing. 
+      The platform enables real-time tracking of production stages, improves coordination between departments, and enhances responsiveness to market demands. 
+      Companies report faster turnaround times and improved customer satisfaction.
     `,
   },
 ];

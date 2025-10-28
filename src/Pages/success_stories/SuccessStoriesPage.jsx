@@ -32,7 +32,7 @@ const staggerContainer = {
 };
 
 const SuccessStoriesPage = () => {
-  const navigate = useNavigate();  // ✅ Hook must be inside component
+  const navigate = useNavigate();  // Hook must be inside component
 
   const handleCardClick = (id) => {
     navigate(`/SuccessStories/${id}`); // go to detail page
@@ -105,7 +105,7 @@ const SuccessStoriesPage = () => {
       {/* Client Stories Grid */}
       <section className="clients-section">
         <h2>
-          Business Success with <span className="success-highlight">SunBPM</span>
+          Business Success Across Diverse Industries with <span className="success-highlight">SunBPM</span>
         </h2>
         <div className="clients-grid">
           {clientCards.map((c, idx) => (
@@ -123,7 +123,7 @@ const SuccessStoriesPage = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="projects-section">
+      {/* <section className="projects-section">
         <h2>
           Our <span className="success-highlight">Successful Projects</span> used
           by the Clients
@@ -137,7 +137,36 @@ const SuccessStoriesPage = () => {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
+
+      <motion.section
+        className="sp-projects"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <motion.h2 className="sp-projects-title" variants={fadeUp}>
+          Our Latest Projects
+        </motion.h2>
+        <div className="sp-projects-list">
+          {projects.map((proj, idx) => (
+            <motion.div className="sp-project-card" key={idx} variants={fadeUp}>
+              <img src={proj.image} alt={`Project ${idx + 1}`} />
+
+              <div className="sp-project-info">
+                <ul>
+                  {proj.desc.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+
     </div>
   );
 };

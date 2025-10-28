@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../../CSS/Products/CSR/CSR.css";
-import CSRADVANTAGES from "../../../data/Products/CSRADVANTAGES";
+// import CSRADVANTAGES from "../../../data/Products/CSRAdvantages.jsx";
+import CSRADVANTAGES from "../../../data/Products/CSRAdvantages";
 import CSRMODULES from "../../../data/Products/CSRModules";
 
 // ---------- Animation Variants ----------
@@ -129,6 +130,7 @@ const CSR = () => {
 
         <div className="csr-cap-grid">
           {CSRADVANTAGES.map(({ icon: Icon, title, desc }, i) => (
+
             <motion.div key={i} className="csr-cap-card" variants={fadeInUp}>
               <div className="csr-cap-icon">
                 <Icon size={26} />
