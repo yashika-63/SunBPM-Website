@@ -145,8 +145,8 @@ const QMS = () => {
       >
         <div className="QMS-cta-inner-container">
           <p className="QMS-cta-text">
-            Turn your QMS initiatives into measurable impact with SunBPM a smart platform that ensures
-            transparency, accountability, and lasting social value.
+            Drive quality excellence across your organization with SunBPM QMS automating audits, tracking 
+            performance, and ensuring continuous improvement at every stage.
           </p>
         </div>
       </motion.section>

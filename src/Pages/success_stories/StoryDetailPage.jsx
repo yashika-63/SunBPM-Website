@@ -16,21 +16,25 @@ const StoryDetailPage = () => {
     <div className="story-detail-page">
       <div className="story-hero">
         <img src={story.grandImage || story.image} alt={story.title} />
-        <h1>{story.title}</h1>
+        <div className="story-hero-overlay"></div>
+        <h1 className="story-hero-title">{story.title}</h1>
       </div>
 
-      <div className="story-content">
-        <h3>{story.fullDesc || story.desc}</h3>
-      </div>
+      <div className="story-detail-container">
+        <div className="story-content highlight-block">
+          <h3>{story.fullDesc || story.desc}</h3>
+        </div>
 
-            <div className="story-content">
-        <p>{story.fullDesc || story.content}</p>
-      </div>
+        <div className="story-content">
+          <p>{story.fullDesc || story.content}</p>
+        </div>
 
-      <button className="back-btn" onClick={() => navigate(-1)}>
-        Back
-      </button>
+        <button className="back-btn" onClick={() => navigate(-1)}>
+          ← Back to Success Stories
+        </button>
+      </div>
     </div>
+
   );
 };
 

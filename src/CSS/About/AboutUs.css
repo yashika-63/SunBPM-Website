@@ -53,8 +53,7 @@
 .Aboutus-img img {
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
-  min-height: 340px;
+  /* min-height: 340px; */
 }
 
 /* ================= INTRO ================= */
@@ -88,7 +87,7 @@
   font-size: 36px;
   font-weight: bold;
   color: #f7941d;
-  margin-bottom: 1.5rem;
+  margin-top: 0px;
   line-height: 1.2;
 }
 
@@ -368,7 +367,7 @@
 
 @media (max-width: 768px) {
   .Aboutus {
-  height: auto;
+    height: auto;
     margin-top: 20px;
   }
 
@@ -379,6 +378,10 @@
   .diagram-container img {
     width: 220px;
     height: 220px;
+  }
+
+  .intro-section {
+    margin-top: 0px;
   }
 
   .vision-mission-section.container {
@@ -400,7 +403,7 @@
   }
 
   .Aboutus-label {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .Aboutus-heading {
@@ -409,11 +412,11 @@
 
   .Aboutus-desc {
     line-height: 1.5;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .intro-text h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .intro-text p {
@@ -423,7 +426,7 @@
   .team-section h1 {
     margin-top: 30px;
     margin-bottom: 10px;
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .timeline-card .year {
@@ -437,55 +440,6 @@
   .team-member-card {
     width: 100%;
     max-width: 300px;
-  }
-
-  .team-grid {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .team-grid img {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .Aboutus-img {
-    height: 160px;
-  }
-
-  .Aboutus-label {
-    font-size: 24px;
-  }
-
-  .Aboutus-heading {
-    font-size: 20px;
-  }
-
-  .Aboutus-desc {
-    font-size: 14px;
-  }
-
-  .intro-text h2 {
-    font-size: 22px;
-  }
-
-  .intro-text p {
-    font-size: 14px;
-  }
-
-  .team-section h1 {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-size: 28px;
-  }
-
-  .timeline-card .year {
-    font-size: 16px;
-  }
-
-  .timeline-card .desc {
-    font-size: 14px;
   }
 
   .team-grid {

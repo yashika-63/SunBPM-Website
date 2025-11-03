@@ -246,6 +246,9 @@
 }
 
 @media (max-width: 768px) {
+  .feature-item {
+    padding: 8px 11px;
+  }
   .hero-title {
     font-size: 2rem;
   }

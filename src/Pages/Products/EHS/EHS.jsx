@@ -149,8 +149,8 @@ const EHS = () => {
       >
         <div className="EHS-cta-inner-container">
           <p className="EHS-cta-text">
-            Turn your EHS initiatives into measurable impact with SunBPM a smart platform that ensures
-            transparency, accountability, and lasting social value.
+            Build a safer, compliant, and more responsible workplace with SunBPM EHS streamlining 
+            Environment, Health, and Safety processes through smart automation and real-time insights.
           </p>
         </div>
       </motion.section>

@@ -34,15 +34,16 @@ function NotFound() {
 
 function AppContent() {
   const location = useLocation();
+  const currentPath = location.pathname.toLowerCase();
 
   // routes where we don’t want navbar/footer
   const noFooter = ["/bookdemo", "/loginadminpagebookdemo"];
-  const hideFooter = noFooter.includes(location.pathname.toLowerCase());
+  const hideFooter = noFooter.includes(currentPath);
 
-  const noNavbar = [""];
-  const hideNavbar = noNavbar.includes(location.pathname.toLowerCase());
+  const noNavbar = [];
+  const hideNavbar = noNavbar.includes(currentPath);
 
-  // detect if current path is invalid
+  // define all valid routes in lowercase
   const validRoutes = [
     "/",
     "/contact",
@@ -58,11 +59,13 @@ function AppContent() {
     "/privacypolicy",
     "/termsconditions",
     "/bookdemo",
-    "/loginadminpagebookdemo",
+    "/loginadminpagebookdemo"
   ];
+
+  // check if path is valid OR starts with /successstories/
   const isValidRoute =
-    validRoutes.includes(location.pathname.toLowerCase()) ||
-    location.pathname.startsWith("/successstories/");
+    validRoutes.includes(currentPath) ||
+    currentPath.startsWith("/successstories/");
 
   return (
     <div>
@@ -97,7 +100,7 @@ function AppContent() {
       {isValidRoute && !hideFooter && <Footer />}
 
       {/* Cookie Consent Banner */}
-      <CookiePopup/>
+      <CookiePopup />
 
     </div>
   );

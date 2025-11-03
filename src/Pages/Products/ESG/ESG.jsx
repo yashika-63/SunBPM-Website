@@ -143,8 +143,8 @@ const ESG = () => {
       >
         <div className="ESG-cta-inner-container">
           <p className="ESG-cta-text">
-            Turn your ESG initiatives into measurable impact with SunBPM a smart platform that ensures
-            transparency, accountability, and lasting social value.
+            Empower sustainable growth with SunBPM ESG your unified platform for tracking, managing, and 
+            reporting environmental, social, and governance performance with accuracy and confidence.
           </p>
         </div>
       </motion.section>

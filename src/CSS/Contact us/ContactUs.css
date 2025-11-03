@@ -23,7 +23,6 @@
   margin-top: 40px;
   height: 570px;
   display: flex;
-  min-height: 300px;
 }
 
 .cu-grand-img {
@@ -310,8 +309,15 @@
 
 /* subtle breathing effect */
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 10px rgba(255,255,255,0.4); }
-  50% { box-shadow: 0 0 20px rgba(255,255,255,0.7); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  }
 }
 
 /* title */
@@ -331,6 +337,7 @@
   opacity: 0.9;
   transition: color 0.3s ease, transform 0.3s ease;
 }
+
 .cu-way-link:hover {
   color: #fff;
   transform: scale(1.05);
@@ -344,10 +351,12 @@
   opacity: 0.95;
   transition: color 0.3s ease;
 }
+
 .cu-way-small a {
   color: inherit;
   text-decoration: none;
 }
+
 .cu-way-small a:hover {
   color: #fff;
 }
@@ -526,7 +535,7 @@
 @media (max-width: 560px) {
 
   .cu-grand {
-  height: auto;
+    height: auto;
   }
 
   .cu-grand,
@@ -543,6 +552,10 @@
     min-height: 200px;
   }
 
+  .cu-start {
+    padding: 40px 0;
+  }
+
   .cu-title {
     font-size: 24px;
   }
@@ -553,6 +566,8 @@
 
   .cu-row-2 {
     grid-template-columns: 1fr;
+    gap:10px;
+    padding-bottom: 10px;
   }
 
   .cu-card {
@@ -569,7 +584,7 @@
 
   .cu-service-heading {
     margin-top: 15px;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.5;
   }
 

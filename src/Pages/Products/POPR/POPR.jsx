@@ -146,8 +146,8 @@ const POPR = () => {
       >
         <div className="POPR-cta-inner-container">
           <p className="POPR-cta-text">
-            Turn your POPR initiatives into measurable impact with SunBPM a smart platform that ensures
-            transparency, accountability, and lasting social value.
+            Automate your procurement lifecycle with SunBPM PO/PR simplifying requisitions, approvals, 
+            and purchase orders while improving transparency and speed.
           </p>
         </div>
       </motion.section>

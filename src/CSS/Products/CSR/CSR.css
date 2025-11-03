@@ -148,6 +148,7 @@ html {
 }
 
 .csr-module-card {
+  /* background: linear-gradient(180deg, #ffffff 0%, #fdf2e3 100%); */
   background: #fff;
   border-radius: 16px;
   padding: 20px;

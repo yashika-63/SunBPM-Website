@@ -34,7 +34,7 @@ const Navbar = () => {
       ],
     },
     { name: 'Contact Us', href: '/Contact' },
-    // { name: 'Success stories', href: '/SuccessStories' },
+    { name: 'Success stories', href: '/SuccessStories' },
   ];
 
   const toggleDropdown = (item) => {
@@ -140,7 +140,7 @@ const Navbar = () => {
           >
             <div
               className={`side-drawer open`}
-              onClick={(e) => e.stopPropagation()} // ✅ prevent closing when clicking inside
+              onClick={(e) => e.stopPropagation()} 
             >
               <div className="drawer-header">
                 <button

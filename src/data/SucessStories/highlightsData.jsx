@@ -1,36 +1,36 @@
 const highlights = [
   {
     image: "/images/success_stories/person1.jpg",
-    title: "Process Efficiency Without Limits: How SunBPM Empowers Businesses with Intelligent Automation",
+    title: "Simplifying Complex Workflows",
     desc: [
-      "To help enterprises move beyond manual workflows and accelerate digital transformation, Pristine built SunBPM which enables process automation and seamless integrations. Businesses now streamline operations, monitor performance in real time, ensure compliance, and optimize costs all within a single unified platform."
+      "SunBPM helps organizations automate manual, repetitive tasks turning paper-heavy operations into streamlined digital workflows. With real-time visibility and zero coding effort, teams achieve faster decisions and smoother collaboration."
     ],
     align: "left"
   },
   {
     image: "/images/success_stories/person2.jpg",
-    title: "SunBPM and Orion Manufacturing Group",
+    title: "Ensuring Compliance with Confidence",
     desc: [
-      "Orion Manufacturing Group leveraged SunBPM by standardizing approvals in their global process framework. By automating manual approvals, digitizing compliance checks, and integrating with existing ERP systems, the company successfully reduced project delays and achieved 30% faster process execution."
+      "From CSR governance to EHS and QMS reporting, SunBPM ensures complete traceability and audit readiness. Our platform centralizes approvals, documentation, and analytics so you stay compliant without the chaos."
     ],
     align: "right"
   },
   {
     image: "/images/success_stories/person3.jpg",
-    title: "Accelerating Business in a Process Transformation",
+    title: "Speed Meets Agility",
     desc: [
-      "NovaBank Financial Services adopted SunBPM by Pristine to overhaul its complex loan approval, compliance reporting, and reconciliation workflows. Processes previously required thousands of hours of manual effort every year, often leading to delays, higher costs, and audit challenges."
+      "Empower managers with instant insights and automated notifications. SunBPM’s low-code design enables quick configuration of workflows that adapt to business changes reducing approval cycles by up to 60%."
     ],
     align: "left"
   },
   {
     image: "/images/success_stories/person4.jpg",
-    title: "Scaling Efficient Public Service",
+    title: "Built for Growth and Integration",
     desc: [
-      "Access to timely, transparent, and well-coordinated public services is crucial for citizens – yet managing large-scale processes across government departments often creates delays and inefficiencies. CityServe Authority, a regional public service agency, adopted SunBPM by Pristine to optimize operations and deliver faster services to millions of people."
+      "Whether you’re a fast-growing enterprise or an established industry leader, SunBPM scales effortlessly. With cloud deployment, role-based access, and integration-ready architecture, your digital transformation never hits a pause."
     ],
     align: "right"
-  },
+  }
 ];
 
 export default highlights;

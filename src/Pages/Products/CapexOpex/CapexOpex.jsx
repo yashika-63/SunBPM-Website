@@ -146,8 +146,8 @@ const CapexOpex = () => {
       >
         <div className="CapexOpex-cta-inner-container">
           <p className="CapexOpex-cta-text">
-            Turn your CapexOpex initiatives into measurable impact with SunBPM a smart platform that ensures
-            transparency, accountability, and lasting social value.
+            Optimize capital and operational expenditures with SunBPM CAPEX/OPEX enabling smarter 
+            financial planning, faster approvals, and full visibility into business spending.
           </p>
         </div>
       </motion.section>

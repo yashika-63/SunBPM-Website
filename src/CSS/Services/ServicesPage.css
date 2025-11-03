@@ -431,11 +431,6 @@
 }
 
 
-
-
-
-
-
 /* RESPONSIVE */
 @media (max-width: 900px) {
 
@@ -515,6 +510,7 @@
 
   .sp-service,
   .sp-service-area {
+    height: auto !important;
     flex-direction: column;
   }
 
@@ -552,9 +548,12 @@
     font-size: 22px;
   }
 
-  .sp-service-label,
-  .sp-service-heading {
-    font-size: 24px;
+  .sp-service-label{
+    font-size: 24px !important;
+  }
+  
+  .sp-service-heading{
+    font-size: 22px;
   }
 
   .sp-insight-card img {
