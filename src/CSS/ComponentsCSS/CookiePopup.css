@@ -1,0 +1,25 @@
+/* Target the actual consent banner container */
+.cookie-consent-container {
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0px !important;
+    position: fixed !important;
+    z-index: 9999 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* For smaller screens */
+@media (max-width: 1024px) {
+    .cookie-consent-container {
+        width: 100% !important;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .cookie-consent-container {
+        width: auto !important;
+    }
+}

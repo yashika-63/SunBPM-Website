@@ -12,6 +12,7 @@ const clientCards = [
       data-driven ecosystems where every process is transparent, traceable, and efficient.
     `,
   },
+  
   {
     id: "electrical-energy",
     image: "/images/success_stories/team2.jpg",

@@ -21,6 +21,8 @@ import QMS from "./Pages/Products/QMS/QMS.jsx";
 import CapexOpex from "./Pages/Products/CapexOpex/CapexOpex.jsx";
 import POPR from "./Pages/Products/POPR/POPR.jsx";
 import CookiePopup from "./Pages/components/CookiePopup.jsx";
+import PopupNotification from "./Pages/components/PopupNotification.jsx";
+
 
 // 404 page WITHOUT navbar & footer
 function NotFound() {
@@ -98,6 +100,9 @@ function AppContent() {
 
       {/* show footer only if valid route and not in no-layout */}
       {isValidRoute && !hideFooter && <Footer />}
+
+      {/* Popup Notification every 5 mins */}
+      <PopupNotification />
 
       {/* Cookie Consent Banner */}
       <CookiePopup />

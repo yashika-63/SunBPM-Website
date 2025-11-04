@@ -1,0 +1,101 @@
+/* Main container */
+.popup-container {
+    text-align: center;
+    padding: 5px 0px;
+}
+
+.popup-title {
+    color: #F7941D;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.popup-message {
+    font-size: 15px;
+    color: #202020;
+    margin-bottom: 12px;
+}
+
+/* Button group */
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.popup-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.view-btn {
+    background: linear-gradient(135deg, #f7941d, #f9c74f);
+    color: #fff;
+}
+
+.view-btn:hover {
+    background: linear-gradient(135deg, #f9c74f, #f7941d);
+}
+
+.no-btn {
+    background-color: #f0f0f0;
+    color: #282828;
+}
+
+.no-btn:hover {
+    background-color: #d9d8d8;
+}
+
+.Toastify__progress-bar--info{
+    background: linear-gradient(135deg, #f89012, #ffb302);
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .Toastify__toast {
+        --toastify-toast-width: auto;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    .popup-container {
+        padding: 8px !important;
+    }
+
+    .popup-title {
+        font-size: 16px;
+    }
+
+    .popup-message {
+        font-size: 14px;
+    }
+
+    .popup-buttons {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .popup-btn {
+        width: 100%;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-container {
+        padding: 8px;
+    }
+
+    .popup-title {
+        font-size: 16px;
+    }
+
+    .popup-message {
+        font-size: 14px;
+    }
+}

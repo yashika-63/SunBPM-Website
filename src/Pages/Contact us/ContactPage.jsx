@@ -126,8 +126,8 @@ const ContactPage = () => {
 
       try {
         // const response = await fetch("/api/book-demo", {
-        const response = await fetch("http://localhost:6002/api/book-demo", {
-          // const response = await fetch("http://15.207.163.30:6002/api/book-demo", {
+        // const response = await fetch("http://localhost:6002/api/book-demo", {
+        const response = await fetch("http://15.207.163.30:6002/api/book-demo", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -191,7 +191,7 @@ const ContactPage = () => {
             Let’s build the future of your business together.
           </div>
           <p className="cu-grand-desc">
-             Whether you’re improving internal processes,
+            Whether you’re improving internal processes,
             boosting team productivity, or expanding operational capabilities, our experts are here to
             provide the right guidance, technology, and support every step of the way.
           </p>
