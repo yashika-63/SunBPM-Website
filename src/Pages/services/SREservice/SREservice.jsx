@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import SREcoreServices from "../../../data/Services/SREcoreServices";
 import SREbenefits from "../../../data/Services/SREbenefits";
-import "../../../CSS/Services/SREService/SREService.css";
+import "../../../CSS/Services/SREservice/SREservice.css";
 
 
 // ---------- Animation Variants ----------

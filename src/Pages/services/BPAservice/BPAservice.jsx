@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import BPAcoreServices from "../../../data/Services/BPAcoreServices";
 import BPAbenefits from "../../../data/Services/BPAbenefits";
-import "../../../CSS/Services/BPAService/BPAService.css";
+import "../../../CSS/Services/BPAservice/BPAservice.css";
 
 
 // ---------- Animation Variants ----------

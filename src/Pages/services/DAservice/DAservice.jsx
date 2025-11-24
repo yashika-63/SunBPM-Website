@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import DAcoreServices from "../../../data/Services/DAcoreServices";
 import DAbenefits from "../../../data/Services/DAbenefits";
-import "../../../CSS/Services/DAService/DAService.css";
+import "../../../CSS/Services/DAservice/DAservice.css";
 
 
 // ---------- Animation Variants ----------
