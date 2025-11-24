@@ -1,105 +1,189 @@
-import { 
-  FaBalanceScale, FaExclamationTriangle, FaClipboardCheck, FaFlask, FaCogs, FaSearch, FaUserShield, FaEye, 
-  FaFileSignature, FaRecycle, FaProjectDiagram, FaCheckCircle, FaShieldAlt, FaFileAlt, FaClipboardList
-} from "react-icons/fa";
-
 const EHSMODULES = [
+  /* =========================================================
+     SAFETY & HEALTH MODULES
+  ========================================================= */
   {
-    icon: FaShieldAlt,
-    title: "Compliance & Regulatory Management",
-    points: [
-      "Ensure adherence to legal and industry-specific EHS standards.",
-      "Maintain compliance records and automate reporting workflows.",
-    ],
+    id: "safety-health",
+    groupName: "Safety & Health Modules",
+    shortDesc:
+      "Strengthens workplace safety through structured reporting, hazard prevention, and employee competency assurance.",
+    image: "/images/products/EHS/viewdetail.jpg",
+
+    modules: [
+      {
+        id: "incident-tracker",
+        title: "Incident Tracker",
+        focus: [
+          "Comprehensive logging, investigation, classification (Lost Time, Recordable, Near-Miss), and root cause analysis of all safety incidents."
+        ],
+        benefits: [
+          "Provides detailed, auditable records for mandatory reporting (e.g., OSHA logs) and drives the systemic elimination of hazards."
+        ]
+      },
+      {
+        id: "hazard-observation",
+        title: "Hazard Observation",
+        focus: [
+          "Facilitates and tracks reporting of unsafe conditions or behaviors by any employee, ensuring immediate management attention."
+        ],
+        benefits: [
+          "Fosters an inclusive safety culture and provides leading indicators for risk before incidents occur."
+        ]
+      },
+      {
+        id: "training-competency",
+        title: "Training & Competency",
+        focus: [
+          "Schedules, manages, and tracks mandatory safety training (e.g., Lockout/Tagout, confined space entry) against employee roles and certifications."
+        ],
+        benefits: [
+          "Ensures all personnel are qualified and compliant for their tasks, drastically reducing human error in high-risk scenarios."
+        ]
+      }
+    ]
   },
+
+  /* =========================================================
+     ENVIRONMENTAL & COMPLIANCE MODULES
+  ========================================================= */
   {
-    icon: FaExclamationTriangle,
-    title: "Incident & Near-Miss Management",
-    points: [
-      "Identify, track, and prevent workplace hazards effectively.",
-      "Implement corrective and preventive measures to avoid recurrence.",
-    ],
+    id: "environment-compliance",
+    groupName: "Environmental & Compliance Modules",
+    shortDesc:
+      "Ensures operational compliance by managing permits, waste reporting, and environmental performance measurement.",
+    image: "/images/products/EHS/viewdetail.jpg",
+
+    modules: [
+      {
+        id: "permit-management",
+        title: "Permit Management",
+        focus: [
+          "Tracks the status, renewal dates, required sampling/testing, and compliance conditions for operational permits (air, water, waste)."
+        ],
+        benefits: [
+          "Prevents costly lapses in required permits and guarantees continuous environmental compliance."
+        ]
+      },
+      {
+        id: "waste-management",
+        title: "Waste Management",
+        focus: [
+          "Tracks waste generation by type, disposal methods, transporter details, and regulatory compliance across waste streams."
+        ],
+        benefits: [
+          "Ensures adherence to complex waste disposal laws, reducing liability and supporting sustainability goals."
+        ]
+      },
+      {
+        id: "environmental-monitoring",
+        title: "Environmental Monitoring",
+        focus: [
+          "Manages scheduling and recording of required environmental testing, sampling data, and permit-defined limits."
+        ],
+        benefits: [
+          "Provides verifiable proof of environmental performance for regulatory submissions and public disclosures."
+        ]
+      }
+    ]
   },
+
+  /* =========================================================
+     GOVERNANCE & IMPROVEMENT MODULES
+  ========================================================= */
   {
-    icon: FaClipboardCheck,
-    title: "Hazard Identification & Risk Assessment (HIRA)",
-    points: [
-      "Streamline hazard analysis and risk mitigation processes.",
-      "Enable proactive safety planning with real-time tracking.",
-    ],
+    id: "governance-improvement",
+    groupName: "Governance & Improvement Modules",
+    shortDesc:
+      "Drives continuous improvement through structured audits, corrective actions, and emergency preparedness.",
+    image: "/images/products/EHS/viewdetail.jpg",
+
+    modules: [
+      {
+        id: "audit-management",
+        title: "Audit Management",
+        focus: [
+          "Planning, scheduling, checklist execution, findings documentation, and follow-up tracking for internal and external EHS audits."
+        ],
+        benefits: [
+          "Streamlines the entire auditing process, ensuring a transparent and efficient audit trail for regulatory bodies."
+        ]
+      },
+      {
+        id: "corrective-preventive-action",
+        title: "Corrective & Preventive Action (CAPA)",
+        focus: [
+          "Full workflow management for root cause analysis, action planning, assignment, tracking, and verification of effectiveness (VOE)."
+        ],
+        benefits: [
+          "Institutionalizes continuous improvement, ensuring that EHS failures lead to permanent systemic changes."
+        ]
+      },
+      {
+        id: "emergency-response-plan",
+        title: "Emergency Response Plan",
+        focus: [
+          "Central repository for emergency procedures, contact lists, drill scheduling, and post-drill review and improvements."
+        ],
+        benefits: [
+          "Ensures the organization is prepared for critical events, minimizing injury, property damage, and operational downtime."
+        ]
+      }
+    ]
   },
+
+  /* =========================================================
+     INCIDENT, AUDIT & PERSONNEL
+  ========================================================= */
   {
-    icon: FaFileAlt,
-    title: "Safety Data Sheets (SDS)",
-    points: [
-      "Maintain and manage chemical safety documentation.",
-      "Ensure quick access to hazard information and safety measures.",
-    ],
-  },
-  {
-    icon: FaCogs,
-    title: "Material & Equipment Management",
-    points: [
-      "Maintain safety standards for materials and workplace equipment.",
-      "Track inspections, maintenance, and compliance checks.",
-    ],
-  },
-  {
-    icon: FaClipboardList,
-    title: "Audit & Inspection Tracking",
-    points: [
-      "Conduct systematic audits with real-time tracking and analytics.",
-      "Generate detailed compliance reports for decision-making.",
-    ],
-  },
-  {
-    icon: FaUserShield,
-    title: "Contractor & Employee Safety Management",
-    points: [
-      "Ensure safety compliance for employees and contractors.",
-      "Manage certifications, training, and safety protocols.",
-    ],
-  },
-  {
-    icon: FaEye,
-    title: "Work Area Monitoring",
-    points: [
-      "Monitor and manage hazardous work areas with safety protocols.",
-      "Improve workplace conditions with real-time assessments.",
-    ],
-  },
-  {
-    icon: FaFileSignature,
-    title: "Permit to Work (PTW)",
-    points: [
-      "Streamline permit approvals to ensure safer work environments.",
-      "Track work authorization and approval status in real-time.",
-    ],
-  },
-  {
-    icon: FaRecycle,
-    title: "Waste & Environmental Management",
-    points: [
-      "Optimize waste disposal and environmental impact tracking.",
-      "Ensure compliance with regulatory waste management standards.",
-    ],
-  },
-  {
-    icon: FaProjectDiagram,
-    title: "Management of Change (MOC)",
-    points: [
-      "Assign tasks cross-functionally with structured planning.",
-      "Track execution, cost estimates, closure, and summary.",
-    ],
-  },
-  {
-    icon: FaCheckCircle,
-    title: "Pre-Startup Safety Review (PSSR)",
-    points: [
-      "Streamline safety checks with workflows covering Entry, Plan, Action, Approval, and Closure.",
-      "Ensure operational readiness and compliance before startup.",
-    ],
-  },
+    id: "incident-audit-personnel",
+    groupName: "Incident, Audit & Personnel",
+    shortDesc:
+      "Ensures employee readiness, structured audit tracking, and comprehensive monitoring of EHS events across the organization.",
+    image: "/images/products/EHS/viewdetail.jpg",
+
+    modules: [
+      {
+        id: "incident-recording",
+        title: "Incident",
+        focus: [
+          "Records, investigates, and tracks corrective actions for near-misses, injuries, and environmental releases."
+        ],
+        benefits: [
+          "Drives continuous safety improvement by analyzing root causes and preventing recurrence."
+        ]
+      },
+      {
+        id: "audit-control",
+        title: "Audit",
+        focus: [
+          "Schedules, executes, and tracks findings for internal and external EHS inspections and audits."
+        ],
+        benefits: [
+          "Ensures systematic review of the EHS management system's effectiveness and compliance status."
+        ]
+      },
+      {
+        id: "employee-management",
+        title: "Employee",
+        focus: [
+          "Manages training records, certifications, medical surveillance, and fitness-for-duty assessments."
+        ],
+        benefits: [
+          "Confirms personnel are qualified and medically fit for assigned tasks, supporting a safe and compliant workforce."
+        ]
+      },
+      {
+        id: "contractor-monitoring",
+        title: "Contractor",
+        focus: [
+          "Manages qualification, safety orientation, performance, and compliance of third-party personnel on-site."
+        ],
+        benefits: [
+          "Extends EHS controls to contractors, reducing risks from external personnel and ensuring regulatory compliance."
+        ]
+      }
+    ]
+  }
 ];
 
 export default EHSMODULES;

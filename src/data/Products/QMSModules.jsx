@@ -1,97 +1,165 @@
-import {
-  FaSitemap,
-  FaProjectDiagram,
-  FaClipboardList,
-  FaTasks,
-  FaVial,
-  FaExchangeAlt,
-  FaBug,
-  FaExclamationTriangle,
-  FaTrafficLight,
-  FaRegClock,
-  FaFileAlt,
-  FaClipboardCheck,
-} from "react-icons/fa";
-
 const QMSMODULES = [
   {
-    icon: FaProjectDiagram,
-    title: "Project Registrations",
-    points: [
-      "Centralized project initiation with unique IDs and metadata.",
-      "Capture objectives, stakeholders, and scope for better tracking.",
+    id: "project-initiation-control",
+    groupName: "Project Initiation & Control",
+    shortDesc:
+      "Standardized project initiation and governance workflows ensuring structured planning, risk management, and controlled execution.",
+    image: "/images/products/CSR/viewdetail.jpg",
+
+    modules: [
+      {
+        id: "project-registrations",
+        title: "Project Registrations",
+        focus: [
+          "Centralized initiation with unique project IDs, stakeholder details, and scope definition."
+        ],
+        benefits: [
+          "Ensures standardized project entry across teams, improving governance and traceability."
+        ],
+      },
+      {
+        id: "project-planning-scheduling",
+        title: "Project Planning & Scheduling",
+        focus: [
+          "Define milestones, dependencies, resources, and timelines with real-time progress visualization via Gantt charts."
+        ],
+        benefits: [
+          "Creates a structured roadmap supporting timely and cost-effective project execution."
+        ],
+      },
+      {
+        id: "minutes-of-meeting",
+        title: "Minutes of Meeting (MOM)",
+        focus: [
+          "Instantly document discussions, decisions, and action items with a digitally searchable archive."
+        ],
+        benefits: [
+          "Enhances stakeholder alignment and provides a reliable audit trail of all key decisions."
+        ],
+      },
+      {
+        id: "risk-log-mitigation",
+        title: "Risk Log & Mitigation",
+        focus: [
+          "Record, categorize, and assess risks while defining mitigation and impact analysis strategies."
+        ],
+        benefits: [
+          "Improves decision-making and prevents operational delays by proactively managing risks."
+        ],
+      },
     ],
   },
+
   {
-    icon: FaClipboardList, 
-    title: "Project Plan",
-    points: [
-      "Define project milestones, deliverables, and dependencies.",
-      "Allocate resources with timelines for structured execution.",
+    id: "execution-tracking-collaboration",
+    groupName: "Execution, Tracking, and Collaboration",
+    shortDesc:
+      "Real-time execution monitoring with collaboration tools ensuring transparency, accountability, and controlled change implementation.",
+    image: "/images/products/CSR/viewdetail.jpg",
+
+    modules: [
+      {
+        id: "task-tracking-collaboration",
+        title: "Task Tracking & Collaboration",
+        focus: [
+          "Assign tasks, monitor progress, and manage updates in real time with role-based accountability and comment threads."
+        ],
+        benefits: [
+          "Boosts collaboration and ensures consistent project momentum across distributed teams."
+        ],
+      },
+      {
+        id: "change-tracker",
+        title: "Change Tracker",
+        focus: [
+          "Structured approval workflows for change requests including impact evaluation before application."
+        ],
+        benefits: [
+          "Maintains an audit-proof record of scope and configuration changes, preventing unplanned project deviations."
+        ],
+      },
+      {
+        id: "rag-health-reports",
+        title: "RAG – Health Reports",
+        focus: [
+          "Monitor project health using Red, Amber, Green indicators with alerts for at-risk areas."
+        ],
+        benefits: [
+          "Helps leadership identify red flags early and focus intervention where most needed."
+        ],
+      },
     ],
   },
+
   {
-    icon: FaTasks,
-    title: "Task Tracking",
-    points: [
-      "Assign, monitor, and update tasks with real-time progress.",
-      "Ensure accountability with role-based ownership and deadlines.",
+    id: "quality-assurance-defect-lifecycle",
+    groupName: "Quality Assurance & Defect Lifecycle",
+    shortDesc:
+      "Ensures that deliverables consistently meet quality standards through structured testing and continuous improvement practices.",
+    image: "/images/products/CSR/viewdetail.jpg",
+
+    modules: [
+      {
+        id: "testing-system",
+        title: "Testing System",
+        focus: [
+          "Develop and execute test cases with configurable approval workflows and built-in stakeholder feedback."
+        ],
+        benefits: [
+          "Ensures every project output meets defined standards before deployment or release."
+        ],
+      },
+      {
+        id: "defect-tracker",
+        title: "Defect Tracker",
+        focus: [
+          "Log, prioritize, classify, and monitor resolution timelines of defects with clear responsibility assignment."
+        ],
+        benefits: [
+          "Provides insights into recurring issues, helping prevent repeat failures over time."
+        ],
+      },
+      {
+        id: "nc-capa",
+        title: "Non-Conformance (NC) / CAPA",
+        focus: [
+          "Manages systematic resolution of major issues through corrective and preventive actions with formal workflow routing."
+        ],
+        benefits: [
+          "Leads to permanent elimination of systemic flaws and promotes continuous organizational improvement."
+        ],
+      },
     ],
   },
+
   {
-    icon: FaClipboardCheck,
-    title: "Testing System",
-    points: [
-      "Build and execute test cases with configurable workflows.",
-      "Track results and feedback to ensure quality compliance.",
-    ],
-  },
-  {
-    icon: FaExchangeAlt,
-    title: "Change Tracker",
-    points: [
-      "Manage change requests with approval workflows.",
-      "Track impact analysis to minimize risks and disruptions.",
-    ],
-  },
-  {
-    icon: FaClipboardList,
-    title: "Defect Tracker",
-    points: [
-      "Log, categorize, and prioritize defects efficiently.",
-      "Monitor resolution status and prevent recurring issues.",
-    ],
-  },
-  {
-    icon: FaExclamationTriangle, 
-    title: "Risk Log",
-    points: [
-      "Identify, assess, and record potential project risks.",
-      "Mitigate issues with proactive action planning.",
-    ],
-  },
-  {
-    icon: FaTrafficLight, 
-    title: "RAG – Red Amber Green (Project Report)",
-    points: [
-      "Visual project health indicators for quick decision-making.",
-      "Generate performance reports to track progress and risks.",
-    ],
-  },
-  {
-    icon: FaRegClock, 
-    title: "MOM (Minutes of Meeting)",
-    points: [
-      "Document discussions, decisions, and action items instantly.",
-      "Share structured MOMs with stakeholders for alignment.",
-    ],
-  },
-  {
-    icon: FaFileAlt, 
-    title: "Reports",
-    points: [
-      "Generate dynamic reports across tasks, defects, and risks.",
-      "Export insights for performance reviews and audits.",
+    id: "reporting-continuous-improvement",
+    groupName: "Reporting & Continuous Improvement",
+    shortDesc:
+      "Data-driven insights and structured project close-out processes enabling organizational learning and future execution enhancement.",
+    image: "/images/products/CSR/viewdetail.jpg",
+
+    modules: [
+      {
+        id: "dynamic-reporting",
+        title: "Dynamic Reporting & Analytics",
+        focus: [
+          "Generate consolidated reports across tasks, risks, and defects with export options for audits and reviews."
+        ],
+        benefits: [
+          "Supports data-driven decision-making and simplifies compliance and audit processes."
+        ],
+      },
+      {
+        id: "lessons-learned-archival",
+        title: "Lessons Learned & Archival",
+        focus: [
+          "Capture project feedback, document key learnings, archive documentation, and formally close out projects."
+        ],
+        benefits: [
+          "Promotes organizational maturity by improving accuracy and execution efficiency in future projects."
+        ],
+      },
     ],
   },
 ];

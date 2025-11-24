@@ -185,24 +185,31 @@ const ServicesPage = () => {
       </motion.section>
 
       {/* Insights */}
-      <section className="sp-insights">
-        <h2 className="sp-insights-title">SunBPM FrameWork Functionality </h2>
-        <div className="sp-insights-list">
-          {insights.map((insight, idx) => (
-            <div className="sp-insight-card" key={idx}>
-              <img src={insight.image} alt={"Insight visual " + (idx + 1)} />
-              <h3 className="sp-insight-heading">{insight.title}</h3>
-              <div className="sp-insight-info">
-                <ul>
-                  {insight.desc.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
+<section className="sp-insights">
+  <h2 className="sp-insights-title">SunBPM Framework Functionality</h2>
+  <div className="sp-insights-list">
+    {insights.map((insight, idx) => (
+      <div className="sp-insight-card" key={idx}>
+        <div className="sp-insight-image-wrapper">
+          <img src={insight.image} alt={"Insight visual " + (idx + 1)} />
+          <div className="sp-insight-overlay">
+            <h3>{insight.title}</h3>
+            <div className="sp-insight-line"></div> {/* 🔸 New animated line */}
+          </div>
         </div>
-      </section>
+        <div className="sp-insight-info">
+          <ul>
+            {insight.desc.map((point, i) => (
+              <li key={i}>{point}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+
 
       {/* <section className="sp-insights">
         <h2 className="sp-insights-title">Explore Insights</h2>

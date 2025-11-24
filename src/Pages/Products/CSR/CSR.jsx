@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import "../../../CSS/Products/CSR/CSR.css";
-// import CSRADVANTAGES from "../../../data/Products/CSRAdvantages.jsx";
 import CSRADVANTAGES from "../../../data/Products/CSRAdvantages";
-import CSRMODULES from "../../../data/Products/CSRModules";
+import CSRModules from "../../../data/Products/CSRModules";
 
 // ---------- Animation Variants ----------
 const fadeInUp = {
@@ -20,7 +20,9 @@ const fadeInRight = {
 };
 
 
+
 const CSR = () => {
+  const navigate = useNavigate();
   return (
     <div className="csr-page">
       {/* ================= Hero ================= */}
@@ -40,25 +42,17 @@ const CSR = () => {
             <button
               className="btn-learn"
               onClick={() => {
-                const element = document.getElementById("csr-modules");
-                if (element) {
-                  const offset = element.getBoundingClientRect().top + window.pageYOffset - 30;
-                  window.scrollTo({ top: offset, behavior: "smooth" });
-                }
+                navigate("/Contact");
               }}
             >
-              Learn More
+              Let us Talk
             </button>
-          </div>
-          {/* <p>
-            Empowering organizations to drive purposeful impact through streamlined CSR planning, 
-            execution, and reporting all on a single intelligent platform.
 
-          </p> */}
+          </div>
         </div>
       </motion.section>
 
-      {/* ================= Redefining CSR ================= */}
+      {/* ================= Defining CSR ================= */}
       <motion.section
         className="csr-redef containers"
         initial="hidden"
@@ -86,77 +80,105 @@ const CSR = () => {
       </motion.section>
 
       {/* ================= Core Modules ================= */}
-      <motion.section
-        id="csr-modules"
-        className="csr-modules containers"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
-        <h1 className="csr-section-title">SunBPM CSR Core Modules</h1>
+      <section className="csr-core-modules container">
+        <h2 className="csr-core-title">Core Modules: Strategy, Execution, and Verification</h2>
 
-        <div className="csr-modules-grid">
-          {CSRMODULES.map(({ icon: Icon, title, points }, idx) => (
-            <motion.div key={idx} className="csr-module-card" variants={fadeInUp}>
-              <div className="csr-module-icon">
-                <Icon size={32} />
+        <div className="csr-cards-grid">
+          {CSRModules.map((group) => (
+            <article
+              key={group.id}
+              className="csr-group-card"
+              onClick={() => navigate(`/csrmodules/${group.id}`)}
+            >
+              <div
+                className="csr-card-image-capsule"
+                style={{ backgroundImage: `url(${group.image})` }}
+                aria-hidden
+              >
+                <div className="csr-capsule-overlay">
+                  <button
+                    className="csr-capsule-view"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigate(`/modules/group/${group.id}`);
+                    }}
+                  >
+                    <span className="csr-capsule-text">View Modules</span>
+                  </button>
+                </div>
               </div>
-              <h4>{title}</h4>
-              <ul>
-                {points.map((p, i) => (
-                  <li key={i}>
-                    <span className="csr-benefit-dot"></span>
-                    <span>{p}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+
+              {/* content above the hover image */}
+              <div className="csr-csr-group-card-body">
+                <div className="csr-group-top">
+                  <span className="csr-radio-dot" aria-hidden />
+                  <span className="csr-group-label">{group.groupName.split(" ")[0]}</span>
+                </div>
+
+                <h3 className="csr-group-name">{group.groupName.split(" ").slice(0, 4).join(" ")}</h3>
+
+                <p className="csr-group-shortdesc">{group.shortDesc}</p>
+
+                {/* bottom pill visible in default state */}
+                <div className="csr-default-cta">
+                  <div className="csr-cta-pill">
+                    <div className="csr-cta-circle">
+                      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden>
+                        <path
+                          d="M8 12h8M14 8l4 4-4 4"
+                          fill="none"
+                          stroke="#b6b5b5ff"
+                          strokeWidth="1.4"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+
+                    <div className="csr-cta-line" aria-hidden />
+                  </div>
+                </div>
+              </div>
+            </article>
           ))}
         </div>
-      </motion.section>
+      </section>
 
       {/* ================= Strategic Advantages ================= */}
       <motion.section
-        className="csr-ADVANTAGES containers"
+        className="csr-strategic-advantages container"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <h1 className="csr-section-title">
-          Delivering Client Value: Strategic Advantages
-        </h1>
+        <h1 className="csr-advantages-title">Delivering Client Value: Strategic Advantages</h1>
+        <div className="csr-advantages-title-line"></div>
 
-        <div className="csr-cap-grid">
+        <div className="csr-advantages-grid">
           {CSRADVANTAGES.map(({ icon: Icon, title, desc }, i) => (
+            <motion.div key={i} className="csr-advantages-card" variants={fadeInUp}>
 
-            <motion.div key={i} className="csr-cap-card" variants={fadeInUp}>
-              <div className="csr-cap-icon">
-                <Icon size={26} />
+              <div className="csr-advantages-icon-wrap">
+                <div className="csr-advantages-icon">
+                  <Icon size={32} />
+                  <span className="csr-icon-blink"></span>
+                </div>
               </div>
-              <div className="csr-cap-heading">{title}</div>
-              <div className="csr-cap-desc">{desc}</div>
+
+              <h3 className="csr-advantages-card-title">{title}</h3>
+
+              {/* Line between heading and paragraph */}
+              <div className="csr-advantages-card-line"></div>
+
+              <p className="csr-advantages-card-desc">{desc}</p>
+
+              <span className="csr-shine"></span>
             </motion.div>
           ))}
         </div>
       </motion.section>
 
-      {/* ================= CTA ================= */}
-      <motion.section
-        className="csr-cta"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
-        <div className="csr-cta-inner-container">
-          <p className="csr-cta-text">
-            Turn your CSR initiatives into measurable impact with SunBPM a smart platform that ensures
-            transparency, accountability, and lasting social value.
-          </p>
-        </div>
-      </motion.section>
     </div>
   );
 };

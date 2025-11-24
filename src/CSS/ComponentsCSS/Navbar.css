@@ -1,41 +1,51 @@
+/* ============================
+   NAVBAR BASE STYLES
+============================ */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 50;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.navbar.scrolled {
+/* .navbar.scrolled {
   background: white;
-  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
-}
+} */
 
 .navbar.transparent {
   background: transparent;
 }
 
 .navbar-container {
-  /* max-width: 1400px; */
-  margin: 0px;
-  padding: 0 1rem 0 0 ;
+  margin: 0;
+  padding: 0 1rem 0 0;
 }
 
 .navbar-inner {
+  width: 100%;
+  padding-left: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .logo {
   height: 70px;
   width: auto;
   cursor: pointer;
-  margin-left: 0px;
-  padding-left: 0px;
+  margin-left: 0;
+  padding-left: 0;
 }
 
+/* ============================
+   NAV LINKS (DESKTOP)
+============================ */
 .nav-links {
   align-items: center;
   text-align: center;
@@ -43,35 +53,16 @@
   padding-right: 40px;
 }
 
-.navbar-btn-primary {
-  font-size: 16px;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: #F7941D;
-  color: white;
-  padding: 7px 16px;
-  border-radius: 9999px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.navbar-btn-primary:hover{
-color: #000000;
-}
-
-
-
 @media (min-width: 1024px) {
   .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 10px;
   }
 }
 
 .nav-item {
   position: relative;
-  cursor: pointer; /* ensures dropdown is aligned below each nav item */
+  cursor: pointer;
 }
 
 .nav-link {
@@ -85,44 +76,55 @@ color: #000000;
   transition: color 0.2s ease;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover {
   color: #F7941D;
 }
 
+.nav-link.active {
+  color: #F7941D;
+  border-bottom: 2px solid #F7941D;
+  padding: 2px;
+}
+
+
 .chevron-icon {
-  color: #000000;
+  color: #000;
   padding-left: 5px;
   width: 1rem;
   height: 1rem;
 }
 
+/* ============================
+   SIMPLE DROPDOWN (NON-PRODUCTS)
+============================ */
 .dropdown {
-  position:absolute;
-  top: 100%; /* exactly below nav-link */
+  position: absolute;
+  top: 100%;
   left: 0;
   background: white;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  z-index: 100;
 }
 
 .dropdown-link {
   display: block;
-  padding: 8px 4px;
+  padding: 8px 12px;
   font-size: 14px;
-  color: #000000;
-  width: 110px;
+  color: #000;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
 .dropdown-link:hover {
   background: #f9fafb;
-  color: #F7941D;;
+  color: #F7941D;
 }
 
-/* Mobile menu icon */
+/* ============================
+   MOBILE MENU ICON
+============================ */
 .mobile-menu-icon {
   display: flex;
   align-items: center;
@@ -131,42 +133,30 @@ color: #000000;
   padding-right: 30px;
 }
 
-.nav-links {
-  align-items: center;
-  text-align: center;
-  display: none;
-  padding-right: 40px;
+@media (min-width: 1024px) {
+  .mobile-menu-icon {
+    display: none;
+  }
 }
 
-.nav-links.open {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 64px;
-  left: 0;
-  width: 100%;
-  background: white;
-  border-top: 1px solid #e5e7eb;
-  padding: 1rem 0;
-}
-
-/* Overlay */
+/* ============================
+   SIDE DRAWER (MOBILE MENU)
+============================ */
 .drawer-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: 998;
 }
 
-/* Side Drawer */
 .side-drawer {
   position: fixed;
   top: 0;
-  right: -260px; /* hidden */
+  right: -260px;
   height: 100%;
-  width: 150px;
+  width: 200px;
   background: white;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
   flex-direction: column;
@@ -176,12 +166,11 @@ color: #000000;
 }
 
 .side-drawer.open {
-  right: 0; /* slide into view */
+  right: 0;
 }
 
-/* Close button */
 .drawer-close {
-  color: #000000;
+  color: #000;
   position: absolute;
   top: 15px;
   right: 15px;
@@ -191,31 +180,33 @@ color: #000000;
   cursor: pointer;
 }
 
-/* Nav styling */
 .mobile-nav-item {
   margin-bottom: 12px;
 }
 
 .mobile-nav-link {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   cursor: pointer;
   font-size: 16px;
   padding: 8px 0;
-  margin-top: 10px;        
-  color: black;        
+  margin-top: 10px;
+  color: black;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.mobile-nav-link:hover,
+.mobile-nav-link:hover {
+  color: #F7941D;
+}
+
 .mobile-nav-link.active {
-  color: orange;            /* hover + active orange */
+  color: #F7941D;
+  border-bottom: 2px solid #F7941D;
+  padding: 2px;
 }
 
 .mobile-dropdown {
-  /* padding-left: 12px; */
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -224,115 +215,185 @@ color: #000000;
 .mobile-dropdown-link {
   font-size: 14px;
   padding: 6px 0;
-  margin-left: 10px;        /* extra indent */
+  margin-left: 10px;
   color: black;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.mobile-dropdown-link:hover,
+.mobile-dropdown-link:hover {
+  color: #F7941D;
+}
+
 .mobile-dropdown-link.active {
-  color: orange;
+  color: #F7941D;
+  border-bottom: 2px solid #F7941D;
+  padding: 2px;
 }
 
 .mobile-cta {
   margin-top: 20px;
 }
 
-.drawer-header {
-  margin-bottom: 20px;
-  align-items: end;
-  align-content: end;
-  text-align: end;
-}
-
-
-@media (min-width: 1024px) {
-  .mobile-menu-icon {
-    display: none;
-  }
-  .nav-links {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    background: transparent;
-    gap: 2rem;
-  }
-}
-
-.dropdown {
-  width: auto;
-}
-
-@media (max-width: 1023px) {
-  .dropdown {
-    position: static;
-    border: none;
-    box-shadow: none;
-    padding-left: 1rem;
-    background: transparent;
-  }
-  .dropdown-link {
-    padding: 0.5rem 0;
-  }
-}
-
-@media (max-width: 768px) {
-.navbar-inner {
-  display: flex;
-  justify-content: space-between;
+/* ============================
+   BUTTON STYLE
+============================ */
+.navbar-btn-primary {
+  font-size: 16px;
+  display: inline-flex;
   align-items: center;
-  height: 70px;
+  gap: 0.5rem;
+  background: #F7941D;
+  color: white;
+  padding: 7px 16px;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.logo {
+.navbar-btn-primary:hover {
+  background: #ffac45;
+  color: #000;
+}
+
+/* ============================
+   RESPONSIVE LOGO
+============================ */
+@media (max-width: 768px) {
+  .navbar-inner {
+    padding-left: 10px;
+    height: 70px;
+  }
+
+  .logo {
     height: 60px;
     width: auto;
+  }
 }
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Side Drawer */
-
-/* .side-drawer {
-  position: fixed;
-  top: 0;
-  right: -260px; 
-  height: 100%;
-  width: 260px;
-  background: white;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-  flex-direction: column;
-  transition: right 0.3s ease;
-  z-index: 999;
+/* ============================
+   FULL-PAGE MEGA DROPDOWN (PRODUCTS)
+============================ */
+.mega-overlay {
+  position: absolute;
+  top: 100%;
+  /* position directly below navbar */
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* subtle transparent background */
+  z-index: 150;
   display: flex;
-} */
-
-/* Close button */
-.drawer-header {
-  padding: 15px;
-  text-align: right;
+  justify-content: center;
+  align-items: flex-start;
+  pointer-events: none;
+  /* overlay won't block hover between nav and dropdown */
 }
 
 
+.mega-dropdown {
+  pointer-events: auto;
+  display: flex;
+  background: #fff;
+  width: 95%;
+  /* max-width: 1200px; */
+  height: 450px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  overflow: hidden;
+  /* border: 1px solid #ddd; */
+  z-index: 200;
+}
+
+.mega-left {
+  width: 35%;
+  text-align: left;
+  /* background: #011863; */
+  background: linear-gradient(135deg, #011863, #004c6d);
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-right: 1px solid #eee;
+}
+
+.mega-item {
+  padding: 14px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  /* color: #333; */
+  margin-bottom: 8px;
+}
+
+.mega-item:hover,
+.mega-item.active {
+  background: #F7941D;
+  color: #fff;
+}
+
+.mega-right {
+  width: 65%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mega-preview img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.mega-preview h4 {
+  margin-top: 30px !important;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0px;
+  color: #222;
+}
+
+.mega-preview p {
+  text-align: left;
+  margin: 3px 0px 30px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* make the nav item area larger so hovering above/below text triggers open */
+.nav-item {
+  position: relative;
+  cursor: pointer;
+  padding: 18px 6px;
+}
+
+.nav-link {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+  padding: 18px 6px;
+}
 
 
-
+.mega-overlay {
+  position: fixed;
+  top: 70px;
+  /* height of navbar */
+  left: 0;
+  /* width: 100%; */
+  height: calc(100vh - 70px);
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 150;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}

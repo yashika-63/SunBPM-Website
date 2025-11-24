@@ -8,6 +8,7 @@ import '../../CSS/Home/Sunbpmhome.css';
 import features from '../../data/featuresData';
 import valueProps from "../../data/valuePropsData";
 import industryStats from "../../data/industryStatsData";
+import ClientReviews from './ClientReviews';
 
 const AnimatedNumber = ({ value, animate }) => {
   const [count, setCount] = useState(0);
@@ -48,130 +49,83 @@ const Sunbpmhome = () => {
 
   return (
     <div className="home">
+
       <Hero />
-      {/* Value Proposition */}
-      <section className="section white-background">
-        <div className="container">
-          <div className="text-center">
-            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="section-title">
-              Why Leading Enterprises Choose SunBPM
-            </motion.h2>
-            <motion.p initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="section-subtitle">
-              Accelerate innovation and efficiency with our low-code platform.
-            </motion.p>
-          </div>
-          <div className="value-grid">
-            {valueProps.map((prop, index) => (
-              <motion.div key={index} className="value-card">
-                <div className="icon-container">
-                  <prop.icon className="icon-white" />
+
+      <section className="value-section">
+        <h2 className="value-title">Why Leading Enterprises Choose SunBPM</h2>
+        <div className="value-container">
+          {valueProps.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <div className="value-card" key={index}>
+                {/* Background image (moves on hover) */}
+                <div
+                  className="value-image"
+                  style={{ backgroundImage: `url(${item.image})` }}
+                ></div>
+
+                {/* Text content */}
+                <div className="value-content">
+                  <div className="value-icon">
+                    <Icon size={36} />
+                  </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
                 </div>
-                <h3 className="value-title">{prop.title}</h3>
-                {/* <p className="value-description">{prop.description}</p> */}
-              </motion.div>
-            ))}
-          </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
-      {/* Features */}
-      <section className="section gray-background">
-        <div className="container">
-          <div className="text-center section-header">
-            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="section-title">
-              Powerful Features for Every Industry
-            </motion.h2>
-            <motion.p initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="section-subtitle">
-              Everything you need to digitize and automate your workflows
-            </motion.p>
-          </div>
-          <div className="feature-grid">
-            {features.map((feature, index) => (
-              <FeatureCard key={index} {...feature} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeatureCard />
 
       {/* Stats */}
-      <section className="section orange-gradient" ref={statsRef}>
-        <div className="container">
-          <div className="text-center section-header">
-            <motion.h2
-              className="section-title white-text"
-              initial={{ opacity: 0, y: 30 }}
-              animate={controls}
-              transition={{ duration: 0.6 }}
-            >
-              Trusted by Industry Leaders
-            </motion.h2>
-            <motion.p
-              className="section-subtitle light-text"
-              initial={{ opacity: 0, y: 30 }}
-              animate={controls}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
+      <section className="trusted-section">
+        <div className="trusted-container">
+          {/* Left Section */}
+          <motion.div
+            className="trusted-left"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="trusted-heading">Trusted by Industry Leaders</h2>
+            <p className="trusted-desc">
               Empowering enterprises to streamline operations and achieve excellence.
-            </motion.p>
-          </div>
-
-          <div className="stats-grid">
-            {industryStats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="stat-card"
-                initial={{ opacity: 0, y: 40 }}
-                animate={controls}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-              >
-                <div className="stat-value">
-                  <AnimatedNumber value={stat.value} animate={inView} />
-                </div>
-                <div className="stat-label">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-
-      {/* Benefits */}
-      <section className="section white-background">
-        <div className="container grid-2">
-          <motion.div className="benefits-content">
-            <h2 style={{ textAlign: 'left', marginTop: '0px' }} className="section-title">
-              Transform Your Business Operations</h2>
-            <p style={{ textAlign: 'left', }} className="section-subtitle">
-              SunBPM empowers organizations to streamline processes, reduce costs, and improve compliance while maintaining flexibility.
             </p>
-            <div className="benefits-list">
-              {[
-                'Enhance efficiency, control, and visibility.',
-                'Reduce costs while boosting performance.',
-                'Ensure compliance with effective controls.',
-                'Stay flexible with process-tailored solutions.',
-              ].map((benefit, index) => (
-                <div key={index} className="benefit-item">
-                  <CheckCircle className="benefit-icon" />
-                  <span>{benefit}</span>
-                </div>
+          </motion.div>
+
+          {/* Right Stats */}
+          <motion.div
+            className="trusted-right"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            {/* New accent line */}
+            <div className="trusted-line"></div>
+
+            <div className="stats-wrapper">
+              {industryStats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  className="stat-item"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <h3 className="stat-value">{stat.value}</h3>
+                  <p className="stat-label">{stat.label}</p>
+                </motion.div>
               ))}
             </div>
           </motion.div>
-          <motion.div className="image-wrapper">
-            <div className="image-card">
-              <img src="/images/Home/stakeholder.png" alt="Business Process Automation" className="image" />
-              {/* <div className="cost-card">
-                <div className="cost-value">10%</div>
-                <div className="cost-label">Cost Reduction</div>
-              </div> */}
-            </div>
-          </motion.div>
         </div>
       </section>
 
-      <ClientsSection />
+      {/* <ClientReviews /> */}
+
     </div>
   );
 };

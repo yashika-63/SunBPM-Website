@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import "../../../CSS/Products/ESG/ESG.css";
-import ESGADVANTAGES from "../../../data/Products/ESGAdvantages";
-import ESGMODULES from "../../../data/Products/ESGModules";
+import ESGADVANTAGES from "../../../data/Products/ESGADVANTAGES";
+import ESGModules from "../../../data/Products/ESGModules";
 
 // ---------- Animation Variants ----------
 const fadeInUp = {
@@ -20,6 +21,7 @@ const fadeInRight = {
 
 
 const ESG = () => {
+  const navigate = useNavigate();
   return (
     <div className="ESG-page">
       {/* ================= Hero ================= */}
@@ -32,26 +34,23 @@ const ESG = () => {
       >
         <div className="ESG-hero-overlay">
           <h1>
-            ESG: Paving the Path to a Sustainable <br/> Economy
+            ESG: Paving the Path to a Sustainable <br/>Economy
           </h1>
           <div className="hero-button">
             <button
               className="btn-learn"
               onClick={() => {
-                const element = document.getElementById("ESG-modules");
-                if (element) {
-                  const offset = element.getBoundingClientRect().top + window.pageYOffset - 30;
-                  window.scrollTo({ top: offset, behavior: "smooth" });
-                }
+                navigate("/Contact");
               }}
             >
-              Learn More
+              Let us Talk
             </button>
+
           </div>
         </div>
       </motion.section>
 
-      {/* ================= Redefining ESG ================= */}
+      {/* ================= Defining ESG ================= */}
       <motion.section
         className="ESG-redef containers"
         initial="hidden"
@@ -63,9 +62,9 @@ const ESG = () => {
             A Clear View of Your Sustainability Performance
           </h1>
           <p>
-            Enterprise ESG Solution enabling the entire ESG glide path. ESG aims to enhance disclosures 
-            on sustainability-related topics and provide stakeholders with better quantitative and 
-            qualitative insights and improve performance.
+            Enterprise ESG Solution enabling the entire ESG glide path. ESG aims to enhance
+            disclosures on sustainability-related topics and provide stakeholders with better
+            quantitative and qualitative insights and improve performance.
           </p>
         </motion.div>
         <motion.div className="ESG-redef-right" variants={fadeInRight}>
@@ -78,76 +77,105 @@ const ESG = () => {
       </motion.section>
 
       {/* ================= Core Modules ================= */}
-      <motion.section
-        id="ESG-modules"
-        className="ESG-modules containers"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
-        <h1 className="ESG-section-title">SunBPM ESG Core Modules</h1>
+      <section className="ESG-core-modules container">
+        <h2 className="ESG-core-title">Core Modules: Strategy, Execution, and Verification</h2>
 
-        <div className="ESG-modules-grid">
-          {ESGMODULES.map(({ icon: Icon, title, points }, idx) => (
-            <motion.div key={idx} className="ESG-module-card" variants={fadeInUp}>
-              <div className="ESG-module-icon">
-                <Icon size={32} />
+        <div className="ESG-cards-grid">
+          {ESGModules.map((group) => (
+            <article
+              key={group.id}
+              className="ESG-group-card"
+              onClick={() => navigate(`/ESGModules/${group.id}`)}
+            >
+              <div
+                className="ESG-card-image-capsule"
+                style={{ backgroundImage: `url(${group.image})` }}
+                aria-hidden
+              >
+                <div className="ESG-capsule-overlay">
+                  <button
+                    className="ESG-capsule-view"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigate(`/modules/group/${group.id}`);
+                    }}
+                  >
+                    <span className="ESG-capsule-text">View Modules</span>
+                  </button>
+                </div>
               </div>
-              <h4>{title}</h4>
-              <ul>
-                {points.map((p, i) => (
-                  <li key={i}>
-                    <span className="ESG-benefit-dot"></span>
-                    <span>{p}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+
+              {/* content above the hover image */}
+              <div className="ESG-ESG-group-card-body">
+                <div className="ESG-group-top">
+                  <span className="ESG-radio-dot" aria-hidden />
+                  <span className="ESG-group-label">{group.groupName.split(" ")[0]}</span>
+                </div>
+
+                <h3 className="ESG-group-name">{group.groupName.split(" ").slice(0, 4).join(" ")}</h3>
+
+                <p className="ESG-group-shortdesc">{group.shortDesc}</p>
+
+                {/* bottom pill visible in default state */}
+                <div className="ESG-default-cta">
+                  <div className="ESG-cta-pill">
+                    <div className="ESG-cta-circle">
+                      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden>
+                        <path
+                          d="M8 12h8M14 8l4 4-4 4"
+                          fill="none"
+                          stroke="#b6b5b5ff"
+                          strokeWidth="1.4"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+
+                    <div className="ESG-cta-line" aria-hidden />
+                  </div>
+                </div>
+              </div>
+            </article>
           ))}
         </div>
-      </motion.section>
+      </section>
 
       {/* ================= Strategic Advantages ================= */}
       <motion.section
-        className="ESG-ADVANTAGES containers"
+        className="ESG-strategic-advantages container"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <h1 className="ESG-section-title">
-          Delivering Client Value: Strategic Advantages
-        </h1>
+        <h1 className="ESG-advantages-title">Delivering Client Value: Strategic Advantages</h1>
+        <div className="ESG-advantages-title-line"></div>
 
-        <div className="ESG-cap-grid">
+        <div className="ESG-advantages-grid">
           {ESGADVANTAGES.map(({ icon: Icon, title, desc }, i) => (
-            <motion.div key={i} className="ESG-cap-card" variants={fadeInUp}>
-              <div className="ESG-cap-icon">
-                <Icon size={26} />
+            <motion.div key={i} className="ESG-advantages-card" variants={fadeInUp}>
+
+              <div className="ESG-advantages-icon-wrap">
+                <div className="ESG-advantages-icon">
+                  <Icon size={32} />
+                  <span className="ESG-icon-blink"></span>
+                </div>
               </div>
-              <div className="ESG-cap-heading">{title}</div>
-              <div className="ESG-cap-desc">{desc}</div>
+
+              <h3 className="ESG-advantages-card-title">{title}</h3>
+
+              {/* Line between heading and paragraph */}
+              <div className="ESG-advantages-card-line"></div>
+
+              <p className="ESG-advantages-card-desc">{desc}</p>
+
+              <span className="ESG-shine"></span>
             </motion.div>
           ))}
         </div>
       </motion.section>
 
-      {/* ================= CTA ================= */}
-      <motion.section
-        className="ESG-cta"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
-        <div className="ESG-cta-inner-container">
-          <p className="ESG-cta-text">
-            Empower sustainable growth with SunBPM ESG your unified platform for tracking, managing, and 
-            reporting environmental, social, and governance performance with accuracy and confidence.
-          </p>
-        </div>
-      </motion.section>
     </div>
   );
 };

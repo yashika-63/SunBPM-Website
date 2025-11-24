@@ -7,6 +7,11 @@ import { motion } from "framer-motion";
 import MyMap from "./MyMap";
 
 
+const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+};
+
 const CountdownToast = ({ message, duration }) => {
   const [timeLeft, setTimeLeft] = useState(duration / 1000);
 
@@ -126,8 +131,8 @@ const ContactPage = () => {
 
       try {
         // const response = await fetch("/api/book-demo", {
-        // const response = await fetch("http://localhost:6002/api/book-demo", {
-        const response = await fetch("http://15.207.163.30:6002/api/book-demo", {
+        const response = await fetch("http://localhost:6002/api/book-demo", {
+          // const response = await fetch("http://15.207.163.30:6002/api/book-demo", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -177,29 +182,30 @@ const ContactPage = () => {
   return (
     <main className="cu-page">
       {/* ===== 1) LET’S START A CONVERSATION + WORLD MAP ===== */}
-      <motion.section
-        className="cu-grand"
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <motion.div className="cu-grand-content" variants={fadeUp}>
+            <motion.section
+                className="cu-hero"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeInUp}
+            >
+                <div className="cu-hero-overlay">
+                    <h1>
+                        Are you looking for a trusted supplier for IT <br/>services?
+                    </h1>
+                    <div className="hero-button">
+                        <button
+                            className="btn-learn"
+                            onClick={() => {
+                                navigate("/Contact");
+                            }}
+                        >
+                            Let us Talk
+                        </button>
 
-          <div className="cu-grand-label">Lets Start the Conversation</div>
-          <div className="cu-service-heading">
-            Let’s build the future of your business together.
-          </div>
-          <p className="cu-grand-desc">
-            Whether you’re improving internal processes,
-            boosting team productivity, or expanding operational capabilities, our experts are here to
-            provide the right guidance, technology, and support every step of the way.
-          </p>
-        </motion.div>
-        <motion.div className="cu-grand-img" variants={fadeUp}>
-          <img src="/images/ContactUs/Doted-map.jpg" alt="Meeting room" />
-        </motion.div>
-      </motion.section>
+                    </div>
+                </div>
+            </motion.section>
 
       {/* ===== 2) LET’S CONNECT + FORM ===== */}
       <motion.section

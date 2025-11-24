@@ -1,3 +1,5 @@
+import { FaLinkedin, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import React from 'react';
 import '../../CSS/ComponentsCSS/Footer.css';
 import { Link } from 'react-router-dom';
@@ -16,8 +18,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="map-link"
             >
-              5th Floor, Omega House, Hiranandani Gardens,<br />
-              Powai, Mumbai, Maharashtra 400076
+              5th Floor, Omega House, Hiranandani Gardens, Powai, Mumbai, Maharashtra 400076.
             </a>
           </p>
 
@@ -48,9 +49,10 @@ const Footer = () => {
             {/* <li><Link to="/Products/BRSR" className="email-link">SunBPM BRSR</Link></li> */}
             <li><Link to="/Products/ESG" className="email-link">SunBPM ESG</Link></li>
             <li><Link to="/Products/EHS" className="email-link">SunBPM EHS</Link></li>
-            <li><Link to="/Products/QMS" className="email-link">SunBPM QMS</Link></li>
-            <li><Link to="/Products/POPR" className="email-link">SunBPM PO/PR</Link></li>
-            <li><Link to="/Products/CapexOpex" className="email-link">SunBPM Capex/Opex</Link></li>
+            <li><Link to="/Products/PMS" className="email-link">SunBPM PMS</Link></li>
+            <li><Link to="/Products/PRPO" className="email-link">SunBPM PRPO</Link></li>
+            <li><Link to="/Products/ProcurementDecisionTool" className="email-link">
+                SunBPM Procurement<br />Decision Tool</Link></li>
             {/* <li>ERP</li> */}
           </ul>
         </div>
@@ -60,7 +62,7 @@ const Footer = () => {
             <li><Link to="/AboutUs" className="email-link">About</Link></li>
             <li><Link to="/Services" className="email-link">Services</Link></li>
             <li><Link to="/Contact" className="email-link">Contact Us</Link></li>
-            <li><Link to="/SuccessStories" className="email-link">Sucess stories</Link></li>
+            <li><Link to="/SuccessStories" className="email-link">Success Stories</Link></li>
           </ul>
         </div>
         <div className="policies">
@@ -71,48 +73,63 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+
+
       <div className="footer-bottom">
         <div className="footer-social">
           <a
             href="https://www.linkedin.com/company/pristine-it-code"
             target="_blank"
             rel="noopener noreferrer"
-            className="email-link"
+            className="social-link"
           >
-            <img
-              src="/images/components/Footer icons/linkedin-01.png"
-              alt="LinkedIn"
-            />
+            <FaLinkedin className="social-icon" />
+            <span>LinkedIn</span>
+          </a>
+
+          <a
+            href="https://twitter.com/pristineitcode"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+          >
+            <FaXTwitter className="social-icon" />
+            <span>Twitter</span>
           </a>
 
           <a
             href="https://www.facebook.com/pristineitcode/"
             target="_blank"
             rel="noopener noreferrer"
-            className="email-link"
+            className="social-link"
           >
-            <img
-              src="/images/components/Footer icons/facebook-01.png"
-              alt="Facebook"
-            />
+            <FaFacebook className="social-icon" />
+            <span>Facebook</span>
           </a>
 
           <a
             href="https://www.instagram.com/pristineitcode/"
             target="_blank"
             rel="noopener noreferrer"
-            className="email-link"
+            className="social-link"
           >
-            <img
-              src="/images/components/Footer icons/instagram.png"
-              alt="Instagram"
-            />
+            <FaInstagram className="social-icon" />
+            <span>Instagram</span>
+          </a>
+
+          <a
+            href="https://www.youtube.com/@pristineitcode"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+          >
+            <FaYoutube className="social-icon" />
+            <span>YouTube</span>
           </a>
         </div>
-
       </div>
+
     </footer>
   );
 };
-
 export default Footer;

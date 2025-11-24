@@ -1,33 +1,111 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import '../../CSS/Home/FeatureCard.css';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import "../../CSS/Home/FeatureCard.css";
 
-const FeatureCard = ({ icon: Icon, title, description, benefits, index }) => {
+const featuresData = [
+  {
+    title: "Low-Code Workflow Builder",
+    offerings: [
+      "Drag & Drop Capability",
+      "Quick Deployment in Weeks",
+      "Error-Free from Day One",
+      "Easily Adaptable Workflows",
+    ],
+
+  },
+  {
+    title: "Enterprise Security",
+    offerings: [
+      "Flexible Licensing Options",
+      "Role-Based Access Controls",
+      "Complete Audit Trails",
+      "Data Protection & Compliance",
+    ],
+  },
+  {
+    title: "Mobile-First Design",
+    offerings: [
+      "Unified Experience Across Devices",
+      "Support for Field Operations",
+      "Instant Mobile Access",
+      "Work on the go",
+    ],
+
+  },
+  {
+    title: "Seamless Integrations",
+    offerings: [
+      "REST API Support",
+      "Real-Time Synchronization",
+      "Configurable Integrations",
+    ],
+
+  },
+  {
+    title: "Collaborative Workflows",
+    offerings: [
+      "Multi-User Functionality",
+      "Automated Notifications",
+      "Task Assignment & Tracking",
+      "Comments and Remarks",
+    ],
+
+  },
+  {
+    title: "User-Friendly Experience",
+    offerings: [
+      "Highly Rated for Usability",
+      "Easy Setup & Administration",
+      "Smooth Upgradations",
+      "Quick User Adoption",
+    ],
+
+  },
+];
+
+const FeaturesSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeFeature = featuresData[activeIndex];
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="feature-card"
-    >
-      <div className="icon-container">
-        <Icon className="feature-icon" />
-      </div>
+    <section className="features-section">
+      <h2 className="features-title">Powerful Features for Every Industry</h2>
 
-      <h3 className="feature-title">{title}</h3>
-      <p className="feature-description">{description}</p>
+      <div className="features-container">
+        {featuresData.map((feature, index) => (
+          <div className="feature-card" key={index}>
+            {/* Top Image */}
+            <div className="feature-image">
+              <img
+                src={`/images/Home/feature/feature${index + 1}.jpg`}
+                alt={feature.title}
+              />
+            </div>
 
-      <ul className="feature-benefits">
-        {benefits.map((benefit, idx) => (
-          <li key={idx} className="feature-benefit-item">
-            <div className="benefit-dot" />
-            <span className="benefit-text">{benefit}</span>
-          </li>
+            {/* Blue Title Bar */}
+            <div className="feature-overlay">
+              <h3>{feature.title}</h3>
+            </div>
+
+            {/* Hover Content */}
+            <div className="feature-hover">
+              <h3>{feature.title}</h3>
+              <ul>
+                {feature.offerings.map((item, i) => (
+                  <li key={i}>
+                    <span className="page-bullet-dot"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+            </div>
+          </div>
         ))}
-      </ul>
-    </motion.div>
+      </div>
+    </section>
   );
+
 };
 
-export default FeatureCard;
+export default FeaturesSection;

@@ -1,0 +1,790 @@
+/* ================= General ================= */
+/* Prevent horizontal scrollbar */
+body,
+html {
+  overflow-x: hidden;
+}
+
+.PRPO-page {
+  margin-top: 0px;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.containers {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 35px 30px !important;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* ================= Hero Section ================= */
+.PRPO-hero {
+  background: url('../../../../images/products/PRPO/PRPO-grand-image.jpg') no-repeat center/cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.PRPO-hero-overlay {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  /* padding: 40px; */
+  color: white;
+  max-width: 100%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  /* border-radius: 8px; */
+}
+
+.PRPO-hero-overlay h1 {
+  margin-top: 0px;
+  line-height: 1.5;
+  text-align: left;
+  font-size: 36px;
+  padding-top: 300px;
+  padding-left: 40px;
+  /* margin-bottom: 20px; */
+}
+
+.hero-button {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 40px;
+  padding-top: 70px;
+  /* Aligns button to the left */
+}
+
+.btn-learn {
+  background: #F7941D;
+  border: none;
+  padding: 12px 24px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-learn:hover {
+  color: #000000;
+  box-shadow: 0 4px 12px rgba(244, 142, 0, 1);
+
+}
+
+.PRPO-hero-overlay p {
+  font-size: 16px;
+}
+
+/* ================= Intro ================= */
+.PRPO-intro h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.PRPO-intro .highlight {
+  color: #F7941D;
+  font-weight: bold;
+}
+
+.PRPO-benefit-dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(to right, #de7b00, #ff8c1a);
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+/* ================= Redefining PRPO ================= */
+.PRPO-redef {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 110px;
+  width: 100%;
+}
+
+.PRPO-redef-left {
+  flex: 2.5;
+}
+
+.PRPO-redef-right {
+  align-items: end;
+  flex: 1;
+}
+
+.PRPO-redef h1 {
+  margin-top: 0px;
+  line-height: 1.3;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.PRPO-redef .highlight {
+  color: #F7941D;
+  font-weight: bold;
+}
+
+.PRPO-redef-img {
+  border-radius: 6px;
+  width: 380px;
+}
+
+
+/* ================= Strategic Advantages ================= */
+.PRPO-advantages-title {
+  margin: 50px 0px;
+  text-align: left;
+  font-size: 36px;
+  font-weight: 900;
+  background: #000;
+  -webkit-background-clip: text;
+  margin-bottom: 0.7rem;
+}
+
+.PRPO-advantages-title-line {
+  margin-bottom: 40px;
+    left: 0;
+    bottom: -6px;
+    width: 68%;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #F7941D, #fee6cb);
+}
+
+.PRPO-advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 2rem;
+  margin-bottom: 100px;
+}
+
+.PRPO-advantages-card {
+  position: relative;
+  padding: 34px 22px;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.23);
+  border: 1px solid #e8e8e8;
+  overflow: hidden;
+  transition: 0.45s ease;
+  cursor: pointer;
+}
+
+.PRPO-advantages-card:hover {
+  transform: translateY(-20px) !important;
+  box-shadow: 0 20px 30px rgba(247, 148, 29, 0.2);
+  border-color: #F7941D;
+}
+
+.PRPO-advantages-icon-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+
+.PRPO-advantages-icon {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F7941D, #F9C74F);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  font-size: 32px;
+  transition: 0.4s ease;
+}
+
+/* Blinking circle */
+.PRPO-icon-blink {
+  content: "";
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  border: 3px solid #F7941D;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0.4);
+  transition: 0.4s ease;
+}
+
+.PRPO-advantages-card:hover .PRPO-icon-blink {
+  animation: blinkCircle 2s infinite ease-out;
+  opacity: 1;
+}
+
+@keyframes blinkCircle {
+  0%   { transform: scale(0.7); opacity: 0.9; }
+  100% { transform: scale(1.2); opacity: 0; }
+}
+
+/* Hover the icon */
+.PRPO-advantages-card:hover .PRPO-advantages-icon {
+  transform: rotate(6deg) scale(1.15);
+  box-shadow: 0 10px 20px rgba(247, 148, 29, 0.35);
+}
+
+.PRPO-advantages-card-title {
+  font-size: 24px;
+  text-align: left;
+  font-weight: 600;
+  color: #011863;
+  margin-bottom: 12px;
+}
+
+.PRPO-advantages-card-line {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #004C6D, #F7941D);
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+
+.PRPO-advantages-card:hover .PRPO-advantages-card-line {
+  width: 200px;
+}
+
+.PRPO-advantages-card-desc {
+  font-size: 16px;
+  text-align: left;
+  margin-top: 30px;
+  color: #000;
+  opacity: 0.85;
+  line-height: 1.7;
+  transition: 0.3s ease;
+}
+
+.PRPO-advantages-card:hover .PRPO-advantages-card-desc {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.PRPO-core-title {
+    text-align: left;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #000000;
+    position: relative; /* required */
+}
+
+.PRPO-core-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 77%;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #F7941D, #fee6cb);
+}
+
+.PRPO-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.PRPO-group-card {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 12px;
+    height: 360px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(16, 18, 24, 0.18);
+    border: 1px solid rgba(16, 24, 40, 0.04);
+    transition: transform .22s ease, background .3s ease, box-shadow .3s ease;
+    cursor: pointer;
+}
+
+/* Hover - dark background + lift */
+.PRPO-group-card:hover {
+    transform: translateY(-6px);
+    background: #1e1b22;
+    box-shadow: 0 18px 60px rgba(16, 18, 24, 0.18);
+}
+
+.PRPO-group-card:hover .PRPO-radio-dot {
+    border-color: #fff;
+}
+
+/* Text color changes on hover */
+.PRPO-group-card:hover .PRPO-group-name,
+.PRPO-group-card:hover .PRPO-group-shortdesc,
+.PRPO-group-card:hover .PRPO-group-label {
+    color: #fff;
+}
+
+/* ---------------------------
+   CARD IMAGE CAPSULE (bottom)
+   --------------------------- */
+.PRPO-card-image-capsule {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    width: 86%;
+    bottom: 20px;
+    height: 21%;
+    border-radius: 44px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+    transition: all .32s cubic-bezier(.2, .9, .2, 1);
+    z-index: 6;
+    pointer-events: none;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+    background-color: rgba(0, 0, 0, 0.35);
+    background-blend-mode: multiply;
+
+}
+
+/* overlay inside capsule */
+.PRPO-card-image-capsule .PRPO-capsule-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 0 18px;
+    gap: 12px;
+}
+
+/* Show capsule on hover */
+.PRPO-group-card:hover .PRPO-card-image-capsule {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+/* view service button inside capsule */
+.PRPO-capsule-view {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    /* justify-content: center; */
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.capsule-circle {
+    margin-left: auto;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.03);
+    transition: transform .22s ease, border-color .22s ease;
+}
+
+.capsule-circle svg path {
+    stroke: #fff;
+}
+
+/* subtle right-slide effect inside capsule */
+.PRPO-capsule-view:hover .capsule-circle {
+    transform: translateX(6px);
+    border-color: rgba(255, 255, 255, 0.38);
+}
+
+/* ---------------------------
+   CARD CONTENT (top)
+   --------------------------- */
+.PRPO-PRPO-group-card-body {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.PRPO-group-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.PRPO-radio-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #222;
+}
+
+.PRPO-group-label {
+    font-size: 15px;
+    color: #111827;
+    font-weight: 600;
+}
+
+.PRPO-group-name {
+    font-size: 24px;
+    text-align: left;
+    margin: 6px 0 12px;
+    color: #0f1724;
+    font-weight: 600;
+    line-height: 1.12;
+}
+
+.PRPO-group-shortdesc {
+    color: #6b7280;
+    text-align: start;
+    font-size: 16px;
+    line-height: 1.6;
+    /* max-width: 88%; */
+}
+
+.PRPO-group-card:hover .PRPO-group-name {
+    color: #fff;
+}
+
+.PRPO-group-card:hover .PRPO-group-shortdesc {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.PRPO-group-card:hover .PRPO-group-label {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.PRPO-default-cta {
+    margin-top: auto;
+    z-index: 10;
+    transition: opacity .22s ease, transform .22s ease;
+}
+
+.PRPO-cta-pill {
+    position: relative;
+    display: flex;
+    height: 84px;
+    align-items: center;
+    height: 84px;
+    border-radius: 42px;
+    border: 2px solid #c0c0c0;
+    /* background: #fff; */
+    padding: 0 22px;
+    box-sizing: border-box;
+}
+
+/* circle inside CTA */
+.PRPO-cta-circle {
+    position: absolute;
+    left: 20px;
+    /* starting point (left side) */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1.6px solid rgba(14, 27, 51, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.55s ease;
+    /* <-- key animation */
+}
+
+
+/* LINE inside pill */
+.PRPO-cta-line {
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(14, 27, 51, 0.08), rgba(14, 27, 51, 0.12));
+    border-radius: 2px;
+    margin-left: 70px;
+}
+
+/* ON HOVER: move arrow circle all the way to the right */
+.PRPO-group-card:hover .PRPO-cta-circle {
+    left: calc(100% - 76px);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* DARK CARD STYLE */
+.PRPO-group-card.dark {
+    background: #1e1b22;
+    color: #fff;
+}
+
+
+/* ================= Responsive ================= */
+/* RESPONSIVE FIXES */
+@media (max-width: 900px) {
+    .PRPO-group-name {
+        font-size: 22px;
+    }
+
+    .PRPO-cta-pill {
+        height: 70px;
+    }
+
+    .PRPO-card-image-capsule {
+        height: 74px;
+        border-radius: 36px;
+    }
+}
+@media (max-width: 1100px) {
+    .PRPO-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .PRPO-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Large screens (≥1600px) */
+@media (min-width: 1600px) {
+  .containers {
+    max-width: 1500px;
+    padding: 50px 15px 0px;
+  }
+
+  .PRPO-cta,
+  .PRPO-fact {
+    max-width: 1200px;
+  }
+}
+
+/* Laptops (1024px–1599px) */
+@media (max-width: 1599px) {
+  .containers {
+    padding: 50px 15px 0px;
+  }
+
+  .PRPO-modules-grid,
+  .PRPO-cap-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets (768px–1023px) */
+@media (max-width: 1023px) {
+  .PRPO-hero {
+    height: 400px;
+  }
+
+  .PRPO-hero-overlay h1 {
+    font-size: 22px;
+  }
+
+  .PRPO-hero-overlay p {
+    font-size: 14px;
+  }
+
+  .PRPO-redef h1 {
+    font-size: 22px;
+  }
+
+  .PRPO-modules-grid,
+  .PRPO-cap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .PRPO-card {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .PRPO-how,
+  .PRPO-redef {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .PRPO-redef-img {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Mobile (480px–767px) */
+@media (max-width: 767px) {
+  .containers {
+    padding: 40px 0px 0px 0px;
+  }
+
+  .PRPO-module-icon {
+    margin: 0 120px 1rem;
+  }
+
+  .PRPO-icon-container {
+    margin: 0 120px 1rem;
+  }
+
+  .PRPO-hero {
+    height: 300px;
+  }
+
+  .PRPO-hero-overlay {
+    height: 84%;
+    padding: 20px;
+  }
+
+  .PRPO-hero-overlay h1 {
+    padding-top: 30px;
+    padding-left: 0px;
+    font-size: 20px;
+  }
+
+  .PRPO-redef h1 {
+    font-size: 24px;
+  }
+
+  .PRPO-hero-overlay p {
+    font-size: 13px;
+  }
+
+  .hero-button {
+    padding-left: 0px;
+    padding-top: 40px;
+  }
+
+.btn-learn {
+  padding: 8px 12px;
+}
+
+  .PRPO-modules-grid,
+  .PRPO-cap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .PRPO-card {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .PRPO-card li {
+    gap: 0px;
+  }
+
+  PRPO-module-card {
+    padding: 12px;
+  }
+
+  .PRPO-cta {
+    margin: 40px auto;
+    padding: 40px 20px;
+    border-radius: 14px;
+  }
+
+  .PRPO-cta-text {
+    font-size: 1rem;
+  }
+
+  .PRPO-cta-btn {
+    padding: 10px 24px !important;
+    font-size: 0.9rem;
+  }
+
+  .PRPO-fact {
+    padding: 40px 20px;
+  }
+
+  .PRPO-fact h3 {
+    font-size: 1.3rem;
+  }
+
+  .PRPO-fact p {
+    font-size: 0.95rem;
+  }
+
+  .PRPO-redef {
+    gap: 30px;
+  }
+}
+
+/* Small Mobile (≤479px) */
+@media (max-width: 479px) {
+  .containers {
+    padding: 30px 0px 0px 0px;
+  }
+
+  .PRPO-module-icon {
+    margin: 0 40% 1rem;
+  }
+
+  .PRPO-icon-container {
+    margin: 0 40% 1rem;
+  }
+
+  .PRPO-hero {
+    height: 250px;
+  }
+
+  .PRPO-hero-overlay h1 {
+    padding-top: 30px;
+    padding-left: 0px;
+    font-size: 18px;
+  }
+
+  .hero-button {
+    padding-left: 0px;
+    padding-top: 40px;
+  }
+
+  .btn-learn {
+  padding: 8px 12px !important;
+}
+
+  .PRPO-redef h1 {
+    font-size: 22px;
+  }
+
+  .PRPO-hero-overlay p {
+    font-size: 12px;
+  }
+
+  .PRPO-module-card h4,
+  .PRPO-cap-heading {
+    font-size: 1rem;
+  }
+
+  .PRPO-cap-desc {
+    font-size: 0.9rem;
+  }
+
+  .PRPO-cta {
+    margin: 40px auto;
+    padding: 30px 15px;
+  }
+
+  .PRPO-cta-text {
+    font-size: 0.95rem;
+  }
+
+  .PRPO-cta-btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+
+  .PRPO-fact h3 {
+    font-size: 1.1rem;
+  }
+
+  .PRPO-fact p {
+    font-size: 0.9rem;
+  }
+}

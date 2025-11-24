@@ -52,19 +52,19 @@ const clientCards = [
       teams operate with precision and confidence.
     `,
   },
-  {
-    id: "it-services",
-    image: "/images/success_stories/team5.jpg",
-    title: "IT & Services Industry",
-    industry: "IT & Services",
-    desc: "Empowering digital teams with seamless governance.",
-    content: `
-      Companies like PRODATA Management Services, TIME Medical India, and Gunnebo AB have embraced SunBPM to modernize 
-      project tracking, CSR initiatives, and compliance governance. The platform provides a unified digital space where 
-      tasks, documents, and approvals flow effortlessly — enhancing collaboration and productivity across departments 
-      and geographies.
-    `,
-  },
+  // {
+  //   id: "it-services",
+  //   image: "/images/success_stories/team5.jpg",
+  //   title: "IT & Services Industry",
+  //   industry: "IT & Services",
+  //   desc: "Empowering digital teams with seamless governance.",
+  //   content: `
+  //     Companies like PRODATA Management Services, TIME Medical India, and Gunnebo AB have embraced SunBPM to modernize 
+  //     project tracking, CSR initiatives, and compliance governance. The platform provides a unified digital space where 
+  //     tasks, documents, and approvals flow effortlessly — enhancing collaboration and productivity across departments 
+  //     and geographies.
+  //   `,
+  // },
   {
     id: "construction-infrastructure",
     image: "/images/success_stories/team6.jpg",

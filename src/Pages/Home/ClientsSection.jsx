@@ -54,13 +54,14 @@ const ClientsSection = () => {
             .fill(logos)
             .flat()
             .map((logo, index) => (
-              <img
-                key={`${logo.alt}-${index}`}
-                src={logo.src}
-                alt={logo.alt}
-                className={logo.className}
-                style={logo.style}
-              />
+              <div className="ss-clientLogoBox" key={`${logo.alt}-${index}`}>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className={logo.className}
+                  style={logo.style}
+                />
+              </div>
             ))}
         </div>
       </div>

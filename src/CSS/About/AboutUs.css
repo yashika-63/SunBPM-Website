@@ -1,7 +1,7 @@
 /* ================= HERO SECTION (replaced with Aboutus) ================= */
 .Aboutus {
   display: flex;
-  height: 570px;
+  height: 650px;
   min-height: 300px;
   margin-top: 40px;
 }
@@ -42,7 +42,7 @@
 }
 
 .Aboutus-img {
-  height: 570px;
+  height: 650px;
   flex: 2;
   /* background: #eee; */
   display: flex;

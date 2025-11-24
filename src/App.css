@@ -1,7 +1,7 @@
 #root {
-  width: 96%; 
+  width: 100%; 
   margin: 0 ;
-  padding: 2rem;
+  padding: 0rem;
   text-align: center;
   background: #fff;
 }
@@ -53,8 +53,9 @@
 /* Small devices (phones) */
 @media (max-width: 600px) {
   #root {
-    padding-left: 16px;
-    padding-right: 16px;
-    width: 92%;
+    width: 100%;
   }
 }
+
+
+/* background: linear-gradient(135deg, #004c6d, #011863); */

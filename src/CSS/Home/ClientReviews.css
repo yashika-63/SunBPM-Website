@@ -1,0 +1,144 @@
+.review-section {
+  margin-top: 100px;
+  margin-bottom: 40px;
+  background: linear-gradient(180deg, #000842 0%, #0c0c22 100%);
+  color: #fff;
+  padding: 0px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.review-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.review-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.review-subtitle {
+  color: #ddd;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.review-grid {
+    margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.review-card {
+  background: #fff;
+  color: #222;
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  text-align: left;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 12px 25px rgba(255, 140, 26, 0.5);
+}
+
+.quote-icon {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: #ff8c1a;
+  border-radius: 50%;
+  padding: 8px;
+  color: white;
+}
+
+.rating {
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+
+.review-text {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.review-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-info {
+  /* display: flex; */
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, #ffb400, #ff8c1a);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.user-name {
+  margin: 0;
+  font-weight: 600;
+  color: #000;
+}
+
+.user-role {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.verified-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #e9fce9;
+  color: #1e8c1a;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  box-shadow: 0 0 5px rgba(30, 140, 26, 0.3);
+}
+
+.review-card:hover .verified-badge {
+  background: linear-gradient(90deg, #1e8c1a, #3ad94d);
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .review-title {
+    font-size: 1.8rem;
+  }
+  .review-grid {
+    gap: 20px;
+  }
+  .review-card {
+    padding: 20px;
+  }
+}

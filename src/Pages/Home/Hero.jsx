@@ -1,97 +1,117 @@
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle } from "lucide-react";
-import { Link } from "react-router-dom";
+import "../../CSS/Home/hero.css";
 
-import "../../CSS/Home/Hero.css";
-
-const Hero = () => {
-  const features = [
-    "Efficiency and Control",
-    "Effectiveness and Responsiveness",
-    "Business Performance",
-    "Quick Configuration",
+export default function HeroSection() {
+  const slides = [
+    {
+      img: "hero 1.jpg",
+      title: "SunBPM Corporate Social Responsibility",
+      link: "/Products/CSR",
+    },
+    {
+      img: "hero 2.jpg",
+      title: "SunBPM Environmental, Social, and Governance",
+      link: "/Products/ESG",
+    },
+    {
+      img: "hero 3.jpg",
+      title: "SunBPM Environment, Health, and Safety",
+      link: "/Products/EHS",
+    },
+    {
+      img: "hero 4.jpg",
+      title: "SunBPM Project Management System",
+      link: "/Products/QMS",
+    },
+    {
+      img: "hero 5.jpg",
+      title: "SunBPM Purchase Requisition & Purchase Order",
+      link: "/Products/PRPO",
+    },
+    {
+      img: "hero 1.jpg",
+      title: "SunBPM Procurement Decision Tool",
+      link: "/Products/CapexOpex",
+    },
   ];
 
+  const [index, setIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+
+  // Auto-slideshow every 10 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % slides.length);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Typewriter animation
+  useEffect(() => {
+    let i = 0;
+    const currentTitle = slides[index].title;
+    let isMounted = true;
+
+    setDisplayText(""); // reset text
+
+    function typeLetter() {
+      if (!isMounted) return;
+
+      if (i < currentTitle.length) {
+        setDisplayText(currentTitle.slice(0, i + 1)); // SAFE + NO MISSING LETTERS
+        i++;
+        setTimeout(typeLetter, 50); // smooth typing
+      }
+    }
+
+    typeLetter();
+
+    return () => {
+      isMounted = false; // stop when component changes slide
+    };
+  }, [index]);
+
+
+
   return (
-    <section className="hero-section">
-      <div className="hero-overlay"></div>
+    <section className="hero-container">
 
-      <div className="hero-container">
-        <div className="hero-grid">
-          {/* ===== Left Column ===== */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="hero-left"
-          >
-            <div className="hero-badge">
-              <span className="hero-badge-dot"></span>
-              Trusted by 50+ Enterprise Clients
-            </div>
+      {/* Background slideshow */}
+      <div
+        className="slideshow-dynamic"
+        style={{
+          backgroundImage: `url("/images/Home/Hero/${slides[index].img}")`,
+        }}
+      ></div>
 
-            <h1 className="hero-title">
-              Transform Your Business Processes with SunBPM
-            </h1>
+      <div className="overlay"></div>
 
-            <p className="hero-description">
-              The comprehensive low-code platform that empowers enterprises to
-              digitize, automate, and optimize workflows across all departments.
-            </p>
+      {/* Content */}
+      <div className="hero-content">
 
-            <div className="hero-buttons">
-              <Link to="/BookDemo" className="home-btn-primary">
-                Book a Demo
-                <ArrowRight className="icon" />
-              </Link>
-            </div>
+        {/* Left-to-Right Typing Heading */}
+        <motion.h1
+          key={index}
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="hero-heading typewriter"
+        >
+          {displayText}
+        </motion.h1>
 
-            <div className="hero-features">
-              {features.map((feature, i) => (
-                <div key={i} className="feature-item">
-                  <CheckCircle className="hero-feature-icon" />
-                  <span>{feature}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* ===== Right Column ===== */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="hero-right"
-          >
-            <div className="hero-card">
-              <img
-                src="/images/Home/costEfficiency.jpg"
-                alt="SunBPM Logo"
-                className="hero-img"
-              />
-            </div>
-
-            {/* Floating Elements */}
-            {/* <motion.div
-              animate={{ y: [-8, 8, -8] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="floating-element top-right"
-            >
-              <div className="floating-circle orange">✓</div>
-            </motion.div>
-
-            <motion.div
-              animate={{ y: [8, -8, 8] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="floating-element bottom-left"
-            >
-              <div className="floating-circle dark-orange">⚡</div>
-            </motion.div> */}
-          </motion.div>
-        </div>
+        {/* Dynamic button */}
+        <motion.a
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          href={slides[index].link}
+          className="hero-btn"
+        >
+          Read More
+        </motion.a>
       </div>
     </section>
   );
-};
-
-export default Hero;
+}

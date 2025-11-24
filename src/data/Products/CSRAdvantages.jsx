@@ -9,17 +9,17 @@ const CSRADVANTAGES = [
   {
     icon: FaMicrochip,
     title: "Drive Low-Code Agility for Adaptability",
-    desc: "Leverage our low-code platform to instantly adapt data collection forms, policy approval matrices, and reporting formats to evolving community needs or regulatory changes."
+    desc: "Leverage our low-code platform to instantly adapt data collection forms, policy approval matrices, and reporting formats to align with evolving local community needs or sudden regulatory changes without complex IT intervention."
   },
   {
     icon: FaShieldAlt,
     title: "Guarantee Investor-Grade Assurance",
-    desc: "Baseline Data Collection and Impact Assessment modules generate defensible data chains, strengthening investor confidence and improving ESG ratings."
+    desc: "The required Baseline Data Collection and Impact Assessment modules generate a continuous data chain that is defensible under external audit. This level of verifiable outcome reporting strengthens investor confidence and improves your ESG ratings."
   },
   {
     icon: FaLink,
     title: "Enable Seamless Integration with the Digital Core",
-    desc: "Integrate Fund Disbursement Tracker with ERP systems and connect Volunteer Management to HRMS, ensuring full reconciliation with corporate financial records."
+    desc: "Native integration capabilities allow you to link the Fund Disbursement Tracker to your ERP systems and connect the Volunteer Management module to your HRMS. This eliminates double-entry and ensures CSR financial data is fully reconciled with corporate financial records."
   }
 ];
 

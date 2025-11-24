@@ -6,19 +6,15 @@ html {
 }
 
 .ESG-page {
-  margin-top: 42px;
+  margin-top: 0px;
   color: #000000;
   line-height: 1.6;
 }
 
 .containers {
   width: 100%;
-  max-width: 1600px;
-  /* stretches on wide screens */
   margin: 0 auto;
-  /* center align */
-  padding: 50px 0px 30px;
-  /* safe container padding */
+  padding: 50px 35px 30px !important;
   text-align: left;
   box-sizing: border-box;
 }
@@ -28,7 +24,7 @@ html {
   background: url('../../../../images/products/ESG/ESG-grand-image.png') no-repeat center/cover;
   position: relative;
   width: 100%;
-  height: 570px;
+  height: 100vh;
   /* display: flex;
   align-items: center;
   justify-content: center; */
@@ -47,10 +43,11 @@ html {
 }
 
 .ESG-hero-overlay h1 {
+  margin-top: 0px;
   line-height: 1.5;
   text-align: left;
   font-size: 36px;
-  padding-top: 180px;
+  padding-top: 300px;
   padding-left: 40px;
   /* margin-bottom: 20px; */
 }
@@ -114,13 +111,11 @@ html {
 
 .ESG-redef-left {
   flex: 2.5;
-  /* Text area takes 2 parts */
 }
 
 .ESG-redef-right {
   align-items: end;
   flex: 1;
-  /* Image area takes 1 part */
 }
 
 .ESG-redef h1 {
@@ -140,261 +135,431 @@ html {
   width: 380px;
 }
 
-/* ================= Core Modules ================= */
-.ESG-modules-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.ESG-module-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.ESG-module-card:hover {
-  transform: translateY(-5px) scale(1.04) !important;
-  box-shadow: 0 4px 12px rgba(244, 142, 0, 0.8);
-}
-
-.ESG-module-icon {
-  background: #F7941D;
-  padding: 1rem;
-  border-radius: 9999px;
-  display: inline-flex;
-  transition: transform 0.3s ease;
-  margin-bottom: 20px;
-  margin-left: 140px;
-  margin-right: auto;
-  color: #fff;
-}
-
-.ESG-module-card h4 {
-  height: 65px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-
-.ESG-module-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.ESG-module-card li {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-  color: #000000;
-}
-
-.ESG-benefit-dot {
-  margin-right: 10px;
-}
-
-.ESG-section-title {
-  margin-bottom: 20px;
-}
 
 /* ================= Strategic Advantages ================= */
-.ESG-cap-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.8rem;
-  margin-top: 2rem;
+.ESG-advantages-title {
+  margin: 50px 0px;
+  text-align: left;
+  font-size: 36px;
+  font-weight: 900;
+  background: #000;
+  -webkit-background-clip: text;
+  margin-bottom: 0.7rem;
 }
 
-.ESG-cap-card {
+.ESG-advantages-title-line {
+  margin-bottom: 40px;
+    left: 0;
+    bottom: -6px;
+    width: 68%;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #F7941D, #fee6cb);
+}
+
+.ESG-advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 2rem;
+  margin-bottom: 100px;
+}
+
+.ESG-advantages-card {
   position: relative;
-  background: #fff;
-  border-radius: 16px;
-  padding: 28px 24px;
-  text-align: left;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  transition: all 0.45s ease;
+  padding: 34px 22px;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.23);
+  border: 1px solid #e8e8e8;
   overflow: hidden;
+  transition: 0.45s ease;
   cursor: pointer;
 }
 
-/* Hover lift + orange glow */
-.ESG-cap-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(247, 148, 29, 0.6);
+.ESG-advantages-card:hover {
+  transform: translateY(-20px) !important;
+  box-shadow: 0 20px 30px rgba(247, 148, 29, 0.2);
+  border-color: #F7941D;
 }
 
-/* Icon styling */
-.ESG-cap-icon {
-  width: 60px;
-  height: 60px;
+.ESG-advantages-icon-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+
+.ESG-advantages-icon {
+  width: 78px;
+  height: 78px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f7941d, #ffb74d);
+  background: linear-gradient(135deg, #F7941D, #F9C74F);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   color: #fff;
-  margin-bottom: 1.2rem;
-  transition: transform 0.4s ease;
+  font-size: 32px;
+  transition: 0.4s ease;
 }
 
-.ESG-cap-card:hover .ESG-cap-icon {
-  transform: rotate(10deg) scale(1.15);
-}
-
-/* Heading animation */
-.ESG-cap-heading {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 20px;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.ESG-cap-heading::after {
+/* Blinking circle */
+.ESG-icon-blink {
   content: "";
   position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background: #f7941d;
-  border-radius: 2px;
-  transition: width 0.4s ease;
-}
-
-.ESG-cap-card:hover .ESG-cap-heading::after {
-  width: 45%;
-}
-
-/* Description animation */
-.ESG-cap-desc {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
-  transition: color 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
-}
-
-.ESG-cap-card:hover .ESG-cap-desc {
-  color: #000;
-  transform: translateY(-2px);
-  opacity: 0.95;
-}
-
-/* Light pulse glow behind icon */
-.ESG-cap-card:hover .ESG-cap-icon::after {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  border: 2px solid rgba(247, 148, 29, 1);
+  width: 95px;
+  height: 95px;
+  border: 3px solid #F7941D;
   border-radius: 50%;
-  animation: pulseGlow 1.4s ease-out infinite;
-  z-index: 0;
-}
-
-@keyframes pulseGlow {
-  0% {
-    transform: scale(0.9);
-    opacity: 0.6;
-  }
-
-  100% {
-    transform: scale(1.4);
-    opacity: 0;
-  }
-}
-
-/* ================= CTA Section ================= */
-.ESG-cta {
-  position: relative;
-  background: linear-gradient(90deg, #f7941d 0%, #f9c74f 100%);
-  color: #000000;
-  text-align: center;
-  padding: 70px 25px;
-  border-radius: 20px;
-  margin: 70px auto;
-  max-width: 1000px;
-  transition: all 0.5s ease;
-  overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-/* Animated gradient glow on hover */
-.ESG-cta:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 25px rgba(247, 148, 29, 0.35);
-  background: linear-gradient(270deg, #f9c74f 0%, #f7941d 100%);
-}
-
-/* Light sweep effect with continuous repetition on hover */
-.ESG-cta::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.25);
-  transform: skewX(-25deg);
   opacity: 0;
-  pointer-events: none;
+  transform: scale(0.4);
+  transition: 0.4s ease;
 }
 
-/* Trigger animation only on hover */
-.ESG-cta:hover::before {
-  animation: sweep 3s linear infinite; /* repeat continuously */
+.ESG-advantages-card:hover .ESG-icon-blink {
+  animation: blinkCircle 2s infinite ease-out;
   opacity: 1;
 }
 
-@keyframes sweep {
-  0% {
-    left: -75%;
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  50% {
-    left: 125%;
-    opacity: 0.8;
-  }
-  100% {
-    left: 125%;
-    opacity: 0;
-  }
+@keyframes blinkCircle {
+  0%   { transform: scale(0.7); opacity: 0.9; }
+  100% { transform: scale(1.2); opacity: 0; }
 }
 
+/* Hover the icon */
+.ESG-advantages-card:hover .ESG-advantages-icon {
+  transform: rotate(6deg) scale(1.15);
+  box-shadow: 0 10px 20px rgba(247, 148, 29, 0.35);
+}
 
-/* Text styling */
-.ESG-cta-text {
-  text-align: center;
-  font-size: 1.6rem;
+.ESG-advantages-card-title {
+  font-size: 24px;
+  text-align: left;
   font-weight: 600;
-  margin: 0;
-  color: #000;
-  transition: color 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
+  color: #011863;
+  margin-bottom: 12px;
 }
 
-/* Text animation on hover */
-.ESG-cta:hover .ESG-cta-text {
-  transform: translateY(-4px);
-  opacity: 0.95;
-  color: #1a1a1a;
+.ESG-advantages-card-line {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #004C6D, #F7941D);
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+
+.ESG-advantages-card:hover .ESG-advantages-card-line {
+  width: 200px;
+}
+
+.ESG-advantages-card-desc {
+  font-size: 16px;
+  text-align: left;
+  margin-top: 30px;
+  color: #000;
+  opacity: 0.85;
+  line-height: 1.7;
+  transition: 0.3s ease;
+}
+
+.ESG-advantages-card:hover .ESG-advantages-card-desc {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.ESG-core-title {
+    text-align: left;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #000000;
+    position: relative; /* required */
+}
+
+.ESG-core-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 77%;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #F7941D, #fee6cb);
+}
+
+.ESG-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.ESG-group-card {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 12px;
+    height: 360px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(16, 18, 24, 0.18);
+    border: 1px solid rgba(16, 24, 40, 0.04);
+    transition: transform .22s ease, background .3s ease, box-shadow .3s ease;
+    cursor: pointer;
+}
+
+/* Hover - dark background + lift */
+.ESG-group-card:hover {
+    transform: translateY(-6px);
+    background: #1e1b22;
+    box-shadow: 0 18px 60px rgba(16, 18, 24, 0.18);
+}
+
+.ESG-group-card:hover .ESG-radio-dot {
+    border-color: #fff;
+}
+
+/* Text color changes on hover */
+.ESG-group-card:hover .ESG-group-name,
+.ESG-group-card:hover .ESG-group-shortdesc,
+.ESG-group-card:hover .ESG-group-label {
+    color: #fff;
+}
+
+/* ---------------------------
+   CARD IMAGE CAPSULE (bottom)
+   --------------------------- */
+.ESG-card-image-capsule {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    width: 86%;
+    bottom: 20px;
+    height: 21%;
+    border-radius: 44px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+    transition: all .32s cubic-bezier(.2, .9, .2, 1);
+    z-index: 6;
+    pointer-events: none;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+    background-color: rgba(0, 0, 0, 0.35);
+    background-blend-mode: multiply;
+
+}
+
+/* overlay inside capsule */
+.ESG-card-image-capsule .ESG-capsule-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 0 18px;
+    gap: 12px;
+}
+
+/* Show capsule on hover */
+.ESG-group-card:hover .ESG-card-image-capsule {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+/* view service button inside capsule */
+.ESG-capsule-view {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    /* justify-content: center; */
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.capsule-circle {
+    margin-left: auto;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.03);
+    transition: transform .22s ease, border-color .22s ease;
+}
+
+.capsule-circle svg path {
+    stroke: #fff;
+}
+
+/* subtle right-slide effect inside capsule */
+.ESG-capsule-view:hover .capsule-circle {
+    transform: translateX(6px);
+    border-color: rgba(255, 255, 255, 0.38);
+}
+
+/* ---------------------------
+   CARD CONTENT (top)
+   --------------------------- */
+.ESG-ESG-group-card-body {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ESG-group-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.ESG-radio-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #222;
+}
+
+.ESG-group-label {
+    font-size: 15px;
+    color: #111827;
+    font-weight: 600;
+}
+
+.ESG-group-name {
+    font-size: 24px;
+    text-align: left;
+    margin: 6px 0 12px;
+    color: #0f1724;
+    font-weight: 600;
+    line-height: 1.12;
+}
+
+.ESG-group-shortdesc {
+    color: #6b7280;
+    text-align: start;
+    font-size: 16px;
+    line-height: 1.6;
+    /* max-width: 88%; */
+}
+
+.ESG-group-card:hover .ESG-group-name {
+    color: #fff;
+}
+
+.ESG-group-card:hover .ESG-group-shortdesc {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.ESG-group-card:hover .ESG-group-label {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.ESG-default-cta {
+    margin-top: auto;
+    z-index: 10;
+    transition: opacity .22s ease, transform .22s ease;
+}
+
+.ESG-cta-pill {
+    position: relative;
+    display: flex;
+    height: 84px;
+    align-items: center;
+    height: 84px;
+    border-radius: 42px;
+    border: 2px solid #c0c0c0;
+    /* background: #fff; */
+    padding: 0 22px;
+    box-sizing: border-box;
+}
+
+/* circle inside CTA */
+.ESG-cta-circle {
+    position: absolute;
+    left: 20px;
+    /* starting point (left side) */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1.6px solid rgba(14, 27, 51, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.55s ease;
+    /* <-- key animation */
+}
+
+
+/* LINE inside pill */
+.ESG-cta-line {
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(14, 27, 51, 0.08), rgba(14, 27, 51, 0.12));
+    border-radius: 2px;
+    margin-left: 70px;
+}
+
+/* ON HOVER: move arrow circle all the way to the right */
+.ESG-group-card:hover .ESG-cta-circle {
+    left: calc(100% - 76px);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* DARK CARD STYLE */
+.ESG-group-card.dark {
+    background: #1e1b22;
+    color: #fff;
 }
 
 
 /* ================= Responsive ================= */
+/* RESPONSIVE FIXES */
+@media (max-width: 900px) {
+    .ESG-group-name {
+        font-size: 22px;
+    }
+
+    .ESG-cta-pill {
+        height: 70px;
+    }
+
+    .ESG-card-image-capsule {
+        height: 74px;
+        border-radius: 36px;
+    }
+}
+@media (max-width: 1100px) {
+    .ESG-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .ESG-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* Large screens (≥1600px) */
 @media (min-width: 1600px) {
   .containers {
     max-width: 1500px;
-    padding: 50px 0px 0px 0px;
+    padding: 50px 15px 0px;
   }
 
   .ESG-cta,
@@ -406,7 +571,7 @@ html {
 /* Laptops (1024px–1599px) */
 @media (max-width: 1599px) {
   .containers {
-    padding: 50px 0px 0px 0px;
+    padding: 50px 15px 0px;
   }
 
   .ESG-modules-grid,
@@ -594,7 +759,6 @@ html {
 
   .ESG-module-card h4,
   .ESG-cap-heading {
-    height: auto;
     font-size: 1rem;
   }
 

@@ -42,7 +42,7 @@ const projects = [
   {
     image: "/images/services/project5.png",
     heading: "SunBPM PO/PR",
-    link: "/Products/POPR",
+    link: "/Products/PRPO",
     desc: [
       "Automates purchase requests and order approvals.",
       "Reads emails and updates data automatically.",

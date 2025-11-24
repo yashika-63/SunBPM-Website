@@ -10,7 +10,7 @@ const products = [
     { name: "SunBPM ESG", path: "/Products/ESG" },
     { name: "SunBPM EHS", path: "/Products/EHS" },
     { name: "SunBPM QMS", path: "/Products/QMS" },
-    { name: "SunBPM PO/PR", path: "/Products/POPR" },
+    { name: "SunBPM PO/PR", path: "/Products/PRPO" },
     { name: "SunBPM Capex/Opex", path: "/Products/CapexOpex" },
 ];
 
@@ -25,7 +25,7 @@ const PopupNotification = () => {
 
         const interval = setInterval(() => {
             showProductToast();
-        }, 3 * 60 * 1000); //3 minutes 
+        }, 300 * 60 * 1000); //3 minutes 
 
         return () => {
             clearInterval(interval);
@@ -70,7 +70,7 @@ const PopupNotification = () => {
             pauseOnHover: true,
             draggable: false,
             theme: "light",
-            icon: <FaBell style={{ color: "#ff6b00" , fontSize: "20px"}} />, 
+            icon: <FaBell style={{ color: "#ff6b00", fontSize: "20px" }} />,
         });
     };
 

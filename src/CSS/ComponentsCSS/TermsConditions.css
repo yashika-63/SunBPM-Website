@@ -14,9 +14,9 @@ h1 {
 }
 
 .last-updated {
-  font-style: italic;
-  color: #666;
-  margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #000000;
+    margin-bottom: 20px;
 }
 
 .Terms-Section {
