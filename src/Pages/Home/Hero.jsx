@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import "../../CSS/Home/hero.css";
+import "../../CSS/Home/Hero.css";
 
 export default function HeroSection() {
   const slides = [
