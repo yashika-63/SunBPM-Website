@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "../../../CSS/Products/EHS/EHS.css";
-import EHSADVANTAGES from "../../../data/Products/EHSAdvantages";
+import EHSADVANTAGES from "../../../data/Products/ESGAdvantages";
 import EHSModules from "../../../data/Products/EHSModules";
 
 // ---------- Animation Variants ----------

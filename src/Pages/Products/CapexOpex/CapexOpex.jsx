@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "../../../CSS/Products/CapexOpex/CapexOpex.css";
-import CapexOpexADVANTAGES from "../../../data/Products/CapexOpexADVANTAGES";
+import CapexOpexADVANTAGES from "../../../data/Products/CapexOpexAdvantages";
 import CapexOpexModules from "../../../data/Products/CapexOpexModules";
 
 // ---------- Animation Variants ----------

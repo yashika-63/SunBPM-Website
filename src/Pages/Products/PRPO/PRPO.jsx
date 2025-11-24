@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "../../../CSS/Products/PRPO/PRPO.css";
-import PRPOADVANTAGES from "../../../data/Products/PRPOADVANTAGES";
+import PRPOADVANTAGES from "../../../data/Products/PRPOAdvantages";
 import PRPOModules from "../../../data/Products/PRPOModules";
 
 // ---------- Animation Variants ----------

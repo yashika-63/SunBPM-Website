@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "../../../CSS/Products/QMS/QMS.css";
-import QMSADVANTAGES from "../../../data/Products/QMSADVANTAGES";
+import QMSADVANTAGES from "../../../data/Products/QMSAdvantages";
 import QMSModules from "../../../data/Products/QMSModules";
 
 // ---------- Animation Variants ----------
