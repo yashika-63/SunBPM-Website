@@ -1,11 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../../CSS/BookADemo/BookADemo.css";
-
-const CountdownToast = ({ message }) => {
-  return <div>{message}</div>;
-};
 
 const BookADemo = () => {
   const [formData, setFormData] = useState({
@@ -19,87 +15,34 @@ const BookADemo = () => {
     datetime: "",
     description: "",
     purpose: "",
+    location: "",
   });
 
   const [errors, setErrors] = useState({});
 
-  // OTP Validation States
-  const [emailOtp, setEmailOtp] = useState("");
-  const [mobileOtp, setMobileOtp] = useState("");
-  const [generatedEmailOtp, setGeneratedEmailOtp] = useState("");
-  const [generatedMobileOtp, setGeneratedMobileOtp] = useState("");
-  const [emailVerified, setEmailVerified] = useState(false);
-  const [mobileVerified, setMobileVerified] = useState(false);
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  // Generate random OTP
-  const generateOtp = () => Math.floor(100000 + Math.random() * 900000).toString();
-
-  // Send OTP (Email)
-  const sendEmailOtp = () => {
-    if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) {
-      toast.error("Enter a valid email before sending OTP");
-      return;
-    }
-    const otp = generateOtp();
-    setGeneratedEmailOtp(otp);
-    setEmailVerified(false);
-
-    toast.info(`OTP sent to email (Demo: ${otp})`);
-  };
-
-  // Verify Email OTP
-  const verifyEmailOtp = () => {
-    if (emailOtp === generatedEmailOtp) {
-      setEmailVerified(true);
-      toast.success("Email Verified Successfully");
-    } else {
-      toast.error("Invalid Email OTP");
-    }
-  };
-
-  // Send OTP (Mobile)
-  const sendMobileOtp = () => {
-    if (!/^[0-9]{10}$/.test(formData.mobile)) {
-      toast.error("Enter valid 10-digit mobile before sending OTP");
-      return;
-    }
-    const otp = generateOtp();
-    setGeneratedMobileOtp(otp);
-    setMobileVerified(false);
-
-    toast.info(`OTP sent to mobile (Demo: ${otp})`);
-  };
-
-  // Verify Mobile OTP
-  const verifyMobileOtp = () => {
-    if (mobileOtp === generatedMobileOtp) {
-      setMobileVerified(true);
-      toast.success("Mobile Verified Successfully");
-    } else {
-      toast.error("Invalid Mobile OTP");
-    }
   };
 
   const validate = () => {
     let newErrors = {};
 
     if (!formData.fullname) newErrors.fullname = "Full name is required";
-
     if (!formData.email) newErrors.email = "Email is required";
-    else if (!emailVerified) newErrors.email = "Email not verified";
+    else if (!/\S+@\S+\.\S+/.test(formData.email))
+      newErrors.email = "Enter a valid email";
 
     if (!formData.mobile) newErrors.mobile = "Mobile number is required";
-    else if (!mobileVerified) newErrors.mobile = "Mobile not verified";
+    else if (!/^[0-9]{10}$/.test(formData.mobile))
+      newErrors.mobile = "Enter valid 10-digit mobile";
 
     if (!formData.organization) newErrors.organization = "Organization is required";
     if (!formData.role) newErrors.role = "Role is required";
     if (!formData.designation) newErrors.designation = "Designation is required";
     if (!formData.interest) newErrors.interest = "Please select a product";
-    if (!formData.datetime) newErrors.datetime = "Please select date and time";
+    if (!formData.datetime) newErrors.datetime = "Please select date & time";
+
+    if (!formData.location) newErrors.location = "Location is required";
 
     if (!formData.description || formData.description.length < 100)
       newErrors.description = "Minimum 100 characters required";
@@ -121,18 +64,22 @@ const BookADemo = () => {
 
     setErrors({});
 
+
+
     try {
-      const response = await fetch("http://localhost:6002/api/book-demo", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      // const response = await fetch("/api/book-demo",
+      const response = await fetch("http://localhost:6002/api/book-demo",
+        // const response = await fetch("http://15.207.163.30:6002/api/book-demo",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
 
       if (response.ok) {
-        toast.success(
-          <CountdownToast message="Thank you! Your request has been submitted." />,
-          { autoClose: 5000 }
-        );
+        toast.success("Thank you! Your request has been submitted.", {
+          autoClose: 5000,
+        });
 
         setFormData({
           fullname: "",
@@ -145,16 +92,14 @@ const BookADemo = () => {
           datetime: "",
           description: "",
           purpose: "",
+          location: "",
         });
-
-        setEmailVerified(false);
-        setMobileVerified(false);
       } else {
         toast.error("Something went wrong, please try again.");
       }
     } catch (err) {
-      console.log(err);
       toast.error("Network error. Try again.");
+      console.log(err);
     }
   };
 
@@ -164,60 +109,45 @@ const BookADemo = () => {
         <h2 className="form-title">Book a Demo</h2>
 
         <form onSubmit={handleSubmit} className="demo-form">
+
           {/* Full Name */}
           <div className="form-group">
             <label>Full Name *</label>
-            <input type="text" name="fullname" value={formData.fullname} onChange={handleChange} />
+            <input
+              type="text"
+              name="fullname"
+              placeholder="Enter your full name"
+              value={formData.fullname}
+              onChange={handleChange}
+            />
             {errors.fullname && <p className="error">{errors.fullname}</p>}
           </div>
 
           {/* Email */}
-          <div className="form-group otp-row">
-            <div>
-              <label>Email *</label>
-              <input type="email" name="email" value={formData.email} onChange={handleChange} />
-            </div>
-            <button type="button" onClick={sendEmailOtp}>
-              Send OTP
-            </button>
+          <div className="form-group">
+            <label>Email *</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            {errors.email && <p className="error">{errors.email}</p>}
           </div>
-
-          {!emailVerified && generatedEmailOtp && (
-            <div className="form-group otp-verify">
-              <input
-                type="text"
-                placeholder="Enter Email OTP"
-                value={emailOtp}
-                onChange={(e) => setEmailOtp(e.target.value)}
-              />
-              <button type="button" onClick={verifyEmailOtp}>Verify</button>
-            </div>
-          )}
-          {errors.email && <p className="error">{errors.email}</p>}
 
           {/* Mobile */}
-          <div className="form-group otp-row">
-            <div>
-              <label>Mobile Number *</label>
-              <input type="tel" name="mobile" value={formData.mobile} onChange={handleChange} />
-            </div>
-            <button type="button" onClick={sendMobileOtp}>
-              Send OTP
-            </button>
+          <div className="form-group">
+            <label>Mobile Number *</label>
+            <input
+              type="tel"
+              name="mobile"
+              placeholder="Enter 10-digit mobile number"
+              value={formData.mobile}
+              onChange={handleChange}
+            />
+            {errors.mobile && <p className="error">{errors.mobile}</p>}
           </div>
-
-          {!mobileVerified && generatedMobileOtp && (
-            <div className="form-group otp-verify">
-              <input
-                type="text"
-                placeholder="Enter Mobile OTP"
-                value={mobileOtp}
-                onChange={(e) => setMobileOtp(e.target.value)}
-              />
-              <button type="button" onClick={verifyMobileOtp}>Verify</button>
-            </div>
-          )}
-          {errors.mobile && <p className="error">{errors.mobile}</p>}
 
           {/* Organization */}
           <div className="form-group">
@@ -225,44 +155,55 @@ const BookADemo = () => {
             <input
               type="text"
               name="organization"
+              placeholder="Enter your company / organization"
               value={formData.organization}
               onChange={handleChange}
             />
             {errors.organization && <p className="error">{errors.organization}</p>}
           </div>
 
+          {/* Location */}
+          <div className="form-group">
+            <label>Your Location *</label>
+            <input
+              type="text"
+              name="location"
+              placeholder="Enter your current Location"
+              value={formData.location}
+              onChange={handleChange}
+            />
+            {errors.location && <p className="error">{errors.location}</p>}
+          </div>
+
           {/* Role */}
           <div className="form-group">
             <label>Role *</label>
-            <input type="text" name="role" value={formData.role} onChange={handleChange} />
+            <input
+              type="text"
+              name="role"
+              placeholder="Enter your role"
+              value={formData.role}
+              onChange={handleChange}
+            />
             {errors.role && <p className="error">{errors.role}</p>}
           </div>
 
           {/* Designation */}
           <div className="form-group">
             <label>Designation *</label>
-            <input type="text" name="designation" value={formData.designation} onChange={handleChange} />
+            <input
+              type="text"
+              name="designation"
+              placeholder="Enter your designation"
+              value={formData.designation}
+              onChange={handleChange}
+            />
             {errors.designation && <p className="error">{errors.designation}</p>}
           </div>
 
-          {/* Interest */}
+          {/* Date & Time – FULL WIDTH */}
           <div className="form-group">
-            <label>Products Interested In *</label>
-            <select name="interest" value={formData.interest} onChange={handleChange}>
-              <option value="">Select one</option>
-              <option value="SunBPM CSR">SunBPM CSR</option>
-              <option value="SunBPM EHS">SunBPM EHS</option>
-              <option value="SunBPM ESG">SunBPM ESG</option>
-              <option value="SunBPM QMS">SunBPM QMS</option>
-              <option value="SunBPM PO/PR">SunBPM PO/PR</option>
-              <option value="SunBPM Capex/Opex">SunBPM Capex/Opex</option>
-            </select>
-            {errors.interest && <p className="error">{errors.interest}</p>}
-          </div>
-
-          {/* Date & Time */}
-          <div className="form-group">
-            <label>Select Date & Time (Mon–Fri, 10 AM – 5 PM) *</label>
+            <label>Select Date & Time for Demo (Mon–Fri, 10 AM – 5 PM) *</label>
             <input
               type="datetime-local"
               name="datetime"
@@ -272,38 +213,52 @@ const BookADemo = () => {
             {errors.datetime && <p className="error">{errors.datetime}</p>}
           </div>
 
-          {/* Description */}
-          <div className="form-group">
-            <label>Describe Sub-module (Minimum 100 chars) *</label>
+          {/* Interest – FULL WIDTH */}
+          <div className="form-group full-width">
+            <label>Products Interested In *</label>
+            <select name="interest" value={formData.interest} onChange={handleChange}>
+              <option value="">Select one</option>
+              <option value="SunBPM Corporate Social Responsibility">SunBPM Corporate Social Responsibility</option>
+              <option value="SunBPM Environment, Health, and Safety">SunBPM Environment, Health, and Safety</option>
+              <option value="SunBPM Environmental, Social, and Governance">SunBPM Environmental, Social, and Governance</option>
+              <option value="SunBPM Project Management System">SunBPM Project Management System</option>
+              <option value="SunBPM Purchase Requisition and Purchase Order">SunBPM Purchase Requisition and Purchase Order</option>
+              <option value="SunBPM Procurement Decision Tool">SunBPM Procurement Decision Tool</option>
+            </select>
+            {errors.interest && <p className="error">{errors.interest}</p>}
+          </div>
+
+          {/* Description – FULL WIDTH */}
+          <div className="form-group full-width">
+            <label>Describe Sub-module (Min 100 chars) *</label>
             <textarea
               name="description"
               rows="4"
+              placeholder="Describe the module/feature you want us to show"
               value={formData.description}
               onChange={handleChange}
-              placeholder="Enter your message..."
             />
             {errors.description && <p className="error">{errors.description}</p>}
           </div>
 
-          {/* Purpose */}
-          <div className="form-group">
-            <label>Purpose of Demo (Minimum 100 chars) *</label>
+          {/* Purpose – FULL WIDTH */}
+          <div className="form-group full-width">
+            <label>Purpose of Demo (Min 100 chars) *</label>
             <textarea
               name="purpose"
               rows="4"
+              placeholder="Explain why you want the demo"
               value={formData.purpose}
               onChange={handleChange}
-              placeholder="Enter purpose..."
             />
             {errors.purpose && <p className="error">{errors.purpose}</p>}
           </div>
 
-          <div className="form-btn">
-            <button type="submit" disabled={!emailVerified || !mobileVerified}>
-              Submit Request
-            </button>
+          <div className="form-btn full-width">
+            <button type="submit">Submit Request</button>
           </div>
         </form>
+
 
         <ToastContainer position="top-right" />
       </div>

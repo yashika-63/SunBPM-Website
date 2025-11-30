@@ -40,8 +40,8 @@ export default function QMSModuleDetail() {
             ← Back
           </button>
 
-          <button className="md-book-btn" onClick={() => navigate('/BookDemo')}>
-            Book a Demo
+          <button className="md-book-btn" onClick={() => navigate(-1)}>
+            Next Module →
           </button>
         </div>
 

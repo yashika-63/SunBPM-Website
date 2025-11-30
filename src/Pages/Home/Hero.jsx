@@ -5,12 +5,12 @@ import "../../CSS/Home/Hero.css";
 export default function HeroSection() {
   const slides = [
     {
-      img: "hero 1.jpg",
+      img: "hero 1.png",
       title: "SunBPM Corporate Social Responsibility",
       link: "/Products/CSR",
     },
     {
-      img: "hero 2.jpg",
+      img: "hero 2.png",
       title: "SunBPM Environmental, Social, and Governance",
       link: "/Products/ESG",
     },
@@ -30,7 +30,7 @@ export default function HeroSection() {
       link: "/Products/PRPO",
     },
     {
-      img: "hero 1.jpg",
+      img: "hero 6.png",
       title: "SunBPM Procurement Decision Tool",
       link: "/Products/CapexOpex",
     },
@@ -39,11 +39,11 @@ export default function HeroSection() {
   const [index, setIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
 
-  // Auto-slideshow every 10 seconds
+  // Auto-slideshow every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
-    }, 10000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 

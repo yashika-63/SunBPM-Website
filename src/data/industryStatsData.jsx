@@ -1,6 +1,6 @@
 const industryStats = [
-    { label: 'Projects', value: '100+' },
-    { label: 'Clients', value: '30+' },
+    { label: 'Projects', value: '40+' },
+    { label: 'Clients', value: '20+' },
     { label: 'Locations PAN India', value: '10+' },
     { label: 'Resources', value: '1000+' }
 ];

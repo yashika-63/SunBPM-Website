@@ -150,7 +150,7 @@ html {
   margin-bottom: 40px;
     left: 0;
     bottom: -6px;
-    width: 68%;
+    width: 64%;
     height: 4px;
     border-radius: 4px;
     background: linear-gradient(90deg, #F7941D, #fee6cb);
@@ -280,7 +280,7 @@ html {
     position: absolute;
     left: 0;
     bottom: -6px;
-    width: 77%;
+    width: 87%;
     height: 4px;
     border-radius: 4px;
     background: linear-gradient(90deg, #F7941D, #fee6cb);

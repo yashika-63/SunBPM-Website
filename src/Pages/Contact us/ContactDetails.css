@@ -1,0 +1,134 @@
+/* MAIN WRAPPER */
+.lux-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  /* padding-right: 25px;
+  background: #E8E8E8; */
+}
+
+/* PAGE TITLE */
+.lux-main-title {
+  color: #004C6D;
+  /* premium deep blue */
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+/* GLASS CARD */
+.lux-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 20px;
+  padding: 26px;
+  backdrop-filter: blur(18px);
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: 0.35s ease;
+}
+
+/* GRADIENT GLOW BORDER */
+.lux-glow {
+  padding: 0px 45px;
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+  background: linear-gradient(90deg, #ffe9cd, #F9C74F);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+  z-index: -1;
+}
+
+.lux-card:hover .lux-glow {
+  opacity: 1;
+}
+
+/* CARD TITLE */
+.lux-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #004C6D;
+  margin-bottom: 14px;
+}
+
+/* TEXT BLOCKS */
+.lux-block strong {
+  color: #000000;
+  font-size: 16px;
+}
+
+.lux-block {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* CLICKABLE LINKS */
+.lux-link {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 6px 0;
+  color: #004C6D;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.lux-link:hover {
+  background: rgba(247, 148, 29, 0.55);
+  color: #000;
+  transform: translateX(6px);
+}
+
+/* INFO TAGS */
+.lux-info {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #000000;
+  font-weight: 600;
+}
+
+.lux-text {
+  text-align: left;
+  color: #333333;
+  margin: 5px 0;
+}
+
+.lux-note {
+  text-align: left;
+  opacity: 0.85;
+  margin-top: 10px;
+}
+
+/* BUTTON */
+.lux-btn {
+  margin-top: 12px;
+  padding: 10px 18px;
+  /* background: linear-gradient(90deg, #F7941D, #F9C74F, #004C6D); */
+  background: linear-gradient(90deg, #F7941D, #F9C74F);
+  border: none;
+  border-radius: 10px;
+  color: #000000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.lux-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .lux-wrapper {
+    padding-right: 0;
+  }
+}

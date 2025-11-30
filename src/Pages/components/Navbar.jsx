@@ -24,7 +24,7 @@ const Navbar = () => {
     {
       name: 'Services',
       dropdown: [
-        { name: 'Our core services', href: '/Services' },
+        // { name: 'Our core services', href: '/Services' },
         { name: 'ERP Implementation and services', href: '/Services/ERP' },
         { name: 'Mobile App Development services', href: '/Services/MobileApp' },
         { name: 'Data Analytics services', href: '/Services/DataAnalytics' },
@@ -221,11 +221,11 @@ const Navbar = () => {
 
                             /* =================== SERVICE PREVIEW DATA =================== */
                             const serviceDetails = {
-                              'Our core services': {
-                                title: 'Our core services',
-                                desc: 'Comprehensive Digital Solutions Tailored to Your Business.',
-                                img: "/images/services/core-services/erp-grand-image.jpg",
-                              },
+                              // 'Our core services': {
+                              //   title: 'Our core services',
+                              //   desc: 'Comprehensive Digital Solutions Tailored to Your Business.',
+                              //   img: "/images/services/core-services/erp-grand-image.jpg",
+                              // },
                               'ERP Implementation and services': {
                                 title: 'ERP Implementation and Services',
                                 desc: 'Empowering Enterprise Transformation with Intelligent ERP Solutions.',

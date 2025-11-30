@@ -7,7 +7,6 @@ import AboutUs from "./Pages/About/AboutUs";
 import SuccessStoriesPage from "./Pages/success_stories/SuccessStoriesPage";
 import EHS from "./Pages/Products/EHS/EHS";
 import ESG from "./Pages/Products/ESG/ESG";
-
 import Footer from "./Pages/components/Footer";
 import Navbar from "./Pages/components/Navbar";
 import ScrollToTop from "./Pages/components/ScrollToTop";
@@ -34,6 +33,7 @@ import MobileappService from "./Pages/services/MobileappService/MobileappService
 import DAService from "./Pages/services/DAservice/DAservice.jsx";
 import BPAService from "./Pages/services/BPAservice/BPAservice.jsx";
 import SREService from "./Pages/services/SREservice/SREservice.jsx";
+import LocationPage from "./Pages/Contact us/Location.jsx";
 
 
 
@@ -80,13 +80,16 @@ function AppContent() {
     "/services/mobileapp",
     "/services/dataanalytics",
     "/services/bpa",
-    "/services/sitereliability"
+    "/services/sitereliability",
+    "/locations"
   ];
 
   // check if path is valid OR starts with /successstories/
   const isValidRoute =
     validRoutes.includes(currentPath) ||
-    currentPath.startsWith("/successstories/");
+    currentPath.startsWith("/successstories/")||
+  currentPath.includes("modules/");
+    
 
   return (
     <div>
@@ -126,6 +129,7 @@ function AppContent() {
           <Route path="/Services/DataAnalytics" element={<DAService/>} />
           <Route path="/Services/BPA" element={<BPAService/>} />
           <Route path="/Services/SiteReliability" element={<SREService/>} />
+          <Route path="/Locations" element={<LocationPage/>} />
         </Routes>
       </main>
 

@@ -60,9 +60,9 @@ const Footer = () => {
           <h3>Explore</h3>
           <ul>
             <li><Link to="/AboutUs" className="email-link">About</Link></li>
-            <li><Link to="/Services" className="email-link">Services</Link></li>
+            <li><Link to="/Client" className="email-link">Clients</Link></li>
             <li><Link to="/Contact" className="email-link">Contact Us</Link></li>
-            <li><Link to="/SuccessStories" className="email-link">Success Stories</Link></li>
+            <li><Link to="/Locations" className="email-link">Locations</Link></li>
           </ul>
         </div>
         <div className="policies">

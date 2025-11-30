@@ -59,19 +59,17 @@ const Sunbpmhome = () => {
             const Icon = item.icon;
             return (
               <div className="value-card" key={index}>
-                {/* Background image (moves on hover) */}
                 <div
                   className="value-image"
                   style={{ backgroundImage: `url(${item.image})` }}
                 ></div>
 
-                {/* Text content */}
                 <div className="value-content">
                   <div className="value-icon">
                     <Icon size={36} />
                   </div>
                   <h3>{item.title}</h3>
-                  <p>{item.description}</p>
+                  <p className="value-description">{item.description}</p>
                 </div>
               </div>
             );

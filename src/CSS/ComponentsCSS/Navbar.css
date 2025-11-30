@@ -35,6 +35,15 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* .navbar-inner > *:nth-child(1) {
+  margin-right: 20px; 
+}
+
+.navbar-inner > *:nth-child(2) {
+  margin-right: 320px; 
+} */
+
+
 .logo {
   height: 70px;
   width: auto;

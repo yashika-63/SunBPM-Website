@@ -89,6 +89,16 @@
   margin: 0;
 }
 
+/* .client-page-bullet-dot {
+  flex-shrink: 0;
+  margin-top: 0px;
+  width: 7px;
+  height: 7px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background-color: transparent;
+} */
+
 .client-page-bullet-dot {
   flex-shrink: 0;
   margin-top: 0px;
@@ -97,6 +107,7 @@
   background: linear-gradient(to right, #de7b00, #ff8c1a);
   border-radius: 50%;
 }
+
 
 /* === Logo Section === */
 .client-page-logo {
@@ -185,9 +196,8 @@
 .client-page-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(1, 24, 99, 1.5);
-  /* background: rgba(0, 48, 96, 1.5); */
-  /* background: linear-gradient(90deg, #0077cc, #00aaff); */
+  /* background-color: rgba(1, 24, 99, 1.5); */
+  background: linear-gradient(135deg, #011863, #004c6d);
   color: #fff;
   opacity: 0;
   transform: translateX(-100%);
@@ -202,7 +212,6 @@
   opacity: 1;
   transform: translateX(0);
 }
-
 
 /* .client-page-overlay {
   position: absolute;

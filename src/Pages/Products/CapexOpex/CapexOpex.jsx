@@ -153,7 +153,7 @@ const CapexOpex = () => {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <h1 className="CapexOpex-advantages-title">Delivering Client Value: Strategic Advantages</h1>
+        <h1 className="CapexOpex-advantages-title">End-to-End Operational Control, Simplified</h1>
         <div className="CapexOpex-advantages-title-line"></div>
 
         <div className="CapexOpex-advantages-grid">

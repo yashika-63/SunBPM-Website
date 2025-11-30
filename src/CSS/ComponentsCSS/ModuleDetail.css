@@ -26,6 +26,7 @@
    HEADER (PREMIUM HERO)
 ================================ */
 .md-header-super {
+  margin-top: 70px;
   position: relative;
   padding: 10px 24px 10px;
   background: linear-gradient(135deg, rgba(1, 24, 99, 1), rgba(0, 76, 109, 0.94));

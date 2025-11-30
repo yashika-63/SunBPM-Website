@@ -5,16 +5,6 @@ import "../../CSS/Home/ClientReviews.css";
 
 const reviews = [
     {
-        name: "Ms. Shweta",
-        designation: "HR",
-        industry: "Chemical Industry",
-        review:
-            "Outstanding HRMS solution! Reduced our HR workload with excellent automation features. Intuitive design and fantastic support from the SunBPM team.",
-        rating: 5,
-        product: "HRMS",
-        verified: true,
-    },
-    {
         name: "Mr. Mukul",
         designation: "Manager",
         industry: "Manufacturing Industry",

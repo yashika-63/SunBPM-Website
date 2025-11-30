@@ -14,14 +14,13 @@
 }
 
 .cu-container {
-  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0 16px;
 }
 
 /* HERO */
 .cu-hero {
-  background: url('../../../public/images/ContactUs/cu-grand-image.jpg') no-repeat center/cover;
+  background: url('../../../public/images/ContactUs/cu-grand-image.png') no-repeat center/cover;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -123,6 +122,32 @@
   color: #000000;
 }
 
+
+.cu-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  width: 100%;        /* Forces heading to span full width */
+  margin-left: 35px;     /* Ensures left alignment */
+}
+
+
+.cu-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 16%;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #F7941D, #fee6cb);
+}
+
+
 /* contact strip */
 .cu-strip {
   margin-top: 24px;
@@ -174,13 +199,14 @@
 
 /* ===== start + form ===== */
 .cu-start {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .cu-start-grid {
+  padding: 0px 35px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 40px;
   align-items: start;
 }
 
@@ -206,7 +232,8 @@
 }
 
 .cu-card {
-  background: var(--orange);
+  /* background: var(--orange); */
+  background: linear-gradient(90deg, #ffa83e, #F9C74F);
   border-radius: 14px;
   padding: 22px;
   color: #111;
@@ -645,3 +672,28 @@
     font-size: 24px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
