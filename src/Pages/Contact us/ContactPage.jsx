@@ -4,7 +4,7 @@ import "../../CSS/Contact us/ContactUs.css";
 import { CalendarCheck2, PhoneCall, Mail, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import MyMap from "./MyMap";
+// import MyMap from "./MyMap";
 import ContactForm from "./ContactForm";
 import ContactFAQ from "./ContactFAQ";
 import WorldMap from "./WorldMap";

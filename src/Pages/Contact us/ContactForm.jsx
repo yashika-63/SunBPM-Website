@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { motion } from "framer-motion";
-import MyMap from "./MyMap";
+// import MyMap from "./MyMap";
 import ContactDetails from "./ContactDetails";
 
 const fadeUp = {
