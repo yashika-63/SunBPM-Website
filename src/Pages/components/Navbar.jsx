@@ -190,32 +190,32 @@ const Navbar = () => {
                               'SunBPM Corporate Social Responsibility': {
                                 title: 'SunBPM Corporate Social Responsibility',
                                 desc: 'Manage corporate social responsibility with transparency and efficiency.',
-                                img: "/images/products/CSR/CSR-grand-image.png",
+                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/CSR-grand-image.png",
                               },
                               'SunBPM Environmental, Social, and Governance': {
                                 title: 'SunBPM Environmental, Social, and Governance',
                                 desc: 'Drive sustainability and compliance through smart ESG management.',
-                                img: "/images/products/ESG/ESG-grand-image.png",
+                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/ESG/ESG-grand-image.png",
                               },
                               'SunBPM Environment, Health, and Safety': {
                                 title: 'SunBPM Environment, Health, and Safety',
                                 desc: 'Ensure environment, health, and safety compliance across operations.',
-                                img: "/images/products/EHS/EHS-grand-image.jpg",
+                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/EHS/EHS-grand-image.jpg",
                               },
                               'SunBPM Project  Management System': {
                                 title: 'SunBPM Project  Management System',
                                 desc: 'Maintain quality and standards effortlessly with intelligent QMS workflows.',
-                                img: "/images/products/QMS/QMS-grand-image.jpg",
+                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/QMS/QMS-grand-image.jpg",
                               },
                               'SunBPM Purchase Requisition and Purchase Order': {
                                 title: 'SunBPM Purchase Requisition and Purchase Order',
                                 desc: 'Simplify procurement and approval with efficient PR and PO tracking.',
-                                img: "/images/products/PRPO/PRPO-grand-image.jpg",
+                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/PRPO/PRPO-grand-image.jpg",
                               },
                               'SunBPM Procurement Decision Tool': {
                                 title: 'SunBPM Procurement Decision Tool',
                                 desc: 'Optimize capital and operational expenditure with complete visibility.',
-                                img: "/images/products/CapexOpex/CapexOpex-grand-image.png",
+                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CapexOpex/CapexOpex-grand-image.png",
                               },
                             };
 
@@ -224,32 +224,32 @@ const Navbar = () => {
                               // 'Our core services': {
                               //   title: 'Our core services',
                               //   desc: 'Comprehensive Digital Solutions Tailored to Your Business.',
-                              //   img: "/images/services/core-services/erp-grand-image.jpg",
+                              //   img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/core-services/erp-grand-image.jpg",
                               // },
                               'ERP Implementation and services': {
                                 title: 'ERP Implementation and Services',
                                 desc: 'Empowering Enterprise Transformation with Intelligent ERP Solutions.',
-                                img: "/images/services/core-services/erp-grand-image.jpg",
+                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/core-services/erp-grand-image.jpg",
                               },
                               'Mobile App Development services': {
                                 title: 'Mobile App Development services',
                                 desc: 'Expand footprint with innovative mobile applications.',
-                                img: "/images/services/core-services/mobile-app-grand-image.jpg",
+                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/core-services/mobile-app-grand-image.jpg",
                               },
                               'Data Analytics services': {
                                 title: 'Data Analytics services',
                                 desc: 'Every Growth Strategy Now Starts With Data.',
-                                img: "/images/services/core-services/Data-analitics-grand-image.png",
+                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/core-services/Data-analitics-grand-image.png",
                               },
                               'Business process Automation services': {
                                 title: 'Business Process Automation services',
                                 desc: 'Orchestrate end-to-end workflows with intelligent process automation.',
-                                img: "/images/services/core-services/BPA-grand-image.jpg",
+                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/core-services/BPA-grand-image.jpg",
                               },
                               'Site Reliability Services': {
                                 title: 'Site Reliability Services',
                                 desc: 'End-to-End IT support that keeps your business running strong.',
-                                img: "/images/services/core-services/SRE-grand-image.jpg",
+                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/core-services/SRE-grand-image.jpg",
                               },
                             };
 

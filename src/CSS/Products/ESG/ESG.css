@@ -21,7 +21,7 @@ html {
 
 /* ================= Hero Section ================= */
 .ESG-hero {
-  background: url('../../../../images/products/ESG/ESG-grand-image.png') no-repeat center/cover;
+  background: url('https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/ESG/ESG-grand-image.png') no-repeat center/cover;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -149,12 +149,12 @@ html {
 
 .ESG-advantages-title-line {
   margin-bottom: 40px;
-    left: 0;
-    bottom: -6px;
-    width: 68%;
-    height: 4px;
-    border-radius: 4px;
-    background: linear-gradient(90deg, #F7941D, #fee6cb);
+  left: 0;
+  bottom: -6px;
+  width: 68%;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #F7941D, #fee6cb);
 }
 
 .ESG-advantages-grid {
@@ -169,7 +169,7 @@ html {
   padding: 34px 22px;
   background: #ffffff;
   border-radius: 22px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.23);
   border: 1px solid #e8e8e8;
   overflow: hidden;
   transition: 0.45s ease;
@@ -221,8 +221,15 @@ html {
 }
 
 @keyframes blinkCircle {
-  0%   { transform: scale(0.7); opacity: 0.9; }
-  100% { transform: scale(1.2); opacity: 0; }
+  0% {
+    transform: scale(0.7);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
 }
 
 /* Hover the icon */
@@ -267,292 +274,300 @@ html {
 }
 
 .ESG-core-title {
-    text-align: left;
-    font-size: 36px;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    color: #000000;
-    position: relative; /* required */
+  text-align: left;
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: #000000;
+  position: relative;
+  /* required */
 }
 
 .ESG-core-title::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 77%;
-    height: 4px;
-    border-radius: 4px;
-    background: linear-gradient(90deg, #F7941D, #fee6cb);
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 77%;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #F7941D, #fee6cb);
 }
 
 .ESG-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
 }
 
 .ESG-group-card {
-    position: relative;
-    overflow: hidden;
-    background: #fff;
-    border-radius: 12px;
-    height: 360px;
-    padding: 20px;
-    box-shadow: 0 6px 18px rgba(16, 18, 24, 0.18);
-    border: 1px solid rgba(16, 24, 40, 0.04);
-    transition: transform .22s ease, background .3s ease, box-shadow .3s ease;
-    cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 12px;
+  height: 360px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(16, 18, 24, 0.18);
+  border: 1px solid rgba(16, 24, 40, 0.04);
+  transition: transform .22s ease, background .3s ease, box-shadow .3s ease;
+  cursor: pointer;
 }
 
 /* Hover - dark background + lift */
 .ESG-group-card:hover {
-    transform: translateY(-6px);
-    background: #1e1b22;
-    box-shadow: 0 18px 60px rgba(16, 18, 24, 0.18);
+  transform: translateY(-6px);
+  background: #1e1b22;
+  box-shadow: 0 18px 60px rgba(16, 18, 24, 0.18);
 }
 
 .ESG-group-card:hover .ESG-radio-dot {
-    border-color: #fff;
+  border-color: #fff;
 }
 
 /* Text color changes on hover */
 .ESG-group-card:hover .ESG-group-name,
 .ESG-group-card:hover .ESG-group-shortdesc,
 .ESG-group-card:hover .ESG-group-label {
-    color: #fff;
+  color: #fff;
 }
 
 /* ---------------------------
    CARD IMAGE CAPSULE (bottom)
    --------------------------- */
 .ESG-card-image-capsule {
-    position: absolute;
-    left: 18px;
-    right: 18px;
-    width: 86%;
-    bottom: 20px;
-    height: 21%;
-    border-radius: 44px;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transform: translateY(18px) scale(0.98);
-    transition: all .32s cubic-bezier(.2, .9, .2, 1);
-    z-index: 6;
-    pointer-events: none;
-    overflow: hidden;
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
-    background-color: rgba(0, 0, 0, 0.35);
-    background-blend-mode: multiply;
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  width: 86%;
+  bottom: 20px;
+  height: 21%;
+  border-radius: 44px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: translateY(18px) scale(0.98);
+  transition: all .32s cubic-bezier(.2, .9, .2, 1);
+  z-index: 6;
+  pointer-events: none;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+  background-color: rgba(0, 0, 0, 0.35);
+  background-blend-mode: multiply;
 
 }
 
 /* overlay inside capsule */
 .ESG-card-image-capsule .ESG-capsule-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    padding: 0 18px;
-    gap: 12px;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding: 0 18px;
+  gap: 12px;
 }
 
 /* Show capsule on hover */
 .ESG-group-card:hover .ESG-card-image-capsule {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
 }
 
 /* view service button inside capsule */
 .ESG-capsule-view {
-    display: flex;
-    gap: 14px;
-    align-items: center;
-    /* justify-content: center; */
-    background: transparent;
-    border: none;
-    color: #fff;
-    font-weight: 700;
-    font-size: 16px;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  /* justify-content: center; */
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 .capsule-circle {
-    margin-left: auto;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.22);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.03);
-    transition: transform .22s ease, border-color .22s ease;
+  margin-left: auto;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform .22s ease, border-color .22s ease;
 }
 
 .capsule-circle svg path {
-    stroke: #fff;
+  stroke: #fff;
 }
 
 /* subtle right-slide effect inside capsule */
 .ESG-capsule-view:hover .capsule-circle {
-    transform: translateX(6px);
-    border-color: rgba(255, 255, 255, 0.38);
+  transform: translateX(6px);
+  border-color: rgba(255, 255, 255, 0.38);
 }
 
 /* ---------------------------
    CARD CONTENT (top)
    --------------------------- */
 .ESG-ESG-group-card-body {
-    position: relative;
-    z-index: 10;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .ESG-group-top {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
 }
 
 .ESG-radio-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 2px solid #222;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #222;
 }
 
 .ESG-group-label {
-    font-size: 15px;
-    color: #111827;
-    font-weight: 600;
+  font-size: 15px;
+  color: #111827;
+  font-weight: 600;
 }
 
 .ESG-group-name {
-    font-size: 24px;
-    text-align: left;
-    margin: 6px 0 12px;
-    color: #0f1724;
-    font-weight: 600;
-    line-height: 1.12;
+  font-size: 24px;
+  text-align: left;
+  margin: 6px 0 12px;
+  color: #0f1724;
+  font-weight: 600;
+  line-height: 1.12;
 }
 
 .ESG-group-shortdesc {
-    color: #6b7280;
-    text-align: start;
-    font-size: 16px;
-    line-height: 1.6;
-    /* max-width: 88%; */
+  color: #6b7280;
+  text-align: start;
+  font-size: 16px;
+  line-height: 1.6;
+  max-height: calc(1.6em * 5);
+  /* height for 5 lines */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  transition: max-height 0.4s ease;
 }
 
 .ESG-group-card:hover .ESG-group-name {
-    color: #fff;
+  color: #fff;
 }
 
 .ESG-group-card:hover .ESG-group-shortdesc {
-    color: rgba(255, 255, 255, 0.86);
+  color: rgba(255, 255, 255, 0.86);
 }
 
 .ESG-group-card:hover .ESG-group-label {
-    color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .ESG-default-cta {
-    margin-top: auto;
-    z-index: 10;
-    transition: opacity .22s ease, transform .22s ease;
+  margin-top: auto;
+  z-index: 10;
+  transition: opacity .22s ease, transform .22s ease;
 }
 
 .ESG-cta-pill {
-    position: relative;
-    display: flex;
-    height: 84px;
-    align-items: center;
-    height: 84px;
-    border-radius: 42px;
-    border: 2px solid #c0c0c0;
-    /* background: #fff; */
-    padding: 0 22px;
-    box-sizing: border-box;
+  position: relative;
+  display: flex;
+  height: 84px;
+  align-items: center;
+  height: 84px;
+  border-radius: 42px;
+  border: 2px solid #c0c0c0;
+  /* background: #fff; */
+  padding: 0 22px;
+  box-sizing: border-box;
 }
 
 /* circle inside CTA */
 .ESG-cta-circle {
-    position: absolute;
-    left: 20px;
-    /* starting point (left side) */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    border: 1.6px solid rgba(14, 27, 51, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: left 0.55s ease;
-    /* <-- key animation */
+  position: absolute;
+  left: 20px;
+  /* starting point (left side) */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1.6px solid rgba(14, 27, 51, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.55s ease;
+  /* <-- key animation */
 }
 
 
 /* LINE inside pill */
 .ESG-cta-line {
-    height: 2px;
-    width: 100%;
-    background: linear-gradient(90deg, rgba(14, 27, 51, 0.08), rgba(14, 27, 51, 0.12));
-    border-radius: 2px;
-    margin-left: 70px;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(14, 27, 51, 0.08), rgba(14, 27, 51, 0.12));
+  border-radius: 2px;
+  margin-left: 70px;
 }
 
 /* ON HOVER: move arrow circle all the way to the right */
 .ESG-group-card:hover .ESG-cta-circle {
-    left: calc(100% - 76px);
-    border-color: rgba(255, 255, 255, 0.8);
+  left: calc(100% - 76px);
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 
 /* DARK CARD STYLE */
 .ESG-group-card.dark {
-    background: #1e1b22;
-    color: #fff;
+  background: #1e1b22;
+  color: #fff;
 }
 
 
 /* ================= Responsive ================= */
 /* RESPONSIVE FIXES */
 @media (max-width: 900px) {
-    .ESG-group-name {
-        font-size: 22px;
-    }
+  .ESG-group-name {
+    font-size: 22px;
+  }
 
-    .ESG-cta-pill {
-        height: 70px;
-    }
+  .ESG-cta-pill {
+    height: 70px;
+  }
 
-    .ESG-card-image-capsule {
-        height: 74px;
-        border-radius: 36px;
-    }
+  .ESG-card-image-capsule {
+    height: 74px;
+    border-radius: 36px;
+  }
 }
+
 @media (max-width: 1100px) {
-    .ESG-cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .ESG-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 640px) {
-    .ESG-cards-grid {
-        grid-template-columns: 1fr;
-    }
+  .ESG-cards-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Large screens (≥1600px) */
@@ -626,6 +641,16 @@ html {
     padding: 40px 0px 0px 0px;
   }
 
+  .ESG-advantages-title {
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .ESG-core-title {
+    text-align: left;
+    font-size: 24px;
+  }
+
   .ESG-module-icon {
     margin: 0 120px 1rem;
   }
@@ -639,6 +664,7 @@ html {
   }
 
   .ESG-hero-overlay {
+    margin-top: 74px;
     height: 84%;
     padding: 20px;
   }
@@ -650,6 +676,7 @@ html {
   }
 
   .ESG-redef h1 {
+    text-align: left;
     font-size: 24px;
   }
 
@@ -662,9 +689,9 @@ html {
     padding-top: 40px;
   }
 
-.btn-learn {
-  padding: 8px 12px;
-}
+  .btn-learn {
+    padding: 8px 12px;
+  }
 
   .ESG-modules-grid,
   .ESG-cap-grid {
@@ -714,6 +741,10 @@ html {
   .ESG-redef {
     gap: 30px;
   }
+
+  .ESG-group-card {
+    height: 290px;
+  }
 }
 
 /* Small Mobile (≤479px) */
@@ -731,13 +762,13 @@ html {
   }
 
   .ESG-hero {
-    height: 250px;
+    height: 550px;
   }
 
   .ESG-hero-overlay h1 {
     padding-top: 30px;
     padding-left: 0px;
-    font-size: 18px;
+    font-size: 24px;
   }
 
   .hero-button {
@@ -746,8 +777,8 @@ html {
   }
 
   .btn-learn {
-  padding: 8px 12px !important;
-}
+    padding: 8px 12px !important;
+  }
 
   .ESG-redef h1 {
     font-size: 22px;

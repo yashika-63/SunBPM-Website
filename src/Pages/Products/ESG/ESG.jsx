@@ -69,7 +69,7 @@ const ESG = () => {
         </motion.div>
         <motion.div className="ESG-redef-right" variants={fadeInRight}>
           <img
-            src="/images/products/ESG/ESG Intro Image.png"
+            src="https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/ESG/ESG+Intro+Image.png"
             alt="ESG  Intro Image"
             className="ESG-redef-img"
           />

@@ -4,7 +4,7 @@ const CapexOpexModules = [
     groupName: "Budget Planning & Validation",
     shortDesc:
       "Standardized budget creation, approval, and real-time validation to ensure disciplined fund utilization.",
-    image: "/images/products/CSR/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -45,7 +45,7 @@ const CapexOpexModules = [
     groupName: "CAPEX Request Management",
     shortDesc:
       "Centralized management of capital expenditure requests with structured evaluation, approvals, and vendor comparison.",
-    image: "/images/products/CSR/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -86,7 +86,7 @@ const CapexOpexModules = [
     groupName: "OPEX & Vendor Management",
     shortDesc:
       "Operational expense tracking and vendor management with approval workflows and analytical insights.",
-    image: "/images/products/CSR/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -127,7 +127,7 @@ const CapexOpexModules = [
     groupName: "Reporting, Analytics & Optimization",
     shortDesc:
       "Real-time reporting, alerts, and insights to support continuous improvement and financial decision-making.",
-    image: "/images/products/CSR/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {

@@ -6,7 +6,7 @@ import {
   Marker,
 } from "react-simple-maps";
 
-import "./WorldMap.css";
+import "../../CSS/Contact us/WorldMap.css";
 
 const geoUrl ="https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 

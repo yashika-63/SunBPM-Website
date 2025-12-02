@@ -1,49 +1,36 @@
-import {
-  FaGlobeAmericas,
-  FaCogs,
-  FaShieldAlt,
-  FaNetworkWired,
-  FaBalanceScale,
-  FaChartLine,
-} from "react-icons/fa";
+import { FaBullseye, FaMicrochip, FaShieldAlt, FaLink, FaExclamationTriangle, FaChartLine } from "react-icons/fa";
 
 const EHSADVANTAGES = [
   {
-    icon: FaGlobeAmericas,
+    icon: FaBullseye,
     title: "Achieve Unified Governance and Transparency",
-    desc:
-      "A single, unified platform for managing EHS across global locations with standardized processes and real-time visibility into organizational risk, reducing operational variability and compliance inconsistencies.",
+    desc: "A unified platform for managing EHS across all global sites, enforcing standardized procedures and reporting. Reduces variability in safety culture and compliance while offering leadership real-time visibility into organizational risk."
   },
   {
-    icon: FaCogs,
+    icon: FaMicrochip,
     title: "Drive Low-Code Agility for Adaptability",
-    desc:
-      "Quickly modify workflows, incident forms, permits, and training modules using low-code configuration to meet changing regulations such as OSHA or EPA requirements, ensuring continuous compliance and uninterrupted operations.",
+    desc: "Instantly adapt incident forms, permit renewal workflows, and safety training modules using low-code capabilities to meet evolving regulations such as OSHA and EPA. Ensures uninterrupted compliance and avoids regulatory penalties."
+  },
+  {
+    icon: FaExclamationTriangle,
+    title: "Guarantee Proactive Risk Mitigation",
+    desc: "Hazard Observations and Audit Management enable early identification of unsafe conditions, linking them directly to CAPA workflows. Transforms safety culture from reactive investigation to predictive prevention, lowering TRIR and insurance costs."
+  },
+  {
+    icon: FaLink,
+    title: "Enable Seamless Integration with the Digital Core",
+    desc: "Native integrations connect Incident Tracker with HRMS and Permit Management with ERP to eliminate data silos. Ensures EHS metrics like training completion and incident frequency remain fully aligned with HR and operational planning."
   },
   {
     icon: FaShieldAlt,
-    title: "Guarantee Proactive Risk Mitigation",
-    desc:
-      "Hazard observations and audit management enable early identification of unsafe conditions and automate corrective action workflows, transforming safety from reactive to proactive and helping reduce TRIR and insurance costs.",
-  },
-  {
-    icon: FaNetworkWired,
-    title: "Enable Seamless Integration with the Digital Core",
-    desc:
-      "Native integrations link EHS processes with HRMS and ERP systems, eliminating data silos and ensuring that safety metrics like training completion and incident frequency align with operational and workforce data.",
-  },
-  {
-    icon: FaBalanceScale,
     title: "Accelerate Time-to-Compliance for Regulatory Readiness",
-    desc:
-      "Digital audit trails, mandatory documentation, and automated reporting streamline compliance and certification efforts, ensuring faster regulatory readiness and reducing preparation time for audits and inspections.",
+    desc: "Automated compliance tracking with digitally traceable documentation ensures first-pass readiness for internal audits and regulatory inspections. Significantly reduces preparation time and mitigates compliance gaps."
   },
   {
     icon: FaChartLine,
     title: "Build a Culture of Continuous Safety Improvement",
-    desc:
-      "Insights from incidents, near-misses, and observations help identify recurring patterns and systemic weaknesses, enabling organizations to strengthen prevention strategies and evolve EHS from compliance to competitive advantage.",
-  },
+    desc: "Convert insights from incidents, near-misses, and observations into actionable trends. Strengthen high-risk areas using root cause analysis and pattern identification, elevating safety from a compliance task to a strategic operational advantage."
+  }
 ];
 
 export default EHSADVANTAGES;

@@ -72,7 +72,7 @@ const CSR = () => {
         </motion.div>
         <motion.div className="csr-redef-right" variants={fadeInRight}>
           <img
-            src="/images/products/CSR/CSR Intro Image.png"
+            src="https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/CSR+Intro+Image.png"
             alt="CSR  Intro Image"
             className="csr-redef-img"
           />

@@ -1,21 +1,7 @@
-import image1 from "../../../public/images/ContactUs/locations/Mumbai.jpg";
-import image2 from "../../../public/images/ContactUs/locations/Bengaluru.jpg";
-import image3 from "../../../public/images/ContactUs/locations/Pune.jpg";
-import image4 from "../../../public/images/ContactUs/locations/Jalgaon.jpg";
-import image5 from "../../../public/images/ContactUs/locations/Nashik.jpg";
-import image6 from "../../../public/images/ContactUs/locations/Noida.jpg";
-import image7 from "../../../public/images/ContactUs/locations/Gurugram.jpg";
-import image8 from "../../../public/images/ContactUs/locations/Hyderabad.jpg";
-import image9 from "../../../public/images/ContactUs/locations/Kolkata.jpg";
-import image10 from "../../../public/images/ContactUs/locations/USA.jpg";
-import image11 from "../../../public/images/ContactUs/locations/Japan.jpg";
-import image12 from "../../../public/images/ContactUs/locations/UAE.jpg";
-import image13 from "../../../public/images/ContactUs/locations/Germany.jpg";
-
 
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
 import { useState } from "react";
-import "./Location.css";
+import "../../CSS/Contact us/Location.css";
 import { motion } from "framer-motion";
 
 const countries = ["India", "Japan", "UAE", "Germany", "USA"];
@@ -42,7 +28,7 @@ const locations = [
             "5th Floor, Omega House, 501 A & B, Hiranandani Gardens, Sainath Nagar, Powai, Mumbai, Maharashtra 400076.",
         email: "sales@sunbpm.com",
         phone: "+91-8850941503",
-        img: image1,
+        img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/Mumbai.jpg",
         map: "https://maps.app.goo.gl/GZARF4M4UMCdXMv76",
     },
     {
@@ -51,7 +37,7 @@ const locations = [
             "BHIVE Premium Whitefield Campus, Jbr Tech Park, Plot No. 77, Whitefield, Bengaluru, Karnataka 560066.",
         email: "sales@sunbpm.com",
         phone: "+91-8850941503",
-        img: image2,
+        img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/Bengaluru.jpg",
         map: "https://maps.app.goo.gl/y6Qee8Lg9i7V4k6f8",
     },
     {
@@ -60,7 +46,7 @@ const locations = [
             "Regus Pentagon P-2, 6th Floor, Magarpatta, Hadapsar, Pune, Maharashtra 411013.",
         email: "sales@sunbpm.com",
         phone: "+91-8850941503",
-        img: image3,
+        img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/Pune.jpg",
         map: "https://maps.app.goo.gl/1pbzwARExudZ2pEV8",
     },
     {
@@ -69,7 +55,7 @@ const locations = [
             "Aurangabad-Ajanta-Jalgaon Road Gat No- 139/1&2, Umale, Maharashtra 425003.",
         email: "sales@sunbpm.com",
         phone: "+91-8591061753",
-        img: image4,
+        img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/Jalgaon.jpg",
         map: "https://maps.app.goo.gl/uSapCGY5CiM6r4wB7",
     },
     {
@@ -78,7 +64,7 @@ const locations = [
             "H-161/162, MIDC Ambad, Nashik, Maharashtra 422010.",
         email: "sales@sunbpm.com",
         phone: "+91-8850941503",
-        img: image5,
+        img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/Nashik.jpg",
         map: "https://maps.app.goo.gl/82bGpqKLEgGJYPuMA",
     },
     {
@@ -87,7 +73,7 @@ const locations = [
             "Regus - World Trade Tower, Plot No, 1, Delhi Noida Direct Flyway, Central Auto Market, Block C, Block B, Sector 16, Noida, Uttar Pradesh 201301.",
         email: "sales@sunbpm.com",
         phone: "+91-8850941503",
-        img: image6,
+        img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/Noida.jpg",
         map: "https://maps.app.goo.gl/EiHfF11pViDWPu6e6",
     },
     {
@@ -96,7 +82,7 @@ const locations = [
             "Regus - Gurugram, Unitech Cyber Park, Tower-B, UNITECH CYBER PARK, Road, Durga Colony, Sector 39, Gurugram, Haryana 122003.",
         email: "sales@sunbpm.com",
         phone: "+91-8850941503",
-        img: image7,
+        img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/Gurugram.jpg",
         map: "https://maps.app.goo.gl/xxEWYgm8zN18nFvG9",
     },
     {
@@ -105,7 +91,7 @@ const locations = [
             "Regus - iLabs Center 18, Building 3, Software Units Layout Hi-Tech City, Inorbit Mall Rd, Madhapur, Telangana 500081.",
         email: "sales@sunbpm.com",
         phone: "+91-8850941503",
-        img: image8,
+        img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/Hyderabad.jpg",
         map: "https://maps.app.goo.gl/KiDkJkEYA1pccChm6",
     },
     {
@@ -114,7 +100,7 @@ const locations = [
             "Regus - Kolkata, Camac Street, 9th Floor, Ps Arcadia Central, 4a, Camac St, Kankaria Estates, Park Street area, Kolkata, West Bengal 700071.",
         email: "sales@sunbpm.com",
         phone: "+91-8850941503",
-        img: image9,
+        img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/Kolkata.jpg",
         map: "https://maps.app.goo.gl/LeHatb5CDYHR2kg5A",
     },
     {
@@ -123,7 +109,7 @@ const locations = [
             "Regus - San Ramon - Crow Canyon Plaza, Suite, 2010 Crow Canyon Place, 100 Crow Canyon Ct Plaza, San Ramon, CA 94583, United States.",
         email: "sales@sunbpm.com",
         phone: "+91-8591061753",
-        img: image10,
+        img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/USA.jpg",
         map: "https://maps.app.goo.gl/NeniVaQvVB36fD7H9",
     },
     {
@@ -132,7 +118,7 @@ const locations = [
             "Regus - Tokyo Pacific Century Place, 8F, 1 Chome-11-1 Marunouchi, Chiyoda City, Tokyo 100-6028, Japan.",
         email: "sales@sunbpm.com",
         phone: "+91-8591061753",
-        img: image11,
+        img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/Japan.jpg",
         map: "https://maps.app.goo.gl/5ecFvv3aVvKJDtH49",
     },
     {
@@ -141,7 +127,7 @@ const locations = [
             "Regus - Dubai CommerCity, 11 17th St - Umm Ramool - Dubai.",
         email: "sales@sunbpm.com",
         phone: "+91-8591061753",
-        img: image12,
+        img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/UAE.jpg",
         map: "https://maps.app.goo.gl/TcdF2DSsCUQF6VKX8",
     },
     {
@@ -150,7 +136,7 @@ const locations = [
             "Regus - Stuttgart, Friedrichstrasse 15, 70174 Stuttgart, Germany.",
         email: "sales@sunbpm.com",
         phone: "+91-8591061753",
-        img: image13,
+        img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/Germany.jpg",
         map: "https://maps.app.goo.gl/zwdkvqPtMPqpgCES8",
     },
 ];
@@ -160,7 +146,7 @@ export default function LocationPage() {
     const stats = [
         { number: "13+", label: "Offices" },
         { number: "5", label: "Global Presence" },
-        { number: "9", label: "Locations PAN India" },
+        { number: "10", label: "Locations PAN India" },
         { number: "100%", label: "Geography Coverage" },
     ];
 
@@ -218,7 +204,7 @@ export default function LocationPage() {
                 </motion.div>
                 <motion.div className="location-redef-right" variants={fadeInRight}>
                     <img
-                        src="/images/ContactUs/locations/location Intro Image.png"
+                        src="https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/location+Intro+Image.png"
                         alt="location  Intro Image"
                         className="location-redef-img"
                     />

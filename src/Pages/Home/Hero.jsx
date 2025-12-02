@@ -2,37 +2,37 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../../CSS/Home/Hero.css";
 
-export default function HeroSection() {
+export default function Hero() {
   const slides = [
     {
-      img: "hero 1.png",
+      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/Home/Hero/hero+1.png",
       title: "SunBPM Corporate Social Responsibility",
       link: "/Products/CSR",
     },
     {
-      img: "hero 2.png",
+      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/Home/Hero/hero+2.png",
       title: "SunBPM Environmental, Social, and Governance",
       link: "/Products/ESG",
     },
     {
-      img: "hero 3.jpg",
+      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/Home/Hero/hero+3.jpg",
       title: "SunBPM Environment, Health, and Safety",
       link: "/Products/EHS",
     },
     {
-      img: "hero 4.jpg",
+      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/Home/Hero/hero+4.jpg",
       title: "SunBPM Project Management System",
-      link: "/Products/QMS",
+      link: "/Products/PMS",
     },
     {
-      img: "hero 5.jpg",
+      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/Home/Hero/hero+5.jpg",
       title: "SunBPM Purchase Requisition & Purchase Order",
       link: "/Products/PRPO",
     },
     {
-      img: "hero 6.png",
+      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/Home/Hero/hero+6.png",
       title: "SunBPM Procurement Decision Tool",
-      link: "/Products/CapexOpex",
+      link: "/Products/ProcurementDecisionTool",
     },
   ];
 
@@ -81,7 +81,7 @@ export default function HeroSection() {
       <div
         className="slideshow-dynamic"
         style={{
-          backgroundImage: `url("/images/Home/Hero/${slides[index].img}")`,
+          backgroundImage: `url(${slides[index].img})`,
         }}
       ></div>
 

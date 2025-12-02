@@ -20,7 +20,7 @@
 
 /* HERO */
 .cu-hero {
-  background: url('../../../public/images/ContactUs/cu-grand-image.png') no-repeat center/cover;
+  background: url('https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/cu-grand-image.png') no-repeat center/cover;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -591,6 +591,9 @@
 }
 
 @media (max-width: 840px) {
+  .cu-hero-overlay h1 {
+    font-size: 24px;
+  }
   .cu-ways-grid {
     grid-template-columns: 1fr;
   }
@@ -651,6 +654,7 @@
   }
 
   .cu-card {
+    width: 76%;
     padding: 18px;
   }
 

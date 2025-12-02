@@ -1,43 +1,43 @@
-import {
-  FaCogs,
+import { 
+  FaBullseye, 
+  FaMicrochip, 
+  FaShieldAlt, 
   FaLink,
-  FaBolt,
-  FaServer,
-  FaClipboardCheck,
-  FaProjectDiagram,
+  FaSyncAlt,
+  FaChartLine
 } from "react-icons/fa";
 
 const PRPOADVANTAGES = [
   {
-    icon: FaProjectDiagram,
+    icon: FaBullseye,
     title: "Unified Procurement Lifecycle",
-    desc: "Integrates PR, PO, and vendor processes into a single governed platform, ensuring full transparency, traceability, and compliance across the procurement cycle.",
+    desc: "Integrates PR, PO, and vendor processes into one unified platform, ensuring seamless transitions, transparent communication, and strong procurement compliance."
   },
   {
-    icon: FaCogs,
+    icon: FaMicrochip,
     title: "Low-Code Agility for Custom Workflows",
-    desc: "Easily adapt approval hierarchies, cost validations, and procurement categories to evolving business policies using a low-code configuration—no developer dependency required.",
+    desc: "Quickly adapt approval hierarchies, cost validations, and procurement categories using low-code configurability—eliminating dependency on extensive coding or IT bottlenecks."
   },
   {
-    icon: FaBolt,
+    icon: FaSyncAlt,
     title: "Accelerated Approvals & Reduced Cycle Time",
-    desc: "Automated routing, escalations, and real-time notifications ensure faster approvals, reducing procurement cycle times and eliminating manual follow-ups.",
+    desc: "Automated routing, escalation workflows, and real-time dashboards accelerate approval cycles while maintaining complete visibility and control over organizational spend."
   },
   {
     icon: FaLink,
     title: "ERP and Third-Party Integration",
-    desc: "Seamlessly connects with ERP, finance, and SCM systems to maintain data consistency, operational alignment, and financial accuracy across platforms.",
+    desc: "Supports seamless integration with SAP, accounting systems, and vendor portals—removing data silos and eliminating error-prone manual entry."
   },
   {
-    icon: FaClipboardCheck,
+    icon: FaShieldAlt,
     title: "Comprehensive Audit Readiness",
-    desc: "Every transaction, comment, and attachment is timestamped and traceable, ensuring complete transparency and effortless audit compliance.",
+    desc: "Every action, approval, and document is logged with a complete audit trail—ensuring full compliance with internal procurement policies and regulatory standards."
   },
   {
-    icon: FaServer,
+    icon: FaChartLine,
     title: "Scalable Architecture for Enterprise Growth",
-    desc: "Supports multi-entity, multi-currency, and multi-location operations with consistent performance, governance, and control across global enterprises.",
-  },
+    desc: "Enterprise-grade, secure, scalable infrastructure built to support increasing procurement complexity and organizational expansion with version control and performance stability."
+  }
 ];
 
 export default PRPOADVANTAGES;

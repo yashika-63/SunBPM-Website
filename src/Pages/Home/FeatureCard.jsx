@@ -28,7 +28,7 @@ const featuresData = [
       "Unified Experience Across Devices",
       "Support for Field Operations",
       "Instant Mobile Access",
-      "Work on the go",
+      // "Work on the go",
     ],
 
   },
@@ -77,9 +77,10 @@ const FeaturesSection = () => {
             {/* Top Image */}
             <div className="feature-image">
               <img
-                src={`/images/Home/feature/feature${index + 1}.jpg`}
+                src={`https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/Home/feature/feature${index + 1}.jpg`}
                 alt={feature.title}
               />
+
             </div>
 
             {/* Blue Title Bar */}

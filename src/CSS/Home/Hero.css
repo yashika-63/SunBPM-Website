@@ -76,3 +76,19 @@
   background: #fff;
   color: #000;
 }
+
+
+@media (max-width: 767px) {
+  .hero-container {
+  width: auto;
+  height: 680px;
+  /* overflow: hidden; */
+}
+
+.hero-heading {
+  text-align: left;
+  font-size: 30px;
+  white-space: normal;
+}
+
+}

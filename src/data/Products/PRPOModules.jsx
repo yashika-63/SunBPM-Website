@@ -4,7 +4,7 @@ const PRPOMODULES = [
     groupName: "Requisition Initiation & Validation",
     shortDesc:
       "Standardized requisition creation with automated approvals and real-time budget validation ensuring controlled purchasing operations.",
-    image: "/images/products/CSR/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -40,53 +40,76 @@ const PRPOMODULES = [
     ],
   },
 
-  {
-    id: "purchase-order-management",
-    groupName: "Purchase Order Management & Execution",
-    shortDesc:
-      "Streamlined purchase order processing with automated documentation, vendor-facing collaboration, and integration capabilities.",
-    image: "/images/products/CSR/viewdetail.jpg",
+{
+  id: "purchase-order-management",
+  groupName: "Purchase Order Management & Execution",
+  shortDesc:
+    "Streamlined purchase order processing with automated document handling, SCM verification, costing approvals, and system integrations.",
+  image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
-    modules: [
-      {
-        id: "po-creation-processing",
-        title: "Purchase Order (PO) Creation & Processing",
-        focus: [
-          "Generate and modify purchase orders with integrated cost approvals, supporting both domestic and international transactions."
-        ],
-        benefits: [
-          "Reduces manual effort and ensures accurate purchasing commitments aligned with financial controls."
-        ],
-      },
-      {
-        id: "automated-email-document-integration",
-        title: "Automated Email & Document Integration",
-        focus: [
-          "Auto-read incoming PO PDFs from email and archive quotations, invoices, and approvals automatically."
-        ],
-        benefits: [
-          "Eliminates data entry errors and maintains a secure, audit-ready document repository."
-        ],
-      },
-      {
-        id: "vendor-collaboration-dashboard",
-        title: "Vendor Collaboration Dashboard",
-        focus: [
-          "Enables vendors to acknowledge POs, upload invoices, and update delivery progress in real time."
-        ],
-        benefits: [
-          "Improves vendor communication, reduces timeline delays, and enhances procurement transparency."
-        ],
-      },
-    ],
-  },
+  modules: [
+        {
+      id: "automated-email-document-integration",
+      title: "Automated Email & Document Integration",
+      focus: [
+        "Automatically captures PO PDFs from incoming emails, validates details through SCM."
+      ],
+      benefits: [
+        "Eliminates data entry errors, accelerates approvals, and maintains a secure audit-ready document repository."
+      ],
+    },
+    {
+      id: "po-entry-modification",
+      title: "PO Entry & Modification",
+      focus: [
+        "Create, update, and manage purchase orders with standardized fields, vendor details, schedules, and compliance validations."
+      ],
+      benefits: [
+        "Ensures accurate and consistent PO creation while reducing operational workload and data inconsistencies."
+      ],
+    },
+    {
+      id: "scm-verification",
+      title: "SCM Verification & Validation",
+      focus: [
+        "SCM team reviews product details, quantities, specifications, and vendor information before final approval."
+      ],
+      benefits: [
+        "Prevents procurement discrepancies and ensures all PO data is validated before progressing to costing approval."
+      ],
+    },
+    {
+      id: "costing-approval",
+      title: "Costing Approval Workflow",
+      focus: [
+        "Multi-level costing approval that verifies pricing, budget alignment, rate contracts, and financial compliance."
+      ],
+      benefits: [
+        "Strengthens financial control and ensures all purchases comply with internal cost policies and budget limits."
+      ],
+    },
+
+    {
+      id: "vendor-collaboration-dashboard",
+      title: "Vendor Collaboration Dashboard",
+      focus: [
+        "Enables vendors to acknowledge POs, upload invoices, and update delivery status through a self-service interface."
+      ],
+      benefits: [
+        "Improves supplier communication and enhances transparency across the procurement lifecycle."
+      ],
+    }
+  ],
+}
+
+,
 
   {
     id: "master-data-compliance",
     groupName: "Master Data & Compliance Control",
     shortDesc:
       "Centralized master data and integration ensuring accuracy, consistency, and full audit traceability across procurement operations.",
-    image: "/images/products/CSR/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -127,7 +150,7 @@ const PRPOMODULES = [
     groupName: "Reporting, Analytics & Optimization",
     shortDesc:
       "Real-time visibility into procurement performance with alerts, automation, and insights for continuous improvement.",
-    image: "/images/products/CSR/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {

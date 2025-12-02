@@ -6,7 +6,7 @@
   margin: 0px;
   text-align: start;
   /* background: #e8e8e8; */
-   /* background: linear-gradient(to bottom right, black, #0000ff,  black); */
+  /* background: linear-gradient(to bottom right, black, #0000ff,  black); */
   background: linear-gradient(135deg, #011863 0%, #020c3a 100%);
   background-size: cover;
   background-position: center;
@@ -99,7 +99,8 @@
 
 .social-link:hover .social-icon {
   transform: scale(1.2);
-  color: #F7941D; /* hover effect */
+  color: #F7941D;
+  /* hover effect */
 }
 
 .social-link:hover span {
@@ -207,7 +208,18 @@
     padding: 10px;
   }
 
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .social-link span {
+    font-size: 12px;
+  }
+
+
   .footer-social {
+    gap: 15px;
     margin: 10px 0;
   }
 

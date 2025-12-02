@@ -7,7 +7,7 @@ const EHSMODULES = [
     groupName: "Safety & Health Modules",
     shortDesc:
       "Strengthens workplace safety through structured reporting, hazard prevention, and employee competency assurance.",
-    image: "/images/products/EHS/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -22,7 +22,7 @@ const EHSMODULES = [
       },
       {
         id: "hazard-observation",
-        title: "Hazard Observation",
+        title: "Unsafe act/ Unsafe condition Observation",
         focus: [
           "Facilitates and tracks reporting of unsafe conditions or behaviors by any employee, ensuring immediate management attention."
         ],
@@ -34,7 +34,7 @@ const EHSMODULES = [
         id: "training-competency",
         title: "Training & Competency",
         focus: [
-          "Schedules, manages, and tracks mandatory safety training (e.g., Lockout/Tagout, confined space entry) against employee roles and certifications."
+          "Schedules, manages, and tracks mandatory safety training against employee roles and certifications."
         ],
         benefits: [
           "Ensures all personnel are qualified and compliant for their tasks, drastically reducing human error in high-risk scenarios."
@@ -51,7 +51,7 @@ const EHSMODULES = [
     groupName: "Environmental & Compliance Modules",
     shortDesc:
       "Ensures operational compliance by managing permits, waste reporting, and environmental performance measurement.",
-    image: "/images/products/EHS/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -66,24 +66,24 @@ const EHSMODULES = [
       },
       {
         id: "waste-management",
-        title: "Waste Management",
+        title: "Compliance",
         focus: [
-          "Tracks waste generation by type, disposal methods, transporter details, and regulatory compliance across waste streams."
+          "Compliance is the adherence to all relevant government regulations, laws, and standards for protecting the environment, ensuring worker safety."
         ],
         benefits: [
           "Ensures adherence to complex waste disposal laws, reducing liability and supporting sustainability goals."
         ]
       },
-      {
-        id: "environmental-monitoring",
-        title: "Environmental Monitoring",
-        focus: [
-          "Manages scheduling and recording of required environmental testing, sampling data, and permit-defined limits."
-        ],
-        benefits: [
-          "Provides verifiable proof of environmental performance for regulatory submissions and public disclosures."
-        ]
-      }
+      // {
+      //   id: "environmental-monitoring",
+      //   title: "Environmental Monitoring",
+      //   focus: [
+      //     "Manages scheduling and recording of required environmental testing, sampling data, and permit-defined limits."
+      //   ],
+      //   benefits: [
+      //     "Provides verifiable proof of environmental performance for regulatory submissions and public disclosures."
+      //   ]
+      // }
     ]
   },
 
@@ -95,14 +95,14 @@ const EHSMODULES = [
     groupName: "Governance & Improvement Modules",
     shortDesc:
       "Drives continuous improvement through structured audits, corrective actions, and emergency preparedness.",
-    image: "/images/products/EHS/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
         id: "audit-management",
         title: "Audit Management",
         focus: [
-          "Planning, scheduling, checklist execution, findings documentation, and follow-up tracking for internal and external EHS audits."
+          "Planning, scheduling, target date, findings documentation, and follow-up tracking for internal and external EHS audits."
         ],
         benefits: [
           "Streamlines the entire auditing process, ensuring a transparent and efficient audit trail for regulatory bodies."
@@ -118,72 +118,66 @@ const EHSMODULES = [
           "Institutionalizes continuous improvement, ensuring that EHS failures lead to permanent systemic changes."
         ]
       },
-      {
-        id: "emergency-response-plan",
-        title: "Emergency Response Plan",
-        focus: [
-          "Central repository for emergency procedures, contact lists, drill scheduling, and post-drill review and improvements."
-        ],
-        benefits: [
-          "Ensures the organization is prepared for critical events, minimizing injury, property damage, and operational downtime."
-        ]
-      }
+      // {
+      //   id: "emergency-response-plan",
+      //   title: "Emergency Response Plan",
+      //   focus: [
+      //     "Central repository for emergency procedures, contact lists, drill scheduling, and post-drill review and improvements."
+      //   ],
+      //   benefits: [
+      //     "Ensures the organization is prepared for critical events, minimizing injury, property damage, and operational downtime."
+      //   ]
+      // }
     ]
   },
 
   /* =========================================================
-     INCIDENT, AUDIT & PERSONNEL
+     Process Safety Management
   ========================================================= */
   {
-    id: "incident-audit-personnel",
-    groupName: "Incident, Audit & Personnel",
+    id: "process-safety-management",
+    groupName: "Process Safety Management",
     shortDesc:
-      "Ensures employee readiness, structured audit tracking, and comprehensive monitoring of EHS events across the organization.",
-    image: "/images/products/EHS/viewdetail.jpg",
+      "A fully digitized safety ecosystem that strengthens hazard identification, controls organizational changes, and ensures equipment and process readiness before startup.",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
-        id: "incident-recording",
-        title: "Incident",
+        id: "hazop",
+        title: "HAZOP (Hazard and Operability Study)",
         focus: [
-          "Records, investigates, and tracks corrective actions for near-misses, injuries, and environmental releases."
+          "Simplifies hazard analysis with digital workflows, automated risk calculations, and transparent approvals for safer, compliant operations."
         ],
         benefits: [
-          "Drives continuous safety improvement by analyzing root causes and preventing recurrence."
+          "Enhances safety by enabling consistent node evaluation and complete audit traceability."
         ]
       },
+
       {
-        id: "audit-control",
-        title: "Audit",
+        id: "moc",
+        title: "MOC (Management of Change)",
         focus: [
-          "Schedules, executes, and tracks findings for internal and external EHS inspections and audits."
+          "Enables structured planning, cross-functional evaluation, task assignment, and financial estimation throughout the change management process."
         ],
         benefits: [
-          "Ensures systematic review of the EHS management system's effectiveness and compliance status."
+          "Ensures controlled implementation of organizational changes with complete visibility of tasks, costs, and closure."
         ]
       },
+
       {
-        id: "employee-management",
-        title: "Employee",
+        id: "pssr",
+        title: "PSSR (Pre-Startup Safety Review)",
         focus: [
-          "Manages training records, certifications, medical surveillance, and fitness-for-duty assessments."
+          "Streamlines Pre-Startup Safety Review with structured workflows across Entry, Planning, Action, Approval, Modification, and Summary stages."
         ],
         benefits: [
-          "Confirms personnel are qualified and medically fit for assigned tasks, supporting a safe and compliant workforce."
-        ]
-      },
-      {
-        id: "contractor-monitoring",
-        title: "Contractor",
-        focus: [
-          "Manages qualification, safety orientation, performance, and compliance of third-party personnel on-site."
-        ],
-        benefits: [
-          "Extends EHS controls to contractors, reducing risks from external personnel and ensuring regulatory compliance."
+          "Ensures operational readiness by identifying and mitigating risks before startup, improving compliance and safety reliability."
         ]
       }
     ]
   }
+
+
 ];
 
 export default EHSMODULES;

@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-section address">
-          <h1>Shaping future success with the technology we have today.</h1>
+          <h1>Innovating Today for a Smarter Tomorrow.</h1>
           <p>
             <strong>Address:</strong> <br />
             <a

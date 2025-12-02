@@ -14,7 +14,7 @@ const BPAbenefits = [
     title: "Higher Process Efficiency",
     icon: <FaBolt className="benefit-icon" />,
     desc:
-      "Automation eliminates repetitive manual work, reduces processing time, and ensures faster task execution.",
+      "Automation eliminates repetitive manual work, reduces processing time and ensures faster task execution.",
   },
   {
     title: "Standardized Workflows",

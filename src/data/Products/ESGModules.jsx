@@ -4,7 +4,7 @@ const ESGMODULES = [
     groupName: "Data Foundation & Disclosure",
     shortDesc:
       "Centralized ESG data collection and structured reporting to ensure accuracy, consistency and regulatory readiness.",
-    image: "/images/products/CSR/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -15,6 +15,16 @@ const ESGMODULES = [
         ],
         benefits: [
           "Creates a verifiable single source of truth for mandatory disclosure data ensuring consistency and audit readiness."
+        ],
+      },
+      {
+        id: "brsr-9-principles",
+        title: "BRSR: 9 Principles",
+        focus: [
+          "Aligns business operations with responsible practices across ethics, environment, workforce, stakeholders and sustainable growth."
+        ],
+        benefits: [
+          "Ensures compliance with India’s sustainability framework through transparent, accountable and principle-driven governance."
         ],
       },
       {
@@ -55,7 +65,7 @@ const ESGMODULES = [
     groupName: "Strategy & Assurance",
     shortDesc:
       "Aligns ESG direction with stakeholder priorities and ensures execution, tracking, and independent audit validation.",
-    image: "/images/products/CSR/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -106,7 +116,7 @@ const ESGMODULES = [
     groupName: "Supply Chain Governance",
     shortDesc:
       "Extends ESG responsibility beyond corporate boundaries to suppliers and associates through structured governance workflows.",
-    image: "/images/products/CSR/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -121,6 +131,39 @@ const ESGMODULES = [
       },
     ],
   },
+
+  {
+    id: "report-standards",
+    groupName: "Report Standards & Disclosure Formats",
+    shortDesc:
+      "Generates India-compliant BRSR reports and globally recognized ESG disclosures such as GRI, CDP, and S&P—ensuring consistent, transparent, and audit-ready reporting.",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
+
+    modules: [
+      {
+        id: "indian-format",
+        title: "BRSR Report",
+        focus: [
+          "Creates BRSR reports aligned with India’s regulatory requirements, including the BRSR 9 Principles, following the SEBI-mandated government format."],
+        benefits: [
+          "Ensures accurate, audit-ready compliance reporting while simplifying statutory disclosure submissions."
+        ],
+      },
+
+      {
+        id: "global-format",
+        title: "Global Format Reporting (GRI, CDP, S&P)",
+        focus: [
+          "Supports globally accepted frameworks including GRI (Global Reporting Initiative), CDP (Carbon Disclosure Project), and S&P ESG Evaluation formats."
+        ],
+        benefits: [
+          "Enables organizations to publish internationally benchmarked sustainability reports with complete environmental, social, and governance transparency."
+        ],
+      },
+    ],
+  }
+
+
 ];
 
 export default ESGMODULES;

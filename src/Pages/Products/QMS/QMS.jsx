@@ -73,7 +73,7 @@ const QMS = () => {
         </motion.div>
         <motion.div className="QMS-redef-right" variants={fadeInRight}>
           <img
-            src="/images/products/QMS/QMS Intro Image.jpg"
+            src="https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/QMS/QMS+Intro+Image.jpg"
             alt="QMS  Intro Image"
             className="QMS-redef-img"
           />
@@ -89,7 +89,7 @@ const QMS = () => {
             <article
               key={group.id}
               className="QMS-group-card"
-              onClick={() => navigate(`/QMSModules/${group.id}`)}
+              onClick={() => navigate(`/PMSModules/${group.id}`)}
             >
               <div
                 className="QMS-card-image-capsule"

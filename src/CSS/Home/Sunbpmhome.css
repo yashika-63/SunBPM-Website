@@ -413,11 +413,26 @@
 
 @media (max-width: 768px) {
   .value-section {
-    padding: 50px 20px;
+    padding: 50px 35px;
   }
+
+  .value-content h3 {
+    height: auto !important; 
+  }
+
+.value-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
 
   .value-card {
     height: 320px;
+  }
+
+  .value-title{
+    font-size: 24px;
+    text-align: left;
   }
 }
 
@@ -534,9 +549,26 @@
 /* Responsive */
 @media (max-width: 900px) {
   .trusted-container {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column;       /* stack items vertically */
+    align-items: flex-start;      /* align to left for readability */
+    justify-content: flex-start;  /* no space-between on mobile */
+    gap: 20px;                    /* smaller gap for mobile */
   }
+
+  .trusted-heading {
+    font-size: 24px;
+    text-align: left;
+}
+
+  .trusted-left {
+    margin-top: 0px;
+    flex: 1 1 40%;
+    min-width: 280px;
+}
+
+.trusted-right {
+  margin-top: -50px;
+}
 
   .stats-wrapper {
     text-align: center;
@@ -550,6 +582,6 @@
   }
 
   .stat-value {
-    font-size: 2.4rem;
+    font-size: 24px;
   }
 }

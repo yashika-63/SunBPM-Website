@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "../../../CSS/Products/EHS/EHS.css";
-import EHSADVANTAGES from "../../../data/Products/ESGAdvantages";
+import EHSADVANTAGES from "../../../data/Products/EHSAdvantages";
 import EHSModules from "../../../data/Products/EHSModules";
 
 // ---------- Animation Variants ----------
@@ -71,7 +71,7 @@ const EHS = () => {
         </motion.div>
         <motion.div className="EHS-redef-right" variants={fadeInRight}>
           <img
-            src="/images/products/EHS/EHS Intro Image.jpg"
+            src="https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/EHS/EHS+Intro+Image.jpg"
             alt="EHS  Intro Image"
             className="EHS-redef-img"
           />

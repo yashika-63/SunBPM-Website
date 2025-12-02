@@ -1,43 +1,43 @@
-import {
-  FaProjectDiagram,
-  FaCogs,
-  FaBolt,
+import { 
+  FaBullseye, 
+  FaMicrochip, 
+  FaShieldAlt, 
   FaLink,
-  FaClipboardCheck,
-  FaServer,
+  FaSyncAlt,
+  FaChartLine
 } from "react-icons/fa";
 
 const CapexOpexADVANTAGES = [
   {
-    icon: FaProjectDiagram,
+    icon: FaBullseye,
     title: "Unified Financial Lifecycle",
-    desc: "Integrates budgeting, CAPEX/OPEX requests, and vendor processes within a single governed platform to ensure transparency, accountability, and control across financial operations.",
+    desc: "Integrates budgeting, CAPEX/OPEX requests, and vendor processes into a single governed platform, ensuring financial transparency and streamlined decision-making."
   },
   {
-    icon: FaCogs,
+    icon: FaMicrochip,
     title: "Low-Code Agility",
-    desc: "Quickly adapt workflows, approval hierarchies, and budget categories to evolving business or regulatory policies without complex IT intervention.",
+    desc: "Quickly adapt workflows, approval hierarchies, and budget categories using configurable low-code tools—without dependency on complex IT development."
   },
   {
-    icon: FaBolt,
+    icon: FaSyncAlt,
     title: "Accelerated Approvals & Reduced Cycle Time",
-    desc: "Automated routing, escalations, and real-time notifications drive faster approvals and decisions, optimizing financial turnaround time.",
+    desc: "Automated routing, escalations, and real-time notifications ensure faster approvals, reducing financial processing delays across departments."
   },
   {
     icon: FaLink,
     title: "ERP and Third-Party Integration",
-    desc: "Seamlessly integrates with SAP, Oracle, and other ERP systems to synchronize financial data accurately across all departments and processes.",
+    desc: "Seamlessly connects with SAP, Oracle, and other ERP systems for real-time financial synchronization and elimination of manual data entry errors."
   },
   {
-    icon: FaClipboardCheck,
+    icon: FaShieldAlt,
     title: "Comprehensive Audit Readiness",
-    desc: "Every transaction, approval, and supporting document is digitally timestamped, ensuring complete traceability and effortless audit compliance.",
+    desc: "Every transaction, approval, and document is time-stamped and traceable, ensuring audit readiness and strict compliance with financial control policies."
   },
   {
-    icon: FaServer,
+    icon: FaChartLine,
     title: "Scalable Architecture",
-    desc: "Built to support multi-location, multi-entity, and multi-currency operations, maintaining high performance and data integrity at enterprise scale.",
-  },
+    desc: "Supports multi-location, multi-entity, and multi-currency operations with high performance, making it suitable for growing enterprise financial ecosystems."
+  }
 ];
 
 export default CapexOpexADVANTAGES;

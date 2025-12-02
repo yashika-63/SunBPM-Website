@@ -25,7 +25,7 @@ const PopupNotification = () => {
 
         const interval = setInterval(() => {
             showProductToast();
-        }, 300 * 60 * 1000); //3 minutes 
+        }, 5 * 60 * 1000); //5 minutes 
 
         return () => {
             clearInterval(interval);

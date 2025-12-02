@@ -4,7 +4,7 @@ const QMSMODULES = [
     groupName: "Project Initiation & Control",
     shortDesc:
       "Standardized project initiation and governance workflows ensuring structured planning, risk management, and controlled execution.",
-    image: "/images/products/CSR/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -28,16 +28,6 @@ const QMSMODULES = [
         ],
       },
       {
-        id: "minutes-of-meeting",
-        title: "Minutes of Meeting (MOM)",
-        focus: [
-          "Instantly document discussions, decisions, and action items with a digitally searchable archive."
-        ],
-        benefits: [
-          "Enhances stakeholder alignment and provides a reliable audit trail of all key decisions."
-        ],
-      },
-      {
         id: "risk-log-mitigation",
         title: "Risk Log & Mitigation",
         focus: [
@@ -47,6 +37,17 @@ const QMSMODULES = [
           "Improves decision-making and prevents operational delays by proactively managing risks."
         ],
       },
+      {
+        id: "minutes-of-meeting",
+        title: "Minutes of Meeting (MOM)",
+        focus: [
+          "Instantly document discussions, decisions, and action items with a digitally searchable archive."
+        ],
+        benefits: [
+          "Enhances stakeholder alignment and provides a reliable audit trail of all key decisions."
+        ],
+      },
+
     ],
   },
 
@@ -55,7 +56,7 @@ const QMSMODULES = [
     groupName: "Execution, Tracking, and Collaboration",
     shortDesc:
       "Real-time execution monitoring with collaboration tools ensuring transparency, accountability, and controlled change implementation.",
-    image: "/images/products/CSR/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -96,7 +97,7 @@ const QMSMODULES = [
     groupName: "Quality Assurance & Defect Lifecycle",
     shortDesc:
       "Ensures that deliverables consistently meet quality standards through structured testing and continuous improvement practices.",
-    image: "/images/products/CSR/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -119,16 +120,16 @@ const QMSMODULES = [
           "Provides insights into recurring issues, helping prevent repeat failures over time."
         ],
       },
-      {
-        id: "nc-capa",
-        title: "Non-Conformance (NC) / CAPA",
-        focus: [
-          "Manages systematic resolution of major issues through corrective and preventive actions with formal workflow routing."
-        ],
-        benefits: [
-          "Leads to permanent elimination of systemic flaws and promotes continuous organizational improvement."
-        ],
-      },
+      // {
+      //   id: "nc-capa",
+      //   title: "Non-Conformance (NC) / CAPA",
+      //   focus: [
+      //     "Manages systematic resolution of major issues through corrective and preventive actions with formal workflow routing."
+      //   ],
+      //   benefits: [
+      //     "Leads to permanent elimination of systemic flaws and promotes continuous organizational improvement."
+      //   ],
+      // },
     ],
   },
 
@@ -136,8 +137,8 @@ const QMSMODULES = [
     id: "reporting-continuous-improvement",
     groupName: "Reporting & Continuous Improvement",
     shortDesc:
-      "Data-driven insights and structured project close-out processes enabling organizational learning and future execution enhancement.",
-    image: "/images/products/CSR/viewdetail.jpg",
+      "Data-driven insights that streamline reporting and strengthen future execution.",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -148,6 +149,16 @@ const QMSMODULES = [
         ],
         benefits: [
           "Supports data-driven decision-making and simplifies compliance and audit processes."
+        ],
+      },
+      {
+        id: "report-formats-frequency",
+        title: "Report Formats & Frequency Automation",
+        focus: [
+          "Supports Excel-based import/export, automated scheduling, and multi-frequency reporting including daily, weekly, monthly, quarterly, yearly, real-time, and on-demand reports."
+        ],
+        benefits: [
+          "Ensures consistent, timely, and customizable reporting cycles with automated generation and user-defined scheduling."
         ],
       },
       {

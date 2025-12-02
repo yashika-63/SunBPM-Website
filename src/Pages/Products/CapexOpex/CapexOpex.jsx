@@ -73,7 +73,7 @@ const CapexOpex = () => {
         </motion.div>
         <motion.div className="CapexOpex-redef-right" variants={fadeInRight}>
           <img
-            src="/images/products/CapexOpex/CapexOpex Intro Image.jpg"
+            src="https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CapexOpex/CapexOpex+Intro+Image.jpg"
             alt="CapexOpex  Intro Image"
             className="CapexOpex-redef-img"
           />

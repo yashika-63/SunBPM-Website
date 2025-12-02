@@ -4,9 +4,19 @@ const CSRMODULES = [
     groupName: "Planning and Budget Control",
     shortDesc:
       "Budget planning, policy approvals and standardized project registration to ensure governance and accurate allocation.",
-    image: "/images/products/CSR/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
+      {
+        id: "csr-committee-governance",
+        title: "CSR Committee & Governance",
+        focus: [
+          "Streamlines CSR policy creation, meeting management, corrective actions, and governance documentation."
+        ],
+        benefits: [
+          "Ensures compliance with CSR regulations and strengthens responsible decision-making through structured governance."
+        ],
+      },
       {
         id: "budget-planning-allocation",
         title: "Budget Planning & Allocation",
@@ -45,7 +55,7 @@ const CSRMODULES = [
     groupName: "Execution and Partner Management",
     shortDesc:
       "Agency/partner governance, fund disbursement controls and volunteer tracking for transparent execution.",
-    image: "/images/services/office.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -86,7 +96,7 @@ const CSRMODULES = [
     groupName: "Impact Assessment and Verification",
     shortDesc:
       "Baseline data collection, impact assessment and live monitoring to produce verifiable outcomes.",
-    image: "/images/products/CSR/viewdetail.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
@@ -124,17 +134,17 @@ const CSRMODULES = [
 
   {
     id: "reporting-compliance",
-    groupName: "Reporting and Compliance",
+    groupName: "Reporting",
     shortDesc:
       "Automated regulatory reporting and a centralized archival repository for audits and documentation.",
-    image: "/images/services/office.jpg",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
       {
         id: "mandatory-reporting",
         title: "Mandatory Reporting",
         focus: [
-          "Automates the generation of regulatory reports (e.g., India's CSR Form, GRI standards, custom board reports).",
+          "Automates the generation of regulatory reports (e.g., India's CSR Form, custom reports).",
         ],
         benefits: [
           "Reduces compliance effort and ensures reports are data-consistent across all mandated formats.",

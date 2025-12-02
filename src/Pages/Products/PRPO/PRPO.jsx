@@ -73,7 +73,7 @@ const PRPO = () => {
         </motion.div>
         <motion.div className="PRPO-redef-right" variants={fadeInRight}>
           <img
-            src="/images/products/PRPO/PRPO Intro Image.jpg"
+            src="https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/PRPO/PRPO+Intro+Image.jpg"
             alt="PRPO  Intro Image"
             className="PRPO-redef-img"
           />
