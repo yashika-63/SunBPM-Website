@@ -36,7 +36,8 @@ jobs:
             cd ec2-user
             cd sunbpm-ui
             sudo yum install nodejs npm -y
-            npm install
+            npm install --legacy-peer-deps
+
             sudo npm run build
             cd dist
             sudo rm -rf /var/www/html/sunbpm-website/*
