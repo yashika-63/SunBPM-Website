@@ -256,7 +256,7 @@
   padding: 15px 20px 12px;
   align-items: center;
   border: none;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   font-size: 22px;
   cursor: pointer;
   color: #111;
@@ -504,10 +504,6 @@
   display: block;
 }
 
-
-
-
-
 .erp-flip-back p {
   font-size: 16px;
   line-height: 1.6;
@@ -515,9 +511,19 @@
 }
 
 
-
 @media (max-width: 768px) {
-  .erp-benefits-title, .erp-core h2, .erp-hero-overlay h1 {
+
+  .erp-benefits-title,
+  .erp-core h2,
+  .erp-hero-overlay h1 {
     font-size: 24px;
+  }
+
+  .erp-hero-overlay h1 {
+    padding-top: 35vh;
+  }
+
+  .erp-hero {
+    height: 80vh;
   }
 }

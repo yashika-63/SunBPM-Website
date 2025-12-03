@@ -251,6 +251,23 @@
 }
 
 @media (max-width: 768px) {
+  .client-page-filter {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+.client-page-dropdown{
+    width: 98%;
+}
+
+.client-page-input-line {
+  width: 90%;
+}
+
+  .client-page-header h2 {
+    font-size: 24px;
+  }
+
   .client-page-grid {
     grid-template-columns: repeat(2, 1fr);
   }

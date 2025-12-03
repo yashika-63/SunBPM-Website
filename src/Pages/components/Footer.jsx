@@ -59,7 +59,7 @@ const Footer = () => {
         <div className="more">
           <h3>Explore</h3>
           <ul>
-            <li><Link to="/AboutUs" className="email-link">About</Link></li>
+            <li><Link to="/" className="email-link">About</Link></li>
             <li><Link to="/Client" className="email-link">Clients</Link></li>
             <li><Link to="/Contact" className="email-link">Contact Us</Link></li>
             <li><Link to="/Locations" className="email-link">Locations</Link></li>
@@ -88,7 +88,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://twitter.com/pristineitcode"
+            href="https://x.com/PristineITcode"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"
@@ -118,7 +118,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://www.youtube.com/@pristineitcode"
+            href="https://www.youtube.com/@pristine-itcode"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"

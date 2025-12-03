@@ -40,7 +40,20 @@ export default function EHSModuleDetail() {
             ← Back
           </button>
 
-          <button className="md-book-btn" onClick={() => navigate(-1)}>
+          <button
+            className="md-book-btn"
+            onClick={() => {
+              navigate("/Products/EHS");
+
+              // Jump directly to section (no smooth scroll)
+              setTimeout(() => {
+                const el = document.getElementById("EHS-core-modules");
+                if (el) {
+                  el.scrollIntoView({ behavior: "auto", block: "start" });
+                }
+              }, 150);
+            }}
+          >
             Next Module →
           </button>
         </div>

@@ -271,6 +271,7 @@
 ============================ */
 @media (max-width: 768px) {
   .navbar-inner {
+    width: 102%;
     padding-left: 10px;
     height: 70px;
   }

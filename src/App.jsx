@@ -3,7 +3,7 @@ import "./App.css";
 import Sunbpmhome from "./Pages/Home/Sunbpmhome";
 import ServicesPage from "./Pages/services/ServicesPage";
 import CSR from "./Pages/Products/CSR/CSR";
-import AboutUs from "./Pages/About/AboutUs";
+// import AboutUs from "./Pages/About/AboutUs";
 import SuccessStoriesPage from "./Pages/success_stories/SuccessStoriesPage";
 import EHS from "./Pages/Products/EHS/EHS";
 import ESG from "./Pages/Products/ESG/ESG";
@@ -69,7 +69,6 @@ function AppContent() {
     "/products/pms",
     "/products/prpo",
     "/products/procurementdecisiontool",
-    "/aboutus",
     "/successstories",
     "/privacypolicy",
     "/termsconditions",
@@ -115,7 +114,7 @@ function AppContent() {
           <Route path="PMSmodules/:id" element={<QMSModuleDetail/>} />
           <Route path="/Products/ProcurementDecisionTool" element={<CapexOpex />} />
           <Route path="CapexOpexmodules/:id" element={<CapexOpexModuleDetail/>} />
-          <Route path="/AboutUs" element={<AboutUs />} />
+          {/* <Route path="/AboutUs" element={<AboutUs />} /> */}
           <Route path="/SuccessStories" element={<SuccessStoriesPage />} />
           <Route path="/SuccessStories/:id" element={<StoryDetailPage />} />
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />

@@ -11,8 +11,8 @@ const EHSMODULES = [
 
     modules: [
       {
-        id: "incident-tracker",
-        title: "Incident Tracker",
+        id: "incident-management",
+        title: "Incident Management",
         focus: [
           "Comprehensive logging, investigation, classification (Lost Time, Recordable, Near-Miss), and root cause analysis of all safety incidents."
         ],
@@ -108,16 +108,16 @@ const EHSMODULES = [
           "Streamlines the entire auditing process, ensuring a transparent and efficient audit trail for regulatory bodies."
         ]
       },
-      {
-        id: "corrective-preventive-action",
-        title: "Corrective & Preventive Action (CAPA)",
-        focus: [
-          "Full workflow management for root cause analysis, action planning, assignment, tracking, and verification of effectiveness (VOE)."
-        ],
-        benefits: [
-          "Institutionalizes continuous improvement, ensuring that EHS failures lead to permanent systemic changes."
-        ]
-      },
+      // {
+      //   id: "corrective-preventive-action",
+      //   title: "Corrective & Preventive Action (CAPA)",
+      //   focus: [
+      //     "Full workflow management for root cause analysis, action planning, assignment, tracking, and verification of effectiveness (VOE)."
+      //   ],
+      //   benefits: [
+      //     "Institutionalizes continuous improvement, ensuring that EHS failures lead to permanent systemic changes."
+      //   ]
+      // },
       // {
       //   id: "emergency-response-plan",
       //   title: "Emergency Response Plan",

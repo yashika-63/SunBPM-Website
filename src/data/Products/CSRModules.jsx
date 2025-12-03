@@ -7,6 +7,16 @@ const CSRMODULES = [
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
+      // {
+      //   id: "csr-baseline",
+      //   title: "CSR Baseline",
+      //   focus: [
+      //     "Collects essential pre-project data including demographics, livelihood status, infrastructure access, and community resources."
+      //   ],
+      //   benefits: [
+      //     "Provides a factual foundation for project planning, ensuring initiatives are targeted and measurable."
+      //   ],
+      // },
       {
         id: "csr-committee-governance",
         title: "CSR Committee & Governance",

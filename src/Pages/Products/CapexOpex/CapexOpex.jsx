@@ -37,7 +37,7 @@ const CapexOpex = () => {
           <h1>
             A Unified View of Capital and Operational <br />Spend.
           </h1>
-          <div className="hero-button">
+          <div className="product-hero-button">
             <button
               className="btn-learn"
               onClick={() => {
@@ -81,7 +81,7 @@ const CapexOpex = () => {
       </motion.section>
 
       {/* ================= Core Modules ================= */}
-      <section className="CapexOpex-core-modules container">
+      <section id="CapexOpex-core-modules"  className="CapexOpex-core-modules container">
         <h2 className="CapexOpex-core-title">Core Modules: CAPEX/OPEX Streamlined with Governance</h2>
 
         <div className="CapexOpex-cards-grid">

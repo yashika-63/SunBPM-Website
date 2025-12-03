@@ -38,7 +38,7 @@ const CSR = () => {
 
             Impact That Speaks. Responsibility <br />That Counts
           </h1>
-          <div className="hero-button">
+          <div className="product-hero-button">
             <button
               className="btn-learn"
               onClick={() => {
@@ -80,7 +80,7 @@ const CSR = () => {
       </motion.section>
 
       {/* ================= Core Modules ================= */}
-      <section className="csr-core-modules container">
+      <section id="csr-core-modules" className="csr-core-modules container">
         <h2 className="csr-core-title">Core Modules: Strategy, Execution, and Verification</h2>
 
         <div className="csr-cards-grid">

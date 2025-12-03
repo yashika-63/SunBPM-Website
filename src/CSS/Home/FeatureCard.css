@@ -114,15 +114,12 @@
 }
 
 .features-title{
+  margin-top: 0px;
     font-size: 24px;
     text-align: left;
 }
 
-  .features-title {
-    font-size: 20px;
-  }
-
   .feature-hover h3 {
-    font-size: 20px;
+    font-size: 24px;
   }
 }

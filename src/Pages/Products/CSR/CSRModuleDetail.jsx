@@ -40,9 +40,23 @@ export default function CSRModuleDetail() {
             ← Back
           </button>
 
-          <button className="md-book-btn" onClick={() => navigate(-1)}>
+          <button
+            className="md-book-btn"
+            onClick={() => {
+              navigate("/Products/CSR");
+
+              // Jump directly to section (no smooth scroll)
+              setTimeout(() => {
+                const el = document.getElementById("csr-core-modules");
+                if (el) {
+                  el.scrollIntoView({ behavior: "auto", block: "start" });
+                }
+              }, 150);
+            }}
+          >
             Next Module →
           </button>
+
         </div>
 
         {/* Center content */}

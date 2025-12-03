@@ -37,7 +37,7 @@ const PRPO = () => {
           <h1>
             Empower Every Purchase with Ease and <br /> Efficiency
           </h1>
-          <div className="hero-button">
+          <div className="product-hero-button">
             <button
               className="btn-learn"
               onClick={() => {
@@ -81,7 +81,7 @@ const PRPO = () => {
       </motion.section>
 
       {/* ================= Core Modules ================= */}
-      <section className="PRPO-core-modules container">
+      <section id="PRPO-core-modules"  className="PRPO-core-modules container">
         <h2 className="PRPO-core-title">Core Modules: Procurement Streamlined with Governance</h2>
 
         <div className="PRPO-cards-grid">

@@ -77,18 +77,21 @@
   color: #000;
 }
 
-
 @media (max-width: 767px) {
   .hero-container {
-  width: auto;
-  height: 680px;
-  /* overflow: hidden; */
-}
+    width: auto;
+    height: 80vh !important;
+    /* overflow: hidden; */
+  }
 
-.hero-heading {
-  text-align: left;
-  font-size: 30px;
-  white-space: normal;
-}
+  .hero-heading {
+    height: 150px;
+    text-align: left;
+    font-size: 28px;
+    white-space: normal;
+  }
+  .slideshow-dynamic.right-crop {
+    background-position: right center !important;
+  }
 
 }

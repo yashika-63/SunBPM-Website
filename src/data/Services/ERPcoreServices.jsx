@@ -9,7 +9,7 @@ const ERPcoreServices = [
         desc: `Our ERP consultants are dedicated to revolutionizing your operations and driving measurable business success. With deep expertise across industries and a proven track record in ERP services, we deliver solutions that ensure swift execution, minimal risk, and long-term value.
 
 Strategize::
-We meticulously outline the technological framework, project timelines, and milestones to ensure seamless ERP implementations, migrations, or upgrades. Our strategic planning aligns with your business goals and sets the foundation for scalable ERP success.
+We meticulously outline the technological framework, project timelines, and milestones to ensure seamless ERP Integrations, migrations, or upgrades. Our strategic planning aligns with your business goals and sets the foundation for scalable ERP success.
 Innovate::
 Committed to innovation, we deploy the latest ERP advancements from intelligent automation to keep your operations ahead of the curve. Our consultants integrate cutting-edge features that enhance agility, visibility, and decision-making.
 Evolve::
@@ -20,7 +20,7 @@ As your ERP partner, we offer regular user training sessions and enablement prog
     {
         title: "Implementation",
         icon: <FaTools />,
-        desc: `We deliver ERP implementations that go beyond deployment—we engineer transformation. With deep cross-industry experience and a commitment to excellence, we serve as your strategic ally, offering end-to-end advisory, implementation, and support services tailored to your business goals.
+        desc: `We deliver ERP Integrations that go beyond deployment—we engineer transformation. With deep cross-industry experience and a commitment to excellence, we serve as your strategic ally, offering end-to-end advisory, implementation, and support services tailored to your business goals.
 
 Strategize:
 We foster seamless collaboration to gain a 360° understanding of your objectives, ensuring absolute clarity on scope, budget, timelines, and deliverables. Every implementation begins with a roadmap built for scale, speed, and success.

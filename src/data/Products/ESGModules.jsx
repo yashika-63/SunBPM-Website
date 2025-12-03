@@ -70,7 +70,7 @@ const ESGMODULES = [
     modules: [
       {
         id: "materiality",
-        title: "Materiality",
+        title: "Double Materiality",
         focus: [
           "Manages stakeholder mapping, prioritization of ESG concerns, risk/opportunity analysis, and creation of Materiality Reports."
         ],
@@ -90,7 +90,7 @@ const ESGMODULES = [
       },
       {
         id: "assurance",
-        title: "Assurance",
+        title: "Reasonable Assurance",
         focus: [
           "Covers verification lifecycle including audit onboarding, scope definition, assessments, findings and final reporting."
         ],

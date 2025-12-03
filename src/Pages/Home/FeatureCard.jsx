@@ -23,7 +23,7 @@ const featuresData = [
     ],
   },
   {
-    title: "Mobile-First Design",
+    title: "Mobile Access",
     offerings: [
       "Unified Experience Across Devices",
       "Support for Field Operations",

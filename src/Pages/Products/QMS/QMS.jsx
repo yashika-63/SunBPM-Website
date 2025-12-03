@@ -37,7 +37,7 @@ const QMS = () => {
           <h1>
             From Planning to Delivery, SunBPM PMS delivers <br /> excellence at every stage
           </h1>
-          <div className="hero-button">
+          <div className="product-hero-button">
             <button
               className="btn-learn"
               onClick={() => {
@@ -81,7 +81,7 @@ const QMS = () => {
       </motion.section>
 
       {/* ================= Core Modules ================= */}
-      <section className="QMS-core-modules container">
+      <section id="QMS-core-modules"  className="QMS-core-modules container">
         <h2 className="QMS-core-title">Core Modules: Quality Embedded in Execution</h2>
 
         <div className="QMS-cards-grid">

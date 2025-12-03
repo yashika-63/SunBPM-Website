@@ -85,8 +85,8 @@ const ContactForm = () => {
             whileInView="visible"
             viewport={{ once: true }}
         >
-            <h2 className="cu-heading">Contact Us</h2>
-            <div className="cu-container cu-start-grid">
+            <h2 className="cu-heading" >Contact Us</h2>
+            <div className="cu-container cu-start-grid" id="contact-start">
                 {/* Left side map */}
                 <motion.div className="cu-start-left" variants={fadeUp}>
                     <ContactDetails />

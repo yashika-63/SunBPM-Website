@@ -40,7 +40,20 @@ export default function QMSModuleDetail() {
             ← Back
           </button>
 
-          <button className="md-book-btn" onClick={() => navigate(-1)}>
+          <button
+            className="md-book-btn"
+            onClick={() => {
+              navigate("/Products/PMS");
+
+              // Jump directly to section (no smooth scroll)
+              setTimeout(() => {
+                const el = document.getElementById("QMS-core-modules");
+                if (el) {
+                  el.scrollIntoView({ behavior: "auto", block: "start" });
+                }
+              }, 150);
+            }}
+          >
             Next Module →
           </button>
         </div>

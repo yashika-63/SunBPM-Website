@@ -52,7 +52,7 @@ html {
   /* margin-bottom: 20px; */
 }
 
-.hero-button {
+.product-hero-button {
   display: flex;
   justify-content: flex-start;
   padding-left: 40px;
@@ -552,10 +552,6 @@ html {
     height: 70px;
   }
 
-  .QMS-card-image-capsule {
-    height: 74px;
-    border-radius: 36px;
-  }
 }
 
 @media (max-width: 1100px) {
@@ -646,11 +642,6 @@ html {
     font-size: 24px;
   }
 
-  .QMS-core-title {
-    text-align: left;
-    font-size: 24px;
-  }
-
   .QMS-module-icon {
     margin: 0 120px 1rem;
   }
@@ -664,15 +655,23 @@ html {
   }
 
   .QMS-hero-overlay {
-    margin-top: 74px;
-    height: 84%;
+    margin-top: 70px;
+    height: 92.5%;
     padding: 20px;
   }
 
+  .QMS-core-title {
+    font-size: 24px;
+  }
+
+  .QMS-group-card {
+    height: 290px;
+  }
+
   .QMS-hero-overlay h1 {
-    padding-top: 30px;
+    padding-top: 150px;
     padding-left: 0px;
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .QMS-redef h1 {
@@ -684,7 +683,7 @@ html {
     font-size: 13px;
   }
 
-  .hero-button {
+  .product-hero-button {
     padding-left: 0px;
     padding-top: 40px;
   }
@@ -742,8 +741,9 @@ html {
     gap: 30px;
   }
 
-  .QMS-group-card {
-    height: 290px;
+  .QMS-group-shortdesc {
+    max-height: calc(1.6em * 3);
+    -webkit-line-clamp: 3;
   }
 }
 
@@ -766,12 +766,11 @@ html {
   }
 
   .QMS-hero-overlay h1 {
-    padding-top: 30px;
     padding-left: 0px;
     font-size: 24px;
   }
 
-  .hero-button {
+  .product-hero-button {
     padding-left: 0px;
     padding-top: 40px;
   }

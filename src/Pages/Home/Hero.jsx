@@ -79,11 +79,13 @@ export default function Hero() {
 
       {/* Background slideshow */}
       <div
-        className="slideshow-dynamic"
+        className={`slideshow-dynamic ${ index === 1 ? "right-crop" : ""
+          }`}
         style={{
           backgroundImage: `url(${slides[index].img})`,
         }}
       ></div>
+
 
       <div className="overlay"></div>
 

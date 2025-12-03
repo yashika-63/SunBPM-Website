@@ -2,59 +2,60 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Star, Quote, CheckCircle } from "lucide-react";
 import "../../CSS/Home/ClientReviews.css";
+import reviews from "../../data/ClientReview"
 
-const reviews = [
-    {
-        name: "Mr. Mukul",
-        designation: "Manager",
-        industry: "Manufacturing Industry",
-        review:
-            "Their ESG platform has made compliance reporting effortless. Real-time metrics and reports are a huge plus for our sustainability goals.",
-        rating: 5,
-        product: "ESG",
-        verified: true,
-    },
-    {
-        name: "Mr. Shreekrishna",
-        designation: "HSE Manager",
-        industry: "Chemical Industry",
-        review:
-            "The integrated EHS platform provides excellent visibility across all our safety processes. The mobile access feature has been particularly valuable.",
-        rating: 5,
-        product: "EHS",
-        verified: true,
-    },
-    {
-        name: "Mr. Saho",
-        designation: "CEO",
-        industry: "Manufacturing Industry",
-        review:
-            "SunBPM revolutionized our sustainability reporting with real-time tracking and automated compliance. It’s a game-changer for our operations.",
-        rating: 5,
-        product: "ESG",
-        verified: true,
-    },
-    {
-        name: "Mr. Karan",
-        designation: "Director",
-        industry: "Manufacturing Industry",
-        review:
-            "SunBPM’s PTW system allowed us to streamline our departmental processes and reduce human error significantly. Highly efficient platform.",
-        rating: 5,
-        product: "PTW",
-        verified: true,
-    },
-    {
-        name: "Mr. Milind",
-        designation: "Manager",
-        industry: "Chemical Industry",
-        review:
-            "Outstanding solution for managing environmental data. The automated compliance monitoring ensures zero regulatory misses. Excellent product!",
-        rating: 5,
-        product: "EHS",
-        verified: true,
-    },
-];
+// const ClientReview = [
+//     {
+//         name: "Mr. Mukul",
+//         designation: "Manager",
+//         industry: "Manufacturing Industry",
+//         review:
+//             "Their ESG platform has made compliance reporting effortless. Real-time metrics and reports are a huge plus for our sustainability goals.",
+//         rating: 5,
+//         product: "ESG",
+//         verified: true,
+//     },
+//     {
+//         name: "Mr. Shreekrishna",
+//         designation: "HSE Manager",
+//         industry: "Chemical Industry",
+//         review:
+//             "The integrated EHS platform provides excellent visibility across all our safety processes. The mobile access feature has been particularly valuable.",
+//         rating: 5,
+//         product: "EHS",
+//         verified: true,
+//     },
+//     {
+//         name: "Mr. Saho",
+//         designation: "CEO",
+//         industry: "Manufacturing Industry",
+//         review:
+//             "SunBPM revolutionized our sustainability reporting with real-time tracking and automated compliance. It’s a game-changer for our operations.",
+//         rating: 5,
+//         product: "ESG",
+//         verified: true,
+//     },
+//     {
+//         name: "Mr. Karan",
+//         designation: "Director",
+//         industry: "Manufacturing Industry",
+//         review:
+//             "SunBPM’s PTW system allowed us to streamline our departmental processes and reduce human error significantly. Highly efficient platform.",
+//         rating: 5,
+//         product: "PTW",
+//         verified: true,
+//     },
+//     {
+//         name: "Mr. Milind",
+//         designation: "Manager",
+//         industry: "Chemical Industry",
+//         review:
+//             "Outstanding solution for managing environmental data. The automated compliance monitoring ensures zero regulatory misses. Excellent product!",
+//         rating: 5,
+//         product: "EHS",
+//         verified: true,
+//     },
+// ];
 
 const ClientReviews = () => {
     return (

@@ -48,7 +48,7 @@ const clientsData = [
     description: "Global leader in sustainable engineering and industrial process solutions."
   },
   {
-    industry: "Plastics & Pipes",
+    industry: "Pipes Manufacturing",
     name: "Prince Pipes and Fittings Limited",
     logo: "https://javajar1234.s3.ap-south-1.amazonaws.com/Pristine+IT+Website/Home/client+list/princepipes.png",
     description: "Trusted name in India’s piping industry with innovative solutions."

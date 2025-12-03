@@ -282,46 +282,112 @@
   color: #000;
 }
 
-/* ================================
-   RESPONSIVE
-================================ */
+/* ================RESPONSIVE================ */
 @media (max-width: 960px) {
 
-  .md-table-head,
-  .md-row {
-    grid-template-columns: 1fr;
+  /* Hide table header */
+  .md-table-head {
+    display: none !important;
   }
 
+  /* Convert table rows into stacked cards */
+  .md-row {
+    grid-template-columns: 1fr !important;
+    padding: 18px !important;
+    gap: 14px !important;
+  }
+
+  /* Remove vertical dividers */
+  .md-divider {
+    display: none !important;
+  }
+
+  /* Container padding */
   .container {
-    padding: 20px 18px;
+    padding: 20px 18px 60px;
   }
 
   .title-text {
-    font-size: 15px;
+    font-size: 16px;
+  }
+
+  .md-book-btn {
+    appearance: none;
+    border: none;
+    padding: 10px 18px;
+  }
+
+  /* Add labels for Focus + Benefits */
+  .focus-cell::before {
+    content: "Focus";
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .benefit-cell::before {
+    content: "Benefits";
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .focus-cell,
+  .benefit-cell {
+    margin-top: 4px;
+    padding-top: 6px;
+    border-top: 1px solid #ddd;
+  }
+
+  .md-row li {
+    font-size: 16px;
+    margin-bottom: 4px;
   }
 }
 
 @media(max-width: 620px) {
+
   .md-header-super {
-    padding: 60px 18px 120px;
+    height: 100px;
+    padding: 20px 10px 130px;
   }
 
   .md-header-title {
-    font-size: 26px;
+    padding-top: 10px;
+    font-size: 24px;
   }
 
   .md-header-desc {
-    font-size: 14px;
+    font-size: 16px;
+  }
+
+  .md-book-btn, .md-back-btn {
+    padding: 7px 10px;
   }
 }
 
+
 @media (max-width: 520px) {
+
   .title-index {
     min-width: 36px;
     height: 36px;
   }
 
   .md-row {
-    padding: 16px;
+    padding: 16px !important;
+  }
+
+  .focus-cell::before,
+  .benefit-cell::before {
+    font-size: 16px;
+  }
+
+  .md-row li {
+    font-size: 16px;
   }
 }

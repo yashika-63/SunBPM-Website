@@ -257,7 +257,7 @@
   padding: 15px 20px 12px;
   align-items: center;
   border: none;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   font-size: 22px;
   cursor: pointer;
   color: #111;
@@ -512,7 +512,18 @@
 }
 
 @media (max-width: 768px) {
-  .BPA-benefits-title, .BPA-core h2, .BPA-hero-overlay h1{
+
+  .BPA-benefits-title,
+  .BPA-core h2,
+  .BPA-hero-overlay h1 {
     font-size: 24px;
+  }
+
+  .BPA-hero-overlay h1 {
+    padding-top: 35vh;
+  }
+
+  .BPA-hero {
+    height: 80vh;
   }
 }

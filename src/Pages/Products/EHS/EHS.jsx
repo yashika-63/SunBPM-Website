@@ -36,7 +36,7 @@ const EHS = () => {
           <h1>
             The core platform for operationalizing <br/>health and environmental integrity
           </h1>
-          <div className="hero-button">
+          <div className="product-hero-button">
             <button
               className="btn-learn"
               onClick={() => {
@@ -79,7 +79,7 @@ const EHS = () => {
       </motion.section>
 
       {/* ================= Core Modules ================= */}
-      <section className="EHS-core-modules container">
+      <section id="EHS-core-modules"  className="EHS-core-modules container">
         <h2 className="EHS-core-title">End-to-End EHS Lifecycle Management</h2>
 
         <div className="EHS-cards-grid">

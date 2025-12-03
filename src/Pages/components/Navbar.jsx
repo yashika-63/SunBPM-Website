@@ -25,7 +25,7 @@ const Navbar = () => {
       name: 'Services',
       dropdown: [
         // { name: 'Our core services', href: '/Services' },
-        { name: 'ERP Implementation and services', href: '/Services/ERP' },
+        { name: 'ERP Integration and services', href: '/Services/ERP' },
         { name: 'Mobile App Development services', href: '/Services/MobileApp' },
         { name: 'Data Analytics services', href: '/Services/DataAnalytics' },
         { name: 'Business process Automation services', href: '/Services/BPA' },
@@ -226,8 +226,8 @@ const Navbar = () => {
                               //   desc: 'Comprehensive Digital Solutions Tailored to Your Business.',
                               //   img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/core-services/erp-grand-image.jpg",
                               // },
-                              'ERP Implementation and services': {
-                                title: 'ERP Implementation and Services',
+                              'ERP Integration and services': {
+                                title: 'ERP Integration and Services',
                                 desc: 'Empowering Enterprise Transformation with Intelligent ERP Solutions.',
                                 img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/core-services/erp-grand-image.jpg",
                               },

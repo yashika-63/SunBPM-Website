@@ -9,9 +9,9 @@ const products = [
     { name: "SunBPM CSR", path: "/Products/CSR" },
     { name: "SunBPM ESG", path: "/Products/ESG" },
     { name: "SunBPM EHS", path: "/Products/EHS" },
-    { name: "SunBPM QMS", path: "/Products/QMS" },
-    { name: "SunBPM PO/PR", path: "/Products/PRPO" },
-    { name: "SunBPM Capex/Opex", path: "/Products/CapexOpex" },
+    { name: "SunBPM PMS", path: "/Products/PMS" },
+    { name: "SunBPM PRPO", path: "/Products/PRPO" },
+    { name: "SunBPM Procurement Decision Tool", path: "/Products/ProcurementDecisionTool" },
 ];
 
 const PopupNotification = () => {

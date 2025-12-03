@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
 import Hero from './Hero';
 import FeatureCard from './FeatureCard';
-import ClientsSection from './ClientsSection';
-import { CheckCircle } from 'lucide-react';
-import '../../CSS/Home/Sunbpmhome.css';
-import features from '../../data/featuresData';
+// import ClientsSection from './ClientsSection';
+// import { CheckCircle } from 'lucide-react';
+// import features from '../../data/featuresData';
 import valueProps from "../../data/valuePropsData";
 import industryStats from "../../data/industryStatsData";
-import ClientReviews from './ClientReviews';
+import '../../CSS/Home/Sunbpmhome.css';
+// import ClientReviews from './ClientReviews';
 
 const AnimatedNumber = ({ value, animate }) => {
   const [count, setCount] = useState(0);

@@ -290,6 +290,11 @@
   outline: none;
 }
 
+.cu-field textarea::placeholder {
+  font-family: "Arial", sans-serif ;
+  font-style: normal ;
+}
+
 .cu-btn-dark {
   margin-top: 12px;
   background: var(--ink);
@@ -592,6 +597,7 @@
 
 @media (max-width: 840px) {
   .cu-hero-overlay h1 {
+    padding-top: 35vh;
     font-size: 24px;
   }
   .cu-ways-grid {
@@ -654,7 +660,7 @@
   }
 
   .cu-card {
-    width: 76%;
+    width: 72vw;
     padding: 18px;
   }
 
@@ -675,29 +681,10 @@
   .cu-grand-label {
     font-size: 24px;
   }
+  .cu-hero {
+    height: 80vh;
+  }
+  .cu-heading {
+  font-size: 24px;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

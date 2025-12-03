@@ -36,7 +36,7 @@ const ESG = () => {
           <h1>
             ESG: Paving the Path to a Sustainable <br/>Economy
           </h1>
-          <div className="hero-button">
+          <div className="product-hero-button">
             <button
               className="btn-learn"
               onClick={() => {
@@ -77,7 +77,7 @@ const ESG = () => {
       </motion.section>
 
       {/* ================= Core Modules ================= */}
-      <section className="ESG-core-modules container">
+      <section id="ESG-core-modules" className="ESG-core-modules container">
         <h2 className="ESG-core-title">Core Modules: Strategy, Execution, and Verification</h2>
 
         <div className="ESG-cards-grid">
