@@ -7,6 +7,10 @@ import {
   FaHeadset,
   FaPuzzlePiece,
   FaLightbulb,
+  FaSyncAlt,
+  FaChartLine,
+  FaTasks,
+  FaCogs,
 } from "react-icons/fa";
 
 const ERPbenefits = [
@@ -57,6 +61,31 @@ const ERPbenefits = [
     icon: <FaLightbulb className="benefit-icon" />,
     desc:
       "Provides dashboards and forecasting tools for strategic planning, capacity management, and data-driven decisions.",
+  },
+  // New Benefits
+  {
+    title: "Seamless System Integration",
+    icon: <FaSyncAlt className="benefit-icon" />,
+    desc:
+      "Connects all enterprise systems including CRM, SCM, and HR, eliminating data silos and ensuring smooth operations.",
+  },
+  {
+    title: "Enhanced Reporting & Analytics",
+    icon: <FaChartLine className="benefit-icon" />,
+    desc:
+      "Offers detailed, real-time reports and KPIs to support management decisions and strategic planning.",
+  },
+  {
+    title: "Optimized Resource Management",
+    icon: <FaTasks className="benefit-icon" />,
+    desc:
+      "Improves utilization of human, financial, and material resources through coordinated workflows and planning tools.",
+  },
+  {
+    title: "Process Standardization",
+    icon: <FaCogs className="benefit-icon" />,
+    desc:
+      "Implements standardized processes across departments to reduce errors, enhance efficiency, and maintain consistency.",
   },
 ];
 

@@ -7,9 +7,13 @@ import {
   FaRobot,
   FaCloud,
   FaChartLine,
+  FaMobileAlt,
+  FaSyncAlt,
+  FaChartPie,
+  FaUsers,
 } from "react-icons/fa";
 
- const Mobileappbenefits = [
+const Mobileappbenefits = [
   {
     title: "Faster Development Cycles",
     icon: <FaBolt className="benefit-icon" />,
@@ -58,5 +62,30 @@ import {
     desc:
       "Modern frameworks, reusable modules, and streamlined processes reduce development and maintenance costs.",
   },
+  {
+    title: "Cross-Platform Compatibility",
+    icon: <FaMobileAlt className="benefit-icon" />,
+    desc:
+      "Build apps that work seamlessly across iOS, Android, and web platforms, expanding reach and user adoption.",
+  },
+  {
+    title: "Real-Time Updates & Sync",
+    icon: <FaSyncAlt className="benefit-icon" />,
+    desc:
+      "Instant data synchronization ensures users always have access to the latest information and features.",
+  },
+  {
+    title: "Personalized Engagement",
+    icon: <FaUsers className="benefit-icon" />,
+    desc:
+      "Deliver tailored experiences and recommendations to users, improving engagement and retention.",
+  },
+  {
+    title: "Actionable Analytics",
+    icon: <FaChartPie className="benefit-icon" />,
+    desc:
+      "Built-in analytics provide insights into user behavior, engagement, and app performance for better decision-making.",
+  },
 ];
+
 export default Mobileappbenefits;

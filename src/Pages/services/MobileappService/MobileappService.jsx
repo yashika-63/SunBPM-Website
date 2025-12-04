@@ -180,7 +180,7 @@ export default function MobileappService() {
             {/* =====================BENEFITS (Flip Cards)======================= */}
             <section className="Mobileapp-benefits">
                 <h2 className="Mobileapp-benefits-title">
-                    8 Benefits of Implementing Mobile App in Your Business
+                    Some Benefits of Implementing Mobile App in Your Business
                 </h2>
 
                 <div className="flip-grid">

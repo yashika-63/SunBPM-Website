@@ -7,6 +7,11 @@ import {
   FaSyncAlt,
   FaFileAlt,
   FaCubes,
+  FaLightbulb,
+  FaTasks,
+  FaProjectDiagram,
+  FaSearch,
+  FaDollarSign,
 } from "react-icons/fa";
 
 const DAbenefits = [
@@ -52,11 +57,37 @@ const DAbenefits = [
     desc:
       "Defined workflows and documentation ensure proper governance, transparency, and regulatory alignment.",
   },
+  // Removed "Unified View of Business Data"
+  // --- New Benefits ---
   {
-    title: "Unified View of Business Data",
-    icon: <FaCubes className="benefit-icon" />,
+    title: "Actionable Insights",
+    icon: <FaLightbulb className="benefit-icon" />,
     desc:
-      "Consolidating multiple data sources supports a single source of truth across the organization.",
+      "Transforms raw data into meaningful insights that drive strategic initiatives and operational improvements.",
+  },
+  {
+    title: "Enhanced Collaboration",
+    icon: <FaTasks className="benefit-icon" />,
+    desc:
+      "Centralized dashboards and analytics enable cross-team collaboration and informed decision-making.",
+  },
+  {
+    title: "End-to-End Data Visibility",
+    icon: <FaProjectDiagram className="benefit-icon" />,
+    desc:
+      "Provides transparency across all stages of data collection, processing, and reporting for better oversight.",
+  },
+  {
+    title: "Trend & Market Analysis",
+    icon: <FaSearch className="benefit-icon" />,
+    desc:
+      "Identifies emerging trends, customer behavior shifts, and market opportunities to stay ahead of competition.",
+  },
+  {
+    title: "Low-Cost Analytics Enablement",
+    icon: <FaDollarSign className="benefit-icon" />,
+    desc:
+      "Delivers actionable insights and analytics at reduced operational costs, making data-driven decisions accessible to all businesses.",
   },
 ];
 

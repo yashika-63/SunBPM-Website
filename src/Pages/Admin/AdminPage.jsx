@@ -10,8 +10,8 @@ const AdminPage = () => {
     const fetchData = async () => {
       try {
         // const response = await fetch("/api/book-demo");
-        // const response = await fetch("http://localhost:6002/api/book-demo");
-        const response = await fetch("http://15.207.163.30:6002/api/book-demo");
+        const response = await fetch("http://localhost:6002/api/book-demo");
+        // const response = await fetch("http://15.207.163.30:6002/api/book-demo");
         if (response.ok) {
           const result = await response.json();
           setDemoData(result.data); // access `data` property
@@ -45,11 +45,17 @@ const AdminPage = () => {
                 <th>Email</th>
                 <th>Organization</th>
                 <th>Mobile Number</th>
-                <th>Products / Services</th>
+                <th>Role</th>
+                <th>Designation</th>
+                <th>Products Interested In </th>
+                <th>Location</th>
+                <th>Selected Date & Time</th>
                 <th>Description</th>
+                <th>Purpose</th>
                 <th>Submitted At</th>
               </tr>
             </thead>
+
             <tbody>
               {demoData.map((item) => (
                 <tr key={item.id}>
@@ -58,12 +64,22 @@ const AdminPage = () => {
                   <td>{item.email}</td>
                   <td>{item.organization}</td>
                   <td>{item.mobileNumber}</td>
+                  <td>{item.role}</td>
+                  <td>{item.designation}</td>
                   <td>{item.productsServices}</td>
+                  <td>{item.location}</td>
+                  <td>
+                    {item.dateTime
+                      ? new Date(item.dateTime).toLocaleString()
+                      : "-"}
+                  </td>
                   <td>{item.description || "-"}</td>
+                  <td>{item.purpose || "-"}</td>
                   <td>{new Date(item.createdAt).toLocaleString()}</td>
                 </tr>
               ))}
             </tbody>
+
           </table>
         </div>
       )}

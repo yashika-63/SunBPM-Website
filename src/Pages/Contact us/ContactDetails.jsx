@@ -78,8 +78,7 @@ const ContactDetails = () => {
         </p>
 
         <p className="lux-text">
-          5th Floor, Omega House, Hiranandani Gardens, Powai, <br />
-          Mumbai, Maharashtra 400076
+          5th Floor, Omega House, Hiranandani Gardens, Powai, Mumbai, Maharashtra 400076.
         </p>
 
         <p className="lux-info">

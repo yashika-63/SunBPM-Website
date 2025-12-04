@@ -180,7 +180,7 @@ export default function BPAService() {
             {/* =====================BENEFITS (BPA-flip Cards)======================= */}
             <section className="BPA-benefits">
                 <h2 className="BPA-benefits-title">
-                    8 Benefits of Implementing BPA in Your Business
+                    Some Benefits of Implementing BPA in Your Business
                 </h2>
 
                 <div className="BPA-flip-grid">

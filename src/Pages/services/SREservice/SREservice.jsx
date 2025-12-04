@@ -181,7 +181,7 @@ export default function SREService() {
             {/* =====================BENEFITS (SRE-flip Cards)======================= */}
             <section className="SRE-benefits">
                 <h2 className="SRE-benefits-title">
-                    8 Benefits of Implementing SRE in Your Business
+                    Some Benefits of Implementing SRE in Your Business
                 </h2>
 
                 <div className="SRE-flip-grid">

@@ -5,14 +5,14 @@ import "../../CSS/BookADemo/BookADemo.css";
 
 const BookADemo = () => {
   const [formData, setFormData] = useState({
-    fullname: "",
+    fullName: "",
     email: "",
-    mobile: "",
+    mobileNumber: "",
     organization: "",
     role: "",
     designation: "",
-    interest: "",
-    datetime: "",
+    productsServices: "",
+    dateTime: "",
     description: "",
     purpose: "",
     location: "",
@@ -24,23 +24,32 @@ const BookADemo = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // ------------------ VALIDATION ------------------
   const validate = () => {
     let newErrors = {};
 
-    if (!formData.fullname) newErrors.fullname = "Full name is required";
+    if (!formData.fullName) newErrors.fullName = "Full name is required";
+
     if (!formData.email) newErrors.email = "Email is required";
     else if (!/\S+@\S+\.\S+/.test(formData.email))
       newErrors.email = "Enter a valid email";
 
-    if (!formData.mobile) newErrors.mobile = "Mobile number is required";
-    else if (!/^[0-9]{10}$/.test(formData.mobile))
-      newErrors.mobile = "Enter valid 10-digit mobile";
+    if (!formData.mobileNumber) newErrors.mobileNumber = "Mobile is required";
+    else if (!/^[0-9]{10}$/.test(formData.mobileNumber))
+      newErrors.mobileNumber = "Enter valid 10-digit mobile";
 
-    if (!formData.organization) newErrors.organization = "Organization is required";
+    if (!formData.organization)
+      newErrors.organization = "Organization is required";
+
     if (!formData.role) newErrors.role = "Role is required";
-    if (!formData.designation) newErrors.designation = "Designation is required";
-    if (!formData.interest) newErrors.interest = "Please select a product";
-    if (!formData.datetime) newErrors.datetime = "Please select date & time";
+    if (!formData.designation)
+      newErrors.designation = "Designation is required";
+
+    if (!formData.productsServices)
+      newErrors.productsServices = "Please select a product";
+
+    if (!formData.dateTime)
+      newErrors.dateTime = "Please select date & time";
 
     if (!formData.location) newErrors.location = "Location is required";
 
@@ -53,6 +62,7 @@ const BookADemo = () => {
     return newErrors;
   };
 
+  // ------------------ SUBMIT ------------------
   const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
@@ -64,32 +74,31 @@ const BookADemo = () => {
 
     setErrors({});
 
-
-
     try {
-      // const response = await fetch("/api/book-demo",
-      // const response = await fetch("http://localhost:6002/api/book-demo",
-        const response = await fetch("http://15.207.163.30:6002/api/book-demo",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        });
+      // const response = await fetch("/api/book-demo", {
+      const response = await fetch("http://localhost:6002/api/book-demo", {
+      // const response = await fetch("http://15.207.163.30:6002/api/book-demo", {
+
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
       if (response.ok) {
         toast.success("Thank you! Your request has been submitted.", {
           autoClose: 5000,
         });
 
+        // RESET FIX — must match state names
         setFormData({
-          fullname: "",
+          fullName: "",
           email: "",
-          mobile: "",
+          mobileNumber: "",
           organization: "",
           role: "",
           designation: "",
-          interest: "",
-          datetime: "",
+          productsServices: "",
+          dateTime: "",
           description: "",
           purpose: "",
           location: "",
@@ -109,18 +118,18 @@ const BookADemo = () => {
         <h2 className="form-title">Book a Demo</h2>
 
         <form onSubmit={handleSubmit} className="demo-form">
-
+          
           {/* Full Name */}
           <div className="form-group">
             <label>Full Name *</label>
             <input
               type="text"
-              name="fullname"
+              name="fullName"
               placeholder="Enter your full name"
-              value={formData.fullname}
+              value={formData.fullName}
               onChange={handleChange}
             />
-            {errors.fullname && <p className="error">{errors.fullname}</p>}
+            {errors.fullName && <p className="error">{errors.fullName}</p>}
           </div>
 
           {/* Email */}
@@ -141,12 +150,12 @@ const BookADemo = () => {
             <label>Mobile Number *</label>
             <input
               type="tel"
-              name="mobile"
+              name="mobileNumber"
               placeholder="Enter 10-digit mobile number"
-              value={formData.mobile}
+              value={formData.mobileNumber}
               onChange={handleChange}
             />
-            {errors.mobile && <p className="error">{errors.mobile}</p>}
+            {errors.mobileNumber && <p className="error">{errors.mobileNumber}</p>}
           </div>
 
           {/* Organization */}
@@ -201,22 +210,26 @@ const BookADemo = () => {
             {errors.designation && <p className="error">{errors.designation}</p>}
           </div>
 
-          {/* Date & Time – FULL WIDTH */}
+          {/* Date & Time */}
           <div className="form-group">
             <label>Select Date & Time for Demo (Mon–Fri, 10 AM – 5 PM) *</label>
             <input
               type="datetime-local"
-              name="datetime"
-              value={formData.datetime}
+              name="dateTime"
+              value={formData.dateTime}
               onChange={handleChange}
             />
-            {errors.datetime && <p className="error">{errors.datetime}</p>}
+            {errors.dateTime && <p className="error">{errors.dateTime}</p>}
           </div>
 
-          {/* Interest – FULL WIDTH */}
+          {/* Products Interested */}
           <div className="form-group full-width">
             <label>Products Interested In *</label>
-            <select name="interest" value={formData.interest} onChange={handleChange}>
+            <select
+              name="productsServices"
+              value={formData.productsServices}
+              onChange={handleChange}
+            >
               <option value="">Select one</option>
               <option value="SunBPM Corporate Social Responsibility">SunBPM Corporate Social Responsibility</option>
               <option value="SunBPM Environment, Health, and Safety">SunBPM Environment, Health, and Safety</option>
@@ -225,10 +238,12 @@ const BookADemo = () => {
               <option value="SunBPM Purchase Requisition and Purchase Order">SunBPM Purchase Requisition and Purchase Order</option>
               <option value="SunBPM Procurement Decision Tool">SunBPM Procurement Decision Tool</option>
             </select>
-            {errors.interest && <p className="error">{errors.interest}</p>}
+            {errors.productsServices && (
+              <p className="error">{errors.productsServices}</p>
+            )}
           </div>
 
-          {/* Description – FULL WIDTH */}
+          {/* Description */}
           <div className="form-group full-width">
             <label>Describe Sub-module (Min 100 chars) *</label>
             <textarea
@@ -241,7 +256,7 @@ const BookADemo = () => {
             {errors.description && <p className="error">{errors.description}</p>}
           </div>
 
-          {/* Purpose – FULL WIDTH */}
+          {/* Purpose */}
           <div className="form-group full-width">
             <label>Purpose of Demo (Min 100 chars) *</label>
             <textarea
@@ -258,7 +273,6 @@ const BookADemo = () => {
             <button type="submit">Submit Request</button>
           </div>
         </form>
-
 
         <ToastContainer position="top-right" />
       </div>

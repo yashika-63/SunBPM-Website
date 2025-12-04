@@ -180,7 +180,7 @@ export default function ERPService() {
             {/* =====================BENEFITS (erp-flip Cards)======================= */}
             <section className="erp-benefits">
                 <h2 className="erp-benefits-title">
-                    8 Benefits of Implementing ERP in Your Business
+                    Some Benefits of Implementing ERP in Your Business
                 </h2>
 
                 <div className="erp-flip-grid">

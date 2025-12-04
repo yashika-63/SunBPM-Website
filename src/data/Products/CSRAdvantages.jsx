@@ -1,4 +1,4 @@
-import { FaBullseye, FaMicrochip, FaShieldAlt, FaLink } from "react-icons/fa";
+import { FaBullseye, FaMicrochip, FaShieldAlt, FaLink, FaHandsHelping, FaLeaf} from "react-icons/fa";
 
 const CSRADVANTAGES = [
   {
@@ -20,6 +20,16 @@ const CSRADVANTAGES = [
     icon: FaLink,
     title: "Enable Seamless Integration with the Digital Core",
     desc: "Native integration capabilities connect the Fund Disbursement Tracker to ERP systems and sync Volunteer Management with HRMS, eliminating double-entry and ensuring CSR finances remain fully reconciled."
+  },
+  {
+    icon: FaHandsHelping,
+    title: "Expand Sustainable Value Creation",
+    desc: "Helps organizations deliver long-term value through structured community development, measurable outcomes, and responsible fund utilization that strengthens corporate credibility and social impact."
+  },
+  {
+    icon: FaLeaf,
+    title: "Improve Environmental Responsibility",
+    desc: "Supports environmentally focused initiatives such as water conservation, infrastructure enhancement, and ecological restoration with end-to-end monitoring for measurable, sustainable environmental outcomes."
   }
 ];
 

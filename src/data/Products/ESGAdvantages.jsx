@@ -1,4 +1,4 @@
-import { FaBullseye, FaMicrochip, FaShieldAlt, FaLink } from "react-icons/fa";
+import { FaBullseye, FaMicrochip, FaShieldAlt, FaLink, FaChartLine, FaBalanceScale } from "react-icons/fa";
 
 const ESGADVANTAGES = [
   {
@@ -20,7 +20,19 @@ const ESGADVANTAGES = [
     icon: FaLink,
     title: "Integrated ESG and Enterprise Systems",
     desc: "Native integration capabilities connect emissions tracking to energy systems and link social metrics with HRMS, eliminating data silos and ensuring ESG performance is fully aligned with financial and operational records."
-  }
+  },
+  {
+  icon: FaChartLine,
+  title: "Real-Time ESG Analytics & Predictive Insights",
+  desc: "Provides intelligent dashboards, automated scorecards, and predictive insights to identify risks early, forecast sustainability performance, and support data-driven decision-making across the organization."
+},
+{
+  icon: FaBalanceScale,
+  title: "Enhanced Compliance and Risk Mitigation",
+  desc: "Strengthens compliance posture by aligning ESG processes with global regulatory frameworks and proactively mitigating environmental, safety, ethical, and reputational risks across the enterprise."
+}
+
+  
 ];
 
 export default ESGADVANTAGES;

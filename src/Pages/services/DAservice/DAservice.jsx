@@ -180,7 +180,7 @@ export default function DAService() {
             {/* =====================BENEFITS (DA-flip Cards)======================= */}
             <section className="DA-benefits">
                 <h2 className="DA-benefits-title">
-                    8 Benefits of Implementing Data Analytics in Your Business
+                    Some Benefits of Implementing Data Analytics in Your Business
                 </h2>
 
                 <div className="DA-flip-grid">

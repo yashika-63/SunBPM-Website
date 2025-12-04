@@ -7,6 +7,10 @@ import {
   FaBalanceScale,
   FaChartLine,
   FaShieldAlt,
+  FaProjectDiagram,
+  FaUsers,
+  FaCogs,
+  FaSyncAlt,
 } from "react-icons/fa";
 
 const BPAbenefits = [
@@ -57,6 +61,31 @@ const BPAbenefits = [
     icon: <FaShieldAlt className="benefit-icon" />,
     desc:
       "Automated workflows ensure better audit trails, controlled access, and higher data security across systems.",
+  },
+  // --- New Benefits ---
+  {
+    title: "Enhanced Collaboration",
+    icon: <FaUsers className="benefit-icon" />,
+    desc:
+      "BPA centralizes workflows, allowing teams to collaborate efficiently and share updates in real-time.",
+  },
+  {
+    title: "End-to-End Process Visibility",
+    icon: <FaProjectDiagram className="benefit-icon" />,
+    desc:
+      "Real-time monitoring dashboards provide complete visibility of process performance and bottlenecks across the organization.",
+  },
+  {
+    title: "Rapid Adaptability",
+    icon: <FaCogs className="benefit-icon" />,
+    desc:
+      "Easily modify automated processes to align with changing business requirements or regulatory updates.",
+  },
+  {
+    title: "Continuous Process Improvement",
+    icon: <FaSyncAlt className="benefit-icon" />,
+    desc:
+      "Automation provides actionable insights that enable iterative process optimization and operational excellence.",
   },
 ];
 

@@ -131,8 +131,10 @@
   position: relative;
   display: inline-block;
   text-align: left;
-  width: 100%;        /* Forces heading to span full width */
-  margin-left: 35px;     /* Ensures left alignment */
+  width: 100%;
+  /* Forces heading to span full width */
+  margin-left: 35px;
+  /* Ensures left alignment */
 }
 
 
@@ -291,8 +293,8 @@
 }
 
 .cu-field textarea::placeholder {
-  font-family: "Arial", sans-serif ;
-  font-style: normal ;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
 }
 
 .cu-btn-dark {
@@ -579,6 +581,130 @@
   padding: 0.5rem 0;
 }
 
+/* ==================== PRISTINE SECTION ==================== */
+
+.pristine-section {
+  padding: 35px 35px;
+  margin-bottom: 100px;
+  background: linear-gradient(135deg,
+      #011863 0%,
+      #004C6D 60%,
+      #000000 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.pristine-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---- Glass Card ---- */
+.pristine-card {
+  position: relative;
+  padding: 20px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  backdrop-filter: blur(14px);
+  border: 1.6px solid rgba(232, 232, 232, 0.25);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: 0.35s ease;
+}
+
+.pristine-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(249, 199, 79, 0.55);
+}
+
+/* ----- Animated Border Glow ----- */
+/* .pristine-animated-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  z-index: -1;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(247, 148, 29, 0.4),
+    rgba(249, 199, 79, 0.4),
+    transparent
+  );
+  animation: borderFlow 4s linear infinite;
+} */
+
+@keyframes borderFlow {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+/* ---- Text ---- */
+.pristine-title {
+  font-size: 24px;
+  text-align: center;
+  color: #E8E8E8;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.pristine-desc {
+  font-size: 16px;
+  color: #E8E8E8;
+  opacity: 0.9;
+  line-height: 1.75;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+/* ---- Button ---- */
+.pristine-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  margin: auto;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #F7941D, #F9C74F);
+  box-shadow: 0 8px 25px rgba(247, 148, 29, 0.35);
+  transition: 0.3s ease;
+}
+
+.pristine-btn:hover {
+  color: #000000;
+  box-shadow: 0 10px 32px rgba(249, 199, 79, 0.55);
+}
+
+/* ---- Responsive ---- */
+/* @media (max-width: 768px) {
+  .pristine-card {
+    padding: 40px 25px;
+  }
+
+  .pristine-title {
+    font-size: 20px;
+  }
+
+  .pristine-desc {
+    text-align: left;
+    font-size: 16px;
+  }
+} */
+
+
+
+
+
+
+
+
 
 /* ===== responsive ===== */
 @media (max-width: 1024px) {
@@ -600,6 +726,7 @@
     padding-top: 35vh;
     font-size: 24px;
   }
+
   .cu-ways-grid {
     grid-template-columns: 1fr;
   }
@@ -618,6 +745,23 @@
 
   .cu-grand-img img {
     min-height: 200px;
+  }
+
+    .pristine-card {
+    padding: 40px 25px;
+  }
+
+  .pristine-title {
+    font-size: 20px;
+  }
+
+  .pristine-desc {
+    text-align: left;
+    font-size: 16px;
+  }
+
+  .cu-heading::after {
+    width: 36%;
   }
 }
 
@@ -655,12 +799,12 @@
 
   .cu-row-2 {
     grid-template-columns: 1fr;
-    gap:10px;
+    gap: 10px;
     padding-bottom: 10px;
   }
 
   .cu-card {
-    width: 72vw;
+    width: 73vw;
     padding: 18px;
   }
 
@@ -681,10 +825,24 @@
   .cu-grand-label {
     font-size: 24px;
   }
+
   .cu-hero {
     height: 80vh;
   }
+
   .cu-heading {
-  font-size: 24px;
+    font-size: 24px;
+  }
+    .pristine-card {
+    padding: 40px 25px;
+  }
+
+  .pristine-title {
+    font-size: 20px;
+  }
+
+  .pristine-desc {
+    text-align: left;
+    font-size: 16px;
   }
 }
