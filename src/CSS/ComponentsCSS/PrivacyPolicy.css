@@ -87,9 +87,6 @@
 }
 
 @media (max-width: 768px) {
-  .privacy-policy {
-    padding: 8px;
-  }
 
   .privacy-policy h1 {
     font-size: 1.8em;
@@ -110,8 +107,8 @@
 
 @media (max-width: 576px) {
   .privacy-policy {
-    margin-top: 60px;
-    padding: 5px;
+    margin-top: 50px !important;
+    padding: 25px !important;
   }
 
   .privacy-policy h1 {

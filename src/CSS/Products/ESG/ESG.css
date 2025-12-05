@@ -651,6 +651,7 @@ html {
   }
 
   .ESG-hero {
+    background-position: right center !important;
     height: 300px;
   }
 

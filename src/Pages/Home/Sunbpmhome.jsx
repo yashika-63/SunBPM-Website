@@ -8,6 +8,7 @@ import FeatureCard from './FeatureCard';
 import valueProps from "../../data/valuePropsData";
 import industryStats from "../../data/industryStatsData";
 import '../../CSS/Home/Sunbpmhome.css';
+import CountUp from "react-countup";
 // import ClientReviews from './ClientReviews';
 
 const AnimatedNumber = ({ value, animate }) => {
@@ -54,6 +55,7 @@ const Sunbpmhome = () => {
 
       <section className="value-section">
         <h2 className="value-title">Why Leading Enterprises Choose SunBPM</h2>
+        <p className="value-desc"> SunBPM delivers what you need at a fraction of the cost in half the time.</p>
         <div className="value-container">
           {valueProps.map((item, index) => {
             const Icon = item.icon;
@@ -105,19 +107,32 @@ const Sunbpmhome = () => {
             {/* New accent line */}
             <div className="trusted-line"></div>
 
-            <div className="stats-wrapper">
-              {industryStats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  className="stat-item"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <h3 className="stat-value">{stat.value}</h3>
-                  <p className="stat-label">{stat.label}</p>
-                </motion.div>
-              ))}
-            </div>
+
+
+<div className="stats-wrapper">
+  {industryStats.map((stat, index) => (
+    <motion.div
+      key={index}
+      className="stat-item"
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
+    >
+      <h3 className="stat-value">
+        <CountUp
+          start={0}
+          end={parseInt(stat.value)}
+          duration={2}
+          enableScrollSpy={true}   // <-- animation triggers on scroll
+          scrollSpyDelay={100}
+        />
+        +
+      </h3>
+
+      <p className="stat-label">{stat.label}</p>
+    </motion.div>
+  ))}
+</div>
+
           </motion.div>
         </div>
       </section>
