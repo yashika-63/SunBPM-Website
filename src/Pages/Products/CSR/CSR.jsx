@@ -35,7 +35,6 @@ const CSR = () => {
       >
         <div className="csr-hero-overlay">
           <h1>
-
             Impact That Speaks. Responsibility <br />That Counts
           </h1>
           <div className="product-hero-button">

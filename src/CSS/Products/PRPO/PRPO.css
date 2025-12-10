@@ -746,6 +746,10 @@ html {
     -webkit-line-clamp: 3;
   }
 
+  .PRPO-hero-overlay h1 br {
+    display: none;
+  }
+
 }
 
 /* Small Mobile (≤479px) */

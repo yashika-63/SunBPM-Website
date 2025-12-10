@@ -109,29 +109,29 @@ const Sunbpmhome = () => {
 
 
 
-<div className="stats-wrapper">
-  {industryStats.map((stat, index) => (
-    <motion.div
-      key={index}
-      className="stat-item"
-      whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.3 }}
-    >
-      <h3 className="stat-value">
-        <CountUp
-          start={0}
-          end={parseInt(stat.value)}
-          duration={2}
-          enableScrollSpy={true}   // <-- animation triggers on scroll
-          scrollSpyDelay={100}
-        />
-        +
-      </h3>
+            <div className="stats-wrapper">
+              {industryStats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  className="stat-item"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <h3 className="stat-value">
+                    <CountUp
+                      start={0}
+                      end={parseInt(stat.value)}
+                      duration={2}
+                      enableScrollSpy={true}   
+                      scrollSpyDelay={100}
+                    />
+                    +
+                  </h3>
 
-      <p className="stat-label">{stat.label}</p>
-    </motion.div>
-  ))}
-</div>
+                  <p className="stat-label">{stat.label}</p>
+                </motion.div>
+              ))}
+            </div>
 
           </motion.div>
         </div>

@@ -742,6 +742,10 @@ html {
     max-height: calc(1.6em * 3);
     -webkit-line-clamp: 3;
   }
+
+  .EHS-hero-overlay h1 br {
+    display: none;
+  }
 }
 
 /* Small Mobile (≤479px) */
