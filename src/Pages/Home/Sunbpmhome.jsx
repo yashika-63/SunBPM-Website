@@ -120,11 +120,15 @@ const Sunbpmhome = () => {
                   <h3 className="stat-value">
                     <CountUp
                       start={0}
-                      end={parseInt(stat.value)}
+                      end={Number(stat.value.replace(/\D/g, ""))}
                       duration={2}
-                      enableScrollSpy={true}   
-                      scrollSpyDelay={100}
-                    />
+                      enableScrollSpy
+                    >
+                      {({ countUpRef }) => (
+                        <span ref={countUpRef}></span>
+                      )}
+                    </CountUp>
+
                     +
                   </h3>
 
