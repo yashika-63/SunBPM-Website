@@ -234,8 +234,10 @@
 }
 
 .cu-card {
+  margin: 70px 35px 40px;
   /* background: var(--orange); */
   background: linear-gradient(90deg, #ffa83e, #F9C74F);
+  /* background: linear-gradient(135deg, #042180 0%, #020c3a 100%); */
   border-radius: 14px;
   padding: 22px;
   color: #111;
@@ -261,11 +263,17 @@
 }
 
 .cu-row-2 {
+  margin-bottom: 15px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 12px;
 }
 
+.cu-description-2{
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
 
 .cu-field {
   display: flex;
@@ -763,10 +771,12 @@
   .cu-heading::after {
     width: 36%;
   }
+    .cu-description-2 {
+    display: block;
+  }
 }
 
 @media (max-width: 560px) {
-
   .cu-grand {
     height: auto;
   }
@@ -800,7 +810,7 @@
   .cu-row-2 {
     grid-template-columns: 1fr;
     gap: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
   }
 
   .cu-card {
@@ -844,5 +854,13 @@
   .pristine-desc {
     text-align: left;
     font-size: 16px;
+  }
+
+  .cu-description-2 {
+    display: block;
+  }
+
+  .cu-field select{
+    width: 100%;
   }
 }

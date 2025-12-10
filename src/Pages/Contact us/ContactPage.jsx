@@ -61,11 +61,6 @@ const ContactPage = () => {
       {/* ===== 2) LET’S CONNECT + FORM ===== */}
       <ContactForm />
 
-      <WorldMap />
-
-      {/* ===== 5) FAQ ===== */}
-      {/* <ContactFAQ /> */}
-
       {/* ===== PRISTINE REDIRECT SECTION ===== */}
       <motion.section
         className="pristine-section"
@@ -83,10 +78,10 @@ const ContactPage = () => {
           >
             {/* <div className="pristine-animated-border"></div> */}
 
-            <h2 className="pristine-title">Visit Our Parent Organization – Pristine IT Code</h2>
+            <h2 className="pristine-title">Visit Our Partner Organization – Pristine IT Code</h2>
 
             <p className="pristine-desc">
-              Pristine IT Code is the parent organization behind SunBPM, enabling digital transformation
+              Pristine IT Code is the partner organization of SunBPM, enabling digital transformation
               for enterprises through innovative technology, scalable platforms, and end-to-end IT
               solutions. Explore how Pristine helps businesses modernize operations, enhance process
               efficiency, and accelerate their digital journey.
@@ -107,7 +102,10 @@ const ContactPage = () => {
         </div>
       </motion.section>
 
+      <WorldMap />
 
+      {/* ===== 5) FAQ ===== */}
+      {/* <ContactFAQ /> */}
 
 
     </main>

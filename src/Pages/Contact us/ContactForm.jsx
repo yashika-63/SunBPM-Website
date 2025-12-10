@@ -10,6 +10,9 @@ const fadeUp = {
 };
 
 const ContactForm = () => {
+
+  const now = new Date().toISOString().slice(0, 16);  // yyyy-MM-ddTHH:mm
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -68,7 +71,9 @@ const ContactForm = () => {
     setErrors({});
 
     try {
-      const response = await fetch("http://localhost:6002/api/book-demo", {
+      const response = await fetch("/api/book-demo", {
+        // const response = await fetch("http://localhost:6002/api/book-demo", {
+        // const response = await fetch("http://15.207.163.30:6002/api/book-demo", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -111,7 +116,7 @@ const ContactForm = () => {
       viewport={{ once: true }}
     >
       <h2 className="cu-heading">Contact Us</h2>
-      <div className="cu-container cu-start-grid" id="contact-start">
+      <div className="cu" id="contact-start">
         {/* Left side map */}
         <motion.div className="cu-start-left" variants={fadeUp}>
           <ContactDetails />
@@ -149,10 +154,7 @@ const ContactForm = () => {
                 />
                 {errors.email && <p className="error">{errors.email}</p>}
               </div>
-            </div>
 
-            {/* Mobile + Organization */}
-            <div className="cu-row-2">
               <div className="cu-field">
                 <label>Mobile Number *</label>
                 <input
@@ -164,6 +166,11 @@ const ContactForm = () => {
                 />
                 {errors.mobileNumber && <p className="error">{errors.mobileNumber}</p>}
               </div>
+            </div>
+
+            {/* Mobile + Organization */}
+            <div className="cu-row-2">
+
 
               <div className="cu-field">
                 <label>Your Organization *</label>
@@ -176,10 +183,10 @@ const ContactForm = () => {
                 />
                 {errors.organization && <p className="error">{errors.organization}</p>}
               </div>
-            </div>
+              {/* </div> */}
 
-            {/* Location + Role */}
-            <div className="cu-row-2">
+              {/* Location + Role */}
+              {/* <div className="cu-row-2"> */}
               <div className="cu-field">
                 <label>Your Location *</label>
                 <input
@@ -205,7 +212,7 @@ const ContactForm = () => {
               </div>
             </div>
 
-            {/* Designation + DateTime */}
+            {/* Designation + DateTime  */}
             <div className="cu-row-2">
               <div className="cu-field">
                 <label>Designation *</label>
@@ -225,55 +232,60 @@ const ContactForm = () => {
                   type="datetime-local"
                   name="dateTime"
                   value={formData.dateTime}
+                  min={now}
                   onChange={handleChange}
                 />
+
                 {errors.dateTime && <p className="error">{errors.dateTime}</p>}
+              </div>
+
+
+              {/* Products Interested */}
+              <div className="cu-field">
+                <label>Products Interested In *</label>
+                <select
+                  name="productsServices"
+                  value={formData.productsServices}
+                  onChange={handleChange}
+                >
+                  <option value="">Select one</option>
+                  <option value="SunBPM Corporate Social Responsibility">SunBPM Corporate Social Responsibility</option>
+                  <option value="SunBPM Environment, Health, and Safety">SunBPM Environment, Health, and Safety</option>
+                  <option value="SunBPM Environmental, Social, and Governance">SunBPM Environmental, Social, and Governance</option>
+                  <option value="SunBPM Project Management System">SunBPM Project Management System</option>
+                  <option value="SunBPM Purchase Requisition and Purchase Order">SunBPM Purchase Requisition and Purchase Order</option>
+                  <option value="SunBPM Procurement Decision Tool">SunBPM Procurement Decision Tool</option>
+                </select>
+                {errors.productsServices && <p className="error">{errors.productsServices}</p>}
               </div>
             </div>
 
-            {/* Products Interested */}
-            <div className="cu-field">
-              <label>Products Interested In *</label>
-              <select
-                name="productsServices"
-                value={formData.productsServices}
-                onChange={handleChange}
-              >
-                <option value="">Select one</option>
-                <option value="SunBPM Corporate Social Responsibility">SunBPM Corporate Social Responsibility</option>
-                <option value="SunBPM Environment, Health, and Safety">SunBPM Environment, Health, and Safety</option>
-                <option value="SunBPM Environmental, Social, and Governance">SunBPM Environmental, Social, and Governance</option>
-                <option value="SunBPM Project Management System">SunBPM Project Management System</option>
-                <option value="SunBPM Purchase Requisition and Purchase Order">SunBPM Purchase Requisition and Purchase Order</option>
-                <option value="SunBPM Procurement Decision Tool">SunBPM Procurement Decision Tool</option>
-              </select>
-              {errors.productsServices && <p className="error">{errors.productsServices}</p>}
-            </div>
+            <div className="cu-description-2">
+              {/* Description */}
+              <div className="cu-field">
+                <label>Describe Sub-module (Min 100 chars) *</label>
+                <textarea
+                  name="description"
+                  rows="4"
+                  value={formData.description}
+                  onChange={handleChange}
+                  placeholder="Describe the module or feature you want us to show"
+                />
+                {errors.description && <p className="error">{errors.description}</p>}
+              </div>
 
-            {/* Description */}
-            <div className="cu-field">
-              <label>Describe Sub-module (Min 100 chars) *</label>
-              <textarea
-                name="description"
-                rows="4"
-                value={formData.description}
-                onChange={handleChange}
-                placeholder="Describe the module or feature you want us to show"
-              />
-              {errors.description && <p className="error">{errors.description}</p>}
-            </div>
-
-            {/* Purpose */}
-            <div className="cu-field">
-              <label>Purpose of Demo (Min 100 chars) *</label>
-              <textarea
-                name="purpose"
-                rows="4"
-                value={formData.purpose}
-                onChange={handleChange}
-                placeholder="Explain why you want the demo"
-              />
-              {errors.purpose && <p className="error">{errors.purpose}</p>}
+              {/* Purpose */}
+              <div className="cu-field">
+                <label>Purpose of Demo (Min 100 chars) *</label>
+                <textarea
+                  name="purpose"
+                  rows="4"
+                  value={formData.purpose}
+                  onChange={handleChange}
+                  placeholder="Explain why you want the demo"
+                />
+                {errors.purpose && <p className="error">{errors.purpose}</p>}
+              </div>
             </div>
 
             <button type="submit" className="cu-btn-dark">

@@ -190,17 +190,17 @@ const Navbar = () => {
                               'SunBPM Corporate Social Responsibility': {
                                 title: 'SunBPM Corporate Social Responsibility',
                                 desc: 'Manage corporate social responsibility with transparency and efficiency.',
-                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/CSR-grand-image.png",
+                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/csr-grand-image.png",
                               },
                               'SunBPM Environmental, Social, and Governance': {
                                 title: 'SunBPM Environmental, Social, and Governance',
                                 desc: 'Drive sustainability and compliance through smart ESG management.',
-                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/ESG/ESG-grand-image.png",
+                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/ESG/ESG-grand-image.jpg",
                               },
                               'SunBPM Environment, Health, and Safety': {
                                 title: 'SunBPM Environment, Health, and Safety',
                                 desc: 'Ensure environment, health, and safety compliance across operations.',
-                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/EHS/EHS-grand-image.jpg",
+                                img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/EHS/EHS-grand-image.png",
                               },
                               'SunBPM Project  Management System': {
                                 title: 'SunBPM Project  Management System',
@@ -283,9 +283,17 @@ const Navbar = () => {
             ))}
 
             <div className="cta-buttons">
-              <Link to="/BookDemo" className="navbar-btn-primary">
+              <a
+                href="https://calendly.com/pristine-code-sales/meeting?month=2025-12&date=2025-12-25"
+                className="navbar-btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Book a Demo
-              </Link>
+              </a>
+              {/* <Link to="/BookDemo" className="navbar-btn-primary">
+                Book a Demo
+              </Link> */}
             </div>
           </div>
 
@@ -352,9 +360,17 @@ const Navbar = () => {
               </div>
 
               <div className="mobile-cta">
-                <Link to="/BookDemo" className="navbar-btn-primary">
+                <a
+                  href="https://calendly.com/pristine-code-sales/meeting?month=2025-12&date=2025-12-25"
+                  className="navbar-btn-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Book a Demo
-                </Link>
+                </a>
+                {/* <Link to="/BookDemo" className="navbar-btn-primary">
+                  Book a Demo
+                </Link> */}
               </div>
             </div>
           </div>

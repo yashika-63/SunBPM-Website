@@ -5,32 +5,32 @@ import "../../CSS/Home/Hero.css";
 export default function Hero() {
   const slides = [
     {
-      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/Home/Hero/hero+1.png",
+      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/csr-grand-image.png",
       title: "SunBPM Corporate Social Responsibility",
       link: "/Products/CSR",
     },
     {
-      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/Home/Hero/hero+2.png",
+      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/ESG/ESG-grand-image.jpg",
       title: "SunBPM Environmental, Social, and Governance",
       link: "/Products/ESG",
     },
     {
-      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/Home/Hero/hero+3.jpg",
+      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/EHS/EHS-grand-image.png",
       title: "SunBPM Environment, Health, and Safety",
       link: "/Products/EHS",
     },
     {
-      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/Home/Hero/hero+4.jpg",
+      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/QMS/QMS-grand-image.jpg",
       title: "SunBPM Project Management System",
       link: "/Products/PMS",
     },
     {
-      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/Home/Hero/hero+5.jpg",
+      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/PRPO/PRPO-grand-image.jpg",
       title: "SunBPM Purchase Requisition & Purchase Order",
       link: "/Products/PRPO",
     },
     {
-      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/Home/Hero/hero+6.png",
+      img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CapexOpex/CapexOpex-grand-image.png",
       title: "SunBPM Procurement Decision Tool",
       link: "/Products/ProcurementDecisionTool",
     },

@@ -3,6 +3,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../../CSS/BookADemo/BookADemo.css";
 
+
 const BookADemo = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -17,6 +18,8 @@ const BookADemo = () => {
     purpose: "",
     location: "",
   });
+
+  const now = new Date().toISOString().slice(0, 16);  // yyyy-MM-ddTHH:mm
 
   const [errors, setErrors] = useState({});
 
@@ -75,9 +78,9 @@ const BookADemo = () => {
     setErrors({});
 
     try {
-      // const response = await fetch("/api/book-demo", {
-      const response = await fetch("http://localhost:6002/api/book-demo", {
-      // const response = await fetch("http://15.207.163.30:6002/api/book-demo", {
+      const response = await fetch("/api/book-demo", {
+      // const response = await fetch("http://localhost:6002/api/book-demo", {
+        // const response = await fetch("http://15.207.163.30:6002/api/book-demo", {
 
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -118,7 +121,7 @@ const BookADemo = () => {
         <h2 className="form-title">Book a Demo</h2>
 
         <form onSubmit={handleSubmit} className="demo-form">
-          
+
           {/* Full Name */}
           <div className="form-group">
             <label>Full Name *</label>
@@ -217,8 +220,10 @@ const BookADemo = () => {
               type="datetime-local"
               name="dateTime"
               value={formData.dateTime}
+              min={now}
               onChange={handleChange}
             />
+
             {errors.dateTime && <p className="error">{errors.dateTime}</p>}
           </div>
 
