@@ -230,7 +230,6 @@
 
 .cu-body {
   color: #111;
-  /* max-width: 440px; */
 }
 
 .cu-card {
@@ -269,8 +268,8 @@
   gap: 12px;
 }
 
-.cu-description-2{
-    display: grid;
+.cu-description-2 {
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
@@ -594,11 +593,7 @@
 .pristine-section {
   padding: 35px 35px;
   margin-bottom: 100px;
-  /* background: linear-gradient(135deg,
-      #011863 0%,
-      #004C6D 60%,
-      #000000 100%); */
-      background: linear-gradient(180deg, #011863 60%, #000d29 100% );
+  background: linear-gradient(180deg, #011863 60%, #000d29 100%);
   position: relative;
   overflow: hidden;
 }
@@ -756,7 +751,7 @@
     min-height: 200px;
   }
 
-    .pristine-card {
+  .pristine-card {
     padding: 40px 25px;
   }
 
@@ -772,9 +767,14 @@
   .cu-heading::after {
     width: 36%;
   }
-    .cu-description-2 {
+
+  .cu-description-2 {
     display: block;
   }
+
+  .pristine-section {
+  margin-bottom: 50px;
+}
 }
 
 @media (max-width: 560px) {
@@ -844,7 +844,8 @@
   .cu-heading {
     font-size: 24px;
   }
-    .pristine-card {
+
+  .pristine-card {
     padding: 40px 25px;
   }
 
@@ -861,7 +862,7 @@
     display: block;
   }
 
-  .cu-field select{
+  .cu-field select {
     width: 100%;
   }
 }
