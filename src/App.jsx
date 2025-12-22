@@ -101,7 +101,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Sunbpmhome />} />
           <Route path="/Contact" element={<ContactUs />} />
-          <Route path="/Services" element={<ServicesPage />} />
+          {/* <Route path="/Services" element={<ServicesPage />} /> */}
           <Route path="/Products/CSR" element={<CSR />} />
           <Route path="CSRmodules/:id" element={<CSRModuleDetail />} />
           <Route path="/Products/EHS" element={<EHS />} />

@@ -81,7 +81,7 @@ const QMS = () => {
       </motion.section>
 
       {/* ================= Core Modules ================= */}
-      <section id="QMS-core-modules"  className="QMS-core-modules container">
+      <section id="QMS-core-modules"  className="QMS-core-modules containers">
         <h2 className="QMS-core-title">Core Modules: Quality Embedded in Execution</h2>
 
         <div className="QMS-cards-grid">
@@ -147,7 +147,7 @@ const QMS = () => {
 
       {/* ================= Strategic Advantages ================= */}
       <motion.section
-        className="QMS-strategic-advantages container"
+        className="QMS-strategic-advantages containers"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

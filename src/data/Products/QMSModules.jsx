@@ -1,10 +1,18 @@
+import {
+  FaProjectDiagram,
+  FaUsersCog,
+  FaCheckCircle,
+  FaChartLine
+} from "react-icons/fa";
+
 const QMSMODULES = [
   {
     id: "project-initiation-control",
     groupName: "Project Initiation & Control",
     shortDesc:
-      "Standardized project initiation and governance workflows ensuring structured planning, risk management, and controlled execution.",
+      "Provides a strong and well-defined foundation for every project by bringing structure, clarity, and governance right from the start. This phase ensures that projects are initiated through standardized processes, approved workflows, and clearly documented objectives, scope, and responsibilities. By aligning stakeholders early, defining expectations upfront, and identifying potential risks at the initiation stage, organizations can minimize ambiguity, prevent downstream issues, and ensure projects are executed with accountability, transparency, and alignment to quality, timeline, and delivery goals.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
+    icon: FaProjectDiagram,
 
     modules: [
       {
@@ -47,7 +55,6 @@ const QMSMODULES = [
           "Enhances stakeholder alignment and provides a reliable audit trail of all key decisions."
         ],
       },
-
     ],
   },
 
@@ -55,8 +62,9 @@ const QMSMODULES = [
     id: "execution-tracking-collaboration",
     groupName: "Execution, Tracking, and Collaboration",
     shortDesc:
-      "Real-time execution monitoring with collaboration tools ensuring transparency, accountability, and controlled change implementation.",
+      "Supports seamless project execution by enabling teams to collaborate effectively while maintaining real-time visibility into progress and performance. This stage focuses on tracking tasks, managing changes, and monitoring overall project health through structured workflows and accountability-driven processes. By ensuring that every activity aligns with approved plans and timelines, teams can respond quickly to issues, coordinate across functions, and maintain control over execution while delivering consistent outcomes that meet quality and business expectations.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
+    icon: FaUsersCog,
 
     modules: [
       {
@@ -96,8 +104,9 @@ const QMSMODULES = [
     id: "quality-assurance-defect-lifecycle",
     groupName: "Quality Assurance & Defect Lifecycle",
     shortDesc:
-      "Ensures that deliverables consistently meet quality standards through structured testing and continuous improvement practices.",
+      "Ensures that quality is embedded throughout the project lifecycle by enabling structured testing, issue identification, and defect resolution. This approach helps teams detect problems early, assign clear ownership, and track resolutions through defined workflows. By maintaining transparency and accountability in defect management, organizations can significantly reduce rework, avoid repeated errors, and deliver reliable, high-quality outputs that meet defined standards and stakeholder expectations.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
+    icon: FaCheckCircle,
 
     modules: [
       {
@@ -120,16 +129,6 @@ const QMSMODULES = [
           "Provides insights into recurring issues, helping prevent repeat failures over time."
         ],
       },
-      // {
-      //   id: "nc-capa",
-      //   title: "Non-Conformance (NC) / CAPA",
-      //   focus: [
-      //     "Manages systematic resolution of major issues through corrective and preventive actions with formal workflow routing."
-      //   ],
-      //   benefits: [
-      //     "Leads to permanent elimination of systemic flaws and promotes continuous organizational improvement."
-      //   ],
-      // },
     ],
   },
 
@@ -137,8 +136,9 @@ const QMSMODULES = [
     id: "reporting-continuous-improvement",
     groupName: "Reporting & Continuous Improvement",
     shortDesc:
-      "Data-driven insights that streamline reporting and strengthen future execution.",
+      "Converts operational and project data into actionable insights that drive informed decision-making and continuous improvement. By enabling structured reporting, performance analysis, and knowledge retention, this phase helps organizations understand what worked, what didn’t, and how to improve future execution. Consistent analytics and documented learnings empower leadership to refine processes, enhance efficiency, reduce risk, and continuously raise the overall maturity and success rate of projects.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
+    icon: FaChartLine,
 
     modules: [
       {

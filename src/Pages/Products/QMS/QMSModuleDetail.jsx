@@ -25,6 +25,10 @@ export default function QMSModuleDetail() {
     navigator.clipboard.writeText(text);
   };
 
+  const currentIndex = QMSModules.findIndex(m => m.id === id);
+  const nextModule = QMSModules[currentIndex + 1];
+
+
   return (
     <section className="md-wrapper" ref={containerRef} aria-labelledby="module-heading">
       {/* Header */}
@@ -43,25 +47,29 @@ export default function QMSModuleDetail() {
           <button
             className="md-book-btn"
             onClick={() => {
-              navigate("/Products/PMS");
+              if (nextModule) {
+                navigate(`/PMSModules/${nextModule.id}`);
+              } else {
+                navigate("/Products/PMS");
 
-              // Jump directly to section (no smooth scroll)
-              setTimeout(() => {
-                const el = document.getElementById("QMS-core-modules");
-                if (el) {
-                  el.scrollIntoView({ behavior: "auto", block: "start" });
-                }
-              }, 150);
+                setTimeout(() => {
+                  const el = document.getElementById("QMS-core-modules");
+                  if (el) {
+                    el.scrollIntoView({ behavior: "auto", block: "start" });
+                  }
+                }, 150);
+              }
             }}
           >
-            Next Module →
+            {nextModule ? "Next Module →" : "Back to Modules →"}
           </button>
+
         </div>
 
         {/* Center content */}
         <div className="md-header-main">
           <h1 className="md-header-title">{moduleInfo.groupName}</h1>
-          <p className="md-header-desc">{moduleInfo.shortDesc}</p>
+          {/* <p className="md-header-desc">{moduleInfo.shortDesc}</p> */}
         </div>
 
         {/* Particles */}
@@ -76,6 +84,15 @@ export default function QMSModuleDetail() {
         {/* Slanted decorative bottom */}
         <div className="md-header-bottom-cut" />
       </motion.header>
+
+      <div className="md-header-desc-container-wrap">
+        <p className="md-header-desc-container">{moduleInfo.shortDesc}</p>
+
+        <span className="md-header-icon" aria-hidden="true">
+          {moduleInfo.icon && <moduleInfo.icon />}
+        </span>
+      </div>
+
 
       {/* Table-style content */}
       <main className="md-content container">
@@ -117,7 +134,7 @@ export default function QMSModuleDetail() {
                         <div className="title-text">{mod.title}</div>
                       </div>
                     </div>
-                    <div class="md-divider"></div>
+                    <div className="md-divider"></div>
                     <div className="cell focus-cell">
                       <ul>
                         {mod.focus.map((f, i) => (
@@ -126,7 +143,7 @@ export default function QMSModuleDetail() {
                       </ul>
                     </div>
 
-                    <div class="md-divider"></div>
+                    <div className="md-divider"></div>
 
                     <div className="cell benefit-cell">
                       <ul>

@@ -81,7 +81,7 @@ const CapexOpex = () => {
       </motion.section>
 
       {/* ================= Core Modules ================= */}
-      <section id="CapexOpex-core-modules"  className="CapexOpex-core-modules container">
+      <section id="CapexOpex-core-modules"  className="CapexOpex-core-modules containers">
         <h2 className="CapexOpex-core-title">Core Modules: CAPEX/OPEX Streamlined with Governance</h2>
 
         <div className="CapexOpex-cards-grid">
@@ -147,7 +147,7 @@ const CapexOpex = () => {
 
       {/* ================= Strategic Advantages ================= */}
       <motion.section
-        className="CapexOpex-strategic-advantages container"
+        className="CapexOpex-strategic-advantages containers"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

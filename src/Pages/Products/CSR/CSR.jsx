@@ -79,7 +79,7 @@ const CSR = () => {
       </motion.section>
 
       {/* ================= Core Modules ================= */}
-      <section id="csr-core-modules" className="csr-core-modules container">
+      <section id="csr-core-modules" className="csr-core-modules containers">
         <h2 className="csr-core-title">Core Modules: Strategy, Execution, and Verification</h2>
 
         <div className="csr-cards-grid">
@@ -145,7 +145,7 @@ const CSR = () => {
 
       {/* ================= Strategic Advantages ================= */}
       <motion.section
-        className="csr-strategic-advantages container"
+        className="csr-strategic-advantages containers"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

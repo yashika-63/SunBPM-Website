@@ -66,7 +66,7 @@ html {
   padding: 12px 24px;
   color: white;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 999px;
   cursor: pointer;
 }
 
@@ -137,7 +137,7 @@ html {
 
 /* ================= Strategic Advantages ================= */
 .CapexOpex-advantages-title {
-  margin: 50px 0px;
+  margin: 10px 0px;
   text-align: left;
   font-size: 36px;
   font-weight: 900;
@@ -276,7 +276,7 @@ html {
   text-align: left;
   font-size: 36px;
   font-weight: 700;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 30px;
   color: #000000;
   position: relative;
@@ -303,14 +303,14 @@ html {
 .CapexOpex-group-card {
   position: relative;
   overflow: hidden;
-  background: #fff;
-  border-radius: 12px;
   height: 360px;
-  padding: 20px;
-  box-shadow: 0 6px 18px rgba(16, 18, 24, 0.18);
-  border: 1px solid rgba(16, 24, 40, 0.04);
-  transition: transform .22s ease, background .3s ease, box-shadow .3s ease;
+  padding: 22px;
+  background: linear-gradient(145deg,rgba(5, 5, 5, 0.05) 0%,rgba(0, 0, 0, 0) 55%,rgba(5, 5, 5, 0.2) 100%);
+  border-radius: 16px;
+  color: #ffffff;
   cursor: pointer;
+  box-shadow:0 12px 28px rgba(1, 24, 99, 0.35),inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  transition: transform 0.35s ease,box-shadow 0.35s ease,background 0.35s ease;
 }
 
 /* Hover - dark background + lift */
@@ -454,7 +454,7 @@ html {
 }
 
 .CapexOpex-group-shortdesc {
-  color: #6b7280;
+  color: #424242;
   text-align: start;
   font-size: 16px;
   line-height: 1.6;
@@ -744,7 +744,8 @@ html {
     max-height: calc(1.6em * 3);
     -webkit-line-clamp: 3;
   }
-    .CapexOpex-hero-overlay h1 br {
+
+  .CapexOpex-hero-overlay h1 br {
     display: none;
   }
 }

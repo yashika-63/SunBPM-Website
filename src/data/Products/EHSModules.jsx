@@ -1,3 +1,10 @@
+import {
+  FaHardHat,
+  FaLeaf,
+  FaGavel,
+  FaIndustry,
+} from "react-icons/fa";
+
 const EHSMODULES = [
   /* =========================================================
      SAFETY & HEALTH MODULES
@@ -5,8 +12,9 @@ const EHSMODULES = [
   {
     id: "safety-health",
     groupName: "Safety & Health Modules",
+    icon: FaHardHat,
     shortDesc:
-      "Strengthens workplace safety through structured reporting, hazard prevention, and employee competency assurance.",
+      "Creates a strong foundation for workplace safety by empowering employees and leaders to proactively identify risks, report incidents, and continuously improve safety practices. It promotes a culture where safety is embedded into everyday behavior rather than treated as a checkbox activity. By enabling early hazard identification, structured incident investigations, and role-based safety training, organizations can significantly reduce workplace accidents and injuries. This approach not only improves compliance but also builds confidence, preparedness, and trust across the workforce.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
@@ -49,8 +57,9 @@ const EHSMODULES = [
   {
     id: "environment-compliance",
     groupName: "Environmental & Compliance Modules",
+    icon: FaLeaf,
     shortDesc:
-      "Ensures operational compliance by managing permits, waste reporting, and environmental performance measurement.",
+      "Brings clarity and control to environmental compliance by centralizing permits, regulatory obligations, and statutory reporting in a single, easy-to-manage system. It helps teams stay ahead of renewals, inspections, and compliance deadlines while reducing dependency on manual tracking. By ensuring continuous adherence to environmental laws and standards, organizations can minimize regulatory risks and penalties. At the same time, it supports sustainable operations and demonstrates a strong commitment to environmental responsibility.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
@@ -73,17 +82,7 @@ const EHSMODULES = [
         benefits: [
           "Ensures adherence to complex waste disposal laws, reducing liability and supporting sustainability goals."
         ]
-      },
-      // {
-      //   id: "environmental-monitoring",
-      //   title: "Environmental Monitoring",
-      //   focus: [
-      //     "Manages scheduling and recording of required environmental testing, sampling data, and permit-defined limits."
-      //   ],
-      //   benefits: [
-      //     "Provides verifiable proof of environmental performance for regulatory submissions and public disclosures."
-      //   ]
-      // }
+      }
     ]
   },
 
@@ -93,8 +92,9 @@ const EHSMODULES = [
   {
     id: "governance-improvement",
     groupName: "Governance & Improvement Modules",
+    icon: FaGavel,
     shortDesc:
-      "Drives continuous improvement through structured audits, corrective actions, and emergency preparedness.",
+      "Strengthens EHS governance by introducing structured audits, clear accountability, and a disciplined approach to corrective and preventive actions. It ensures that audit findings are tracked to closure and lessons learned are embedded into daily operations. By driving continuous improvement, organizations can reduce recurring risks and strengthen regulatory confidence. This governance-focused approach helps leadership maintain long-term control over EHS performance and compliance maturity.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
@@ -107,27 +107,7 @@ const EHSMODULES = [
         benefits: [
           "Streamlines the entire auditing process, ensuring a transparent and efficient audit trail for regulatory bodies."
         ]
-      },
-      // {
-      //   id: "corrective-preventive-action",
-      //   title: "Corrective & Preventive Action (CAPA)",
-      //   focus: [
-      //     "Full workflow management for root cause analysis, action planning, assignment, tracking, and verification of effectiveness (VOE)."
-      //   ],
-      //   benefits: [
-      //     "Institutionalizes continuous improvement, ensuring that EHS failures lead to permanent systemic changes."
-      //   ]
-      // },
-      // {
-      //   id: "emergency-response-plan",
-      //   title: "Emergency Response Plan",
-      //   focus: [
-      //     "Central repository for emergency procedures, contact lists, drill scheduling, and post-drill review and improvements."
-      //   ],
-      //   benefits: [
-      //     "Ensures the organization is prepared for critical events, minimizing injury, property damage, and operational downtime."
-      //   ]
-      // }
+      }
     ]
   },
 
@@ -137,8 +117,9 @@ const EHSMODULES = [
   {
     id: "process-safety-management",
     groupName: "Process Safety Management",
+    icon: FaIndustry,
     shortDesc:
-      "A fully digitized safety ecosystem that strengthens hazard identification, controls organizational changes, and ensures equipment and process readiness before startup.",
+      "Provides a comprehensive digital framework to manage high-risk industrial processes with greater confidence and control. It supports systematic hazard identification, disciplined change management, and thorough readiness checks before startup. By embedding safety into every stage of operational decision-making, organizations can prevent major accidents and unplanned downtime. This structured approach strengthens process reliability, improves regulatory compliance, and protects both people and critical assets.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
@@ -176,8 +157,6 @@ const EHSMODULES = [
       }
     ]
   }
-
-
 ];
 
 export default EHSMODULES;

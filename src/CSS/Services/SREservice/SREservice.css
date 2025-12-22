@@ -38,7 +38,7 @@
   padding: 12px 24px;
   color: white;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 999px;
   cursor: pointer;
 }
 
@@ -409,7 +409,8 @@
   text-align: center;
   color: white;
   /* background: linear-gradient(135deg, #01224c, #000d29); */
-  background: linear-gradient(135deg, #004C6D, #011863);
+  /* background: linear-gradient(135deg, #004C6D, #011863); */
+  background: linear-gradient(135deg, #011863 60%, #000d29 100% );
   border: 2px solid rgba(255, 255, 255, 0.22);
   box-shadow: 0 15px 34px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(12px);

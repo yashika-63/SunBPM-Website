@@ -79,7 +79,7 @@ const EHS = () => {
       </motion.section>
 
       {/* ================= Core Modules ================= */}
-      <section id="EHS-core-modules"  className="EHS-core-modules container">
+      <section id="EHS-core-modules"  className="EHS-core-modules containers">
         <h2 className="EHS-core-title">End-to-End EHS Lifecycle Management</h2>
 
         <div className="EHS-cards-grid">
@@ -145,7 +145,7 @@ const EHS = () => {
 
       {/* ================= Strategic Advantages ================= */}
       <motion.section
-        className="EHS-strategic-advantages container"
+        className="EHS-strategic-advantages containers"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

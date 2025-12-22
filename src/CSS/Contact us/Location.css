@@ -91,7 +91,8 @@
     justify-content: center;
     gap: 50px;
     padding: 40px 20px;
-    background: linear-gradient(135deg, #011863, #004C6D);
+    /* background: linear-gradient(135deg, #011863, #004C6D); */
+    background: linear-gradient(135deg, #011863 60%, #000d29 100% );
 }
 
 /* CARD glass/shine effect using only allowed colors */

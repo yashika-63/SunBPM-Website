@@ -12,7 +12,8 @@
 .newcd-left {
   padding: 20px;
   border-radius: 22px;
-  background: linear-gradient(135deg, #004C6D, #011863);
+  background: linear-gradient(135deg, #011863 60%, #000d29 100% );
+  /* background: linear-gradient(135deg, #004C6D, #011863); */
   /* background: linear-gradient(135deg, #022B46, #001430, #011863); */
   color: white;
   display: flex;
@@ -94,15 +95,14 @@
 .newcd-primary-btn {
   background: linear-gradient(95deg, #F7941D, #F9C74F);
   border: none;
-  padding: 14px 28px;
-  font-size: 17px;
+  padding: 15px 20px;
+  font-size: 16px;
   font-weight: 800;
-  border-radius: 12px;
+  border-radius: 9999px;
   cursor: pointer;
   width: fit-content;
   margin-top: 10px;
   margin-left: auto;
-  /* 👈 pushes button to the RIGHT */
   color: black;
   transition: 0.3s ease;
   letter-spacing: 0.5px;
@@ -145,7 +145,7 @@
   font-weight: 800;
   margin-top: 10px;
   margin-bottom: 10px;
-  color: #003d57;
+  color: #011863;
   letter-spacing: 0.5px;
 }
 
@@ -171,7 +171,7 @@
   margin: 0 0 12px 0;
   font-size: 18px;
   font-weight: 700;
-  color: #004C6D;
+  color: #011863;
 }
 
 /* CONTACT LINKS */
@@ -181,7 +181,7 @@
   gap: 15px;
   margin: 6px 0;
   padding: 10px 15px;
-  color: #004C6D;
+  color: #011863;
   background: rgba(245, 245, 245, 0.8);
   text-decoration: none;
   border-radius: 10px;

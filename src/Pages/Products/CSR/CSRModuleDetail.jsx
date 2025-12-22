@@ -25,6 +25,8 @@ export default function CSRModuleDetail() {
     navigator.clipboard.writeText(text);
   };
 
+  const currentIndex = CSRModules.findIndex(m => m.id === id);
+  const nextModule = CSRModules[currentIndex + 1];
   return (
     <section className="md-wrapper" ref={containerRef} aria-labelledby="module-heading">
       {/* Header */}
@@ -40,21 +42,25 @@ export default function CSRModuleDetail() {
             ← Back
           </button>
 
+
           <button
             className="md-book-btn"
             onClick={() => {
-              navigate("/Products/CSR");
+              if (nextModule) {
+                navigate(`/CSRModules/${nextModule.id}`);
+              } else {
+                navigate("/Products/CSR");
 
-              // Jump directly to section (no smooth scroll)
-              setTimeout(() => {
-                const el = document.getElementById("csr-core-modules");
-                if (el) {
-                  el.scrollIntoView({ behavior: "auto", block: "start" });
-                }
-              }, 150);
+                setTimeout(() => {
+                  const el = document.getElementById("csr-core-modules");
+                  if (el) {
+                    el.scrollIntoView({ behavior: "auto", block: "start" });
+                  }
+                }, 150);
+              }
             }}
           >
-            Next Module →
+            {nextModule ? "Next Module →" : "Back to Modules →"}
           </button>
 
         </div>
@@ -62,7 +68,7 @@ export default function CSRModuleDetail() {
         {/* Center content */}
         <div className="md-header-main">
           <h1 className="md-header-title">{moduleInfo.groupName}</h1>
-          <p className="md-header-desc">{moduleInfo.shortDesc}</p>
+          {/* <p className="md-header-desc">{moduleInfo.shortDesc}</p> */}
         </div>
 
         {/* Particles */}
@@ -77,6 +83,14 @@ export default function CSRModuleDetail() {
         {/* Slanted decorative bottom */}
         <div className="md-header-bottom-cut" />
       </motion.header>
+
+      <div className="md-header-desc-container-wrap">
+        <p className="md-header-desc-container">{moduleInfo.shortDesc}</p>
+
+        <span className="md-header-icon" aria-hidden="true">
+          {moduleInfo.icon && <moduleInfo.icon />}
+        </span>
+      </div>
 
       {/* Table-style content */}
       <main className="md-content container">

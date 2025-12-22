@@ -79,16 +79,15 @@ const Sunbpmhome = () => {
         </div>
       </section>
 
-      <FeatureCard />
-
       {/* Stats */}
       <section className="trusted-section">
         <div className="trusted-container">
-          {/* Left Section */}
+
+          {/* Header */}
           <motion.div
-            className="trusted-left"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="trusted-header"
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <h2 className="trusted-heading">Trusted by Industry Leaders</h2>
@@ -97,51 +96,44 @@ const Sunbpmhome = () => {
             </p>
           </motion.div>
 
-          {/* Right Stats */}
+          {/* Divider */}
+          <div className="trusted-line"></div>
+
+          {/* Stats */}
           <motion.div
-            className="trusted-right"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="stats-wrapper"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {/* New accent line */}
-            <div className="trusted-line"></div>
-
-
-
-            <div className="stats-wrapper">
-              {industryStats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  className="stat-item"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <h3 className="stat-value">
-                    <CountUp
-                      start={0}
-                      end={Number(stat.value.replace(/\D/g, ""))}
-                      duration={2}
-                      enableScrollSpy
-                    >
-                      {({ countUpRef }) => (
-                        <span ref={countUpRef}></span>
-                      )}
-                    </CountUp>
-
-                    +
-                  </h3>
-
-                  <p className="stat-label">{stat.label}</p>
-                </motion.div>
-              ))}
-            </div>
-
+            {industryStats.map((stat, index) => (
+              <motion.div
+                key={index}
+                className="stat-item"
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.3 }}
+              >
+                <h3 className="stat-value-number">
+                  <CountUp
+                    start={0}
+                    end={Number(stat.value.replace(/\D/g, ""))}
+                    duration={2}
+                    enableScrollSpy
+                  >
+                    {({ countUpRef }) => <span ref={countUpRef}></span>}
+                  </CountUp>
+                  +
+                </h3>
+                <p className="stat-label">{stat.label}</p>
+              </motion.div>
+            ))}
           </motion.div>
+
         </div>
       </section>
 
-      {/* <ClientReviews /> */}
+
+      <FeatureCard />
 
     </div>
   );

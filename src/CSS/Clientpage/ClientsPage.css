@@ -1,10 +1,10 @@
 .client-page-section {
-  padding: 40px 35px 60px;
+  padding: 40px 0px 100px;
   text-align: center;
 }
 
 .client-page-hero {
-  margin-top: 35px;
+  margin: 35px 35px 0px;
   border-radius: 12px;
   padding: 20px;
   background-color: #e8e8e8;
@@ -49,7 +49,7 @@
 
 /* === Grid Layout === */
 .client-page-grid {
-  margin-top: 30px;
+  margin: 30px 35px 0px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid #ccc;
@@ -88,6 +88,20 @@
   color: #000000;
   margin: 0;
 }
+
+.client-page-empty {
+    border-top: none ;
+  border-left: none;
+  margin: 40px auto;
+  text-align: center;
+  color: #494949;
+  font-size: 16px;
+}
+
+.client-page-empty strong {
+  color: #000000;
+}
+
 
 /* .client-page-bullet-dot {
   flex-shrink: 0;
@@ -197,7 +211,8 @@
   position: absolute;
   inset: 0;
   /* background-color: rgba(1, 24, 99, 1.5); */
-  background: linear-gradient(135deg, #011863, #004c6d);
+  /* background-color: #011863; */
+  background: linear-gradient(135deg,  #011863 60%, #000000 100%);
   color: #fff;
   opacity: 0;
   transform: translateX(-100%);

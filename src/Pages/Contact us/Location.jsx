@@ -203,11 +203,17 @@ export default function LocationPage() {
                     </p>
                 </motion.div>
                 <motion.div className="location-redef-right" variants={fadeInRight}>
-                    <img
-                        src="https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/location+Intro+Image.png"
-                        alt="location  Intro Image"
-                        className="location-redef-img"
-                    />
+                    <a
+                        href="https://maps.app.goo.gl/D8HWUzf4w6ZVfRMY9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src="https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/ContactUs/locations/location+Intro+Image.png"
+                            alt="location Intro Image"
+                            className="location-redef-img"
+                        />
+                    </a>
                 </motion.div>
             </motion.section>
 

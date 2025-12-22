@@ -77,7 +77,7 @@ const ESG = () => {
       </motion.section>
 
       {/* ================= Core Modules ================= */}
-      <section id="ESG-core-modules" className="ESG-core-modules container">
+      <section id="ESG-core-modules" className="ESG-core-modules containers">
         <h2 className="ESG-core-title">Core Modules: Strategy, Execution, and Verification</h2>
 
         <div className="ESG-cards-grid">
@@ -143,7 +143,7 @@ const ESG = () => {
 
       {/* ================= Strategic Advantages ================= */}
       <motion.section
-        className="ESG-strategic-advantages container"
+        className="ESG-strategic-advantages containers"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

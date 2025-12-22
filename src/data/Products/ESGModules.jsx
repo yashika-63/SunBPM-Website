@@ -1,9 +1,17 @@
+import {
+  FaDatabase,
+  FaBullseye,
+  FaTruck,
+  FaFileAlt,
+} from "react-icons/fa";
+
 const ESGMODULES = [
   {
     id: "data-foundation-disclosure",
     groupName: "Data Foundation & Disclosure",
+    icon: FaDatabase,
     shortDesc:
-      "Centralized ESG data collection and structured reporting to ensure accuracy, consistency and regulatory readiness.",
+      "Establishes a reliable ESG data foundation by bringing together environmental, social, and governance information from across the organization into one trusted system. It ensures data accuracy, consistency, and traceability across business units, locations, and reporting periods. By reducing manual data handling and fragmentation, teams gain confidence in their numbers and insights. This foundation keeps organizations disclosure-ready at all times while lowering reporting risk and effort.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
@@ -63,8 +71,9 @@ const ESGMODULES = [
   {
     id: "strategy-assurance",
     groupName: "Strategy & Assurance",
+    icon: FaBullseye,
     shortDesc:
-      "Aligns ESG direction with stakeholder priorities and ensures execution, tracking, and independent audit validation.",
+      "Bridges the gap between ESG intent and real-world execution by converting stakeholder expectations into measurable priorities and actions. It supports structured goal setting, progress tracking, and risk monitoring across ESG initiatives. By embedding assurance and verification into the process, organizations can confidently demonstrate credibility and accountability. This approach ensures ESG commitments are not just stated, but actively managed and delivered.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
@@ -114,8 +123,9 @@ const ESGMODULES = [
   {
     id: "supply-chain-governance",
     groupName: "Supply Chain Governance",
+    icon: FaTruck,
     shortDesc:
-      "Extends ESG responsibility beyond corporate boundaries to suppliers and associates through structured governance workflows.",
+      "Extends ESG responsibility beyond organizational boundaries by actively engaging suppliers and partners in structured governance processes. It enables consistent ESG data capture, assessments, and compliance monitoring across the value chain. By improving visibility into third-party practices, organizations can proactively manage environmental and social risks. This approach promotes responsible sourcing while strengthening trust and resilience across the supply network.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
@@ -135,8 +145,9 @@ const ESGMODULES = [
   {
     id: "report-standards",
     groupName: "Report Standards & Disclosure Formats",
+    icon: FaFileAlt,
     shortDesc:
-      "Generates India-compliant BRSR reports and globally recognized ESG disclosures such as GRI, CDP, and S&P—ensuring consistent, transparent, and audit-ready reporting.",
+      "Enables clear, consistent, and transparent ESG reporting across both Indian and global disclosure frameworks. It simplifies complex reporting requirements while maintaining strict alignment with regulatory, investor, and stakeholder expectations. By standardizing formats and automating data mapping, organizations reduce reporting effort and errors. This ensures audit-ready, credible ESG disclosures that can be published with confidence.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
@@ -144,7 +155,8 @@ const ESGMODULES = [
         id: "indian-format",
         title: "BRSR Report",
         focus: [
-          "Creates BRSR reports aligned with India’s regulatory requirements, including the BRSR 9 Principles, following the SEBI-mandated government format."],
+          "Creates BRSR reports aligned with India’s regulatory requirements, including the BRSR 9 Principles, following the SEBI-mandated government format."
+        ],
         benefits: [
           "Ensures accurate, audit-ready compliance reporting while simplifying statutory disclosure submissions."
         ],
@@ -162,8 +174,6 @@ const ESGMODULES = [
       },
     ],
   }
-
-
 ];
 
 export default ESGMODULES;

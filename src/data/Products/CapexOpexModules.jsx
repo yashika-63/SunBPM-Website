@@ -1,10 +1,18 @@
+import {
+  FaBalanceScale,
+  FaMoneyCheckAlt,
+  FaHandshake,
+  FaChartPie
+} from "react-icons/fa";
+
 const CapexOpexModules = [
   {
     id: "budget-planning-validation",
     groupName: "Budget Planning & Validation",
     shortDesc:
-      "Standardized budget creation, approval, and real-time validation to ensure disciplined fund utilization.",
+      "Establishes a strong and disciplined foundation for financial planning by bringing structure, consistency, and accountability to how budgets are created, reviewed, and approved. By standardizing budgeting practices across departments, organizations gain better visibility into planned versus actual spend while reducing manual errors and inconsistencies. Real-time budget validation ensures every request is checked against approved allocations before funds are committed, preventing surprises later in the cycle. This creates confidence among stakeholders, strengthens financial governance, and ensures funds are utilized responsibly and transparently at every stage.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
+    icon: FaBalanceScale,
 
     modules: [
       {
@@ -44,8 +52,9 @@ const CapexOpexModules = [
     id: "capex-request-management",
     groupName: "CAPEX Request Management",
     shortDesc:
-      "Centralized management of capital expenditure requests with structured evaluation, approvals, and vendor comparison.",
+      "Provides a centralized and transparent approach to managing the entire capital expenditure lifecycle, from initial idea submission to final investment approval. By structuring business justifications, ROI expectations, and cost evaluations, it enables decision-makers to assess investments with greater clarity and confidence. Multi-level approval workflows ensure governance is maintained without slowing down critical initiatives. This results in smarter capital allocation, reduced approval delays, and improved returns on long-term strategic investments.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
+    icon: FaMoneyCheckAlt,
 
     modules: [
       {
@@ -85,8 +94,9 @@ const CapexOpexModules = [
     id: "opex-vendor-management",
     groupName: "OPEX & Vendor Management",
     shortDesc:
-      "Operational expense tracking and vendor management with approval workflows and analytical insights.",
+      "Brings clarity, control, and consistency to everyday operational spending while strengthening vendor governance. By capturing OPEX transactions through defined approval workflows, organizations gain real-time visibility into ongoing expenses and can proactively manage costs. Centralized vendor records ensure compliance, reduce duplication, and improve coordination across teams. Together, these capabilities support tighter cost control, better supplier relationships, and continuous optimization of operational expenditure.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
+    icon: FaHandshake,
 
     modules: [
       {
@@ -126,8 +136,9 @@ const CapexOpexModules = [
     id: "reporting-analytics-optimization",
     groupName: "Reporting, Analytics & Optimization",
     shortDesc:
-      "Real-time reporting, alerts, and insights to support continuous improvement and financial decision-making.",
+      "Converts complex financial data into clear, actionable insights that support smarter and faster decision-making. Real-time dashboards and alerts help leadership quickly identify exceptions, risks, and performance gaps before they escalate. Advanced analytics enable continuous monitoring of budgets, spend patterns, and compliance metrics across the organization. This empowers teams to optimize financial performance, strengthen governance, and drive ongoing improvements in budgeting and cost control.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
+    icon: FaChartPie,
 
     modules: [
       {

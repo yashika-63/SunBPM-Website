@@ -189,35 +189,41 @@ const Navbar = () => {
                             const productDetails = {
                               'SunBPM Corporate Social Responsibility': {
                                 title: 'SunBPM Corporate Social Responsibility',
-                                desc: 'Manage corporate social responsibility with transparency and efficiency.',
+                                desc: 'Manage corporate social responsibility initiatives with end-to-end transparency, governance, and impact tracking. Digitize CSR planning, approvals, execution, and compliance to meet statutory requirements while driving measurable social outcomes.',
                                 img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/csr-grand-image.png",
                               },
+
                               'SunBPM Environmental, Social, and Governance': {
                                 title: 'SunBPM Environmental, Social, and Governance',
-                                desc: 'Drive sustainability and compliance through smart ESG management.',
+                                desc: 'Drive sustainability, compliance, and ethical governance with a unified ESG management platform. Streamline data collection, reporting, and disclosures to align with global ESG frameworks and regulatory expectations.',
                                 img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/ESG/ESG-grand-image.jpg",
                               },
+
                               'SunBPM Environment, Health, and Safety': {
                                 title: 'SunBPM Environment, Health, and Safety',
-                                desc: 'Ensure environment, health, and safety compliance across operations.',
+                                desc: 'Ensure robust environment, health, and safety compliance across operations with proactive risk management. Digitize incidents, audits, permits, and safety programs to build a safer, compliant, and resilient workplace.',
                                 img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/EHS/EHS-grand-image.png",
                               },
+
                               'SunBPM Project  Management System': {
                                 title: 'SunBPM Project  Management System',
-                                desc: 'Maintain quality and standards effortlessly with intelligent QMS workflows.',
+                                desc: 'Plan, execute, and monitor projects with greater control, visibility, and accountability. Standardize workflows, track milestones, and ensure quality and compliance across the entire project lifecycle.',
                                 img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/QMS/QMS-grand-image.jpg",
                               },
+
                               'SunBPM Purchase Requisition and Purchase Order': {
                                 title: 'SunBPM Purchase Requisition and Purchase Order',
-                                desc: 'Simplify procurement and approval with efficient PR and PO tracking.',
+                                desc: 'Simplify procurement operations with streamlined purchase requisition and purchase order workflows. Improve approval turnaround, vendor coordination, and spend visibility while ensuring policy compliance.',
                                 img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/PRPO/PRPO-grand-image.jpg",
                               },
+
                               'SunBPM Procurement Decision Tool': {
                                 title: 'SunBPM Procurement Decision Tool',
-                                desc: 'Optimize capital and operational expenditure with complete visibility.',
+                                desc: 'Optimize capital and operational expenditure with intelligent procurement decision-making. Gain complete visibility into budgets, approvals, vendor comparisons, and financial performance to control costs effectively.',
                                 img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CapexOpex/CapexOpex-grand-image.png",
                               },
                             };
+
 
                             /* =================== SERVICE PREVIEW DATA =================== */
                             const serviceDetails = {
@@ -228,30 +234,35 @@ const Navbar = () => {
                               // },
                               'ERP Integration and services': {
                                 title: 'ERP Integration and Services',
-                                desc: 'Empowering Enterprise Transformation with Intelligent ERP Solutions.',
+                                desc: 'Enable enterprise-wide transformation with seamless ERP integration and implementation services. Enhance operational efficiency, data consistency, and scalability by aligning ERP systems with business processes.',
                                 img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/core-services/erp-grand-image.jpg",
                               },
+
                               'Mobile App Development services': {
                                 title: 'Mobile App Development services',
-                                desc: 'Expand footprint with innovative mobile applications.',
+                                desc: 'Expand your digital footprint with secure, scalable, and user-friendly mobile applications. Deliver engaging mobile experiences that improve customer engagement and operational productivity.',
                                 img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/core-services/mobile-app-grand-image.jpg",
                               },
+
                               'Data Analytics services': {
                                 title: 'Data Analytics services',
-                                desc: 'Every Growth Strategy Now Starts With Data.',
+                                desc: 'Transform raw data into actionable insights with advanced data analytics solutions. Enable smarter decision-making, performance optimization, and growth strategies powered by real-time analytics.',
                                 img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/core-services/Data-analitics-grand-image.png",
                               },
+
                               'Business process Automation services': {
                                 title: 'Business Process Automation services',
-                                desc: 'Orchestrate end-to-end workflows with intelligent process automation.',
+                                desc: 'Automate and optimize end-to-end business processes to reduce manual effort and operational costs. Improve efficiency, accuracy, and agility through intelligent workflow automation.',
                                 img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/core-services/BPA-grand-image.jpg",
                               },
+
                               'Site Reliability Services': {
                                 title: 'Site Reliability Services',
-                                desc: 'End-to-End IT support that keeps your business running strong.',
+                                desc: 'Ensure high availability, performance, and reliability of critical systems with proactive site reliability services. Minimize downtime, enhance system resilience, and support business continuity.',
                                 img: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/core-services/SRE-grand-image.jpg",
                               },
                             };
+
 
                             /* ======================= MERGE BOTH DATA SETS ======================= */
                             const allDetails = { ...productDetails, ...serviceDetails };

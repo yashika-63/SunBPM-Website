@@ -58,7 +58,7 @@
   padding: 12px 24px;
   color: white;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 9999px !important;
   cursor: pointer;
 }
 
@@ -594,10 +594,11 @@
 .pristine-section {
   padding: 35px 35px;
   margin-bottom: 100px;
-  background: linear-gradient(135deg,
+  /* background: linear-gradient(135deg,
       #011863 0%,
       #004C6D 60%,
-      #000000 100%);
+      #000000 100%); */
+      background: linear-gradient(180deg, #011863 60%, #000d29 100% );
   position: relative;
   overflow: hidden;
 }
@@ -673,13 +674,13 @@
 /* ---- Button ---- */
 .pristine-btn {
   display: inline-block;
-  padding: 15px 40px;
+  padding: 15px 30px;
   margin: auto;
   font-size: 16px;
   font-weight: 600;
   color: #000000;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 9999px;
   background: linear-gradient(135deg, #F7941D, #F9C74F);
   box-shadow: 0 8px 25px rgba(247, 148, 29, 0.35);
   transition: 0.3s ease;

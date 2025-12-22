@@ -81,7 +81,7 @@ const PRPO = () => {
       </motion.section>
 
       {/* ================= Core Modules ================= */}
-      <section id="PRPO-core-modules"  className="PRPO-core-modules container">
+      <section id="PRPO-core-modules"  className="PRPO-core-modules containers">
         <h2 className="PRPO-core-title">Core Modules: Procurement Streamlined with Governance</h2>
 
         <div className="PRPO-cards-grid">
@@ -147,7 +147,7 @@ const PRPO = () => {
 
       {/* ================= Strategic Advantages ================= */}
       <motion.section
-        className="PRPO-strategic-advantages container"
+        className="PRPO-strategic-advantages containers"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

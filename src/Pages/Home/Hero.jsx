@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+
 import { motion } from "framer-motion";
 import "../../CSS/Home/Hero.css";
 
@@ -39,13 +41,30 @@ export default function Hero() {
   const [index, setIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
 
-  // Auto-slideshow every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+  const slideTimer = useRef(null);
+
+const startAutoSlide = () => {
+  slideTimer.current = setInterval(() => {
+    setIndex((prev) => (prev + 1) % slides.length);
+  }, 9000);
+};
+
+
+useEffect(() => {
+  startAutoSlide();
+
+  return () => {
+    clearInterval(slideTimer.current);
+  };
+}, []);
+
+  // Auto-slideshow every 9 seconds
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setIndex((prev) => (prev + 1) % slides.length);
+  //   }, 9000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   // Typewriter animation
   useEffect(() => {
@@ -59,7 +78,7 @@ export default function Hero() {
       if (!isMounted) return;
 
       if (i < currentTitle.length) {
-        setDisplayText(currentTitle.slice(0, i + 1)); // SAFE + NO MISSING LETTERS
+        setDisplayText(currentTitle.slice(0, i + 1));
         i++;
         setTimeout(typeLetter, 50); // smooth typing
       }
@@ -72,6 +91,18 @@ export default function Hero() {
     };
   }, [index]);
 
+const prevSlide = () => {
+  clearInterval(slideTimer.current); // stop auto
+  setIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  startAutoSlide(); // restart timer
+};
+
+const nextSlide = () => {
+  clearInterval(slideTimer.current); // stop auto
+  setIndex((prev) => (prev + 1) % slides.length);
+  startAutoSlide(); // restart timer
+};
+
 
 
   return (
@@ -79,7 +110,7 @@ export default function Hero() {
 
       {/* Background slideshow */}
       <div
-        className={`slideshow-dynamic ${ index === 1 ? "right-crop" : ""
+        className={`slideshow-dynamic ${index === 1 ? "right-crop" : ""
           }`}
         style={{
           backgroundImage: `url(${slides[index].img})`,
@@ -88,6 +119,9 @@ export default function Hero() {
 
 
       <div className="overlay"></div>
+
+      <button className="hero-arrow left" onClick={prevSlide}>❮</button>
+      <button className="hero-arrow right" onClick={nextSlide}>❯</button>
 
       {/* Content */}
       <div className="hero-content">

@@ -1,9 +1,17 @@
+import {
+  FaClipboardCheck,
+  FaFileInvoiceDollar,
+  FaDatabase,
+  FaChartLine,
+} from "react-icons/fa";
+
 const PRPOMODULES = [
   {
     id: "requisition-initiation-validation",
     groupName: "Requisition Initiation & Validation",
+    icon: FaClipboardCheck,
     shortDesc:
-      "Standardized requisition creation with automated approvals and real-time budget validation ensuring controlled purchasing operations.",
+      "Creates a clear, controlled, and standardized entry point for all procurement requests across the organization. By digitizing requisition creation, validations, and approvals, this stage ensures that every purchase request is properly justified, aligned to budgets, and compliant with internal policies before it moves forward. Real-time budget checks, automated workflows, and transparent approvals help reduce delays, avoid unnecessary spending, and give stakeholders confidence that procurement decisions are financially sound and well-governed from the very beginning.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
@@ -40,75 +48,74 @@ const PRPOMODULES = [
     ],
   },
 
-{
-  id: "purchase-order-management",
-  groupName: "Purchase Order Management & Execution",
-  shortDesc:
-    "Streamlined purchase order processing with automated document handling, SCM verification, costing approvals, and system integrations.",
-  image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
+  {
+    id: "purchase-order-management",
+    groupName: "Purchase Order Management & Execution",
+    icon: FaFileInvoiceDollar,
+    shortDesc:
+      "Manages the complete purchase order lifecycle with accuracy, speed, and strong control by automating key steps from PO creation to execution. This phase minimizes manual effort through system-driven validations, approvals, and document handling while ensuring collaboration between internal teams and vendors. By maintaining consistency, compliance, and visibility throughout the PO process, organizations can reduce errors, accelerate turnaround times, and ensure every order is executed in line with financial policies and supply chain requirements.",
+    image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
-  modules: [
-        {
-      id: "automated-email-document-integration",
-      title: "Automated Email & Document Integration",
-      focus: [
-        "Automatically captures PO PDFs from incoming emails, validates details through SCM."
-      ],
-      benefits: [
-        "Eliminates data entry errors, accelerates approvals, and maintains a secure audit-ready document repository."
-      ],
-    },
-    {
-      id: "po-entry-modification",
-      title: "PO Entry & Modification",
-      focus: [
-        "Create, update, and manage purchase orders with standardized fields, vendor details, schedules, and compliance validations."
-      ],
-      benefits: [
-        "Ensures accurate and consistent PO creation while reducing operational workload and data inconsistencies."
-      ],
-    },
-    {
-      id: "scm-verification",
-      title: "SCM Verification & Validation",
-      focus: [
-        "SCM team reviews product details, quantities, specifications, and vendor information before final approval."
-      ],
-      benefits: [
-        "Prevents procurement discrepancies and ensures all PO data is validated before progressing to costing approval."
-      ],
-    },
-    {
-      id: "costing-approval",
-      title: "Costing Approval Workflow",
-      focus: [
-        "Multi-level costing approval that verifies pricing, budget alignment, rate contracts, and financial compliance."
-      ],
-      benefits: [
-        "Strengthens financial control and ensures all purchases comply with internal cost policies and budget limits."
-      ],
-    },
-
-    {
-      id: "vendor-collaboration-dashboard",
-      title: "Vendor Collaboration Dashboard",
-      focus: [
-        "Enables vendors to acknowledge POs, upload invoices, and update delivery status through a self-service interface."
-      ],
-      benefits: [
-        "Improves supplier communication and enhances transparency across the procurement lifecycle."
-      ],
-    }
-  ],
-}
-
-,
+    modules: [
+      {
+        id: "automated-email-document-integration",
+        title: "Automated Email & Document Integration",
+        focus: [
+          "Automatically captures PO PDFs from incoming emails, validates details through SCM."
+        ],
+        benefits: [
+          "Eliminates data entry errors, accelerates approvals, and maintains a secure audit-ready document repository."
+        ],
+      },
+      {
+        id: "po-entry-modification",
+        title: "PO Entry & Modification",
+        focus: [
+          "Create, update, and manage purchase orders with standardized fields, vendor details, schedules, and compliance validations."
+        ],
+        benefits: [
+          "Ensures accurate and consistent PO creation while reducing operational workload and data inconsistencies."
+        ],
+      },
+      {
+        id: "scm-verification",
+        title: "SCM Verification & Validation",
+        focus: [
+          "SCM team reviews product details, quantities, specifications, and vendor information before final approval."
+        ],
+        benefits: [
+          "Prevents procurement discrepancies and ensures all PO data is validated before progressing to costing approval."
+        ],
+      },
+      {
+        id: "costing-approval",
+        title: "Costing Approval Workflow",
+        focus: [
+          "Multi-level costing approval that verifies pricing, budget alignment, rate contracts, and financial compliance."
+        ],
+        benefits: [
+          "Strengthens financial control and ensures all purchases comply with internal cost policies and budget limits."
+        ],
+      },
+      {
+        id: "vendor-collaboration-dashboard",
+        title: "Vendor Collaboration Dashboard",
+        focus: [
+          "Enables vendors to acknowledge POs, upload invoices, and update delivery status through a self-service interface."
+        ],
+        benefits: [
+          "Improves supplier communication and enhances transparency across the procurement lifecycle."
+        ],
+      }
+    ],
+  },
 
   {
     id: "master-data-compliance",
     groupName: "Master Data & Compliance Control",
+    icon: FaDatabase,
     shortDesc:
-      "Centralized master data and integration ensuring accuracy, consistency, and full audit traceability across procurement operations.",
+      "Ensures accuracy, consistency, and compliance across all procurement activities by maintaining a centralized and reliable master data foundation. This layer keeps vendor information, organizational structures, and reference data synchronized and up to date while supporting seamless integration with enterprise systems. By eliminating data silos and manual inconsistencies, it strengthens audit readiness, reduces operational risk, and ensures that every procurement transaction is supported by trusted, compliant master data.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
@@ -148,8 +155,9 @@ const PRPOMODULES = [
   {
     id: "reporting-analytics-optimization",
     groupName: "Reporting, Analytics & Optimization",
+    icon: FaChartLine,
     shortDesc:
-      "Real-time visibility into procurement performance with alerts, automation, and insights for continuous improvement.",
+      "Transforms procurement data into meaningful insights that help teams monitor performance, identify risks, and continuously improve processes. With real-time dashboards, automated alerts, and detailed analytics, stakeholders gain visibility into spend patterns, supplier performance, and operational bottlenecks. This enables proactive decision-making, cost optimization, and stronger supplier management while driving efficiency and accountability across the entire procurement lifecycle.",
     image: "https://javajar1234.s3.ap-south-1.amazonaws.com/SunBPM+website/products/CSR/viewdetail.jpg",
 
     modules: [
