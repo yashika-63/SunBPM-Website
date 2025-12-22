@@ -453,6 +453,8 @@
     text-align: left;
     margin-bottom: 15px;
   }
+
+
 }
 
 
@@ -545,11 +547,23 @@
   }
 
   .trusted-heading {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 
 @media (max-width: 600px) {
+    /* Header */
+.trusted-header {
+  width: auto !important;
+  padding:0px 10px !important;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.stat-value-number {
+  font-size: 28px;
+}
+
   .stats-wrapper {
     grid-template-columns: 1fr;
   }

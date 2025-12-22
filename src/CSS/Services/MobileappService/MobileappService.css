@@ -525,5 +525,6 @@
 
   .Mobileapp-hero {
     height: 80vh;
+    background-position: 80% center;
   }
 }
