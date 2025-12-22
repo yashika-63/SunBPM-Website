@@ -71,8 +71,8 @@ const ContactForm = () => {
     setErrors({});
 
     try {
-      // const response = await fetch("/api/book-demo", {
-        const response = await fetch("http://localhost:6002/api/book-demo", {
+      const response = await fetch("/api/book-demo", {
+        // const response = await fetch("http://localhost:6002/api/book-demo", {
         // const response = await fetch("http://15.207.163.30:6002/api/book-demo", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
